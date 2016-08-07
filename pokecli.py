@@ -59,7 +59,10 @@ def init_config():
         required=required("auth_service"))
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password")
-    parser.add_argument("-l", "--location", help="Location", required=required("location"))
+    parser.add_argument("-l", "--location", help="Location")
+    parser.add_argument("-lat", "--latitude", help="Latitude")
+    parser.add_argument("-long", "--longitude", help="Longitude")
+    parser.add_argument("-alt", "--altitude", help="Altitude")
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
     parser.add_argument("-t", "--test", help="Only parse the specified location", action='store_true')
     parser.set_defaults(DEBUG=False, TEST=False)
@@ -77,14 +80,17 @@ def init_config():
     if config.auth_service not in ['ptc', 'google']:
       log.error("Invalid Auth service specified! ('ptc' or 'google')")
       return None
+	  
+    if (config.latitude is None or config.longitude is None or config.altitude is None ) and config.location is None:
+      log.error("Please use one method of Localization.")
+      return None
 
     return config
-
 
 def main():
     # log settings
     # log format
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(module)10s] [%(levelname)5s] %(message)s')
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(module)12s] [%(levelname)5s] %(message)s')
     # log level for http request class
     logging.getLogger("requests").setLevel(logging.WARNING)
     # log level for main pgoapi class
@@ -106,7 +112,11 @@ def main():
     api = pgoapi.PGoApi()
 
     # parse position
-    position = util.get_pos_by_name(config.location)
+    if config.location is None:
+        log.info('Coordinates (lat/long/alt) for location: %s %s %s', config.latitude, config.longitude, config.altitude)
+        position = (float(config.latitude), float(config.longitude), float(config.altitude))
+    else:
+        position = util.get_pos_by_name(config.location)
     if not position:
         log.error('Your given location could not be found by name')
         return
@@ -121,8 +131,12 @@ def main():
 
     # provide the path for your encrypt dll
     api.activate_signature("encrypt.dll")
-
-    # print get maps object
+    
+	# start by getting the player info, which also contains the api_url and a session_ticket which we need
+	# so we can build the Signature field in future requests
+    api.get_player()
+	
+    #print get maps object
     cell_ids = util.get_cell_ids(position[0], position[1])
     timestamps = [0,] * len(cell_ids)
     response_dict = api.get_map_objects(latitude =position[0], longitude = position[1], since_timestamp_ms = timestamps, cell_id = cell_ids)

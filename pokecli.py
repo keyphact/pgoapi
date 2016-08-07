@@ -122,6 +122,11 @@ def main():
     # provide the path for your encrypt dll
     api.activate_signature("encrypt.dll")
 
+    
+    # start by getting the player info, which also contains the api_url and a session_ticket which we need
+    # so we can build the Signature field in future requests
+    api.get_player()
+    
     # print get maps object
     cell_ids = util.get_cell_ids(position[0], position[1])
     timestamps = [0,] * len(cell_ids)

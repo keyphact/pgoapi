@@ -372,11 +372,9 @@ class RpcApi:
         for subresponse in response_proto.returns:
             if i > list_len:
                 self.log.info("Error - something strange happend...")
-
-            try:
-                request_entry = subrequests_list[i]
-            except IndexError:
                 break
+
+            request_entry = subrequests_list[i]
             
             if isinstance(request_entry, int):
                 entry_id = request_entry

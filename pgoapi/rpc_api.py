@@ -373,7 +373,11 @@ class RpcApi:
             if i > list_len:
                 self.log.info("Error - something strange happend...")
 
-            request_entry = subrequests_list[i]
+            try:
+                request_entry = subrequests_list[i]
+            except IndexError:
+                break
+            
             if isinstance(request_entry, int):
                 entry_id = request_entry
             else:

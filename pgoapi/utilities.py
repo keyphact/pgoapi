@@ -23,39 +23,40 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Author: tjado <https://github.com/tejado>
 """
 
-import re
-import time
-import struct
-import ctypes
-import xxhash
 import logging
-
-from json import JSONEncoder
+import struct
+import time
+import xxhash
 from binascii import unhexlify
+from json import JSONEncoder
 
-# other stuff
-from google.protobuf.internal import encoder
 from geopy.geocoders import GoogleV3
 from s2sphere import LatLng, Angle, Cap, RegionCoverer, math
 
-log = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
+
 
 def f2i(float):
-  return struct.unpack('<Q', struct.pack('<d', float))[0]
+    return struct.unpack('<Q', struct.pack('<d', float))[0]
+
 
 def f2h(float):
-  return hex(struct.unpack('<Q', struct.pack('<d', float))[0])
+    return hex(struct.unpack('<Q', struct.pack('<d', float))[0])
+
 
 def h2f(hex):
-  return struct.unpack('<d', struct.pack('<Q', int(hex,16)))[0]
+    return struct.unpack('<d', struct.pack('<Q', int(hex, 16)))[0]
+
 
 def to_camel_case(value):
-  return ''.join(word.capitalize() if word else '_' for word in value.split('_'))
+    return ''.join(word.capitalize() if word else '_' for word in value.split('_'))
+
 
 # JSON Encoder to handle bytes
 class JSONByteEncoder(JSONEncoder):
     def default(self, o):
         return o.decode('utf-8')
+
 
 def get_pos_by_name(location_name):
     geolocator = GoogleV3()
@@ -63,12 +64,15 @@ def get_pos_by_name(location_name):
     if not loc:
         return None
 
-    log.info("Location for '%s' found: %s", location_name, loc.address)
-    log.info('Coordinates (lat/long/alt) for location: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
+    logger.info("Location for '%s' found: %s", location_name, loc.address)
+    logger.info('Coordinates (lat/long/alt) for location: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
 
-    return (loc.latitude, loc.longitude, loc.altitude)
+    return loc.latitude, loc.longitude, loc.altitude
+
 
 EARTH_RADIUS = 6371 * 1000
+
+
 def get_cell_ids(lat, long, radius=1000):
     # Max values allowed by server according to this comment:
     # https://github.com/AeonLucid/POGOProtos/issues/83#issuecomment-235612285
@@ -82,21 +86,24 @@ def get_cell_ids(lat, long, radius=1000):
     cells = cells[:100]  # len(cells) = 100 is max allowed by the server
     return sorted([x.id() for x in cells])
 
-def get_time(ms = False):
+
+def get_time(ms=False):
     if ms:
         return int(round(time.time() * 1000))
     else:
         return int(round(time.time()))
 
-def get_format_time_diff(low, high, ms = True):
+
+def get_format_time_diff(low, high, ms=True):
     diff = (high - low)
     if ms:
         m, s = divmod(diff / 1000, 60)
     else:
         m, s = divmod(diff, 60)
     h, m = divmod(m, 60)
-    
-    return (h, m, s)
+
+    return h, m, s
+
 
 def parse_api_endpoint(api_url):
     if not api_url.startswith("https"):
@@ -108,24 +115,31 @@ def parse_api_endpoint(api_url):
 class Rand48(object):
     def __init__(self, seed):
         self.n = seed
+
     def seed(self, seed):
         self.n = seed
+
     def srand(self, seed):
         self.n = (seed << 16) + 0x330e
+
     def next(self):
-        self.n = (25214903917 * self.n + 11) & (2**48 - 1)
+        self.n = (25214903917 * self.n + 11) & (2 ** 48 - 1)
         return self.n
+
     def drand(self):
-        return self.next() / 2**48
+        return self.next() / 2 ** 48
+
     def lrand(self):
         return self.next() >> 17
+
     def mrand(self):
         n = self.next() >> 16
         if n & (1 << 31):
             n -= 1 << 32
-        return n   
+        return n
 
-def long_to_bytes (val, endianness='big'):
+
+def long_to_bytes(val, endianness='big'):
     """
     Use :ref:`string formatting` and :func:`~binascii.unhexlify` to
     convert ``val``, a :func:`long`, to a byte :func:`str`.
@@ -158,28 +172,29 @@ def long_to_bytes (val, endianness='big'):
         s = s[::-1]
 
     return s
-    
-    
-def generateLocation1(authticket, lat, lng, alt): 
+
+
+def generateLocation1(authticket, lat, lng, alt):
     firstHash = xxhash.xxh32(authticket, seed=0x1B845238).intdigest()
     locationBytes = d2h(lat) + d2h(lng) + d2h(alt)
     if not alt:
         alt = "\x00\x00\x00\x00\x00\x00\x00\x00"
     return xxhash.xxh32(locationBytes, seed=firstHash).intdigest()
 
+
 def generateLocation2(lat, lng, alt):
     locationBytes = d2h(lat) + d2h(lng) + d2h(alt)
     if not alt:
         alt = "\x00\x00\x00\x00\x00\x00\x00\x00"
-    return xxhash.xxh32(locationBytes, seed=0x1B845238).intdigest()      #Hash of location using static seed 0x1B845238
-    
+    return xxhash.xxh32(locationBytes, seed=0x1B845238).intdigest()  # Hash of location using static seed 0x1B845238
+
 
 def generateRequestHash(authticket, request):
-    firstHash = xxhash.xxh64(authticket, seed=0x1B845238).intdigest()                      
+    firstHash = xxhash.xxh64(authticket, seed=0x1B845238).intdigest()
     return xxhash.xxh64(request, seed=firstHash).intdigest()
 
 
 def d2h(f):
-    hex_str = f2h(f)[2:].replace('L','')
+    hex_str = f2h(f)[2:].replace('L', '')
     hex_str = ("0" * (len(hex_str) % 2)) + hex_str
     return unhexlify(hex_str)

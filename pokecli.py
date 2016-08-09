@@ -23,15 +23,13 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 Author: tjado <https://github.com/tejado>
 """
-
-import os
-import sys
-import json
-import time
-import pprint
-import logging
-import getpass
 import argparse
+import getpass
+import json
+import logging
+import os
+import pprint
+import sys
 
 # add directory of this file to PATH, so that the package will be found
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
@@ -41,22 +39,23 @@ from pgoapi import pgoapi
 from pgoapi import utilities as util
 
 
-log = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
+
 
 def init_config():
     parser = argparse.ArgumentParser()
     config_file = "config.json"
 
     # If config file exists, load variables from json
-    load   = {}
+    load = {}
     if os.path.isfile(config_file):
         with open(config_file) as data:
             load.update(json.load(data))
 
     # Read passed in Arguments
-    required = lambda x: not x in load
+    required = lambda x: x not in load
     parser.add_argument("-a", "--auth_service", help="Auth Service ('ptc' or 'google')",
-        required=required("auth_service"))
+                        required=required("auth_service"))
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password")
     parser.add_argument("-l", "--location", help="Location", required=required("location"))
@@ -67,16 +66,16 @@ def init_config():
 
     # Passed in arguments shoud trump
     for key in config.__dict__:
-        if key in load and config.__dict__[key] == None:
+        if key in load and config.__dict__[key] is None:
             config.__dict__[key] = str(load[key])
 
     if config.__dict__["password"] is None:
-        log.info("Secure Password Input (if there is no password prompt, use --password <pw>):")
+        logger.info("Secure Password Input (if there is no password prompt, use --password <pw>):")
         config.__dict__["password"] = getpass.getpass()
 
     if config.auth_service not in ['ptc', 'google']:
-      log.error("Invalid Auth service specified! ('ptc' or 'google')")
-      return None
+        logger.error("Invalid Auth service specified! ('ptc' or 'google')")
+        return None
 
     return config
 
@@ -101,14 +100,13 @@ def main():
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
-
     # instantiate pgoapi
     api = pgoapi.PGoApi()
 
     # parse position
     position = util.get_pos_by_name(config.location)
     if not position:
-        log.error('Your given location could not be found by name')
+        logger.error('Your given location could not be found by name')
         return
     elif config.test:
         return
@@ -116,16 +114,16 @@ def main():
     # set player position on the earth
     api.set_position(*position)
 
-    # new authentication initialitation
-    api.set_authentication(provider = config.auth_service, username = config.username, password =  config.password)
+    # new authentication initialisation
+    api.set_authentication(provider=config.auth_service, username=config.username, password=config.password)
 
     # provide the path for your encrypt dll
     api.activate_signature("encrypt.dll")
 
     # print get maps object
     cell_ids = util.get_cell_ids(position[0], position[1])
-    timestamps = [0,] * len(cell_ids)
-    response_dict = api.get_map_objects(latitude =position[0], longitude = position[1], since_timestamp_ms = timestamps, cell_id = cell_ids)
+    timestamps = [0] * len(cell_ids)
+    response_dict = api.get_map_objects(latitude=position[0], longitude=position[1], since_timestamp_ms=timestamps, cell_id=cell_ids)
     print('Response dictionary (get_player): \n\r{}'.format(pprint.PrettyPrinter(indent=4).pformat(response_dict)))
 
 

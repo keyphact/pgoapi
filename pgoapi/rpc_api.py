@@ -22,39 +22,36 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 Author: tjado <https://github.com/tejado>
 """
-
-from __future__ import absolute_import
-
-import os
-import re
-import time
 import base64
-import random
+import ctypes
 import logging
-import requests
+import os
+import random
 import subprocess
-import six
-
-from google.protobuf import message
-
 from importlib import import_module
 
-
-import ctypes
-
-from pgoapi.protobuf_to_dict import protobuf_to_dict
-from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException, AuthTokenExpiredException, ServerApiEndpointRedirectException
-from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand48, long_to_bytes, generateLocation1, generateLocation2, generateRequestHash, f2i
-
-from . import protos
+import Signature_pb2
+import requests
+import six
 from POGOProtos.Networking.Envelopes_pb2 import RequestEnvelope
 from POGOProtos.Networking.Envelopes_pb2 import ResponseEnvelope
 from POGOProtos.Networking.Requests_pb2 import RequestType
-import Signature_pb2
+from google.protobuf import message
+
+from .exceptions import (
+    NotLoggedInException, ServerBusyOrOfflineException,
+    ServerSideRequestThrottlingException, ServerSideAccessForbiddenException,
+    UnexpectedResponseException, AuthTokenExpiredException,
+    ServerApiEndpointRedirectException
+)
+from .protobuf_to_dict import protobuf_to_dict
+from .utilities import (
+    to_camel_case, get_time, get_format_time_diff, generateLocation1,
+    generateLocation2, generateRequestHash
+)
 
 
-class RpcApi:
-
+class RpcApi(object):
     RPC_ID = 0
     START_TIME = 0
 
@@ -87,7 +84,7 @@ class RpcApi:
         try:
             self._signature_gen = True
             self._signature_lib = ctypes.cdll.LoadLibrary(lib_path)
-        except:
+        except Exception:
             raise
 
     def get_rpc_id(self):
@@ -101,7 +98,7 @@ class RpcApi:
         try:
             process = subprocess.Popen(['protoc', '--decode_raw'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
             output, error = process.communicate(raw)
-        except:
+        except Exception:
             output = "Couldn't find protoc in your environment OR other issue..."
 
         return output
@@ -155,9 +152,9 @@ class RpcApi:
         return response_dict
 
     def check_authentication(self, response_dict):
-        if isinstance(response_dict, dict) and ('auth_ticket' in response_dict) and \
-           ('expire_timestamp_ms' in response_dict['auth_ticket']) and \
-           (self._auth_provider.is_new_ticket(response_dict['auth_ticket']['expire_timestamp_ms'])):
+        if (isinstance(response_dict, dict) and ('auth_ticket' in response_dict) and
+                ('expire_timestamp_ms' in response_dict['auth_ticket']) and
+                (self._auth_provider.is_new_ticket(response_dict['auth_ticket']['expire_timestamp_ms']))):
 
             had_ticket = self._auth_provider.has_ticket()
 
@@ -356,7 +353,7 @@ class RpcApi:
         self.log.debug('Protobuf structure of rpc response:\n\r%s', response_proto)
         try:
             self.log.debug('Decode raw over protoc (protoc has to be in your PATH):\n\r%s', self.decode_raw(response_raw.content).decode('utf-8'))
-        except:
+        except Exception:
             self.log.debug('Error during protoc parsing - ignored.')
 
         response_proto_dict = protobuf_to_dict(response_proto)
@@ -376,7 +373,7 @@ class RpcApi:
         if 'returns' in response_proto_dict:
             del response_proto_dict['returns']
 
-        list_len = len(subrequests_list)-1
+        list_len = len(subrequests_list) - 1
         i = 0
         for subresponse in response_proto.returns:
             if i > list_len:
@@ -397,7 +394,7 @@ class RpcApi:
             subresponse_return = None
             try:
                 subresponse_extension = self.get_class(proto_classname)()
-            except Exception as e:
+            except Exception:
                 subresponse_extension = None
                 error = 'Protobuf definition for {} not found'.format(proto_classname)
                 subresponse_return = error
@@ -407,7 +404,7 @@ class RpcApi:
                 try:
                     subresponse_extension.ParseFromString(subresponse)
                     subresponse_return = protobuf_to_dict(subresponse_extension)
-                except:
+                except Exception:
                     error = "Protobuf definition for {} seems not to match".format(proto_classname)
                     subresponse_return = error
                     self.log.debug(error)

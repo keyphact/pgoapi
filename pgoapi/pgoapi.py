@@ -22,28 +22,26 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 Author: tjado <https://github.com/tejado>
 """
-
-from __future__ import absolute_import
-
-import re
-import six
 import logging
 
-from . import __title__, __version__, __copyright__
-from pgoapi.rpc_api import RpcApi
-from pgoapi.auth_ptc import AuthPtc
-from pgoapi.auth_google import AuthGoogle
-from pgoapi.utilities import parse_api_endpoint
-from pgoapi.exceptions import AuthException, NotLoggedInException, ServerBusyOrOfflineException, NoPlayerPositionSetException, EmptySubrequestChainException, AuthTokenExpiredException, ServerApiEndpointRedirectException, UnexpectedResponseException
-
-from . import protos
 from POGOProtos.Networking.Requests_pb2 import RequestType
+
+from . import __title__, __version__, __copyright__
+from .auth_google import AuthGoogle
+from .auth_ptc import AuthPtc
+from .exceptions import (
+    AuthException, NotLoggedInException, ServerBusyOrOfflineException,
+    NoPlayerPositionSetException, EmptySubrequestChainException,
+    AuthTokenExpiredException, ServerApiEndpointRedirectException,
+    UnexpectedResponseException
+)
+from .rpc_api import RpcApi
+from .utilities import parse_api_endpoint
 
 logger = logging.getLogger(__name__)
 
 
-class PGoApi:
-
+class PGoApi(object):
     def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None):
         self.set_logger()
         self.log.info('%s v%s - %s', __title__, __version__, __copyright__)
@@ -84,7 +82,7 @@ class PGoApi:
             raise AuthException("Invalid Credential Input - Please provide username/password or an oauth2 refresh token")
 
     def get_position(self):
-        return (self._position_lat, self._position_lng, self._position_alt)
+        return self._position_lat, self._position_lng, self._position_alt
 
     def set_position(self, lat, lng, alt):
         self.log.debug('Set Position - Lat: %s Long: %s Alt: %s', lat, lng, alt)
@@ -122,7 +120,7 @@ class PGoApi:
     def __getattr__(self, func):
         def function(**kwargs):
             request = self.create_request()
-            getattr(request, func)(_call_direct=True, **kwargs )
+            getattr(request, func)(_call_direct=True, **kwargs)
             return request.call()
 
         if func.upper() in RequestType.keys():
@@ -148,9 +146,7 @@ class PGoApi:
 
         return response
 
-    """
-    The login function is not needed anymore but still in the code for backward compatibility"
-    """
+    # The login function is not needed anymore but still in the code for backward compatibility
     def login(self, provider, username, password, lat=None, lng=None, alt=None, app_simulation=True):
 
         if lat is not None and lng is not None and alt is not None:
@@ -180,7 +176,7 @@ class PGoApi:
         return True
 
 
-class PGoApiRequest:
+class PGoApiRequest(object):
     def __init__(self, parent, position_lat, position_lng, position_alt, proxy=None):
         self.log = logging.getLogger(__name__)
 
@@ -232,7 +228,7 @@ class PGoApiRequest:
                 try:
                     self.log.info('Access Token rejected! Requesting new one...')
                     self._auth_provider.get_access_token(force_refresh=True)
-                except:
+                except Exception:
                     error = 'Request for new Access Token failed! Logged out...'
                     self.log.error(error)
                     raise NotLoggedInException(error)
@@ -267,7 +263,7 @@ class PGoApiRequest:
             print("{} ({})".format(RequestType.Name(i), i))
 
     def get_position(self):
-        return (self._position_lat, self._position_lng, self._position_alt)
+        return self._position_lat, self._position_lng, self._position_alt
 
     def set_position(self, lat, lng, alt):
         self.log.debug('Set Position - Lat: %s Long: %s Alt: %s', lat, lng, alt)

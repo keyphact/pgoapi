@@ -63,7 +63,7 @@ class PGoApi:
 
         self._session = requests.session()
         self._session.headers.update({'User-Agent': 'Niantic App'})
-        self._session.verify = False
+        self._session.verify = True
 
     def set_logger(self, logger=None):
         self.log = logger or logging.getLogger(__name__)

@@ -187,19 +187,16 @@ class RpcApi:
         if ticket:
             self.log.debug('Found Session Ticket - using this instead of oauth token')
             request.auth_ticket.expire_timestamp_ms, request.auth_ticket.start, request.auth_ticket.end = ticket
+            ticket_serialized = request.auth_ticket.SerializeToString()
 
         else:
             self.log.debug('No Session Ticket found - using OAUTH Access Token')
             request.auth_info.provider = self._auth_provider.get_name()
             request.auth_info.token.contents = self._auth_provider.get_access_token()
             request.auth_info.token.unknown2 = 59
+            ticket_serialized = request.auth_info.SerializeToString() #Sig uses this when no auth_ticket available
 
         if self._signature_gen:
-            if ticket:
-                ticket_serialized = request.auth_ticket.SerializeToString()
-            else:
-                ticket_serialized = request.auth_info.SerializeToString() #Sig uses this when no auth_ticket available
-
             sig = Signature_pb2.Signature()
 
             sig.location_hash1 = generateLocation1(ticket_serialized, request.latitude, request.longitude, request.altitude)

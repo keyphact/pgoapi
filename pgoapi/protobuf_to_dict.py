@@ -1,17 +1,13 @@
 import base64
 
 import six
-
-from google.protobuf.message import Message
 from google.protobuf.descriptor import FieldDescriptor
-
+from google.protobuf.message import Message
 
 __all__ = ["protobuf_to_dict", "TYPE_CALLABLE_MAP", "dict_to_protobuf",
            "REVERSE_TYPE_CALLABLE_MAP"]
 
-
 EXTENSION_CONTAINER = '___X'
-
 
 TYPE_CALLABLE_MAP = {
     FieldDescriptor.TYPE_DOUBLE: float,

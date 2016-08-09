@@ -24,51 +24,46 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Author: tjado <https://github.com/tejado>
 """
 
-import os
-import re
-import sys
-import json
-import time
-import struct
-import pprint
-import logging
-import requests
 import argparse
 import getpass
+import json
+import logging
+import os
+import sys
 
 # add directory of this file to PATH, so that the package will be found
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 # import Pokemon Go API lib
 from pgoapi import pgoapi
-from pgoapi import utilities as util
 
 # other stuff
 from google.protobuf.internal import encoder
 from tabulate import tabulate
-from collections import defaultdict
 
-log = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
+
 
 def encode(cellid):
     output = []
     encoder._VarintEncoder()(output.append, cellid)
     return ''.join(output)
 
+
 def init_config():
     parser = argparse.ArgumentParser()
     config_file = "config.json"
 
     # If config file exists, load variables from json
-    load   = {}
+    load = {}
     if os.path.isfile(config_file):
         with open(config_file) as data:
             load.update(json.load(data))
 
     # Read passed in Arguments
-    required = lambda x: not x in load
+    required = lambda x: x not in load
     parser.add_argument("-a", "--auth_service", help="Auth Service ('ptc' or 'google')",
-        required=required("auth_service"))
+                        required=required("auth_service"))
     parser.add_argument("-u", "--username", help="Username", required=required("username"))
     parser.add_argument("-p", "--password", help="Password")
     parser.add_argument("-d", "--debug", help="Debug Mode", action='store_true')
@@ -78,18 +73,19 @@ def init_config():
 
     # Passed in arguments shoud trump
     for key in config.__dict__:
-        if key in load and config.__dict__[key] == None:
+        if key in load and config.__dict__[key] is None:
             config.__dict__[key] = str(load[key])
 
     if config.__dict__["password"] is None:
-        log.info("Secure Password Input (if there is no password prompt, use --password <pw>):")
+        logger.info("Secure Password Input (if there is no password prompt, use --password <pw>):")
         config.__dict__["password"] = getpass.getpass()
 
     if config.auth_service not in ['ptc', 'google']:
-      log.error("Invalid Auth service specified! ('ptc' or 'google')")
-      return None
+        logger.error("Invalid Auth service specified! ('ptc' or 'google')")
+        return None
 
     return config
+
 
 def main():
     # log settings
@@ -138,9 +134,9 @@ def main():
     def format(i):
         i = i['inventory_item_data']['pokemon_data']
         i = {k: v for k, v in i.items() if k in ['nickname','move_1', 'move_2', 'pokemon_id', 'individual_defense', 'stamina', 'cp', 'individual_stamina', 'individual_attack']}
-        i['individual_defense'] =  i.get('individual_defense', 0)
-        i['individual_attack'] =  i.get('individual_attack', 0)
-        i['individual_stamina'] =  i.get('individual_stamina', 0)
+        i['individual_defense'] = i.get('individual_defense', 0)
+        i['individual_attack'] = i.get('individual_attack', 0)
+        i['individual_stamina'] = i.get('individual_stamina', 0)
         i['power_quotient'] = round(((float(i['individual_defense']) + float(i['individual_attack']) + float(i['individual_stamina'])) / 45) * 100)
         i['name'] = list(filter(lambda j: int(j['Number']) == i['pokemon_id'], pokemon))[0]['Name']
         i['move_1'] = list(filter(lambda j: j['id'] == i['move_1'], moves))[0]['name']
@@ -151,7 +147,8 @@ def main():
     all_pokemon = list(map(format, all_pokemon))
     all_pokemon.sort(key=lambda x: x['power_quotient'], reverse=True)
 
-    print(tabulate(all_pokemon, headers = "keys"))
+    print(tabulate(all_pokemon, headers="keys"))
+
 
 if __name__ == '__main__':
     main()

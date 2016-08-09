@@ -22,20 +22,16 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 Author: tjado <https://github.com/tejado>
 """
-
-from __future__ import absolute_import
-
 import six
-import logging
-
-from pgoapi.auth import Auth
-from pgoapi.exceptions import AuthException
 from gpsoauth import perform_master_login, perform_oauth
 
-class AuthGoogle(Auth):
+from .auth import Auth
+from .exceptions import AuthException
 
+
+class AuthGoogle(Auth):
     GOOGLE_LOGIN_ANDROID_ID = '9774d56d682e549c'
-    GOOGLE_LOGIN_SERVICE= 'audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com'
+    GOOGLE_LOGIN_SERVICE = 'audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com'
     GOOGLE_LOGIN_APP = 'com.nianticlabs.pokemongo'
     GOOGLE_LOGIN_CLIENT_SIG = '321187995bc7cdc2b5fc91b11a96e2baa8602c62'
 
@@ -68,7 +64,7 @@ class AuthGoogle(Auth):
         self.log.info('Google Refresh Token provided by user')
         self._refresh_token = refresh_token
 
-    def get_access_token(self, force_refresh = False):
+    def get_access_token(self, force_refresh=False):
         token_validity = self.check_access_token()
 
         if token_validity is True and force_refresh is False:

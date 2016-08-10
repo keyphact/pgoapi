@@ -25,8 +25,8 @@ Author: tjado <https://github.com/tejado>
 import six
 from gpsoauth import perform_master_login, perform_oauth
 
-from .auth import Auth
-from .exceptions import AuthException
+from pgoapi.auth import Auth
+from pgoapi.exceptions import AuthException
 
 
 class AuthGoogle(Auth):

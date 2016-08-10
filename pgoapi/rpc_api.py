@@ -38,14 +38,14 @@ from POGOProtos.Networking.Envelopes_pb2 import ResponseEnvelope
 from POGOProtos.Networking.Requests_pb2 import RequestType
 from google.protobuf import message
 
-from .exceptions import (
+from pgoapi.exceptions import (
     NotLoggedInException, ServerBusyOrOfflineException,
     ServerSideRequestThrottlingException, ServerSideAccessForbiddenException,
     UnexpectedResponseException, AuthTokenExpiredException,
     ServerApiEndpointRedirectException
 )
-from .protobuf_to_dict import protobuf_to_dict
-from .utilities import (
+from pgoapi.protobuf_to_dict import protobuf_to_dict
+from pgoapi.utilities import (
     to_camel_case, get_time, get_format_time_diff, generateLocation1,
     generateLocation2, generateRequestHash
 )

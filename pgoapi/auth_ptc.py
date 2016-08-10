@@ -29,9 +29,9 @@ import requests
 import six
 from six.moves.urllib.parse import parse_qs
 
-from .auth import Auth
-from .exceptions import AuthException
-from .utilities import get_time
+from pgoapi.auth import Auth
+from pgoapi.exceptions import AuthException
+from pgoapi.utilities import get_time
 
 
 class AuthPtc(Auth):

@@ -24,7 +24,7 @@ Author: tjado <https://github.com/tejado>
 """
 import logging
 
-from .utilities import get_time, get_format_time_diff
+from pgoapi.utilities import get_time, get_format_time_diff
 
 logger = logging.getLogger(__name__)
 

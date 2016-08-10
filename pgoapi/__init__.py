@@ -27,7 +27,7 @@ import logging
 
 import pkg_resources
 
-from .exceptions import PleaseInstallProtobufVersion3
+from pgoapi.exceptions import PleaseInstallProtobufVersion3
 
 __title__ = 'pgoapi'
 __version__ = '1.1.7'
@@ -46,9 +46,9 @@ except Exception:
 if (not protobuf_exist) or (int(protobuf_version[:1]) < 3):
     raise PleaseInstallProtobufVersion3()
 
-from .pgoapi import PGoApi
-from .rpc_api import RpcApi
-from .auth import Auth
+from pgoapi.pgoapi import PGoApi
+from pgoapi.rpc_api import RpcApi
+from pgoapi.auth import Auth
 
 logging.getLogger("pgoapi").addHandler(logging.NullHandler())
 logging.getLogger("rpc_api").addHandler(logging.NullHandler())

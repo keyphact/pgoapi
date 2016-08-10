@@ -27,17 +27,17 @@ import logging
 import requests
 from POGOProtos.Networking.Requests_pb2 import RequestType
 
-from . import __title__, __version__, __copyright__
-from .auth_google import AuthGoogle
-from .auth_ptc import AuthPtc
-from .exceptions import (
+from pgoapi import __title__, __version__, __copyright__
+from pgoapi.auth_google import AuthGoogle
+from pgoapi.auth_ptc import AuthPtc
+from pgoapi.exceptions import (
     AuthException, NotLoggedInException, ServerBusyOrOfflineException,
     NoPlayerPositionSetException, EmptySubrequestChainException,
     AuthTokenExpiredException, ServerApiEndpointRedirectException,
     UnexpectedResponseException
 )
-from .rpc_api import RpcApi
-from .utilities import parse_api_endpoint
+from pgoapi.rpc_api import RpcApi
+from pgoapi.utilities import parse_api_endpoint
 
 logger = logging.getLogger(__name__)
 

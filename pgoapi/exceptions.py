@@ -23,35 +23,46 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 Author: tjado <https://github.com/tejado>
 """
 
+
 class AuthException(Exception):
     pass
+
 
 class NotLoggedInException(Exception):
     pass
 
+
 class ServerBusyOrOfflineException(Exception):
     pass
+
 
 class PleaseInstallProtobufVersion3(Exception):
     pass
 
+
 class NoPlayerPositionSetException(Exception):
     pass
-    
+
+
 class EmptySubrequestChainException(Exception):
     pass
-    
+
+
 class ServerSideRequestThrottlingException(Exception):
     pass
+
 
 class ServerSideAccessForbiddenException(Exception):
     pass
 
+
 class UnexpectedResponseException(Exception):
     pass
 
+
 class AuthTokenExpiredException(Exception):
     pass
+
 
 class ServerApiEndpointRedirectException(Exception):
     def __init__(self):

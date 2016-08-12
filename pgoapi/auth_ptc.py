@@ -22,34 +22,28 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 Author: tjado <https://github.com/tejado>
 """
-
-from __future__ import absolute_import
-from future.standard_library import install_aliases
-install_aliases()
-
-import re
-import six
 import json
-import logging
-import requests
+import re
 
-from urllib.parse import parse_qs
+import requests
+import six
+from six.moves.urllib.parse import parse_qs
 
 from pgoapi.auth import Auth
-from pgoapi.utilities import get_time
 from pgoapi.exceptions import AuthException
+from pgoapi.utilities import get_time
+
 
 class AuthPtc(Auth):
-
     PTC_LOGIN_URL = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
     PTC_LOGIN_OAUTH = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
     PTC_LOGIN_CLIENT_SECRET = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
 
     def __init__(self):
         Auth.__init__(self)
-        
+
         self._auth_provider = 'ptc'
-        
+
         self._session = requests.session()
         self._session.verify = True
 
@@ -58,7 +52,7 @@ class AuthPtc(Auth):
 
         if not isinstance(username, six.string_types) or not isinstance(password, six.string_types):
             raise AuthException("Username/password not correctly specified")
-        
+
         head = {'User-Agent': 'niantic'}
         r = self._session.get(self.PTC_LOGIN_URL, headers=head)
 
@@ -99,7 +93,7 @@ class AuthPtc(Auth):
         self.log.info('PTC Refresh Token provided by user')
         self._refresh_token = refresh_token
 
-    def get_access_token(self, force_refresh = False):
+    def get_access_token(self, force_refresh=False):
         token_validity = self.check_access_token()
 
         if token_validity is True and force_refresh is False:
@@ -118,12 +112,12 @@ class AuthPtc(Auth):
                 'grant_type': 'refresh_token',
                 'code': self._refresh_token,
             }
-            
+
             r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1)
 
             qs = r2.content.decode('utf-8')
             token_data = parse_qs(qs)
-            
+
             access_token = token_data.get('access_token', None)
             if access_token is not None:
                 self._access_token = access_token[0]
@@ -143,6 +137,3 @@ class AuthPtc(Auth):
                 self._access_token = None
                 self._login = False
                 raise AuthException("Could not retrieve a PTC Access Token")
-
-
-        

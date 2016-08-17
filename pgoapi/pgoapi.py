@@ -199,13 +199,16 @@ class PGoApiRequest:
 
         """ Inherit necessary parameters from parent """
         self._api_endpoint = self.__parent__.get_api_endpoint()
-        self._auth_provider = self.__parent__.get_auth_provider()
 
         self._position_lat = position_lat
         self._position_lng = position_lng
         self._position_alt = position_alt
 
         self._req_method_list = []
+
+    @property
+    def _auth_provider(self):
+        return self.__parent__.get_auth_provider()
 
     def call(self):
         if not self._req_method_list:

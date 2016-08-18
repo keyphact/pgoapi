@@ -48,7 +48,7 @@ class PGoApi:
     def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None, proxy_config=None):
         self.set_logger()
         self.log.info('%s v%s - %s', __title__, __version__, __copyright__)
-
+        self._interface_bind = None
         self._auth_provider = None
         if provider is not None and ((username is not None and password is not None) or (oauth2_refresh_token is not None)):
             self.set_authentication(provider, oauth2_refresh_token, username, password, proxy_config)
@@ -110,7 +110,20 @@ class PGoApi:
     def get_api_endpoint(self):
         return self._api_endpoint
 
+
+    def set_srcinterface(self,iface):
+        self.log.info('Set interface ip: %s', iface)        
+        self._interface_bind = iface
+        
+    def get_srcinterface(self):
+        return (self._interface_bind)
+
+    def kristestfunction(self):
+        print('wtf')
+        
+
     def set_api_endpoint(self, api_url):
+        self.log.info('Set api endpoint: %s', api_url)                        
         if api_url.startswith("https"):
             self._api_endpoint = api_url
         else:
@@ -196,6 +209,8 @@ class PGoApiRequest:
         self.log = logging.getLogger(__name__)
 
         self.__parent__ = parent
+        self._srcinterface = self.__parent__.get_srcinterface()
+
 
         """ Inherit necessary parameters from parent """
         self._api_endpoint = self.__parent__.get_api_endpoint()
@@ -216,9 +231,15 @@ class PGoApiRequest:
 
         if self._auth_provider is None or not self._auth_provider.is_login():
             self.log.info('Not logged in')
+<<<<<<< HEAD
+            return NotLoggedInException()
+        request = RpcApi(self._auth_provider, self._proxy,self._srcinterface)
+        #request = RpcApi(self._auth_provider, self._proxy)
+=======
             raise NotLoggedInException()
 
         request = RpcApi(self._auth_provider)
+>>>>>>> keyphact/master
         request._session = self.__parent__._session
 
         lib_path = self.__parent__.get_signature_lib()

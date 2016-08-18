@@ -34,6 +34,7 @@ import logging
 import requests
 import subprocess
 import six
+from requests_toolbelt.adapters import source
 
 from google.protobuf import message
 
@@ -57,10 +58,23 @@ class RpcApi:
 
     RPC_ID = 0
     START_TIME = 0
+    #srcipdef=[ ('192.95.16.43', 'https://pgorelease.nianticlabs.com'), ('192.95.16.43', 'http://pgorelease.nianticlabs.com')]
 
+<<<<<<< HEAD
+    def __init__(self, auth_provider, proxy_config=None,srcipdef=None):
+=======
     def __init__(self, auth_provider):
+>>>>>>> keyphact/master
 
         self.log = logging.getLogger(__name__)
+        self.log.info('Source address passed to thread and into RPC: %s', srcipdef)
+
+        if srcipdef is not None:
+            self._session = requests.session()
+            self._session.headers.update({'User-Agent': 'Niantic App'})
+            self._session.verify = True
+            self._session.mount('http://', source.SourceAddressAdapter('167.114.147.158'))
+            self._session.mount('https://', source.SourceAddressAdapter('167.114.147.158'))        
 
         self._auth_provider = auth_provider
 

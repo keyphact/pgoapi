@@ -29,6 +29,7 @@ import struct
 import ctypes
 import xxhash
 import logging
+import pprint
 
 from json import JSONEncoder
 from binascii import unhexlify
@@ -58,15 +59,23 @@ class JSONByteEncoder(JSONEncoder):
         return o.decode('utf-8')
 
 def get_pos_by_name(location_name):
-    geolocator = GoogleV3()
-    loc = geolocator.geocode(location_name, timeout=10)
+    #geolocator = GoogleV3()
+    #loc = geolocator.geocode(location_name, timeout=10)
     if not loc:
+    #pprint.pprint(locals())
+        pprint.pprint(location_name)
+        log.info("converting to native format")
+        newfix=location_name.split(",")
+    if len(newfix)>2 or len(newfix) <2:
+        log.warn("invalid location sent in!")
+        exit()
+    
+    if not newfix[0].strip() and newfix[1].strip():
         return None
+        
+    log.info('Coordinates (lat/long/alt) for location: %s %s %s', float(newfix[0].strip()), float(newfix[1].strip()), float('0.0'))
+    return (float(newfix[0].strip()), float(newfix[1].strip()), float('0.0'))
 
-    log.info("Location for '%s' found: %s", location_name, loc.address)
-    log.info('Coordinates (lat/long/alt) for location: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
-
-    return (loc.latitude, loc.longitude, loc.altitude)
 
 EARTH_RADIUS = 6371 * 1000
 def get_cell_ids(lat, long, radius=1000):

@@ -30,6 +30,7 @@ import re
 import time
 import base64
 import random
+import pgoapi.lrand48
 import logging
 import requests
 import subprocess
@@ -57,9 +58,8 @@ class RpcApi:
 
     RPC_ID = 0
     START_TIME = 0
-
-    def __init__(self, auth_provider, device_info):
-
+    lrand48=None
+    def __init__(self, auth_provider):
         self.log = logging.getLogger(__name__)
 
         self._auth_provider = auth_provider
@@ -72,7 +72,10 @@ class RpcApi:
             RpcApi.START_TIME = get_time(ms=True)
 
         if RpcApi.RPC_ID == 0:
-            RpcApi.RPC_ID = int(random.random() * 10 ** 18)
+            RpcApi.RPC_ID = 1 #int(random.random() * 10 ** 18)
+            RpcApi.lrand48=pgoapi.lrand48.lrand48()
+            RpcApi.lrand48.seed(4)#Thats what the game does. 
+            
             self.log.debug('Generated new random RPC Request id: %s', RpcApi.RPC_ID)
 
         """ data fields for unknown6 """
@@ -89,7 +92,14 @@ class RpcApi:
 
     def get_rpc_id(self):
         RpcApi.RPC_ID += 1
+        rand=RpcApi.lrand48.next_as_32()
+        cnt= RpcApi.RPC_ID
+        
+        reqid= ((rand| ((cnt&0xFFFFFFFF)>>31))<<32)|cnt
+        
         self.log.debug("Incremented RPC Request ID: %s", RpcApi.RPC_ID)
+        self.log.debug("Sending garbled ID: %s",reqid)
+        return reqid
 
         return RpcApi.RPC_ID
 

@@ -43,7 +43,8 @@ from importlib import import_module
 
 from pgoapi.protobuf_to_dict import protobuf_to_dict
 from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException, AuthTokenExpiredException, ServerApiEndpointRedirectException
-from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand48, long_to_bytes, generate_location_hash_by_seed, generate_location_hash, generate_request_hash, f2i
+from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand48, long_to_bytes, f2i, \
+    HashGenerator
 
 from . import protos
 from POGOProtos.Networking.Envelopes.RequestEnvelope_pb2 import RequestEnvelope
@@ -67,6 +68,7 @@ class RpcApi:
         # mystical unknown6 - resolved by PokemonGoDev
         self._signal_agglom_gen = False
         self._signature_lib = None
+        self._hash_engine = None
 
         if RpcApi.START_TIME == 0:
             RpcApi.START_TIME = get_time(ms=True)
@@ -78,10 +80,11 @@ class RpcApi:
 
         self.device_info = device_info
 
-    def activate_signature(self, lib_path):
+    def activate_signature(self, signature_lib_path, hash_lib_path):
         try:
             self._signal_agglom_gen = True
-            self._signature_lib = ctypes.cdll.LoadLibrary(lib_path)
+            self._signature_lib = ctypes.cdll.LoadLibrary(signature_lib_path)
+            self._hash_engine = HashGenerator(hash_lib_path)
         except:
             raise
 
@@ -121,8 +124,7 @@ class RpcApi:
         self.log.debug('Execution of RPC')
 
         request_proto_serialized = request_proto_plain.SerializeToString()
-        print "request"
-        print binascii.hexlify(request_proto_serialized)
+        #print binascii.hexlify(request_proto_serialized)
         try:
             http_response = self._session.post(endpoint, data=request_proto_serialized, timeout=30)
         except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
@@ -209,11 +211,11 @@ class RpcApi:
         if self._signal_agglom_gen:
             sig = SignalAgglomUpdates()
 
-            sig.location_hash_by_token_seed = generate_location_hash_by_seed(ticket_serialized, request.latitude, request.longitude, request.accuracy)
-            sig.location_hash = generate_location_hash(request.latitude, request.longitude, request.accuracy)
+            sig.location_hash_by_token_seed = self._hash_engine.generate_location_hash_by_seed(ticket_serialized, request.latitude, request.longitude, request.accuracy)
+            sig.location_hash = self._hash_engine.generate_location_hash(request.latitude, request.longitude, request.accuracy)
 
             for req in request.requests:
-                hash = generate_request_hash(ticket_serialized, req.SerializeToString())
+                hash = self._hash_engine.generate_request_hash(ticket_serialized, req.SerializeToString())
                 sig.request_hashes.append(hash)
 
             sig.field22 = self.session_hash
@@ -300,17 +302,15 @@ class RpcApi:
 
         return request
 
-    def _generate_signature(self, signature_plain, iv, lib_path="encrypt.so"):
-        if self._signature_lib is None:
-            self.activate_signature(lib_path)
+    def _generate_signature(self, signature_plain, iv):
         self._signature_lib.argtypes = [ctypes.c_char_p, ctypes.c_size_t, ctypes.c_char_p, ctypes.POINTER(ctypes.POINTER(ctypes.c_ubyte))]
         self._signature_lib.restype = ctypes.c_int
         rounded_size = len(signature_plain) + (256 - (len(signature_plain) % 256));
         total_size = rounded_size + 5;
         output = ctypes.POINTER(ctypes.c_ubyte * total_size)()
-        print binascii.hexlify(signature_plain)
+        #print binascii.hexlify(signature_plain)
         output_size = self._signature_lib.encrypt(signature_plain, len(signature_plain), iv, ctypes.byref(output))
-        print binascii.hexlify(output.contents)
+        #print binascii.hexlify(output.contents)
         signature = b''.join(list(map(lambda x: six.int2byte(x), output.contents)))
         return signature
 

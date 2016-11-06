@@ -7,5 +7,10 @@ https://gist.github.com/ZeChrales/28373120d41829d8e4cd3bdc959cb275
 Thanks a lot to @Waryas
 Linux :
 	cc -fPIC -shared -o libnhash.so libnhash.c
-Windows :
-	oh plz !
+Windows using the Bash on Ubuntu on Windows feature (https://msdn.microsoft.com/en-us/commandline/wsl/install_guide):
+    32bit Python:
+        sudo apt-get install gcc-mingw-w64-i686
+    	i686-w64-mingw32-gcc -std=c99 -shared -o niantichash32.dll niantichash.c
+    64bit Python:
+        sudo apt-get install x86_64-w64-mingw32-gcc
+        x86_64-w64-mingw32-gcc -std=c99 -shared -o niantichash64.dll niantichash.c

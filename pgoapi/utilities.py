@@ -38,7 +38,7 @@ from s2sphere import LatLng, Angle, Cap, RegionCoverer, math
 
 log = logging.getLogger(__name__)
 
-HASH_SEED = 0x61247FBF  # static hash seed from app
+HASH_SEED = 0x46E945F8  # static hash seed from app
 EARTH_RADIUS = 6371000  # radius of Earth in meters
 
 def f2i(float):

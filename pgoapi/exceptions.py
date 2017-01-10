@@ -26,6 +26,14 @@ Author: tjado <https://github.com/tejado>
 class AuthException(Exception):
     pass
 
+class AuthGoogleTwoFactorRequiredException(Exception):
+    def __init__(self, redirectUrl, message):
+        self.redirectUrl = redirectUrl
+        self.message = message
+
+    def __str__(self):
+        return self.message
+
 class NotLoggedInException(Exception):
     pass
 

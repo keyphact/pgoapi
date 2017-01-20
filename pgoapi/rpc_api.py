@@ -28,29 +28,31 @@ from __future__ import absolute_import
 import os
 import re
 import time
-import base64
 import random
 import logging
 import requests
 import subprocess
 import six
 import ctypes
+import binascii
 
 from google.protobuf import message
+from protobuf_to_dict import protobuf_to_dict
 
 from importlib import import_module
 
-from pgoapi.protobuf_to_dict import protobuf_to_dict
-from pgoapi.exceptions import NotLoggedInException, ServerBusyOrOfflineException, ServerSideRequestThrottlingException, ServerSideAccessForbiddenException, UnexpectedResponseException, AuthTokenExpiredException, ServerApiEndpointRedirectException
-from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand48, long_to_bytes, f2i, \
-    HashGenerator
+from pgoapi.exceptions import AuthTokenExpiredException, BadRequestException, MalformedNianticResponseException, NianticIPBannedException, NianticOfflineException, NianticThrottlingException, NianticTimeoutException, NotLoggedInException, ServerApiEndpointRedirectException, UnexpectedResponseException
+from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand48, long_to_bytes, f2i
+from pgoapi.hash_library import HashLibrary
+from pgoapi.hash_engine import HashEngine
+from pgoapi.hash_server import HashServer
 
 from . import protos
-from POGOProtos.Networking.Envelopes.RequestEnvelope_pb2 import RequestEnvelope
-from POGOProtos.Networking.Envelopes.ResponseEnvelope_pb2 import ResponseEnvelope
-from POGOProtos.Networking.Requests.RequestType_pb2 import RequestType
-from POGOProtos.Networking.Envelopes.SignalAgglomUpdates_pb2 import SignalAgglomUpdates
-from POGOProtos.Networking.Platform.Requests.SendEncryptedSignatureRequest_pb2 import SendEncryptedSignatureRequest
+from pogoprotos.networking.envelopes.request_envelope_pb2 import RequestEnvelope
+from pogoprotos.networking.envelopes.response_envelope_pb2 import ResponseEnvelope
+from pogoprotos.networking.requests.request_type_pb2 import RequestType
+from pogoprotos.networking.envelopes.signature_pb2 import Signature
+from pogoprotos.networking.platform.requests.send_encrypted_signature_request_pb2 import SendEncryptedSignatureRequest
 
 
 class RpcApi:
@@ -65,27 +67,34 @@ class RpcApi:
         self._auth_provider = auth_provider
 
         # mystical unknown6 - resolved by PokemonGoDev
-        self._signal_agglom_gen = False
+        self._signature_gen = False
         self._signature_lib = None
         self._hash_engine = None
+        self._api_version = "0_45"
+        self.request_proto = None
 
         if RpcApi.START_TIME == 0:
             RpcApi.START_TIME = get_time(ms=True)
 
         # data fields for SignalAgglom
         self.session_hash = os.urandom(16)
-        self.token2 = random.randint(1,59)
+        self.token2 = random.randint(1, 59)
         self.course = random.uniform(0, 360)
 
         self.device_info = device_info
 
-    def activate_signature(self, signature_lib_path, hash_lib_path):
-        try:
-            self._signal_agglom_gen = True
-            self._signature_lib = ctypes.cdll.LoadLibrary(signature_lib_path)
-            self._hash_engine = HashGenerator(hash_lib_path)
-        except:
-            raise
+    def activate_signature(self, signature_lib_path):
+        self._signature_gen = True
+        self._signature_lib = ctypes.cdll.LoadLibrary(signature_lib_path)
+
+    def activate_hash_library(self, hash_lib_path):
+        self._hash_engine = HashLibrary(hash_lib_path)
+
+    def activate_hash_server(self, auth_token):
+        self._hash_engine = HashServer(auth_token)
+
+    def set_api_version(self, api_version):
+        self._api_version = api_version
 
     def get_rpc_id(self):
         if RpcApi.RPC_ID==0 :  #Startup
@@ -109,14 +118,14 @@ class RpcApi:
         try:
             process = subprocess.Popen(['protoc', '--decode_raw'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
             output, error = process.communicate(raw)
-        except:
+        except (subprocess.SubprocessError, OSError):
             output = "Couldn't find protoc in your environment OR other issue..."
 
         return output
 
     def get_class(self, cls):
         module_, class_ = cls.rsplit('.', 1)
-        class_ = getattr(import_module(module_), class_)
+        class_ = getattr(import_module(module_), to_camel_case(class_))
         return class_
 
     def _make_rpc(self, endpoint, request_proto_plain):
@@ -125,8 +134,10 @@ class RpcApi:
         request_proto_serialized = request_proto_plain.SerializeToString()
         try:
             http_response = self._session.post(endpoint, data=request_proto_serialized, timeout=30)
-        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
-            raise ServerBusyOrOfflineException(e)
+        except requests.exceptions.Timeout:
+            raise NianticTimeoutException('RPC request timed out.')
+        except requests.exceptions.ConnectionError as e:
+            raise NianticOfflineException(e)
 
         return http_response
 
@@ -135,8 +146,8 @@ class RpcApi:
         if not self._auth_provider or self._auth_provider.is_login() is False:
             raise NotLoggedInException()
 
-        request_proto = self._build_main_request(subrequests, player_position)
-        response = self._make_rpc(endpoint, request_proto)
+        self.request_proto = self.request_proto or self._build_main_request(subrequests, player_position)
+        response = self._make_rpc(endpoint, self.request_proto)
 
         response_dict = self._parse_main_response(response, subrequests)
 
@@ -144,19 +155,19 @@ class RpcApi:
 
         # some response validations
         if isinstance(response_dict, dict):
-            status_code = response_dict.get('status_code', None)
+            status_code = response_dict.get('status_code')
             if status_code == 102:
-                raise AuthTokenExpiredException()
+                raise AuthTokenExpiredException
             elif status_code == 52:
-                raise ServerSideRequestThrottlingException("Request throttled by server... slow down man")
+                raise NianticThrottlingException("Request throttled by server... slow down man")
             elif status_code == 53:
-                api_url = response_dict.get('api_url', None)
-                if api_url is not None:
+                api_url = response_dict.get('api_url')
+                if api_url:
                     exception = ServerApiEndpointRedirectException()
                     exception.set_redirected_endpoint(api_url)
                     raise exception
                 else:
-                    raise UnexpectedResponseException()
+                    raise UnexpectedResponseException
 
         return response_dict
 
@@ -169,7 +180,7 @@ class RpcApi:
 
             auth_ticket = response_dict['auth_ticket']
             self._auth_provider.set_ticket(
-                [auth_ticket['expire_timestamp_ms'], base64.standard_b64decode(auth_ticket['start']), base64.standard_b64decode(auth_ticket['end'])])
+                [auth_ticket['expire_timestamp_ms'], auth_ticket['start'], auth_ticket['end']])
 
             now_ms = get_time(ms=True)
             h, m, s = get_format_time_diff(now_ms, auth_ticket['expire_timestamp_ms'], True)
@@ -190,7 +201,7 @@ class RpcApi:
         if player_position:
             request.latitude, request.longitude, altitude = player_position
 
-        # generate sub requests before SignalAgglomUpdates generation
+        # generate sub requests before Signature generation
         request = self._build_sub_requests(request, subrequests)
 
         ticket = self._auth_provider.get_ticket()
@@ -206,45 +217,41 @@ class RpcApi:
             request.auth_info.token.unknown2 = self.token2
             ticket_serialized = request.auth_info.SerializeToString()  #Sig uses this when no auth_ticket available
 
-        if self._signal_agglom_gen:
-            sig = SignalAgglomUpdates()
+        if self._signature_gen:
+            sig = Signature()
 
-            sig.location_hash_by_token_seed = self._hash_engine.generate_location_hash_by_seed(ticket_serialized, request.latitude, request.longitude, request.accuracy)
-            sig.location_hash = self._hash_engine.generate_location_hash(request.latitude, request.longitude, request.accuracy)
+            sig.session_hash = self.session_hash
+            sig.timestamp = get_time(ms=True)
+            sig.timestamp_since_start = get_time(ms=True) - RpcApi.START_TIME
+            if sig.timestamp_since_start < 5000:
+                sig.timestamp_since_start = random.randint(5000, 8000)
 
-            for req in request.requests:
-                hash = self._hash_engine.generate_request_hash(ticket_serialized, req.SerializeToString())
-                sig.request_hashes.append(hash)
+            self._hash_engine.hash(sig.timestamp, request.latitude, request.longitude, request.accuracy, ticket_serialized, sig.session_hash, request.requests)
+            sig.location_hash1 = self._hash_engine.get_location_auth_hash()
+            sig.location_hash2 = self._hash_engine.get_location_hash()
+            for req_hash in self._hash_engine.get_request_hashes():
+                sig.request_hash.append(ctypes.c_uint64(req_hash).value)
 
-            sig.field22 = self.session_hash
-            sig.epoch_timestamp_ms = get_time(ms=True)
-            sig.timestamp_ms_since_start = get_time(ms=True) - RpcApi.START_TIME
-            if sig.timestamp_ms_since_start < 5000:
-                sig.timestamp_ms_since_start = random.randint(5000, 8000)
+            loc = sig.location_fix.add()
+            sen = sig.sensor_info.add()
 
-            loc = sig.location_updates.add()
-            sen = sig.sensor_updates.add()
+            sen.timestamp_snapshot = random.randint(sig.timestamp_since_start - 5000, sig.timestamp_since_start - 100)
+            loc.timestamp_snapshot = random.randint(sig.timestamp_since_start - 5000, sig.timestamp_since_start - 1000)
 
-            sen.timestamp = random.randint(sig.timestamp_ms_since_start - 5000, sig.timestamp_ms_since_start - 100)
-            loc.timestamp_ms = random.randint(sig.timestamp_ms_since_start - 30000, sig.timestamp_ms_since_start - 1000)
-
-            loc.name = random.choice(('network', 'network', 'network', 'network', 'fused'))
+            loc.provider = random.choice(('network', 'network', 'network', 'network', 'fused'))
             loc.latitude = request.latitude
             loc.longitude = request.longitude
 
-            if not altitude:
-                loc.altitude = random.triangular(300, 400, 350)
-            else:
-                loc.altitude = altitude
+            loc.altitude = altitude or random.triangular(300, 400, 350)
 
             if random.random() > .95:
                 # no reading for roughly 1 in 20 updates
-                loc.device_course = -1
-                loc.device_speed = -1
+                loc.course = -1
+                loc.speed = -1
             else:
                 self.course = random.triangular(0, 360, self.course)
-                loc.device_course = self.course
-                loc.device_speed = random.triangular(0.2, 4.25, 1)
+                loc.course = self.course
+                loc.speed = random.triangular(0.2, 4.25, 1)
 
             loc.provider_status = 3
             loc.location_type = 1
@@ -258,9 +265,9 @@ class RpcApi:
                     loc.vertical_accuracy = random.choice((3, 4, 6, 6, 8, 12, 24))
                 loc.horizontal_accuracy = request.accuracy
 
-            sen.acceleration_x = random.triangular(-3, 1, 0)
-            sen.acceleration_y = random.triangular(-2, 3, 0)
-            sen.acceleration_z = random.triangular(-4, 2, 0)
+            sen.linear_acceleration_x = random.triangular(-3, 1, 0)
+            sen.linear_acceleration_y = random.triangular(-2, 3, 0)
+            sen.linear_acceleration_z = random.triangular(-4, 2, 0)
             sen.magnetic_field_x = random.triangular(-50, 50, 0)
             sen.magnetic_field_y = random.triangular(-60, 50, -5)
             sen.magnetic_field_z = random.triangular(-60, 40, -30)
@@ -276,20 +283,23 @@ class RpcApi:
             sen.gravity_z = random.triangular(-1, .7, -0.8)
             sen.status = 3
 
-            sig.field25 = 16892874496697272497
+            if self._api_version == "0_45":
+                sig.unknown25 = -1553869577012279119
+            elif self._api_version == "0_51":
+                sig.unknown25 = -8832040574896607694
 
             if self.device_info:
                 for key in self.device_info:
                     setattr(sig.device_info, key, self.device_info[key])
                 if self.device_info['device_brand'] == 'Apple':
-                    sig.ios_device_info.bool5 = True
+                    sig.activity_status.stationary = True
             else:
-                sig.ios_device_info.bool5 = True
+                sig.activity_status.stationary = True
 
-            signal_agglom_proto = sig.SerializeToString()
+            signature_proto = sig.SerializeToString()
 
             sig_request = SendEncryptedSignatureRequest()
-            sig_request.encrypted_signature = self._generate_signature(signal_agglom_proto, sig.timestamp_ms_since_start)
+            sig_request.encrypted_signature = self._generate_signature(signature_proto, sig.timestamp_since_start)
             plat = request.platform_requests.add()
             plat.type = 6
             plat.request_message = sig_request.SerializeToString()
@@ -300,13 +310,13 @@ class RpcApi:
 
         return request
 
-    def _generate_signature(self, signature_plain, iv):
+    def _generate_signature(self, signature_plain, timestamp):
         self._signature_lib.argtypes = [ctypes.c_char_p, ctypes.c_size_t, ctypes.c_char_p, ctypes.POINTER(ctypes.POINTER(ctypes.c_ubyte))]
         self._signature_lib.restype = ctypes.c_int
-        rounded_size = len(signature_plain) + (256 - (len(signature_plain) % 256));
-        total_size = rounded_size + 5;
+        rounded_size = len(signature_plain) + (256 - (len(signature_plain) % 256))
+        total_size = rounded_size + 5
         output = ctypes.POINTER(ctypes.c_ubyte * total_size)()
-        output_size = self._signature_lib.encrypt(signature_plain, len(signature_plain), iv, ctypes.byref(output))
+        output_size = self._signature_lib.encrypt(signature_plain, len(signature_plain), timestamp, ctypes.byref(output))
         signature = b''.join(list(map(lambda x: six.int2byte(x), output.contents)))
         return signature
 
@@ -321,13 +331,13 @@ class RpcApi:
 
                 entry_name = RequestType.Name(entry_id)
 
-                proto_name = to_camel_case(entry_name.lower()) + 'Message'
-                proto_classname = 'POGOProtos.Networking.Requests.Messages.' + proto_name + '_pb2.' + proto_name
+                proto_name = entry_name.lower() + '_message'
+                proto_classname = 'pogoprotos.networking.requests.messages.' + proto_name + '_pb2.' + proto_name
                 subrequest_extension = self.get_class(proto_classname)()
 
                 self.log.debug("Subrequest class: %s", proto_classname)
 
-                for (key, value) in entry_content.items():
+                for key, value in entry_content.items():
                     if isinstance(value, list):
                         self.log.debug("Found list: %s - trying as repeated", key)
                         for i in value:
@@ -370,35 +380,40 @@ class RpcApi:
     def _parse_main_response(self, response_raw, subrequests):
         self.log.debug('Parsing main RPC response...')
 
+        if response_raw.status_code == 400:
+            raise BadRequestException("400: Bad Request")
         if response_raw.status_code == 403:
-            raise ServerSideAccessForbiddenException("Seems your IP Address is banned or something else went badly wrong...")
-        elif response_raw.status_code == 502:
-            raise ServerBusyOrOfflineException("502: Bad Gateway")
+            raise NianticIPBannedException("Seems your IP Address is banned or something else went badly wrong...")
+        elif response_raw.status_code in (502, 503, 504):
+            raise NianticOfflineException('{} Server Error'.format(response_raw.status_code))
         elif response_raw.status_code != 200:
             error = 'Unexpected HTTP server response - needs 200 got {}'.format(response_raw.status_code)
             self.log.warning(error)
             self.log.debug('HTTP output: \n%s', response_raw.content.decode('utf-8'))
             raise UnexpectedResponseException(error)
 
-        if response_raw.content is None:
+        if not response_raw.content:
             self.log.warning('Empty server response!')
-            return False
+            raise MalformedNianticResponseException('Empty server response!')
 
         response_proto = ResponseEnvelope()
         try:
             response_proto.ParseFromString(response_raw.content)
         except message.DecodeError as e:
-            self.log.warning('Could not parse response: %s', e)
-            return False
+            self.log.error('Could not parse response: %s', e)
+            raise MalformedNianticResponseException('Could not decode response.')
 
         self.log.debug('Protobuf structure of rpc response:\n\r%s', response_proto)
         try:
             self.log.debug('Decode raw over protoc (protoc has to be in your PATH):\n\r%s', self.decode_raw(response_raw.content).decode('utf-8'))
-        except:
+        except Exception:
             self.log.debug('Error during protoc parsing - ignored.')
 
         response_proto_dict = protobuf_to_dict(response_proto)
         response_proto_dict = self._parse_sub_responses(response_proto, subrequests, response_proto_dict)
+
+        if not response_proto_dict:
+            raise MalformedNianticResponseException('Could not convert protobuf to dict.')
 
         return response_proto_dict
 
@@ -414,12 +429,9 @@ class RpcApi:
         if 'returns' in response_proto_dict:
             del response_proto_dict['returns']
 
-        list_len = len(subrequests_list)-1
+        list_len = len(subrequests_list) - 1
         i = 0
         for subresponse in response_proto.returns:
-            if i > list_len:
-                self.log.info("Error - something strange happend...")
-
             request_entry = subrequests_list[i]
             if isinstance(request_entry, int):
                 entry_id = request_entry
@@ -427,8 +439,8 @@ class RpcApi:
                 entry_id = list(request_entry.items())[0][0]
 
             entry_name = RequestType.Name(entry_id)
-            proto_name = to_camel_case(entry_name.lower()) + 'Response'
-            proto_classname = 'POGOProtos.Networking.Responses.' + proto_name + '_pb2.' + proto_name
+            proto_name = entry_name.lower() + '_response'
+            proto_classname = 'pogoprotos.networking.responses.' + proto_name + '_pb2.' + proto_name
 
             self.log.debug("Parsing class: %s", proto_classname)
 
@@ -439,16 +451,16 @@ class RpcApi:
                 subresponse_extension = None
                 error = 'Protobuf definition for {} not found'.format(proto_classname)
                 subresponse_return = error
-                self.log.debug(error)
+                self.log.warning(error)
 
             if subresponse_extension:
                 try:
                     subresponse_extension.ParseFromString(subresponse)
                     subresponse_return = protobuf_to_dict(subresponse_extension)
-                except:
+                except Exception:
                     error = "Protobuf definition for {} seems not to match".format(proto_classname)
                     subresponse_return = error
-                    self.log.debug(error)
+                    self.log.warning(error)
 
             response_proto_dict['responses'][entry_name] = subresponse_return
             i += 1

@@ -45,7 +45,7 @@ logger = logging.getLogger(__name__)
 
 class PGoApi:
 
-    def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None, proxy_config=None, device_info=None):
+    def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None, proxy_config=None, device_info=None, api_endpoint="pgorelease.nianticlabs.com/plfe"):
         self.set_logger()
         self.log.info('%s v%s - %s', __title__, __version__, __copyright__)
 
@@ -53,7 +53,7 @@ class PGoApi:
         if provider is not None and ((username is not None and password is not None) or (oauth2_refresh_token is not None)):
             self.set_authentication(provider, oauth2_refresh_token, username, password, proxy_config)
 
-        self.set_api_endpoint("pgorelease.nianticlabs.com/plfe")
+        self.set_api_endpoint(api_endpoint)
 
         self._position_lat = position_lat
         self._position_lng = position_lng

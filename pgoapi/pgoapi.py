@@ -166,7 +166,7 @@ class PGoApi:
         time.sleep(1.5)
 
         request = self.create_request()
-        request.download_remote_config_version(platform = 1, app_version = VersionInformation.POGOAPI_VERSION_LATEST)
+        request.download_remote_config_version(platform = 1, app_version = VersionInformation.POGOAPI_VERSION)
         request.check_challenge()
         request.get_hatched_eggs()
         request.get_inventory()
@@ -226,9 +226,6 @@ class PGoApiRequest:
         self._position_lat = position_lat
         self._position_lng = position_lng
         self._position_alt = position_alt
-
-        self._default_pgoapi_ver = VersionInformation.POGOAPI_VERSION_DEFAULT
-        self._latest_pgoapi_ver = VersionInformation.POGOAPI_VERSION_LATEST
         
         self._req_method_list = []
         self.device_info = device_info
@@ -246,11 +243,11 @@ class PGoApiRequest:
 
         hash_server_token = self.__parent__.get_hash_server_token()
         if hash_server_token:
-            version = VersionInformation.get_str_version(self._default_pgoapi_ver)
+            version = VersionInformation.POGOAPI_VERSION_LATEST
             request.set_api_version(version)
             request.activate_hash_server(hash_server_token)
         else:
-            version = VersionInformation.get_str_version(self._latest_pgoapi_ver)
+            version = VersionInformation.POGOAPI_VERSION_DEFAULT
 
         default_libraries = get_lib_paths(version)
         signature_lib_path, hash_lib_path = default_libraries

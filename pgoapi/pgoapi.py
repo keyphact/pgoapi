@@ -132,6 +132,9 @@ class PGoApi:
     def activate_hash_server(self, hash_server_token):
         self._hash_server_token = hash_server_token
 
+    def get_api_version(self):
+        return VersionInformation.POGOAPI_VERSION_LATEST
+        
     def get_hash_server_token(self):
         return self._hash_server_token
 

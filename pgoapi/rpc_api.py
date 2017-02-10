@@ -46,8 +46,8 @@ from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand
 from pgoapi.hash_library import HashLibrary
 from pgoapi.hash_engine import HashEngine
 from pgoapi.hash_server import HashServer
-from pgoapi.ver_infromation import VersionInformation
-from pgoapi.ver_infromation import Version
+from pgoapi.ver_information import VersionInformation
+from pgoapi.ver_information import Version
 
 from . import protos
 from pogoprotos.networking.envelopes.request_envelope_pb2 import RequestEnvelope

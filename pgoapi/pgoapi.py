@@ -37,6 +37,8 @@ from pgoapi.auth_ptc import AuthPtc
 from pgoapi.auth_google import AuthGoogle
 from pgoapi.utilities import parse_api_endpoint, get_lib_paths
 from pgoapi.exceptions import AuthException, AuthTokenExpiredException, BadRequestException, BannedAccountException, InvalidCredentialsException, NoPlayerPositionSetException, NotLoggedInException, ServerApiEndpointRedirectException, ServerBusyOrOfflineException, UnexpectedResponseException
+from pgoapi.ver_information import VersionInformation
+from pgoapi.ver_information import Version
 
 from . import protos
 from pogoprotos.networking.requests.request_type_pb2 import RequestType
@@ -241,11 +243,11 @@ class PGoApiRequest:
 
         hash_server_token = self.__parent__.get_hash_server_token()
         if hash_server_token:
-            version = "0_55"
+            version = Version.version(VersionInformation.POGOAPI_VERSION_DEFAULT)
             request.set_api_version(version)
             request.activate_hash_server(hash_server_token)
         else:
-            version = "0_45"
+            version = Version.version(VersionInformation.POGOAPI_VERSION_LATEST)
 
         default_libraries = get_lib_paths(version)
         signature_lib_path, hash_lib_path = default_libraries

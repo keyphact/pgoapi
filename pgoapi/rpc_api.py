@@ -46,6 +46,8 @@ from pgoapi.utilities import to_camel_case, get_time, get_format_time_diff, Rand
 from pgoapi.hash_library import HashLibrary
 from pgoapi.hash_engine import HashEngine
 from pgoapi.hash_server import HashServer
+from pgoapi.ver_infromation import VersionInformation
+from pgoapi.ver_infromation import Version
 
 from . import protos
 from pogoprotos.networking.envelopes.request_envelope_pb2 import RequestEnvelope
@@ -71,7 +73,7 @@ class RpcApi:
         self._signature_gen = False
         self._signature_lib = None
         self._hash_engine = None
-        self._api_version = "0_45"
+        self._api_version = Version.version(VersionInformation.POGOAPI_VERSION_DEFAULT)
         self._encrypt_version = 2
         self.request_proto = None
 
@@ -97,8 +99,11 @@ class RpcApi:
 
     def set_api_version(self, api_version):
         self._api_version = api_version
-        if api_version != '0_45':
+        if api_version != Version.version(VersionInformation.POGOAPI_VERSION_DEFAULT):
             self._encrypt_version = 3
+            
+    def get_api_version(self):
+        return self._api_version
 
     def get_rpc_id(self):
         if RpcApi.RPC_ID==0 :  #Startup
@@ -287,7 +292,7 @@ class RpcApi:
             sen.gravity_z = random.triangular(-1, .7, -0.8)
             sen.status = 3
 
-            if self._api_version == "0_45":
+            if self._api_version == Version.version(VersionInformation.POGOAPI_VERSION_DEFAULT):
                 sig.unknown25 = -1553869577012279119
             else:
                 sig.unknown25 = -9156899491064153954

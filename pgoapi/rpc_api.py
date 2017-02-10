@@ -76,7 +76,7 @@ class RpcApi:
         self._default_pgoapi_ver = VersionInformation.POGOAPI_VERSION_DEFAULT
         self._latest_pgoapi_ver = VersionInformation.POGOAPI_VERSION_LATEST
         
-        self._api_version = VersionInformation.version(self._default_pgoapi_ver)
+        self._api_version = VersionInformation.get_str_version(self._default_pgoapi_ver)
         self._encrypt_version = 2
         self.request_proto = None
 
@@ -102,7 +102,7 @@ class RpcApi:
 
     def set_api_version(self, api_version):
         self._api_version = api_version
-        if api_version !=  VersionInformation.version(self._default_pgoapi_ver):
+        if api_version !=  VersionInformation.get_str_version(self._default_pgoapi_ver):
             self._encrypt_version = 3
             
     def get_api_version(self):
@@ -295,7 +295,7 @@ class RpcApi:
             sen.gravity_z = random.triangular(-1, .7, -0.8)
             sen.status = 3
 
-            if self._api_version == Version.version(self, VersionInformation.POGOAPI_VERSION_DEFAULT):
+            if self._api_version == VersionInformation.get_str_version(self._default_pgoapi_ver):
                 sig.unknown25 = -1553869577012279119
             else:
                 sig.unknown25 = -9156899491064153954

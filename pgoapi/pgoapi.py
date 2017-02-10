@@ -133,7 +133,7 @@ class PGoApi:
         self._hash_server_token = hash_server_token
 
     def get_api_version(self):
-        return VersionInformation.POGOAPI_VERSION_LATEST
+        return VersionInformation.POGOAPI_HASH_VERSION
         
     def get_hash_server_token(self):
         return self._hash_server_token

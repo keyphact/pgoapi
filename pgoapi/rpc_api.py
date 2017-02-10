@@ -47,7 +47,6 @@ from pgoapi.hash_library import HashLibrary
 from pgoapi.hash_engine import HashEngine
 from pgoapi.hash_server import HashServer
 from pgoapi.ver_information import VersionInformation
-from pgoapi.ver_information import Version
 
 from . import protos
 from pogoprotos.networking.envelopes.request_envelope_pb2 import RequestEnvelope
@@ -73,7 +72,11 @@ class RpcApi:
         self._signature_gen = False
         self._signature_lib = None
         self._hash_engine = None
-        self._api_version = Version.version(self, VersionInformation.POGOAPI_VERSION_DEFAULT)
+        
+        self._default_pgoapi_ver = VersionInformation.POGOAPI_VERSION_DEFAULT
+        self._latest_pgoapi_ver = VersionInformation.POGOAPI_VERSION_LATEST
+        
+        self._api_version = VersionInformation.version(self._default_pgoapi_ver)
         self._encrypt_version = 2
         self.request_proto = None
 
@@ -99,7 +102,7 @@ class RpcApi:
 
     def set_api_version(self, api_version):
         self._api_version = api_version
-        if api_version != Version.version(self, VersionInformation.POGOAPI_VERSION_DEFAULT):
+        if api_version !=  VersionInformation.version(self._default_pgoapi_ver):
             self._encrypt_version = 3
             
     def get_api_version(self):

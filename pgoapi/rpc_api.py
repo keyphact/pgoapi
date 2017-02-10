@@ -101,9 +101,7 @@ class RpcApi:
         self._api_version = api_version
         if api_version !=  VersionInformation.POGOAPI_VERSION_DEFAULT:
             self._encrypt_version = 3
-            
-    def get_api_version(self):
-        return self._api_version
+            VersionInformation.POGOAPI_HASH_VERSION = api_version
 
     def get_rpc_id(self):
         if RpcApi.RPC_ID==0 :  #Startup

@@ -243,11 +243,11 @@ class PGoApiRequest:
 
         hash_server_token = self.__parent__.get_hash_server_token()
         if hash_server_token:
-            version = Version.version(VersionInformation.POGOAPI_VERSION_DEFAULT)
+            version = Version.version(self, VersionInformation.POGOAPI_VERSION_DEFAULT)
             request.set_api_version(version)
             request.activate_hash_server(hash_server_token)
         else:
-            version = Version.version(VersionInformation.POGOAPI_VERSION_LATEST)
+            version = Version.version(self, VersionInformation.POGOAPI_VERSION_LATEST)
 
         default_libraries = get_lib_paths(version)
         signature_lib_path, hash_lib_path = default_libraries

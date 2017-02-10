@@ -6,6 +6,7 @@ import requests
 
 from pgoapi.hash_engine import HashEngine
 from pgoapi.exceptions import BadHashRequestException, HashingOfflineException, HashingQuotaExceededException, HashingTimeoutException, MalformedHashResponseException, TempHashingBanException, UnexpectedHashResponseException
+from pgoapi.ver_information import VersionInformation
 
 class HashServer(HashEngine):
     _session = requests.session()
@@ -13,7 +14,7 @@ class HashServer(HashEngine):
     _session.mount('https://', _adapter)
     _session.verify = True
     _session.headers.update({'User-Agent': 'Python pgoapi @pogodev'})
-    endpoint = "https://pokehash.buddyauth.com/api/v125/hash"
+    endpoint = VersionInformation.ENDPOINT
     status = {}
 
     def __init__(self, auth_token):

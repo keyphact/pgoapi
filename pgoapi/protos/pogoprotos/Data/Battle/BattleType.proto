@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Data.Battle;
+
+enum BattleType {
+	BATTLE_TYPE_UNSET = 0;
+	BATTLE_TYPE_NORMAL = 1;
+	BATTLE_TYPE_TRAINING = 2;
+}

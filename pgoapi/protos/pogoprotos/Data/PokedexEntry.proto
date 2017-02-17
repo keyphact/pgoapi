@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+import "POGOProtos/Enums/Costume.proto";
+import "POGOProtos/Enums/Form.proto";
+import "POGOProtos/Enums/Gender.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message PokedexEntry {
+	.POGOProtos.Enums.PokemonId pokemon_id = 1;
+	int32 times_encountered = 2;
+	int32 times_captured = 3;
+	int32 evolution_stone_pieces = 4;
+	int32 evolution_stones = 5;
+	repeated .POGOProtos.Enums.Costume captured_costumes = 6;
+	repeated .POGOProtos.Enums.Form captured_forms = 7;
+	repeated .POGOProtos.Enums.Gender captured_genders = 8;
+	bool captured_shiny = 9;
+	repeated .POGOProtos.Enums.Costume encountered_costumes = 10;
+	repeated .POGOProtos.Enums.Form encountered_forms = 11;
+	repeated .POGOProtos.Enums.Gender encountered_genders = 12;
+	bool encountered_shiny = 13;
+}

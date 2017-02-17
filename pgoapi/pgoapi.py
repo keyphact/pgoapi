@@ -37,6 +37,7 @@ from pgoapi.auth_ptc import AuthPtc
 from pgoapi.auth_google import AuthGoogle
 from pgoapi.utilities import parse_api_endpoint, get_lib_paths
 from pgoapi.exceptions import AuthException, AuthTokenExpiredException, BadRequestException, BannedAccountException, InvalidCredentialsException, NoPlayerPositionSetException, NotLoggedInException, ServerApiEndpointRedirectException, ServerBusyOrOfflineException, UnexpectedResponseException
+from pgoapi.ver_information import VersionInformation
 
 from . import protos
 from pogoprotos.networking.requests.request_type_pb2 import RequestType
@@ -65,6 +66,7 @@ class PGoApi:
         self._session = requests.session()
         self._session.headers.update({'User-Agent': 'Niantic App'})
         self._session.verify = True
+       
 
         if proxy_config is not None:
             self._session.proxies = proxy_config
@@ -130,6 +132,9 @@ class PGoApi:
     def activate_hash_server(self, hash_server_token):
         self._hash_server_token = hash_server_token
 
+    def get_api_version(self):
+        return VersionInformation.POGOAPI_HASH_VERSION
+        
     def get_hash_server_token(self):
         return self._hash_server_token
 
@@ -164,7 +169,7 @@ class PGoApi:
         time.sleep(1.5)
 
         request = self.create_request()
-        request.download_remote_config_version(platform = 1, app_version = 5500)
+        request.download_remote_config_version(platform = 1, app_version = VersionInformation.POGOAPI_VERSION)
         request.check_challenge()
         request.get_hatched_eggs()
         request.get_inventory()
@@ -224,7 +229,7 @@ class PGoApiRequest:
         self._position_lat = position_lat
         self._position_lng = position_lng
         self._position_alt = position_alt
-
+        
         self._req_method_list = []
         self.device_info = device_info
 
@@ -241,11 +246,11 @@ class PGoApiRequest:
 
         hash_server_token = self.__parent__.get_hash_server_token()
         if hash_server_token:
-            version = "0_55"
+            version = VersionInformation.POGOAPI_VERSION_LATEST
             request.set_api_version(version)
             request.activate_hash_server(hash_server_token)
         else:
-            version = "0_45"
+            version = VersionInformation.POGOAPI_VERSION_DEFAULT
 
         default_libraries = get_lib_paths(version)
         signature_lib_path, hash_lib_path = default_libraries

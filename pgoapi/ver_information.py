@@ -1,6 +1,8 @@
 class VersionInformation(object):
-    ENDPOINT = 'https://pokehash.buddyauth.com/api/v125/hash'
+    ENDPOINT = 'https://pokehash.buddyauth.com/api/v127_2/hash'
     POGOAPI_VERSION_DEFAULT = '0_45'
-    POGOAPI_VERSION_LATEST = '0_55'
+    POGOAPI_VERSION_LATEST = '0_57'
     POGOAPI_HASH_VERSION = '0_45'
-    POGOAPI_VERSION = 5500
+    POGOAPI_VERSION = 5700
+    HASH_SIGNATURE_DEFAULT = -816976800928766045
+    HASH_SIGNATURE_LATEST = -816976800928766045

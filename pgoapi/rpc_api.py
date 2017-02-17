@@ -291,9 +291,9 @@ class RpcApi:
             sen.status = 3
 
             if self._api_version == VersionInformation.POGOAPI_VERSION_DEFAULT:
-                sig.unknown25 = -1553869577012279119
+                sig.unknown25 = VersionInformation.UNKNOWN25_DEFAULT
             else:
-                sig.unknown25 = -9156899491064153954
+                sig.unknown25 = VersionInformation.UNKNOWN25_LATEST
 
             if self.device_info:
                 for key in self.device_info:

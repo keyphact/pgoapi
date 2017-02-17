@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum Filter {
+	UNSET_FILTER = 0;
+	ALL = 1;
+	DEFAULT = 2;
+	OWNED = 3;
+	FEATURED = 4;
+	PURCHASABLE = 5;
+	UNLOCKABLE = 6;
+}

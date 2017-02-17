@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message GpsSettings {
+	float driving_warning_speed_meters_per_second = 1;
+	float driving_warning_cooldown_minutes = 2;
+	float driving_speed_sample_interval_seconds = 3;
+	int32 driving_speed_sample_count = 4;
+}

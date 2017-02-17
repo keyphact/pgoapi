@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Pokemon;
+
+message PokemonGenderSettings {
+	float male_percent = 1;
+	float female_percent = 2;
+	float genderless_percent = 3;
+}

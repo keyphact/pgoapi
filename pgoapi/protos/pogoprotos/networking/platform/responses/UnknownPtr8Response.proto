@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+message UnknownPtr8Response {
+	string message = 2;
+}

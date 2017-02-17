@@ -1,0 +1,34 @@
+syntax = "proto3";
+package POGOProtos.Networking.Envelopes;
+
+import "POGOProtos/Networking/Envelopes/AuthTicket.proto";
+import "POGOProtos/Networking/Platform/PlatformRequestType.proto";
+
+message ResponseEnvelope {
+	StatusCode status_code = 1;
+	uint64 request_id = 2;
+	string api_url = 3;
+
+	repeated PlatformResponse platform_returns = 6;
+	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 7;
+
+	repeated bytes returns = 100;
+	string error = 101;
+
+	message PlatformResponse {
+		.POGOProtos.Networking.Platform.PlatformRequestType type = 1;
+		bytes response = 2;
+	}
+
+	enum StatusCode {
+		UNKNOWN = 0;
+		OK = 1;                         // valid response with no api url
+		OK_RPC_URL_IN_RESPONSE = 2;     // the response envelope has api_url set and this response is valid
+		BAD_REQUEST = 3;                // bad request
+		INVALID_REQUEST = 51;           // using unimplemented request or corrupt request
+		INVALID_PLATFORM_REQUEST = 52;  // invalid platform request or corrupt platform request
+		REDIRECT = 53;                  // a new rpc endpoint is available and you should redirect to there
+		SESSION_INVALIDATED = 100;      // occurs when you send blank authinfo, or sending nonsense timings (ie LocationFix.timestampSnapshot == Signature.timestampSinceStart)
+		INVALID_AUTH_TOKEN = 102;       // occurs when the login token is invalid
+	}
+}

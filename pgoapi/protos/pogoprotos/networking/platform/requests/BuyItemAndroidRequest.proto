@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+message BuyItemAndroidRequest {
+	string buy_item_intent = 1;  // see https://developer.android.com/google/play/billing/billing_reference.html table 4
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "POGOProtos/Enums/QuestType.proto";
+import "POGOProtos/Enums/PokemonFamilyId.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+// Usage unknown.
+// - Maybe used in envelope (?)
+message InventoryKey {
+	fixed64 pokemon_id = 1;
+	.POGOProtos.Inventory.Item.ItemId item = 2;
+	int32 pokedex_entry_id = 3;
+	bool player_stats = 4;
+	bool player_currency = 5;
+	bool player_camera = 6;
+	bool inventory_upgrades = 7;
+	bool applied_items = 8;
+	bool egg_incubators = 9;
+	.POGOProtos.Enums.PokemonFamilyId pokemon_family_id = 10;
+	.POGOProtos.Enums.QuestType quest_type = 11;
+	string avatar_template_id = 12;
+}

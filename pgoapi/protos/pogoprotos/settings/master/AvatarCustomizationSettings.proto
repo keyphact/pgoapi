@@ -1,0 +1,37 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Data/Player/PlayerAvatarType.proto";
+import "POGOProtos/Enums/BadgeType.proto";
+import "POGOProtos/Enums/Slot.proto";
+
+message AvatarCustomizationSettings {
+	bool enabled = 1;
+	.POGOProtos.Data.Player.PlayerAvatarType avatar_type = 2;
+	repeated .POGOProtos.Enums.Slot slot = 3;
+	string bundle_name = 4;
+	string asset_name = 5;
+	string group_name = 6;
+	int32 sort_order = 7;
+	AvatarCustomizationUnlockType unlock_type = 8;
+	repeated AvatarCustomizationPromoType promo_type = 9;
+	.POGOProtos.Enums.BadgeType unlock_badge_type = 10;
+	string iap_sku = 11;
+	int32 unlock_badge_level = 12;
+	string icon_name = 13;
+	int32 unlock_player_level = 14;
+
+	enum AvatarCustomizationPromoType {
+		UNSET_PROMO_TYPE = 0;
+		SALE = 1;
+		FEATURED = 2;
+	}
+
+	enum AvatarCustomizationUnlockType {
+		UNSET_UNLOCK_TYPE = 0;
+		DEFAULT = 1;
+		MEDAL_REWARD = 2;
+		IAP_CLOTHING = 3;
+		LEVEL_REWARD = 4;
+	}
+}

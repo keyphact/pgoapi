@@ -1,0 +1,32 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/TeamColor.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Map/Fort/FortType.proto";
+import "POGOProtos/Map/Fort/FortSponsor.proto";
+import "POGOProtos/Map/Fort/FortRenderingType.proto";
+import "POGOProtos/Map/Fort/FortLureInfo.proto";
+
+message FortData {
+	string id = 1;
+	int64 last_modified_timestamp_ms = 2;
+	double latitude = 3;
+	double longitude = 4;
+	.POGOProtos.Enums.TeamColor owned_by_team = 5;     // (Gym only) Team that owns the gym.
+	.POGOProtos.Enums.PokemonId guard_pokemon_id = 6;  // (Gym only) Highest CP Pokemon ID at the gym.
+	int32 guard_pokemon_cp = 7;                        // (Gym only) Highest CP Pokemon at the gym.
+	bool enabled = 8;
+	.POGOProtos.Map.Fort.FortType type = 9;
+	int64 gym_points = 10;                                                 // (Gym only) Prestigate / experience of the gym.
+	bool is_in_battle = 11;                                                // (Gym only) Whether someone is battling at the gym currently.
+	repeated .POGOProtos.Inventory.Item.ItemId active_fort_modifier = 12;  // (Pokestop only)
+	.POGOProtos.Map.Fort.FortLureInfo lure_info = 13;                      // (Pokestop only)
+	int64 cooldown_complete_timestamp_ms = 14;                             // (Pokestop only) Timestamp when the pokestop can be activated again to get items / xp.
+	.POGOProtos.Map.Fort.FortSponsor sponsor = 15;
+	.POGOProtos.Map.Fort.FortRenderingType rendering_type = 16;
+	int64 deploy_lockout_end_ms = 17;
+	.POGOProtos.Data.PokemonDisplay guard_pokemon_display = 18;
+}

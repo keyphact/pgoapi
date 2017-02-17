@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Avatar/AvatarCustomization.proto";
+
+message ListAvatarCustomizationsResponse {
+	Result result = 1;
+	.POGOProtos.Data.Avatar.AvatarCustomization avatar_customizations = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+}

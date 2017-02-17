@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message FestivalSettings {
+	FestivalType festival_type = 1;
+	string key = 2;
+	string vector = 3;
+
+	enum FestivalType {
+		NONE = 0;
+		HALLOWEEN = 1;
+		HOLIDAY = 2;
+	}
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Capture/CaptureProbability.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message UseItemEncounterResponse {
+	Status status = 1;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 2;
+	.POGOProtos.Inventory.Item.ItemId active_item = 3;
+
+	enum Status {
+		SUCCESS = 0;
+		ALREADY_COMPLETED = 1;
+		ACTIVE_ITEM_EXISTS = 2;
+		NO_ITEM_IN_INVENTORY = 3;
+		INVALID_ITEM_CATEGORY = 4;
+	}
+}

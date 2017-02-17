@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum QuestType {
+	QUEST_UNKNOWN_TYPE = 0;
+	QUEST_FIRST_CATCH_OF_THE_DAY = 1;
+	QUEST_FIRST_POKESTOP_OF_THE_DAY = 2;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Pokemon;
+
+import "POGOProtos/Enums/PokemonMovementType.proto";
+
+message EncounterAttributes {
+	float base_capture_rate = 1;
+	float base_flee_rate = 2;
+	float collision_radius_m = 3;
+	float collision_height_m = 4;
+	float collision_head_radius_m = 5;
+	.POGOProtos.Enums.PokemonMovementType movement_type = 6;
+	float movement_timer_s = 7;
+	float jump_time_s = 8;
+	float attack_timer_s = 9;
+	int32 bonus_candy_capture_reward = 10;
+	int32 bonus_stardust_capture_reward = 11;
+	float attack_probability = 12;
+	float dodge_probability = 13;
+	float dodge_duration_s = 14;
+	float dodge_distance = 15;
+	float camera_distance = 16;
+	float min_pokemon_action_frequency_s = 17;
+	float max_pokemon_action_frequency_s = 18;
+}

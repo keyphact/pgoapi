@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message GetPlayerMessage {
+	.POGOProtos.Networking.Requests.Messages.GetPlayerMessage.PlayerLocale player_locale = 1;
+
+	message PlayerLocale {
+		string country = 1;
+		string language = 2;
+		string timezone = 3;
+	}
+}

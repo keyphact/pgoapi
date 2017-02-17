@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message NewsSettings {
+	repeated News news = 1;
+
+	message News {
+		string news_bundle_id = 1;
+		repeated string exclusive_countries = 2;
+	}
+}

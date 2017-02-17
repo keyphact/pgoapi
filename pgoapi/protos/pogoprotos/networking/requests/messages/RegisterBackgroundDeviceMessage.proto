@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message RegisterBackgroundDeviceMessage {
+	string device_type = 1;
+	string device_id = 2;
+}

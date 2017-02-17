@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+message BuyItemAndroidResponse {
+	Status result = 1;  // result
+	string purchase_token = 2;
+
+	// THESE ARE SOMEWHAT SPECULATED, failed may be 2
+	enum Status {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+	}
+}

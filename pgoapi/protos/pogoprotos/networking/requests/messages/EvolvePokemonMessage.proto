@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message EvolvePokemonMessage {
+	fixed64 pokemon_id = 1;
+	.POGOProtos.Inventory.Item.ItemId evolution_item_requirement = 2;
+}

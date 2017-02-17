@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message SfidaSettings {
+	float low_battery_threshold = 1;
+}

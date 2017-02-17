@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Settings/Master/Pokemon/PokemonGenderSettings.proto";
+
+message GenderSettings {
+	.POGOProtos.Enums.PokemonId pokemon = 1;
+	.POGOProtos.Settings.Master.Pokemon.PokemonGenderSettings gender = 2;
+}

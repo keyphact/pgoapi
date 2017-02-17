@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message UseItemEncounterMessage {
+	.POGOProtos.Inventory.Item.ItemId item = 1;
+	fixed64 encounter_id = 2;
+	string spawn_point_guid = 3;
+}

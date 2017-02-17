@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/Form.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message FormSettings {
+	.POGOProtos.Enums.PokemonId pokemon = 1;
+	repeated Form forms = 2;
+
+	message Form {
+		.POGOProtos.Enums.Form form = 1;
+		int32 asset_bundle_value = 2;
+	}
+}

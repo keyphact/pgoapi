@@ -1,7 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Requests.Messages;
-
-message IncenseEncounterMessage {
-	uint64 encounter_id = 1;
-	string encounter_location = 2;
-}

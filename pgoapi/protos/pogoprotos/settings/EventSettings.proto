@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Settings;
-
-message EventSettings {
-	repeated string condolence_ribbon_country = 1;
-}

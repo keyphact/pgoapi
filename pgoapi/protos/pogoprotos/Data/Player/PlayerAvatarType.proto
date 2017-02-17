@@ -1,7 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Data.Player;
-
-enum PlayerAvatarType {
-	PLAYER_AVATAR_MALE = 0;
-	PLAYER_AVATAR_FEMALE = 1;
-}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Requests.Messages;
-
-message SetFavoritePokemonMessage {
-	int64 pokemon_id = 1;  // Do not change https://github.com/AeonLucid/POGOProtos/pull/126
-	bool is_favorite = 2;
-}

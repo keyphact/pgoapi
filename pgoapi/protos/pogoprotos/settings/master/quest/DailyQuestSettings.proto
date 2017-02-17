@@ -1,9 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Settings.Master.Quest;
-
-message DailyQuestSettings {
-	int32 buckets_per_day = 1;
-	int32 streak_length = 2;
-	float bonus_multiplier = 3;
-	float streak_bonus_multiplier = 4;
-}

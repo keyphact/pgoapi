@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Platform.Requests;
-
-message SendEncryptedSignatureRequest {
-	bytes encrypted_signature = 1;
-}

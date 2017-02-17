@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Platform.Responses;
-
-message SendEncryptedSignatureResponse {
-	bool received = 1;  // speculated, could be an enum
-}

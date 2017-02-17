@@ -1,8 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Enums;
-
-enum PokemonRarity {
-	POKEMON_RARITY_NORMAL = 0;
-	POKEMON_RARITY_LEGENDARY = 1;
-	POKEMON_RARITY_MYTHIC = 2;
-}

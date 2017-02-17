@@ -1,8 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Enums;
-
-enum EncounterType {
-	SPAWN_POINT = 0;
-	INCENSE = 1;
-	DISK = 2;
-}

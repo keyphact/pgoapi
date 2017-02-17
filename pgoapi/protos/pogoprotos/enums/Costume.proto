@@ -1,8 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Enums;
-
-enum Costume {
-	COSTUME_UNSET = 0;
-	HOLIDAY_2016 = 1;
-	ANNIVERSARY = 2;
-}

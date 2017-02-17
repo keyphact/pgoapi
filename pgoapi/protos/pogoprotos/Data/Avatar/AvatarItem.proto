@@ -1,8 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Data.Avatar;
-
-message AvatarItem {
-	string avatar_template_id = 1;
-	int64 new_timestamp_ms = 2;
-	bool viewed = 3;
-}

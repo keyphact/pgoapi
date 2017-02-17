@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Platform.Requests;
-
-message BuyItemPokeCoinsRequest {
-	string item_id = 1;
-}

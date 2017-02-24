@@ -288,7 +288,7 @@ class RpcApi:
             sen.status = 3
 
             if self._api_version == "0_45":
-                sig.unknown25 = -1553869577012279119
+                sig.unknown25 = -816976800928766045
             else:
                 sig.unknown25 = -816976800928766045
 

@@ -13,17 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from POGOProtos.Data.Player import PlayerPublicProfile_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerPublicProfile__pb2
 from POGOProtos.Data import PokemonData_pb2 as POGOProtos_dot_Data_dot_PokemonData__pb2
+from POGOProtos.Data.Player import PlayerPublicProfile_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerPublicProfile__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/Gym/GymMembership.proto',
   package='POGOProtos.Data.Gym',
   syntax='proto3',
-  serialized_pb=_b('\n\'POGOProtos/Data/Gym/GymMembership.proto\x12\x13POGOProtos.Data.Gym\x1a\x30POGOProtos/Data/Player/PlayerPublicProfile.proto\x1a!POGOProtos/Data/PokemonData.proto\"\x90\x01\n\rGymMembership\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12K\n\x16trainer_public_profile\x18\x02 \x01(\x0b\x32+.POGOProtos.Data.Player.PlayerPublicProfileb\x06proto3')
+  serialized_pb=_b('\n\'POGOProtos/Data/Gym/GymMembership.proto\x12\x13POGOProtos.Data.Gym\x1a!POGOProtos/Data/PokemonData.proto\x1a\x30POGOProtos/Data/Player/PlayerPublicProfile.proto\"\xc8\x01\n\rGymMembership\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12K\n\x16trainer_public_profile\x18\x02 \x01(\x0b\x32+.POGOProtos.Data.Player.PlayerPublicProfile\x12\x36\n\x10training_pokemon\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonDatab\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Data_dot_Player_dot_PlayerPublicProfile__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokemonData__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Data_dot_PokemonData__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player_dot_PlayerPublicProfile__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,6 +50,13 @@ _GYMMEMBERSHIP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='training_pokemon', full_name='POGOProtos.Data.Gym.GymMembership.training_pokemon', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -63,11 +70,12 @@ _GYMMEMBERSHIP = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=150,
-  serialized_end=294,
+  serialized_end=350,
 )
 
 _GYMMEMBERSHIP.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data_dot_PokemonData__pb2._POKEMONDATA
 _GYMMEMBERSHIP.fields_by_name['trainer_public_profile'].message_type = POGOProtos_dot_Data_dot_Player_dot_PlayerPublicProfile__pb2._PLAYERPUBLICPROFILE
+_GYMMEMBERSHIP.fields_by_name['training_pokemon'].message_type = POGOProtos_dot_Data_dot_PokemonData__pb2._POKEMONDATA
 DESCRIPTOR.message_types_by_name['GymMembership'] = _GYMMEMBERSHIP
 
 GymMembership = _reflection.GeneratedProtocolMessageType('GymMembership', (_message.Message,), dict(

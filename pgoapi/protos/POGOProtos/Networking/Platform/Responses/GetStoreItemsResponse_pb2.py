@@ -19,9 +19,9 @@ from POGOProtos.Inventory.Item import ItemData_pb2 as POGOProtos_dot_Inventory_d
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Platform/Responses/GetStoreItemsResponse.proto',
-  package='POGOProtos.Networking.Envelopes',
+  package='POGOProtos.Networking.Platform.Responses',
   syntax='proto3',
-  serialized_pb=_b('\nDPOGOProtos/Networking/Platform/Responses/GetStoreItemsResponse.proto\x12\x1fPOGOProtos.Networking.Envelopes\x1a%POGOProtos/Data/Player/Currency.proto\x1a(POGOProtos/Inventory/Item/ItemData.proto\"\xa1\x05\n\x15GetStoreItemsResponse\x12M\n\x06status\x18\x01 \x01(\x0e\x32=.POGOProtos.Networking.Envelopes.GetStoreItemsResponse.Status\x12O\n\x05items\x18\x02 \x03(\x0b\x32@.POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem\x12;\n\x11player_currencies\x18\x03 \x03(\x0b\x32 .POGOProtos.Data.Player.Currency\x12\x10\n\x08unknown4\x18\x04 \x01(\t\x1a\xf5\x02\n\tStoreItem\x12\x0f\n\x07item_id\x18\x01 \x01(\t\x12\x0e\n\x06is_iap\x18\x02 \x01(\x08\x12\x39\n\x0f\x63urrency_to_buy\x18\x03 \x01(\x0b\x32 .POGOProtos.Data.Player.Currency\x12\x39\n\x0fyields_currency\x18\x04 \x01(\x0b\x32 .POGOProtos.Data.Player.Currency\x12\x38\n\x0byields_item\x18\x05 \x01(\x0b\x32#.POGOProtos.Inventory.Item.ItemData\x12X\n\x04tags\x18\x06 \x03(\x0b\x32J.POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.TagsEntry\x12\x10\n\x08unknown7\x18\x07 \x01(\x05\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"!\n\x06Status\x12\r\n\tUNDEFINED\x10\x00\x12\x08\n\x04OKAY\x10\x01\x62\x06proto3')
+  serialized_pb=_b('\nDPOGOProtos/Networking/Platform/Responses/GetStoreItemsResponse.proto\x12(POGOProtos.Networking.Platform.Responses\x1a%POGOProtos/Data/Player/Currency.proto\x1a(POGOProtos/Inventory/Item/ItemData.proto\"\xbc\x05\n\x15GetStoreItemsResponse\x12V\n\x06status\x18\x01 \x01(\x0e\x32\x46.POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.Status\x12X\n\x05items\x18\x02 \x03(\x0b\x32I.POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem\x12;\n\x11player_currencies\x18\x03 \x03(\x0b\x32 .POGOProtos.Data.Player.Currency\x12\x10\n\x08unknown4\x18\x04 \x01(\t\x1a\xfe\x02\n\tStoreItem\x12\x0f\n\x07item_id\x18\x01 \x01(\t\x12\x0e\n\x06is_iap\x18\x02 \x01(\x08\x12\x39\n\x0f\x63urrency_to_buy\x18\x03 \x01(\x0b\x32 .POGOProtos.Data.Player.Currency\x12\x39\n\x0fyields_currency\x18\x04 \x01(\x0b\x32 .POGOProtos.Data.Player.Currency\x12\x38\n\x0byields_item\x18\x05 \x01(\x0b\x32#.POGOProtos.Inventory.Item.ItemData\x12\x61\n\x04tags\x18\x06 \x03(\x0b\x32S.POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.TagsEntry\x12\x10\n\x08unknown7\x18\x07 \x01(\x05\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"!\n\x06Status\x12\r\n\tUNDEFINED\x10\x00\x12\x08\n\x04OKAY\x10\x01\x62\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Data_dot_Player_dot_Currency__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Item_dot_ItemData__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -30,7 +30,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _GETSTOREITEMSRESPONSE_STATUS = _descriptor.EnumDescriptor(
   name='Status',
-  full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.Status',
+  full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.Status',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -45,28 +45,28 @@ _GETSTOREITEMSRESPONSE_STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=827,
-  serialized_end=860,
+  serialized_start=863,
+  serialized_end=896,
 )
 _sym_db.RegisterEnumDescriptor(_GETSTOREITEMSRESPONSE_STATUS)
 
 
 _GETSTOREITEMSRESPONSE_STOREITEM_TAGSENTRY = _descriptor.Descriptor(
   name='TagsEntry',
-  full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.TagsEntry',
+  full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.TagsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.TagsEntry.key', index=0,
+      name='key', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.TagsEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.TagsEntry.value', index=1,
+      name='value', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.TagsEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -84,61 +84,61 @@ _GETSTOREITEMSRESPONSE_STOREITEM_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=782,
-  serialized_end=825,
+  serialized_start=818,
+  serialized_end=861,
 )
 
 _GETSTOREITEMSRESPONSE_STOREITEM = _descriptor.Descriptor(
   name='StoreItem',
-  full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem',
+  full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='item_id', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.item_id', index=0,
+      name='item_id', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.item_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_iap', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.is_iap', index=1,
+      name='is_iap', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.is_iap', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='currency_to_buy', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.currency_to_buy', index=2,
+      name='currency_to_buy', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.currency_to_buy', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='yields_currency', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.yields_currency', index=3,
+      name='yields_currency', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.yields_currency', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='yields_item', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.yields_item', index=4,
+      name='yields_item', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.yields_item', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.tags', index=5,
+      name='tags', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.tags', index=5,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unknown7', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.unknown7', index=6,
+      name='unknown7', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.unknown7', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -156,40 +156,40 @@ _GETSTOREITEMSRESPONSE_STOREITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=452,
-  serialized_end=825,
+  serialized_start=479,
+  serialized_end=861,
 )
 
 _GETSTOREITEMSRESPONSE = _descriptor.Descriptor(
   name='GetStoreItemsResponse',
-  full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse',
+  full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.status', index=0,
+      name='status', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='items', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.items', index=1,
+      name='items', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.items', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_currencies', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.player_currencies', index=2,
+      name='player_currencies', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.player_currencies', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unknown4', full_name='POGOProtos.Networking.Envelopes.GetStoreItemsResponse.unknown4', index=3,
+      name='unknown4', full_name='POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.unknown4', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -208,8 +208,8 @@ _GETSTOREITEMSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=187,
-  serialized_end=860,
+  serialized_start=196,
+  serialized_end=896,
 )
 
 _GETSTOREITEMSRESPONSE_STOREITEM_TAGSENTRY.containing_type = _GETSTOREITEMSRESPONSE_STOREITEM
@@ -231,17 +231,17 @@ GetStoreItemsResponse = _reflection.GeneratedProtocolMessageType('GetStoreItemsR
     TagsEntry = _reflection.GeneratedProtocolMessageType('TagsEntry', (_message.Message,), dict(
       DESCRIPTOR = _GETSTOREITEMSRESPONSE_STOREITEM_TAGSENTRY,
       __module__ = 'POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse_pb2'
-      # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem.TagsEntry)
+      # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem.TagsEntry)
       ))
     ,
     DESCRIPTOR = _GETSTOREITEMSRESPONSE_STOREITEM,
     __module__ = 'POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse_pb2'
-    # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Envelopes.GetStoreItemsResponse.StoreItem)
+    # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse.StoreItem)
     ))
   ,
   DESCRIPTOR = _GETSTOREITEMSRESPONSE,
   __module__ = 'POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse_pb2'
-  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Envelopes.GetStoreItemsResponse)
+  # @@protoc_insertion_point(class_scope:POGOProtos.Networking.Platform.Responses.GetStoreItemsResponse)
   ))
 _sym_db.RegisterMessage(GetStoreItemsResponse)
 _sym_db.RegisterMessage(GetStoreItemsResponse.StoreItem)

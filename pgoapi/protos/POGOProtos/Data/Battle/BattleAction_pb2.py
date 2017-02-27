@@ -13,18 +13,18 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from POGOProtos.Data.Battle import BattleResults_pb2 as POGOProtos_dot_Data_dot_Battle_dot_BattleResults__pb2
 from POGOProtos.Data.Battle import BattleActionType_pb2 as POGOProtos_dot_Data_dot_Battle_dot_BattleActionType__pb2
 from POGOProtos.Data.Battle import BattleParticipant_pb2 as POGOProtos_dot_Data_dot_Battle_dot_BattleParticipant__pb2
-from POGOProtos.Data.Battle import BattleResults_pb2 as POGOProtos_dot_Data_dot_Battle_dot_BattleResults__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/Battle/BattleAction.proto',
   package='POGOProtos.Data.Battle',
   syntax='proto3',
-  serialized_pb=_b('\n)POGOProtos/Data/Battle/BattleAction.proto\x12\x16POGOProtos.Data.Battle\x1a-POGOProtos/Data/Battle/BattleActionType.proto\x1a.POGOProtos/Data/Battle/BattleParticipant.proto\x1a*POGOProtos/Data/Battle/BattleResults.proto\"\x85\x04\n\x0c\x42\x61ttleAction\x12\x36\n\x04Type\x18\x01 \x01(\x0e\x32(.POGOProtos.Data.Battle.BattleActionType\x12\x17\n\x0f\x61\x63tion_start_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x64uration_ms\x18\x03 \x01(\x05\x12\x14\n\x0c\x65nergy_delta\x18\x05 \x01(\x05\x12\x16\n\x0e\x61ttacker_index\x18\x06 \x01(\x05\x12\x14\n\x0ctarget_index\x18\x07 \x01(\x05\x12\x19\n\x11\x61\x63tive_pokemon_id\x18\x08 \x01(\x06\x12@\n\rplayer_joined\x18\t \x01(\x0b\x32).POGOProtos.Data.Battle.BattleParticipant\x12=\n\x0e\x62\x61ttle_results\x18\n \x01(\x0b\x32%.POGOProtos.Data.Battle.BattleResults\x12*\n\"damage_windows_start_timestamp_mss\x18\x0b \x01(\x03\x12(\n damage_windows_end_timestamp_mss\x18\x0c \x01(\x03\x12>\n\x0bplayer_left\x18\r \x01(\x0b\x32).POGOProtos.Data.Battle.BattleParticipant\x12\x19\n\x11target_pokemon_id\x18\x0e \x01(\x06\x62\x06proto3')
+  serialized_pb=_b('\n)POGOProtos/Data/Battle/BattleAction.proto\x12\x16POGOProtos.Data.Battle\x1a*POGOProtos/Data/Battle/BattleResults.proto\x1a-POGOProtos/Data/Battle/BattleActionType.proto\x1a.POGOProtos/Data/Battle/BattleParticipant.proto\"\x83\x04\n\x0c\x42\x61ttleAction\x12\x36\n\x04type\x18\x01 \x01(\x0e\x32(.POGOProtos.Data.Battle.BattleActionType\x12\x17\n\x0f\x61\x63tion_start_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x64uration_ms\x18\x03 \x01(\x05\x12\x14\n\x0c\x65nergy_delta\x18\x05 \x01(\x05\x12\x16\n\x0e\x61ttacker_index\x18\x06 \x01(\x05\x12\x14\n\x0ctarget_index\x18\x07 \x01(\x05\x12\x19\n\x11\x61\x63tive_pokemon_id\x18\x08 \x01(\x06\x12@\n\rplayer_joined\x18\t \x01(\x0b\x32).POGOProtos.Data.Battle.BattleParticipant\x12=\n\x0e\x62\x61ttle_results\x18\n \x01(\x0b\x32%.POGOProtos.Data.Battle.BattleResults\x12)\n!damage_windows_start_timestamp_ms\x18\x0b \x01(\x03\x12\'\n\x1f\x64\x61mage_windows_end_timestamp_ms\x18\x0c \x01(\x03\x12>\n\x0bplayer_left\x18\r \x01(\x0b\x32).POGOProtos.Data.Battle.BattleParticipant\x12\x19\n\x11target_pokemon_id\x18\x0e \x01(\x06\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Data_dot_Battle_dot_BattleActionType__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Battle_dot_BattleParticipant__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Battle_dot_BattleResults__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Data_dot_Battle_dot_BattleResults__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Battle_dot_BattleActionType__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Battle_dot_BattleParticipant__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -38,7 +38,7 @@ _BATTLEACTION = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Type', full_name='POGOProtos.Data.Battle.BattleAction.Type', index=0,
+      name='type', full_name='POGOProtos.Data.Battle.BattleAction.type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -101,14 +101,14 @@ _BATTLEACTION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='damage_windows_start_timestamp_mss', full_name='POGOProtos.Data.Battle.BattleAction.damage_windows_start_timestamp_mss', index=9,
+      name='damage_windows_start_timestamp_ms', full_name='POGOProtos.Data.Battle.BattleAction.damage_windows_start_timestamp_ms', index=9,
       number=11, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='damage_windows_end_timestamp_mss', full_name='POGOProtos.Data.Battle.BattleAction.damage_windows_end_timestamp_mss', index=10,
+      name='damage_windows_end_timestamp_ms', full_name='POGOProtos.Data.Battle.BattleAction.damage_windows_end_timestamp_ms', index=10,
       number=12, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -141,10 +141,10 @@ _BATTLEACTION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=209,
-  serialized_end=726,
+  serialized_end=724,
 )
 
-_BATTLEACTION.fields_by_name['Type'].enum_type = POGOProtos_dot_Data_dot_Battle_dot_BattleActionType__pb2._BATTLEACTIONTYPE
+_BATTLEACTION.fields_by_name['type'].enum_type = POGOProtos_dot_Data_dot_Battle_dot_BattleActionType__pb2._BATTLEACTIONTYPE
 _BATTLEACTION.fields_by_name['player_joined'].message_type = POGOProtos_dot_Data_dot_Battle_dot_BattleParticipant__pb2._BATTLEPARTICIPANT
 _BATTLEACTION.fields_by_name['battle_results'].message_type = POGOProtos_dot_Data_dot_Battle_dot_BattleResults__pb2._BATTLERESULTS
 _BATTLEACTION.fields_by_name['player_left'].message_type = POGOProtos_dot_Data_dot_Battle_dot_BattleParticipant__pb2._BATTLEPARTICIPANT

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Platform/PlatformRequestType.proto',
   package='POGOProtos.Networking.Platform',
   syntax='proto3',
-  serialized_pb=_b('\n8POGOProtos/Networking/Platform/PlatformRequestType.proto\x12\x1ePOGOProtos.Networking.Platform*\x9a\x01\n\x13PlatformRequestType\x12\x10\n\x0cMETHOD_UNSET\x10\x00\x12\x16\n\x12\x42UY_ITEM_POKECOINS\x10\x02\x12\x14\n\x10\x42UY_ITEM_ANDROID\x10\x03\x12\x10\n\x0c\x42UY_ITEM_IOS\x10\x04\x12\x13\n\x0fGET_STORE_ITEMS\x10\x05\x12\x1c\n\x18SEND_ENCRYPTED_SIGNATURE\x10\x06\x62\x06proto3')
+  serialized_pb=_b('\n8POGOProtos/Networking/Platform/PlatformRequestType.proto\x12\x1ePOGOProtos.Networking.Platform*\xad\x01\n\x13PlatformRequestType\x12\x10\n\x0cMETHOD_UNSET\x10\x00\x12\x16\n\x12\x42UY_ITEM_POKECOINS\x10\x02\x12\x14\n\x10\x42UY_ITEM_ANDROID\x10\x03\x12\x10\n\x0c\x42UY_ITEM_IOS\x10\x04\x12\x13\n\x0fGET_STORE_ITEMS\x10\x05\x12\x1c\n\x18SEND_ENCRYPTED_SIGNATURE\x10\x06\x12\x11\n\rUNKNOWN_PTR_8\x10\x08\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -54,11 +54,15 @@ _PLATFORMREQUESTTYPE = _descriptor.EnumDescriptor(
       name='SEND_ENCRYPTED_SIGNATURE', index=5, number=6,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN_PTR_8', index=6, number=8,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=93,
-  serialized_end=247,
+  serialized_end=266,
 )
 _sym_db.RegisterEnumDescriptor(_PLATFORMREQUESTTYPE)
 
@@ -69,6 +73,7 @@ BUY_ITEM_ANDROID = 3
 BUY_ITEM_IOS = 4
 GET_STORE_ITEMS = 5
 SEND_ENCRYPTED_SIGNATURE = 6
+UNKNOWN_PTR_8 = 8
 
 
 DESCRIPTOR.enum_types_by_name['PlatformRequestType'] = _PLATFORMREQUESTTYPE

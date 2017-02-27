@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Enums/PokemonId.proto',
   package='POGOProtos.Enums',
   syntax='proto3',
-  serialized_pb=_b('\n POGOProtos/Enums/PokemonId.proto\x12\x10POGOProtos.Enums*\x93\x10\n\tPokemonId\x12\r\n\tMISSINGNO\x10\x00\x12\r\n\tBULBASAUR\x10\x01\x12\x0b\n\x07IVYSAUR\x10\x02\x12\x0c\n\x08VENUSAUR\x10\x03\x12\x0e\n\nCHARMANDER\x10\x04\x12\x0e\n\nCHARMELEON\x10\x05\x12\r\n\tCHARIZARD\x10\x06\x12\x0c\n\x08SQUIRTLE\x10\x07\x12\r\n\tWARTORTLE\x10\x08\x12\r\n\tBLASTOISE\x10\t\x12\x0c\n\x08\x43\x41TERPIE\x10\n\x12\x0b\n\x07METAPOD\x10\x0b\x12\x0e\n\nBUTTERFREE\x10\x0c\x12\n\n\x06WEEDLE\x10\r\x12\n\n\x06KAKUNA\x10\x0e\x12\x0c\n\x08\x42\x45\x45\x44RILL\x10\x0f\x12\n\n\x06PIDGEY\x10\x10\x12\r\n\tPIDGEOTTO\x10\x11\x12\x0b\n\x07PIDGEOT\x10\x12\x12\x0b\n\x07RATTATA\x10\x13\x12\x0c\n\x08RATICATE\x10\x14\x12\x0b\n\x07SPEAROW\x10\x15\x12\n\n\x06\x46\x45\x41ROW\x10\x16\x12\t\n\x05\x45KANS\x10\x17\x12\t\n\x05\x41RBOK\x10\x18\x12\x0b\n\x07PIKACHU\x10\x19\x12\n\n\x06RAICHU\x10\x1a\x12\r\n\tSANDSHREW\x10\x1b\x12\r\n\tSANDSLASH\x10\x1c\x12\x12\n\x0eNIDORAN_FEMALE\x10\x1d\x12\x0c\n\x08NIDORINA\x10\x1e\x12\r\n\tNIDOQUEEN\x10\x1f\x12\x10\n\x0cNIDORAN_MALE\x10 \x12\x0c\n\x08NIDORINO\x10!\x12\x0c\n\x08NIDOKING\x10\"\x12\x0c\n\x08\x43LEFAIRY\x10#\x12\x0c\n\x08\x43LEFABLE\x10$\x12\n\n\x06VULPIX\x10%\x12\r\n\tNINETALES\x10&\x12\x0e\n\nJIGGLYPUFF\x10\'\x12\x0e\n\nWIGGLYTUFF\x10(\x12\t\n\x05ZUBAT\x10)\x12\n\n\x06GOLBAT\x10*\x12\n\n\x06ODDISH\x10+\x12\t\n\x05GLOOM\x10,\x12\r\n\tVILEPLUME\x10-\x12\t\n\x05PARAS\x10.\x12\x0c\n\x08PARASECT\x10/\x12\x0b\n\x07VENONAT\x10\x30\x12\x0c\n\x08VENOMOTH\x10\x31\x12\x0b\n\x07\x44IGLETT\x10\x32\x12\x0b\n\x07\x44UGTRIO\x10\x33\x12\n\n\x06MEOWTH\x10\x34\x12\x0b\n\x07PERSIAN\x10\x35\x12\x0b\n\x07PSYDUCK\x10\x36\x12\x0b\n\x07GOLDUCK\x10\x37\x12\n\n\x06MANKEY\x10\x38\x12\x0c\n\x08PRIMEAPE\x10\x39\x12\r\n\tGROWLITHE\x10:\x12\x0c\n\x08\x41RCANINE\x10;\x12\x0b\n\x07POLIWAG\x10<\x12\r\n\tPOLIWHIRL\x10=\x12\r\n\tPOLIWRATH\x10>\x12\x08\n\x04\x41\x42RA\x10?\x12\x0b\n\x07KADABRA\x10@\x12\x0c\n\x08\x41LAKAZAM\x10\x41\x12\n\n\x06MACHOP\x10\x42\x12\x0b\n\x07MACHOKE\x10\x43\x12\x0b\n\x07MACHAMP\x10\x44\x12\x0e\n\nBELLSPROUT\x10\x45\x12\x0e\n\nWEEPINBELL\x10\x46\x12\x0e\n\nVICTREEBEL\x10G\x12\r\n\tTENTACOOL\x10H\x12\x0e\n\nTENTACRUEL\x10I\x12\x0b\n\x07GEODUDE\x10J\x12\x0c\n\x08GRAVELER\x10K\x12\t\n\x05GOLEM\x10L\x12\n\n\x06PONYTA\x10M\x12\x0c\n\x08RAPIDASH\x10N\x12\x0c\n\x08SLOWPOKE\x10O\x12\x0b\n\x07SLOWBRO\x10P\x12\r\n\tMAGNEMITE\x10Q\x12\x0c\n\x08MAGNETON\x10R\x12\r\n\tFARFETCHD\x10S\x12\t\n\x05\x44ODUO\x10T\x12\n\n\x06\x44ODRIO\x10U\x12\x08\n\x04SEEL\x10V\x12\x0b\n\x07\x44\x45WGONG\x10W\x12\n\n\x06GRIMER\x10X\x12\x07\n\x03MUK\x10Y\x12\x0c\n\x08SHELLDER\x10Z\x12\x0c\n\x08\x43LOYSTER\x10[\x12\n\n\x06GASTLY\x10\\\x12\x0b\n\x07HAUNTER\x10]\x12\n\n\x06GENGAR\x10^\x12\x08\n\x04ONIX\x10_\x12\x0b\n\x07\x44ROWZEE\x10`\x12\t\n\x05HYPNO\x10\x61\x12\n\n\x06KRABBY\x10\x62\x12\x0b\n\x07KINGLER\x10\x63\x12\x0b\n\x07VOLTORB\x10\x64\x12\r\n\tELECTRODE\x10\x65\x12\r\n\tEXEGGCUTE\x10\x66\x12\r\n\tEXEGGUTOR\x10g\x12\n\n\x06\x43UBONE\x10h\x12\x0b\n\x07MAROWAK\x10i\x12\r\n\tHITMONLEE\x10j\x12\x0e\n\nHITMONCHAN\x10k\x12\r\n\tLICKITUNG\x10l\x12\x0b\n\x07KOFFING\x10m\x12\x0b\n\x07WEEZING\x10n\x12\x0b\n\x07RHYHORN\x10o\x12\n\n\x06RHYDON\x10p\x12\x0b\n\x07\x43HANSEY\x10q\x12\x0b\n\x07TANGELA\x10r\x12\x0e\n\nKANGASKHAN\x10s\x12\n\n\x06HORSEA\x10t\x12\n\n\x06SEADRA\x10u\x12\x0b\n\x07GOLDEEN\x10v\x12\x0b\n\x07SEAKING\x10w\x12\n\n\x06STARYU\x10x\x12\x0b\n\x07STARMIE\x10y\x12\x0b\n\x07MR_MIME\x10z\x12\x0b\n\x07SCYTHER\x10{\x12\x08\n\x04JYNX\x10|\x12\x0e\n\nELECTABUZZ\x10}\x12\n\n\x06MAGMAR\x10~\x12\n\n\x06PINSIR\x10\x7f\x12\x0b\n\x06TAUROS\x10\x80\x01\x12\r\n\x08MAGIKARP\x10\x81\x01\x12\r\n\x08GYARADOS\x10\x82\x01\x12\x0b\n\x06LAPRAS\x10\x83\x01\x12\n\n\x05\x44ITTO\x10\x84\x01\x12\n\n\x05\x45\x45VEE\x10\x85\x01\x12\r\n\x08VAPOREON\x10\x86\x01\x12\x0c\n\x07JOLTEON\x10\x87\x01\x12\x0c\n\x07\x46LAREON\x10\x88\x01\x12\x0c\n\x07PORYGON\x10\x89\x01\x12\x0c\n\x07OMANYTE\x10\x8a\x01\x12\x0c\n\x07OMASTAR\x10\x8b\x01\x12\x0b\n\x06KABUTO\x10\x8c\x01\x12\r\n\x08KABUTOPS\x10\x8d\x01\x12\x0f\n\nAERODACTYL\x10\x8e\x01\x12\x0c\n\x07SNORLAX\x10\x8f\x01\x12\r\n\x08\x41RTICUNO\x10\x90\x01\x12\x0b\n\x06ZAPDOS\x10\x91\x01\x12\x0c\n\x07MOLTRES\x10\x92\x01\x12\x0c\n\x07\x44RATINI\x10\x93\x01\x12\x0e\n\tDRAGONAIR\x10\x94\x01\x12\x0e\n\tDRAGONITE\x10\x95\x01\x12\x0b\n\x06MEWTWO\x10\x96\x01\x12\x08\n\x03MEW\x10\x97\x01\x62\x06proto3')
+  serialized_pb=_b('\n POGOProtos/Enums/PokemonId.proto\x12\x10POGOProtos.Enums*\xa7\x1b\n\tPokemonId\x12\r\n\tMISSINGNO\x10\x00\x12\r\n\tBULBASAUR\x10\x01\x12\x0b\n\x07IVYSAUR\x10\x02\x12\x0c\n\x08VENUSAUR\x10\x03\x12\x0e\n\nCHARMANDER\x10\x04\x12\x0e\n\nCHARMELEON\x10\x05\x12\r\n\tCHARIZARD\x10\x06\x12\x0c\n\x08SQUIRTLE\x10\x07\x12\r\n\tWARTORTLE\x10\x08\x12\r\n\tBLASTOISE\x10\t\x12\x0c\n\x08\x43\x41TERPIE\x10\n\x12\x0b\n\x07METAPOD\x10\x0b\x12\x0e\n\nBUTTERFREE\x10\x0c\x12\n\n\x06WEEDLE\x10\r\x12\n\n\x06KAKUNA\x10\x0e\x12\x0c\n\x08\x42\x45\x45\x44RILL\x10\x0f\x12\n\n\x06PIDGEY\x10\x10\x12\r\n\tPIDGEOTTO\x10\x11\x12\x0b\n\x07PIDGEOT\x10\x12\x12\x0b\n\x07RATTATA\x10\x13\x12\x0c\n\x08RATICATE\x10\x14\x12\x0b\n\x07SPEAROW\x10\x15\x12\n\n\x06\x46\x45\x41ROW\x10\x16\x12\t\n\x05\x45KANS\x10\x17\x12\t\n\x05\x41RBOK\x10\x18\x12\x0b\n\x07PIKACHU\x10\x19\x12\n\n\x06RAICHU\x10\x1a\x12\r\n\tSANDSHREW\x10\x1b\x12\r\n\tSANDSLASH\x10\x1c\x12\x12\n\x0eNIDORAN_FEMALE\x10\x1d\x12\x0c\n\x08NIDORINA\x10\x1e\x12\r\n\tNIDOQUEEN\x10\x1f\x12\x10\n\x0cNIDORAN_MALE\x10 \x12\x0c\n\x08NIDORINO\x10!\x12\x0c\n\x08NIDOKING\x10\"\x12\x0c\n\x08\x43LEFAIRY\x10#\x12\x0c\n\x08\x43LEFABLE\x10$\x12\n\n\x06VULPIX\x10%\x12\r\n\tNINETALES\x10&\x12\x0e\n\nJIGGLYPUFF\x10\'\x12\x0e\n\nWIGGLYTUFF\x10(\x12\t\n\x05ZUBAT\x10)\x12\n\n\x06GOLBAT\x10*\x12\n\n\x06ODDISH\x10+\x12\t\n\x05GLOOM\x10,\x12\r\n\tVILEPLUME\x10-\x12\t\n\x05PARAS\x10.\x12\x0c\n\x08PARASECT\x10/\x12\x0b\n\x07VENONAT\x10\x30\x12\x0c\n\x08VENOMOTH\x10\x31\x12\x0b\n\x07\x44IGLETT\x10\x32\x12\x0b\n\x07\x44UGTRIO\x10\x33\x12\n\n\x06MEOWTH\x10\x34\x12\x0b\n\x07PERSIAN\x10\x35\x12\x0b\n\x07PSYDUCK\x10\x36\x12\x0b\n\x07GOLDUCK\x10\x37\x12\n\n\x06MANKEY\x10\x38\x12\x0c\n\x08PRIMEAPE\x10\x39\x12\r\n\tGROWLITHE\x10:\x12\x0c\n\x08\x41RCANINE\x10;\x12\x0b\n\x07POLIWAG\x10<\x12\r\n\tPOLIWHIRL\x10=\x12\r\n\tPOLIWRATH\x10>\x12\x08\n\x04\x41\x42RA\x10?\x12\x0b\n\x07KADABRA\x10@\x12\x0c\n\x08\x41LAKAZAM\x10\x41\x12\n\n\x06MACHOP\x10\x42\x12\x0b\n\x07MACHOKE\x10\x43\x12\x0b\n\x07MACHAMP\x10\x44\x12\x0e\n\nBELLSPROUT\x10\x45\x12\x0e\n\nWEEPINBELL\x10\x46\x12\x0e\n\nVICTREEBEL\x10G\x12\r\n\tTENTACOOL\x10H\x12\x0e\n\nTENTACRUEL\x10I\x12\x0b\n\x07GEODUDE\x10J\x12\x0c\n\x08GRAVELER\x10K\x12\t\n\x05GOLEM\x10L\x12\n\n\x06PONYTA\x10M\x12\x0c\n\x08RAPIDASH\x10N\x12\x0c\n\x08SLOWPOKE\x10O\x12\x0b\n\x07SLOWBRO\x10P\x12\r\n\tMAGNEMITE\x10Q\x12\x0c\n\x08MAGNETON\x10R\x12\r\n\tFARFETCHD\x10S\x12\t\n\x05\x44ODUO\x10T\x12\n\n\x06\x44ODRIO\x10U\x12\x08\n\x04SEEL\x10V\x12\x0b\n\x07\x44\x45WGONG\x10W\x12\n\n\x06GRIMER\x10X\x12\x07\n\x03MUK\x10Y\x12\x0c\n\x08SHELLDER\x10Z\x12\x0c\n\x08\x43LOYSTER\x10[\x12\n\n\x06GASTLY\x10\\\x12\x0b\n\x07HAUNTER\x10]\x12\n\n\x06GENGAR\x10^\x12\x08\n\x04ONIX\x10_\x12\x0b\n\x07\x44ROWZEE\x10`\x12\t\n\x05HYPNO\x10\x61\x12\n\n\x06KRABBY\x10\x62\x12\x0b\n\x07KINGLER\x10\x63\x12\x0b\n\x07VOLTORB\x10\x64\x12\r\n\tELECTRODE\x10\x65\x12\r\n\tEXEGGCUTE\x10\x66\x12\r\n\tEXEGGUTOR\x10g\x12\n\n\x06\x43UBONE\x10h\x12\x0b\n\x07MAROWAK\x10i\x12\r\n\tHITMONLEE\x10j\x12\x0e\n\nHITMONCHAN\x10k\x12\r\n\tLICKITUNG\x10l\x12\x0b\n\x07KOFFING\x10m\x12\x0b\n\x07WEEZING\x10n\x12\x0b\n\x07RHYHORN\x10o\x12\n\n\x06RHYDON\x10p\x12\x0b\n\x07\x43HANSEY\x10q\x12\x0b\n\x07TANGELA\x10r\x12\x0e\n\nKANGASKHAN\x10s\x12\n\n\x06HORSEA\x10t\x12\n\n\x06SEADRA\x10u\x12\x0b\n\x07GOLDEEN\x10v\x12\x0b\n\x07SEAKING\x10w\x12\n\n\x06STARYU\x10x\x12\x0b\n\x07STARMIE\x10y\x12\x0b\n\x07MR_MIME\x10z\x12\x0b\n\x07SCYTHER\x10{\x12\x08\n\x04JYNX\x10|\x12\x0e\n\nELECTABUZZ\x10}\x12\n\n\x06MAGMAR\x10~\x12\n\n\x06PINSIR\x10\x7f\x12\x0b\n\x06TAUROS\x10\x80\x01\x12\r\n\x08MAGIKARP\x10\x81\x01\x12\r\n\x08GYARADOS\x10\x82\x01\x12\x0b\n\x06LAPRAS\x10\x83\x01\x12\n\n\x05\x44ITTO\x10\x84\x01\x12\n\n\x05\x45\x45VEE\x10\x85\x01\x12\r\n\x08VAPOREON\x10\x86\x01\x12\x0c\n\x07JOLTEON\x10\x87\x01\x12\x0c\n\x07\x46LAREON\x10\x88\x01\x12\x0c\n\x07PORYGON\x10\x89\x01\x12\x0c\n\x07OMANYTE\x10\x8a\x01\x12\x0c\n\x07OMASTAR\x10\x8b\x01\x12\x0b\n\x06KABUTO\x10\x8c\x01\x12\r\n\x08KABUTOPS\x10\x8d\x01\x12\x0f\n\nAERODACTYL\x10\x8e\x01\x12\x0c\n\x07SNORLAX\x10\x8f\x01\x12\r\n\x08\x41RTICUNO\x10\x90\x01\x12\x0b\n\x06ZAPDOS\x10\x91\x01\x12\x0c\n\x07MOLTRES\x10\x92\x01\x12\x0c\n\x07\x44RATINI\x10\x93\x01\x12\x0e\n\tDRAGONAIR\x10\x94\x01\x12\x0e\n\tDRAGONITE\x10\x95\x01\x12\x0b\n\x06MEWTWO\x10\x96\x01\x12\x08\n\x03MEW\x10\x97\x01\x12\x0e\n\tCHIKORITA\x10\x98\x01\x12\x0c\n\x07\x42\x41YLEEF\x10\x99\x01\x12\r\n\x08MEGANIUM\x10\x9a\x01\x12\x0e\n\tCYNDAQUIL\x10\x9b\x01\x12\x0c\n\x07QUILAVA\x10\x9c\x01\x12\x0f\n\nTYPHLOSION\x10\x9d\x01\x12\r\n\x08TOTODILE\x10\x9e\x01\x12\r\n\x08\x43ROCONAW\x10\x9f\x01\x12\x0f\n\nFERALIGATR\x10\xa0\x01\x12\x0c\n\x07SENTRET\x10\xa1\x01\x12\x0b\n\x06\x46URRET\x10\xa2\x01\x12\r\n\x08HOOTHOOT\x10\xa3\x01\x12\x0c\n\x07NOCTOWL\x10\xa4\x01\x12\x0b\n\x06LEDYBA\x10\xa5\x01\x12\x0b\n\x06LEDIAN\x10\xa6\x01\x12\r\n\x08SPINARAK\x10\xa7\x01\x12\x0c\n\x07\x41RIADOS\x10\xa8\x01\x12\x0b\n\x06\x43ROBAT\x10\xa9\x01\x12\r\n\x08\x43HINCHOU\x10\xaa\x01\x12\x0c\n\x07LANTURN\x10\xab\x01\x12\n\n\x05PICHU\x10\xac\x01\x12\x0b\n\x06\x43LEFFA\x10\xad\x01\x12\x0e\n\tIGGLYBUFF\x10\xae\x01\x12\x0b\n\x06TOGEPI\x10\xaf\x01\x12\x0c\n\x07TOGETIC\x10\xb0\x01\x12\t\n\x04NATU\x10\xb1\x01\x12\t\n\x04XATU\x10\xb2\x01\x12\x0b\n\x06MAREEP\x10\xb3\x01\x12\x0c\n\x07\x46LAAFFY\x10\xb4\x01\x12\r\n\x08\x41MPHAROS\x10\xb5\x01\x12\x0e\n\tBELLOSSOM\x10\xb6\x01\x12\x0b\n\x06MARILL\x10\xb7\x01\x12\x0e\n\tAZUMARILL\x10\xb8\x01\x12\x0e\n\tSUDOWOODO\x10\xb9\x01\x12\r\n\x08POLITOED\x10\xba\x01\x12\x0b\n\x06HOPPIP\x10\xbb\x01\x12\r\n\x08SKIPLOOM\x10\xbc\x01\x12\r\n\x08JUMPLUFF\x10\xbd\x01\x12\n\n\x05\x41IPOM\x10\xbe\x01\x12\x0c\n\x07SUNKERN\x10\xbf\x01\x12\r\n\x08SUNFLORA\x10\xc0\x01\x12\n\n\x05YANMA\x10\xc1\x01\x12\x0b\n\x06WOOPER\x10\xc2\x01\x12\r\n\x08QUAGSIRE\x10\xc3\x01\x12\x0b\n\x06\x45SPEON\x10\xc4\x01\x12\x0c\n\x07UMBREON\x10\xc5\x01\x12\x0c\n\x07MURKROW\x10\xc6\x01\x12\r\n\x08SLOWKING\x10\xc7\x01\x12\x0f\n\nMISDREAVUS\x10\xc8\x01\x12\n\n\x05UNOWN\x10\xc9\x01\x12\x0e\n\tWOBBUFFET\x10\xca\x01\x12\x0e\n\tGIRAFARIG\x10\xcb\x01\x12\x0b\n\x06PINECO\x10\xcc\x01\x12\x0f\n\nFORRETRESS\x10\xcd\x01\x12\x0e\n\tDUNSPARCE\x10\xce\x01\x12\x0b\n\x06GLIGAR\x10\xcf\x01\x12\x0c\n\x07STEELIX\x10\xd0\x01\x12\r\n\x08SNUBBULL\x10\xd1\x01\x12\r\n\x08GRANBULL\x10\xd2\x01\x12\r\n\x08QWILFISH\x10\xd3\x01\x12\x0b\n\x06SCIZOR\x10\xd4\x01\x12\x0c\n\x07SHUCKLE\x10\xd5\x01\x12\x0e\n\tHERACROSS\x10\xd6\x01\x12\x0c\n\x07SNEASEL\x10\xd7\x01\x12\x0e\n\tTEDDIURSA\x10\xd8\x01\x12\r\n\x08URSARING\x10\xd9\x01\x12\x0b\n\x06SLUGMA\x10\xda\x01\x12\r\n\x08MAGCARGO\x10\xdb\x01\x12\x0b\n\x06SWINUB\x10\xdc\x01\x12\x0e\n\tPILOSWINE\x10\xdd\x01\x12\x0c\n\x07\x43ORSOLA\x10\xde\x01\x12\r\n\x08REMORAID\x10\xdf\x01\x12\x0e\n\tOCTILLERY\x10\xe0\x01\x12\r\n\x08\x44\x45LIBIRD\x10\xe1\x01\x12\x0c\n\x07MANTINE\x10\xe2\x01\x12\r\n\x08SKARMORY\x10\xe3\x01\x12\r\n\x08HOUNDOUR\x10\xe4\x01\x12\r\n\x08HOUNDOOM\x10\xe5\x01\x12\x0c\n\x07KINGDRA\x10\xe6\x01\x12\x0b\n\x06PHANPY\x10\xe7\x01\x12\x0c\n\x07\x44ONPHAN\x10\xe8\x01\x12\r\n\x08PORYGON2\x10\xe9\x01\x12\r\n\x08STANTLER\x10\xea\x01\x12\r\n\x08SMEARGLE\x10\xeb\x01\x12\x0c\n\x07TYROGUE\x10\xec\x01\x12\x0e\n\tHITMONTOP\x10\xed\x01\x12\r\n\x08SMOOCHUM\x10\xee\x01\x12\x0b\n\x06\x45LEKID\x10\xef\x01\x12\n\n\x05MAGBY\x10\xf0\x01\x12\x0c\n\x07MILTANK\x10\xf1\x01\x12\x0c\n\x07\x42LISSEY\x10\xf2\x01\x12\x0b\n\x06RAIKOU\x10\xf3\x01\x12\n\n\x05\x45NTEI\x10\xf4\x01\x12\x0c\n\x07SUICUNE\x10\xf5\x01\x12\r\n\x08LARVITAR\x10\xf6\x01\x12\x0c\n\x07PUPITAR\x10\xf7\x01\x12\x0e\n\tTYRANITAR\x10\xf8\x01\x12\n\n\x05LUGIA\x10\xf9\x01\x12\n\n\x05HO_OH\x10\xfa\x01\x12\x0b\n\x06\x43\x45LEBI\x10\xfb\x01\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -638,11 +638,411 @@ _POKEMONID = _descriptor.EnumDescriptor(
       name='MEW', index=151, number=151,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHIKORITA', index=152, number=152,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BAYLEEF', index=153, number=153,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MEGANIUM', index=154, number=154,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CYNDAQUIL', index=155, number=155,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='QUILAVA', index=156, number=156,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TYPHLOSION', index=157, number=157,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOTODILE', index=158, number=158,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CROCONAW', index=159, number=159,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FERALIGATR', index=160, number=160,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SENTRET', index=161, number=161,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FURRET', index=162, number=162,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HOOTHOOT', index=163, number=163,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOCTOWL', index=164, number=164,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LEDYBA', index=165, number=165,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LEDIAN', index=166, number=166,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SPINARAK', index=167, number=167,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ARIADOS', index=168, number=168,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CROBAT', index=169, number=169,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHINCHOU', index=170, number=170,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LANTURN', index=171, number=171,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PICHU', index=172, number=172,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CLEFFA', index=173, number=173,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IGGLYBUFF', index=174, number=174,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOGEPI', index=175, number=175,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOGETIC', index=176, number=176,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NATU', index=177, number=177,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='XATU', index=178, number=178,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAREEP', index=179, number=179,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FLAAFFY', index=180, number=180,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AMPHAROS', index=181, number=181,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BELLOSSOM', index=182, number=182,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MARILL', index=183, number=183,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AZUMARILL', index=184, number=184,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUDOWOODO', index=185, number=185,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POLITOED', index=186, number=186,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HOPPIP', index=187, number=187,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SKIPLOOM', index=188, number=188,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='JUMPLUFF', index=189, number=189,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='AIPOM', index=190, number=190,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUNKERN', index=191, number=191,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUNFLORA', index=192, number=192,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='YANMA', index=193, number=193,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WOOPER', index=194, number=194,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='QUAGSIRE', index=195, number=195,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ESPEON', index=196, number=196,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UMBREON', index=197, number=197,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MURKROW', index=198, number=198,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SLOWKING', index=199, number=199,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MISDREAVUS', index=200, number=200,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNOWN', index=201, number=201,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WOBBUFFET', index=202, number=202,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GIRAFARIG', index=203, number=203,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PINECO', index=204, number=204,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FORRETRESS', index=205, number=205,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DUNSPARCE', index=206, number=206,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GLIGAR', index=207, number=207,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='STEELIX', index=208, number=208,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SNUBBULL', index=209, number=209,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GRANBULL', index=210, number=210,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='QWILFISH', index=211, number=211,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SCIZOR', index=212, number=212,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SHUCKLE', index=213, number=213,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HERACROSS', index=214, number=214,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SNEASEL', index=215, number=215,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TEDDIURSA', index=216, number=216,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='URSARING', index=217, number=217,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SLUGMA', index=218, number=218,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAGCARGO', index=219, number=219,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SWINUB', index=220, number=220,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PILOSWINE', index=221, number=221,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CORSOLA', index=222, number=222,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REMORAID', index=223, number=223,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OCTILLERY', index=224, number=224,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DELIBIRD', index=225, number=225,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MANTINE', index=226, number=226,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SKARMORY', index=227, number=227,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HOUNDOUR', index=228, number=228,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HOUNDOOM', index=229, number=229,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='KINGDRA', index=230, number=230,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PHANPY', index=231, number=231,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DONPHAN', index=232, number=232,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PORYGON2', index=233, number=233,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='STANTLER', index=234, number=234,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SMEARGLE', index=235, number=235,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TYROGUE', index=236, number=236,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HITMONTOP', index=237, number=237,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SMOOCHUM', index=238, number=238,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ELEKID', index=239, number=239,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAGBY', index=240, number=240,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MILTANK', index=241, number=241,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='BLISSEY', index=242, number=242,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RAIKOU', index=243, number=243,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENTEI', index=244, number=244,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUICUNE', index=245, number=245,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LARVITAR', index=246, number=246,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PUPITAR', index=247, number=247,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TYRANITAR', index=248, number=248,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LUGIA', index=249, number=249,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HO_OH', index=250, number=250,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CELEBI', index=251, number=251,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=55,
-  serialized_end=2122,
+  serialized_end=3550,
 )
 _sym_db.RegisterEnumDescriptor(_POKEMONID)
 
@@ -799,6 +1199,106 @@ DRAGONAIR = 148
 DRAGONITE = 149
 MEWTWO = 150
 MEW = 151
+CHIKORITA = 152
+BAYLEEF = 153
+MEGANIUM = 154
+CYNDAQUIL = 155
+QUILAVA = 156
+TYPHLOSION = 157
+TOTODILE = 158
+CROCONAW = 159
+FERALIGATR = 160
+SENTRET = 161
+FURRET = 162
+HOOTHOOT = 163
+NOCTOWL = 164
+LEDYBA = 165
+LEDIAN = 166
+SPINARAK = 167
+ARIADOS = 168
+CROBAT = 169
+CHINCHOU = 170
+LANTURN = 171
+PICHU = 172
+CLEFFA = 173
+IGGLYBUFF = 174
+TOGEPI = 175
+TOGETIC = 176
+NATU = 177
+XATU = 178
+MAREEP = 179
+FLAAFFY = 180
+AMPHAROS = 181
+BELLOSSOM = 182
+MARILL = 183
+AZUMARILL = 184
+SUDOWOODO = 185
+POLITOED = 186
+HOPPIP = 187
+SKIPLOOM = 188
+JUMPLUFF = 189
+AIPOM = 190
+SUNKERN = 191
+SUNFLORA = 192
+YANMA = 193
+WOOPER = 194
+QUAGSIRE = 195
+ESPEON = 196
+UMBREON = 197
+MURKROW = 198
+SLOWKING = 199
+MISDREAVUS = 200
+UNOWN = 201
+WOBBUFFET = 202
+GIRAFARIG = 203
+PINECO = 204
+FORRETRESS = 205
+DUNSPARCE = 206
+GLIGAR = 207
+STEELIX = 208
+SNUBBULL = 209
+GRANBULL = 210
+QWILFISH = 211
+SCIZOR = 212
+SHUCKLE = 213
+HERACROSS = 214
+SNEASEL = 215
+TEDDIURSA = 216
+URSARING = 217
+SLUGMA = 218
+MAGCARGO = 219
+SWINUB = 220
+PILOSWINE = 221
+CORSOLA = 222
+REMORAID = 223
+OCTILLERY = 224
+DELIBIRD = 225
+MANTINE = 226
+SKARMORY = 227
+HOUNDOUR = 228
+HOUNDOOM = 229
+KINGDRA = 230
+PHANPY = 231
+DONPHAN = 232
+PORYGON2 = 233
+STANTLER = 234
+SMEARGLE = 235
+TYROGUE = 236
+HITMONTOP = 237
+SMOOCHUM = 238
+ELEKID = 239
+MAGBY = 240
+MILTANK = 241
+BLISSEY = 242
+RAIKOU = 243
+ENTEI = 244
+SUICUNE = 245
+LARVITAR = 246
+PUPITAR = 247
+TYRANITAR = 248
+LUGIA = 249
+HO_OH = 250
+CELEBI = 251
 
 
 DESCRIPTOR.enum_types_by_name['PokemonId'] = _POKEMONID

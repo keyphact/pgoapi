@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Requests/Messages/GetPlayerMessage.proto',
   package='POGOProtos.Networking.Requests.Messages',
   syntax='proto3',
-  serialized_pb=_b('\n>POGOProtos/Networking/Requests/Messages/GetPlayerMessage.proto\x12\'POGOProtos.Networking.Requests.Messages\"\xa4\x01\n\x10GetPlayerMessage\x12]\n\rplayer_locale\x18\x01 \x01(\x0b\x32\x46.POGOProtos.Networking.Requests.Messages.GetPlayerMessage.PlayerLocale\x1a\x31\n\x0cPlayerLocale\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n>POGOProtos/Networking/Requests/Messages/GetPlayerMessage.proto\x12\'POGOProtos.Networking.Requests.Messages\"\xb6\x01\n\x10GetPlayerMessage\x12]\n\rplayer_locale\x18\x01 \x01(\x0b\x32\x46.POGOProtos.Networking.Requests.Messages.GetPlayerMessage.PlayerLocale\x1a\x43\n\x0cPlayerLocale\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\t\x12\x10\n\x08timezone\x18\x03 \x01(\tb\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -47,6 +47,13 @@ _GETPLAYERMESSAGE_PLAYERLOCALE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='timezone', full_name='POGOProtos.Networking.Requests.Messages.GetPlayerMessage.PlayerLocale.timezone', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -60,7 +67,7 @@ _GETPLAYERMESSAGE_PLAYERLOCALE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=223,
-  serialized_end=272,
+  serialized_end=290,
 )
 
 _GETPLAYERMESSAGE = _descriptor.Descriptor(
@@ -90,7 +97,7 @@ _GETPLAYERMESSAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=108,
-  serialized_end=272,
+  serialized_end=290,
 )
 
 _GETPLAYERMESSAGE_PLAYERLOCALE.containing_type = _GETPLAYERMESSAGE

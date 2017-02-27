@@ -14,15 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from POGOProtos.Enums import PokemonId_pb2 as POGOProtos_dot_Enums_dot_PokemonId__pb2
+from POGOProtos.Data import PokemonDisplay_pb2 as POGOProtos_dot_Data_dot_PokemonDisplay__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/Logs/CatchPokemonLogEntry.proto',
   package='POGOProtos.Data.Logs',
   syntax='proto3',
-  serialized_pb=_b('\n/POGOProtos/Data/Logs/CatchPokemonLogEntry.proto\x12\x14POGOProtos.Data.Logs\x1a POGOProtos/Enums/PokemonId.proto\"\x8c\x02\n\x14\x43\x61tchPokemonLogEntry\x12\x41\n\x06result\x18\x01 \x01(\x0e\x32\x31.POGOProtos.Data.Logs.CatchPokemonLogEntry.Result\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x15\n\rcombat_points\x18\x03 \x01(\x05\x12\x17\n\x0fpokemon_data_id\x18\x04 \x01(\x06\"P\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x14\n\x10POKEMON_CAPTURED\x10\x01\x12\x10\n\x0cPOKEMON_FLED\x10\x02\x12\x13\n\x0fPOKEMON_HATCHED\x10\x03\x62\x06proto3')
+  serialized_pb=_b('\n/POGOProtos/Data/Logs/CatchPokemonLogEntry.proto\x12\x14POGOProtos.Data.Logs\x1a POGOProtos/Enums/PokemonId.proto\x1a$POGOProtos/Data/PokemonDisplay.proto\"\xc6\x02\n\x14\x43\x61tchPokemonLogEntry\x12\x41\n\x06result\x18\x01 \x01(\x0e\x32\x31.POGOProtos.Data.Logs.CatchPokemonLogEntry.Result\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x15\n\rcombat_points\x18\x03 \x01(\x05\x12\x17\n\x0fpokemon_data_id\x18\x04 \x01(\x06\x12\x38\n\x0fpokemon_display\x18\x05 \x01(\x0b\x32\x1f.POGOProtos.Data.PokemonDisplay\"P\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x14\n\x10POKEMON_CAPTURED\x10\x01\x12\x10\n\x0cPOKEMON_FLED\x10\x02\x12\x13\n\x0fPOKEMON_HATCHED\x10\x03\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokemonDisplay__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -52,8 +53,8 @@ _CATCHPOKEMONLOGENTRY_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=296,
-  serialized_end=376,
+  serialized_start=392,
+  serialized_end=472,
 )
 _sym_db.RegisterEnumDescriptor(_CATCHPOKEMONLOGENTRY_RESULT)
 
@@ -93,6 +94,13 @@ _CATCHPOKEMONLOGENTRY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='pokemon_display', full_name='POGOProtos.Data.Logs.CatchPokemonLogEntry.pokemon_display', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -106,12 +114,13 @@ _CATCHPOKEMONLOGENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=108,
-  serialized_end=376,
+  serialized_start=146,
+  serialized_end=472,
 )
 
 _CATCHPOKEMONLOGENTRY.fields_by_name['result'].enum_type = _CATCHPOKEMONLOGENTRY_RESULT
 _CATCHPOKEMONLOGENTRY.fields_by_name['pokemon_id'].enum_type = POGOProtos_dot_Enums_dot_PokemonId__pb2._POKEMONID
+_CATCHPOKEMONLOGENTRY.fields_by_name['pokemon_display'].message_type = POGOProtos_dot_Data_dot_PokemonDisplay__pb2._POKEMONDISPLAY
 _CATCHPOKEMONLOGENTRY_RESULT.containing_type = _CATCHPOKEMONLOGENTRY
 DESCRIPTOR.message_types_by_name['CatchPokemonLogEntry'] = _CATCHPOKEMONLOGENTRY
 

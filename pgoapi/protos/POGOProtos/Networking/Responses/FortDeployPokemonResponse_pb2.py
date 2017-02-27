@@ -13,8 +13,8 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from POGOProtos.Data.Gym import GymState_pb2 as POGOProtos_dot_Data_dot_Gym_dot_GymState__pb2
 from POGOProtos.Data import PokemonData_pb2 as POGOProtos_dot_Data_dot_PokemonData__pb2
+from POGOProtos.Data.Gym import GymState_pb2 as POGOProtos_dot_Data_dot_Gym_dot_GymState__pb2
 from POGOProtos.Networking.Responses import FortDetailsResponse_pb2 as POGOProtos_dot_Networking_dot_Responses_dot_FortDetailsResponse__pb2
 
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Responses/FortDeployPokemonResponse.proto',
   package='POGOProtos.Networking.Responses',
   syntax='proto3',
-  serialized_pb=_b('\n?POGOProtos/Networking/Responses/FortDeployPokemonResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a\"POGOProtos/Data/Gym/GymState.proto\x1a!POGOProtos/Data/PokemonData.proto\x1a\x39POGOProtos/Networking/Responses/FortDetailsResponse.proto\"\xc4\x04\n\x19\x46ortDeployPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.POGOProtos.Networking.Responses.FortDetailsResponse\x12\x32\n\x0cpokemon_data\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x30\n\tgym_state\x18\x04 \x01(\x0b\x32\x1d.POGOProtos.Data.Gym.GymState\"\xa1\x02\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12%\n!ERROR_ALREADY_HAS_POKEMON_ON_FORT\x10\x02\x12!\n\x1d\x45RROR_OPPOSING_TEAM_OWNS_FORT\x10\x03\x12\x16\n\x12\x45RROR_FORT_IS_FULL\x10\x04\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x05\x12\x1c\n\x18\x45RROR_PLAYER_HAS_NO_TEAM\x10\x06\x12\x1d\n\x19\x45RROR_POKEMON_NOT_FULL_HP\x10\x07\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x08\x12\x1a\n\x16\x45RROR_POKEMON_IS_BUDDY\x10\tb\x06proto3')
+  serialized_pb=_b('\n?POGOProtos/Networking/Responses/FortDeployPokemonResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a!POGOProtos/Data/PokemonData.proto\x1a\"POGOProtos/Data/Gym/GymState.proto\x1a\x39POGOProtos/Networking/Responses/FortDetailsResponse.proto\"\x85\x05\n\x19\x46ortDeployPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.FortDeployPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.POGOProtos.Networking.Responses.FortDetailsResponse\x12\x32\n\x0cpokemon_data\x18\x03 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x30\n\tgym_state\x18\x04 \x01(\x0b\x32\x1d.POGOProtos.Data.Gym.GymState\"\xe2\x02\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12%\n!ERROR_ALREADY_HAS_POKEMON_ON_FORT\x10\x02\x12!\n\x1d\x45RROR_OPPOSING_TEAM_OWNS_FORT\x10\x03\x12\x16\n\x12\x45RROR_FORT_IS_FULL\x10\x04\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x05\x12\x1c\n\x18\x45RROR_PLAYER_HAS_NO_TEAM\x10\x06\x12\x1d\n\x19\x45RROR_POKEMON_NOT_FULL_HP\x10\x07\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x08\x12\x1a\n\x16\x45RROR_POKEMON_IS_BUDDY\x10\t\x12\x1d\n\x19\x45RROR_FORT_DEPLOY_LOCKOUT\x10\n\x12 \n\x1c\x45RROR_PLAYER_HAS_NO_NICKNAME\x10\x0b\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Data_dot_Gym_dot_GymState__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokemonData__pb2.DESCRIPTOR,POGOProtos_dot_Networking_dot_Responses_dot_FortDetailsResponse__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Data_dot_PokemonData__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Gym_dot_GymState__pb2.DESCRIPTOR,POGOProtos_dot_Networking_dot_Responses_dot_FortDetailsResponse__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -75,11 +75,19 @@ _FORTDEPLOYPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
       name='ERROR_POKEMON_IS_BUDDY', index=9, number=9,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_FORT_DEPLOY_LOCKOUT', index=10, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_PLAYER_HAS_NO_NICKNAME', index=11, number=11,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=522,
-  serialized_end=811,
+  serialized_end=876,
 )
 _sym_db.RegisterEnumDescriptor(_FORTDEPLOYPOKEMONRESPONSE_RESULT)
 
@@ -133,7 +141,7 @@ _FORTDEPLOYPOKEMONRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=231,
-  serialized_end=811,
+  serialized_end=876,
 )
 
 _FORTDEPLOYPOKEMONRESPONSE.fields_by_name['result'].enum_type = _FORTDEPLOYPOKEMONRESPONSE_RESULT

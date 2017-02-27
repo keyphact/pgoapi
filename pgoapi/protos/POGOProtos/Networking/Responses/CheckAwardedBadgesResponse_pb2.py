@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Responses/CheckAwardedBadgesResponse.proto',
   package='POGOProtos.Networking.Responses',
   syntax='proto3',
-  serialized_pb=_b('\n@POGOProtos/Networking/Responses/CheckAwardedBadgesResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a POGOProtos/Enums/BadgeType.proto\"\x80\x01\n\x1a\x43heckAwardedBadgesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x33\n\x0e\x61warded_badges\x18\x02 \x03(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\x1c\n\x14\x61warded_badge_levels\x18\x03 \x03(\x05\x62\x06proto3')
+  serialized_pb=_b('\n@POGOProtos/Networking/Responses/CheckAwardedBadgesResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a POGOProtos/Enums/BadgeType.proto\"\x9d\x01\n\x1a\x43heckAwardedBadgesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x33\n\x0e\x61warded_badges\x18\x02 \x03(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\x1c\n\x14\x61warded_badge_levels\x18\x03 \x03(\x05\x12\x1b\n\x13\x61vatar_template_ids\x18\x04 \x03(\tb\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Enums_dot_BadgeType__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -56,6 +56,13 @@ _CHECKAWARDEDBADGESRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_template_ids', full_name='POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.avatar_template_ids', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -69,7 +76,7 @@ _CHECKAWARDEDBADGESRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=136,
-  serialized_end=264,
+  serialized_end=293,
 )
 
 _CHECKAWARDEDBADGESRESPONSE.fields_by_name['awarded_badges'].enum_type = POGOProtos_dot_Enums_dot_BadgeType__pb2._BADGETYPE

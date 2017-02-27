@@ -14,15 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from POGOProtos.Enums import BadgeType_pb2 as POGOProtos_dot_Enums_dot_BadgeType__pb2
+from POGOProtos.Data.Badge import BadgeCaptureReward_pb2 as POGOProtos_dot_Data_dot_Badge_dot_BadgeCaptureReward__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Settings/Master/BadgeSettings.proto',
   package='POGOProtos.Settings.Master',
   syntax='proto3',
-  serialized_pb=_b('\n.POGOProtos/Settings/Master/BadgeSettings.proto\x12\x1aPOGOProtos.Settings.Master\x1a POGOProtos/Enums/BadgeType.proto\"e\n\rBadgeSettings\x12/\n\nbadge_type\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\x12\n\nbadge_rank\x18\x02 \x01(\x05\x12\x0f\n\x07targets\x18\x03 \x03(\x05\x62\x06proto3')
+  serialized_pb=_b('\n.POGOProtos/Settings/Master/BadgeSettings.proto\x12\x1aPOGOProtos.Settings.Master\x1a POGOProtos/Enums/BadgeType.proto\x1a.POGOProtos/Data/Badge/BadgeCaptureReward.proto\"\xa8\x01\n\rBadgeSettings\x12/\n\nbadge_type\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.BadgeType\x12\x12\n\nbadge_rank\x18\x02 \x01(\x05\x12\x0f\n\x07targets\x18\x03 \x03(\x05\x12\x41\n\x0e\x63\x61pture_reward\x18\x04 \x03(\x0b\x32).POGOProtos.Data.Badge.BadgeCaptureRewardb\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Enums_dot_BadgeType__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Enums_dot_BadgeType__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Badge_dot_BadgeCaptureReward__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -56,6 +57,13 @@ _BADGESETTINGS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='capture_reward', full_name='POGOProtos.Settings.Master.BadgeSettings.capture_reward', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -68,11 +76,12 @@ _BADGESETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=112,
-  serialized_end=213,
+  serialized_start=161,
+  serialized_end=329,
 )
 
 _BADGESETTINGS.fields_by_name['badge_type'].enum_type = POGOProtos_dot_Enums_dot_BadgeType__pb2._BADGETYPE
+_BADGESETTINGS.fields_by_name['capture_reward'].message_type = POGOProtos_dot_Data_dot_Badge_dot_BadgeCaptureReward__pb2._BADGECAPTUREREWARD
 DESCRIPTOR.message_types_by_name['BadgeSettings'] = _BADGESETTINGS
 
 BadgeSettings = _reflection.GeneratedProtocolMessageType('BadgeSettings', (_message.Message,), dict(

@@ -76,17 +76,20 @@ class AuthPtc(Auth):
             raise AuthTimeoutException('Auth GET timed out.')
         except RequestException as e:
             raise AuthException('Caught RequestException: {}'.format(e))
-
-        try:
-            data = r.json()
-            data.update({
-                '_eventId': 'submit',
-                'username': self._username,
-                'password': self._password,
-            })
-        except (ValueError, AttributeError) as e:
-            #self.log.error('PTC User Login Error - invalid JSON response: {}'.format(e))
-            #raise AuthException('Invalid JSON response: {}'.format(e))
+            
+        # Determine the reponse from requests is json or html.
+        if r.text.find('<head>') == -1 :
+            try:
+                data = r.json()
+                data.update({
+                    '_eventId': 'submit',
+                    'username': self._username,
+                    'password': self._password,
+                })
+            except (ValueError, AttributeError) as e:
+                self.log.error('PTC User Login Error - invalid JSON response: {}'.format(e))
+                raise AuthException('Invalid JSON response: {}'.format(e))
+        else:
             tree = html.fromstring(r.text)
             json_data = {}
             json_data['lt'] = tree.xpath('//form/input[@name="lt"]')[0].value
@@ -121,9 +124,6 @@ class AuthPtc(Auth):
             self._login = False
             raise AuthException("Could not retrieve a PTC Access Token")
         return self._login
-        
-    #def get_token_from_html(self, htmlcontent):
-            
 
     def set_refresh_token(self, refresh_token):
         self.log.info('PTC Refresh Token provided by user')

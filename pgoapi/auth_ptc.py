@@ -79,6 +79,7 @@ class AuthPtc(Auth):
             
         # Determine the reponse from requests is json or html.
         if r.text.find('<head>') == -1 :
+            self.log.info('PTC load as json')
             try:
                 data = r.json()
                 data.update({
@@ -90,6 +91,7 @@ class AuthPtc(Auth):
                 self.log.error('PTC User Login Error - invalid JSON response: {}'.format(e))
                 raise AuthException('Invalid JSON response: {}'.format(e))
         else:
+            self.log.info('PTC load as html')
             tree = html.fromstring(r.text)
             json_data = {}
             json_data['lt'] = tree.xpath('//form/input[@name="lt"]')[0].value
@@ -97,8 +99,8 @@ class AuthPtc(Auth):
             json_data['_eventId'] = 'submit'
             json_data['username'] = self._username
             json_data['password'] = self._password
-            #data = json.dumps(json_data)
-            data = json_data
+            data = json.dumps(json_data)
+            #data = json_data
 
         try:
             r = self._session.post(self.PTC_LOGIN_URL, data=data, timeout=self.timeout, allow_redirects=False)

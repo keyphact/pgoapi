@@ -28,6 +28,8 @@ from future.standard_library import install_aliases
 install_aliases()
 
 import requests
+import json
+from lxml import html
 
 from urllib.parse import parse_qs, urlsplit
 from six import string_types
@@ -83,8 +85,17 @@ class AuthPtc(Auth):
                 'password': self._password,
             })
         except (ValueError, AttributeError) as e:
-            self.log.error('PTC User Login Error - invalid JSON response: {}'.format(e))
-            raise AuthException('Invalid JSON response: {}'.format(e))
+            #self.log.error('PTC User Login Error - invalid JSON response: {}'.format(e))
+            #raise AuthException('Invalid JSON response: {}'.format(e))
+            tree = html.fromstring(r.text)
+            json_data = {}
+            json_data['lt'] = tree.xpath('//form/input[@name="lt"]')[0].value
+            json_data['execution'] = tree.xpath('//form/input[@name="execution"]')[0].value
+            json_data['_eventId'] = 'submit'
+            json_data['username'] = self._username
+            json_data['password'] = self._password
+            #data = json.dumps(json_data)
+            data = json_data
 
         try:
             r = self._session.post(self.PTC_LOGIN_URL, data=data, timeout=self.timeout, allow_redirects=False)
@@ -110,6 +121,9 @@ class AuthPtc(Auth):
             self._login = False
             raise AuthException("Could not retrieve a PTC Access Token")
         return self._login
+        
+    #def get_token_from_html(self, htmlcontent):
+            
 
     def set_refresh_token(self, refresh_token):
         self.log.info('PTC Refresh Token provided by user')

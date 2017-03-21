@@ -93,7 +93,10 @@ class AuthPtc(Auth):
         else:
             self.log.info('PTC load as html')
             tree = html.fromstring(r.text)
+            self.log.info('PTC load to tree')
             json_data = {}
+            self.log.info(tree.xpath('//form/input[@name="lt"]')[0].value)
+            self.log.info(tree.xpath('//form/input[@name="execution"]')[0].value)
             json_data['lt'] = tree.xpath('//form/input[@name="lt"]')[0].value
             json_data['execution'] = tree.xpath('//form/input[@name="execution"]')[0].value
             json_data['_eventId'] = 'submit'

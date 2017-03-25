@@ -28,7 +28,6 @@ from future.standard_library import install_aliases
 install_aliases()
 
 import requests
-from time import sleep
 
 from urllib.parse import parse_qs, urlsplit
 from six import string_types
@@ -68,14 +67,14 @@ class AuthPtc(Auth):
         self.log.info('PTC User Login for: {}'.format(self._username))
         self._session.cookies.clear()
         now = get_time()
-        
+
         try:
             r = self._session.get(self.PTC_LOGIN_URL, timeout=self.timeout)
         except Timeout:
             raise AuthTimeoutException('Auth GET timed out.')
         except RequestException as e:
             raise AuthException('Caught RequestException: {}'.format(e))
-            
+
         try:
             data = r.json()
             data.update({
@@ -93,6 +92,7 @@ class AuthPtc(Auth):
             raise AuthTimeoutException('Auth POST timed out.')
         except RequestException as e:
             raise AuthException('Caught RequestException: {}'.format(e))
+
         try:
             qs = parse_qs(urlsplit(r.headers['Location'])[3])
             self._refresh_token = qs.get('ticket')[0]

@@ -13,17 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from POGOProtos.Data.Gym import GymMembership_pb2 as POGOProtos_dot_Data_dot_Gym_dot_GymMembership__pb2
 from POGOProtos.Map.Fort import FortData_pb2 as POGOProtos_dot_Map_dot_Fort_dot_FortData__pb2
+from POGOProtos.Data.Gym import GymMembership_pb2 as POGOProtos_dot_Data_dot_Gym_dot_GymMembership__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/Gym/GymState.proto',
   package='POGOProtos.Data.Gym',
   syntax='proto3',
-  serialized_pb=_b('\n\"POGOProtos/Data/Gym/GymState.proto\x12\x13POGOProtos.Data.Gym\x1a\'POGOProtos/Data/Gym/GymMembership.proto\x1a\"POGOProtos/Map/Fort/FortData.proto\"u\n\x08GymState\x12\x30\n\tfort_data\x18\x01 \x01(\x0b\x32\x1d.POGOProtos.Map.Fort.FortData\x12\x37\n\x0bmemberships\x18\x02 \x03(\x0b\x32\".POGOProtos.Data.Gym.GymMembershipb\x06proto3')
+  serialized_pb=_b('\n\"POGOProtos/Data/Gym/GymState.proto\x12\x13POGOProtos.Data.Gym\x1a\"POGOProtos/Map/Fort/FortData.proto\x1a\'POGOProtos/Data/Gym/GymMembership.proto\"\x8d\x01\n\x08GymState\x12\x30\n\tfort_data\x18\x01 \x01(\x0b\x32\x1d.POGOProtos.Map.Fort.FortData\x12\x37\n\x0bmemberships\x18\x02 \x03(\x0b\x32\".POGOProtos.Data.Gym.GymMembership\x12\x16\n\x0e\x64\x65ploy_lockout\x18\x03 \x01(\x08\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Data_dot_Gym_dot_GymMembership__pb2.DESCRIPTOR,POGOProtos_dot_Map_dot_Fort_dot_FortData__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Map_dot_Fort_dot_FortData__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Gym_dot_GymMembership__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,6 +50,13 @@ _GYMSTATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='deploy_lockout', full_name='POGOProtos.Data.Gym.GymState.deploy_lockout', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -62,8 +69,8 @@ _GYMSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=136,
-  serialized_end=253,
+  serialized_start=137,
+  serialized_end=278,
 )
 
 _GYMSTATE.fields_by_name['fort_data'].message_type = POGOProtos_dot_Map_dot_Fort_dot_FortData__pb2._FORTDATA

@@ -14,15 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from POGOProtos.Enums import PokemonId_pb2 as POGOProtos_dot_Enums_dot_PokemonId__pb2
+from POGOProtos.Data import PokemonDisplay_pb2 as POGOProtos_dot_Data_dot_PokemonDisplay__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Map/Pokemon/NearbyPokemon.proto',
   package='POGOProtos.Map.Pokemon',
   syntax='proto3',
-  serialized_pb=_b('\n*POGOProtos/Map/Pokemon/NearbyPokemon.proto\x12\x16POGOProtos.Map.Pokemon\x1a POGOProtos/Enums/PokemonId.proto\"\x9b\x01\n\rNearbyPokemon\x12/\n\npokemon_id\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x1a\n\x12\x64istance_in_meters\x18\x02 \x01(\x02\x12\x14\n\x0c\x65ncounter_id\x18\x03 \x01(\x06\x12\x0f\n\x07\x66ort_id\x18\x04 \x01(\t\x12\x16\n\x0e\x66ort_image_url\x18\x05 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n*POGOProtos/Map/Pokemon/NearbyPokemon.proto\x12\x16POGOProtos.Map.Pokemon\x1a POGOProtos/Enums/PokemonId.proto\x1a$POGOProtos/Data/PokemonDisplay.proto\"\xd5\x01\n\rNearbyPokemon\x12/\n\npokemon_id\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x1a\n\x12\x64istance_in_meters\x18\x02 \x01(\x02\x12\x14\n\x0c\x65ncounter_id\x18\x03 \x01(\x06\x12\x0f\n\x07\x66ort_id\x18\x04 \x01(\t\x12\x16\n\x0e\x66ort_image_url\x18\x05 \x01(\t\x12\x38\n\x0fpokemon_display\x18\x06 \x01(\x0b\x32\x1f.POGOProtos.Data.PokemonDisplayb\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokemonDisplay__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -70,6 +71,13 @@ _NEARBYPOKEMON = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='pokemon_display', full_name='POGOProtos.Map.Pokemon.NearbyPokemon.pokemon_display', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -82,11 +90,12 @@ _NEARBYPOKEMON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=105,
-  serialized_end=260,
+  serialized_start=143,
+  serialized_end=356,
 )
 
 _NEARBYPOKEMON.fields_by_name['pokemon_id'].enum_type = POGOProtos_dot_Enums_dot_PokemonId__pb2._POKEMONID
+_NEARBYPOKEMON.fields_by_name['pokemon_display'].message_type = POGOProtos_dot_Data_dot_PokemonDisplay__pb2._POKEMONDISPLAY
 DESCRIPTOR.message_types_by_name['NearbyPokemon'] = _NEARBYPOKEMON
 
 NearbyPokemon = _reflection.GeneratedProtocolMessageType('NearbyPokemon', (_message.Message,), dict(

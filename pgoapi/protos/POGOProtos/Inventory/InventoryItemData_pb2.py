@@ -13,25 +13,27 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from POGOProtos.Data.Player import PlayerCamera_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerCamera__pb2
-from POGOProtos.Data.Player import PlayerCurrency_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerCurrency__pb2
-from POGOProtos.Data.Player import PlayerStats_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerStats__pb2
-from POGOProtos.Data import PokedexEntry_pb2 as POGOProtos_dot_Data_dot_PokedexEntry__pb2
-from POGOProtos.Data import PokemonData_pb2 as POGOProtos_dot_Data_dot_PokemonData__pb2
-from POGOProtos.Inventory import AppliedItems_pb2 as POGOProtos_dot_Inventory_dot_AppliedItems__pb2
-from POGOProtos.Inventory import Candy_pb2 as POGOProtos_dot_Inventory_dot_Candy__pb2
-from POGOProtos.Inventory import EggIncubators_pb2 as POGOProtos_dot_Inventory_dot_EggIncubators__pb2
-from POGOProtos.Inventory import InventoryUpgrades_pb2 as POGOProtos_dot_Inventory_dot_InventoryUpgrades__pb2
 from POGOProtos.Inventory.Item import ItemData_pb2 as POGOProtos_dot_Inventory_dot_Item_dot_ItemData__pb2
+from POGOProtos.Inventory import AppliedItems_pb2 as POGOProtos_dot_Inventory_dot_AppliedItems__pb2
+from POGOProtos.Inventory import EggIncubators_pb2 as POGOProtos_dot_Inventory_dot_EggIncubators__pb2
+from POGOProtos.Inventory import Candy_pb2 as POGOProtos_dot_Inventory_dot_Candy__pb2
+from POGOProtos.Inventory import InventoryUpgrades_pb2 as POGOProtos_dot_Inventory_dot_InventoryUpgrades__pb2
+from POGOProtos.Data.Avatar import AvatarItem_pb2 as POGOProtos_dot_Data_dot_Avatar_dot_AvatarItem__pb2
+from POGOProtos.Data import PokemonData_pb2 as POGOProtos_dot_Data_dot_PokemonData__pb2
+from POGOProtos.Data import PokedexEntry_pb2 as POGOProtos_dot_Data_dot_PokedexEntry__pb2
+from POGOProtos.Data.Player import PlayerStats_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerStats__pb2
+from POGOProtos.Data.Player import PlayerCurrency_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerCurrency__pb2
+from POGOProtos.Data.Player import PlayerCamera_pb2 as POGOProtos_dot_Data_dot_Player_dot_PlayerCamera__pb2
+from POGOProtos.Data.Quests import Quest_pb2 as POGOProtos_dot_Data_dot_Quests_dot_Quest__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Inventory/InventoryItemData.proto',
   package='POGOProtos.Inventory',
   syntax='proto3',
-  serialized_pb=_b('\n,POGOProtos/Inventory/InventoryItemData.proto\x12\x14POGOProtos.Inventory\x1a)POGOProtos/Data/Player/PlayerCamera.proto\x1a+POGOProtos/Data/Player/PlayerCurrency.proto\x1a(POGOProtos/Data/Player/PlayerStats.proto\x1a\"POGOProtos/Data/PokedexEntry.proto\x1a!POGOProtos/Data/PokemonData.proto\x1a\'POGOProtos/Inventory/AppliedItems.proto\x1a POGOProtos/Inventory/Candy.proto\x1a(POGOProtos/Inventory/EggIncubators.proto\x1a,POGOProtos/Inventory/InventoryUpgrades.proto\x1a(POGOProtos/Inventory/Item/ItemData.proto\"\xd2\x04\n\x11InventoryItemData\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x31\n\x04item\x18\x02 \x01(\x0b\x32#.POGOProtos.Inventory.Item.ItemData\x12\x34\n\rpokedex_entry\x18\x03 \x01(\x0b\x32\x1d.POGOProtos.Data.PokedexEntry\x12\x39\n\x0cplayer_stats\x18\x04 \x01(\x0b\x32#.POGOProtos.Data.Player.PlayerStats\x12?\n\x0fplayer_currency\x18\x05 \x01(\x0b\x32&.POGOProtos.Data.Player.PlayerCurrency\x12;\n\rplayer_camera\x18\x06 \x01(\x0b\x32$.POGOProtos.Data.Player.PlayerCamera\x12\x43\n\x12inventory_upgrades\x18\x07 \x01(\x0b\x32\'.POGOProtos.Inventory.InventoryUpgrades\x12\x39\n\rapplied_items\x18\x08 \x01(\x0b\x32\".POGOProtos.Inventory.AppliedItems\x12;\n\x0e\x65gg_incubators\x18\t \x01(\x0b\x32#.POGOProtos.Inventory.EggIncubators\x12*\n\x05\x63\x61ndy\x18\n \x01(\x0b\x32\x1b.POGOProtos.Inventory.Candyb\x06proto3')
+  serialized_pb=_b('\n,POGOProtos/Inventory/InventoryItemData.proto\x12\x14POGOProtos.Inventory\x1a(POGOProtos/Inventory/Item/ItemData.proto\x1a\'POGOProtos/Inventory/AppliedItems.proto\x1a(POGOProtos/Inventory/EggIncubators.proto\x1a POGOProtos/Inventory/Candy.proto\x1a,POGOProtos/Inventory/InventoryUpgrades.proto\x1a\'POGOProtos/Data/Avatar/AvatarItem.proto\x1a!POGOProtos/Data/PokemonData.proto\x1a\"POGOProtos/Data/PokedexEntry.proto\x1a(POGOProtos/Data/Player/PlayerStats.proto\x1a+POGOProtos/Data/Player/PlayerCurrency.proto\x1a)POGOProtos/Data/Player/PlayerCamera.proto\x1a\"POGOProtos/Data/Quests/Quest.proto\"\xb9\x05\n\x11InventoryItemData\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.POGOProtos.Data.PokemonData\x12\x31\n\x04item\x18\x02 \x01(\x0b\x32#.POGOProtos.Inventory.Item.ItemData\x12\x34\n\rpokedex_entry\x18\x03 \x01(\x0b\x32\x1d.POGOProtos.Data.PokedexEntry\x12\x39\n\x0cplayer_stats\x18\x04 \x01(\x0b\x32#.POGOProtos.Data.Player.PlayerStats\x12?\n\x0fplayer_currency\x18\x05 \x01(\x0b\x32&.POGOProtos.Data.Player.PlayerCurrency\x12;\n\rplayer_camera\x18\x06 \x01(\x0b\x32$.POGOProtos.Data.Player.PlayerCamera\x12\x43\n\x12inventory_upgrades\x18\x07 \x01(\x0b\x32\'.POGOProtos.Inventory.InventoryUpgrades\x12\x39\n\rapplied_items\x18\x08 \x01(\x0b\x32\".POGOProtos.Inventory.AppliedItems\x12;\n\x0e\x65gg_incubators\x18\t \x01(\x0b\x32#.POGOProtos.Inventory.EggIncubators\x12*\n\x05\x63\x61ndy\x18\n \x01(\x0b\x32\x1b.POGOProtos.Inventory.Candy\x12,\n\x05quest\x18\x0b \x01(\x0b\x32\x1d.POGOProtos.Data.Quests.Quest\x12\x37\n\x0b\x61vatar_item\x18\x0c \x01(\x0b\x32\".POGOProtos.Data.Avatar.AvatarItemb\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Data_dot_Player_dot_PlayerCamera__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player_dot_PlayerCurrency__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player_dot_PlayerStats__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokedexEntry__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokemonData__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_AppliedItems__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Candy__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_EggIncubators__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_InventoryUpgrades__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Item_dot_ItemData__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Inventory_dot_Item_dot_ItemData__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_AppliedItems__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_EggIncubators__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Candy__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_InventoryUpgrades__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Avatar_dot_AvatarItem__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokemonData__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_PokedexEntry__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player_dot_PlayerStats__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player_dot_PlayerCurrency__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Player_dot_PlayerCamera__pb2.DESCRIPTOR,POGOProtos_dot_Data_dot_Quests_dot_Quest__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -114,6 +116,20 @@ _INVENTORYITEMDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='quest', full_name='POGOProtos.Inventory.InventoryItemData.quest', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_item', full_name='POGOProtos.Inventory.InventoryItemData.avatar_item', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -126,8 +142,8 @@ _INVENTORYITEMDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=477,
-  serialized_end=1071,
+  serialized_start=554,
+  serialized_end=1251,
 )
 
 _INVENTORYITEMDATA.fields_by_name['pokemon_data'].message_type = POGOProtos_dot_Data_dot_PokemonData__pb2._POKEMONDATA
@@ -140,6 +156,8 @@ _INVENTORYITEMDATA.fields_by_name['inventory_upgrades'].message_type = POGOProto
 _INVENTORYITEMDATA.fields_by_name['applied_items'].message_type = POGOProtos_dot_Inventory_dot_AppliedItems__pb2._APPLIEDITEMS
 _INVENTORYITEMDATA.fields_by_name['egg_incubators'].message_type = POGOProtos_dot_Inventory_dot_EggIncubators__pb2._EGGINCUBATORS
 _INVENTORYITEMDATA.fields_by_name['candy'].message_type = POGOProtos_dot_Inventory_dot_Candy__pb2._CANDY
+_INVENTORYITEMDATA.fields_by_name['quest'].message_type = POGOProtos_dot_Data_dot_Quests_dot_Quest__pb2._QUEST
+_INVENTORYITEMDATA.fields_by_name['avatar_item'].message_type = POGOProtos_dot_Data_dot_Avatar_dot_AvatarItem__pb2._AVATARITEM
 DESCRIPTOR.message_types_by_name['InventoryItemData'] = _INVENTORYITEMDATA
 
 InventoryItemData = _reflection.GeneratedProtocolMessageType('InventoryItemData', (_message.Message,), dict(

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Inventory/Item/ItemAward.proto',
   package='POGOProtos.Inventory.Item',
   syntax='proto3',
-  serialized_pb=_b('\n)POGOProtos/Inventory/Item/ItemAward.proto\x12\x19POGOProtos.Inventory.Item\x1a&POGOProtos/Inventory/Item/ItemId.proto\"S\n\tItemAward\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12\x12\n\nitem_count\x18\x02 \x01(\x05\x62\x06proto3')
+  serialized_pb=_b('\n)POGOProtos/Inventory/Item/ItemAward.proto\x12\x19POGOProtos.Inventory.Item\x1a&POGOProtos/Inventory/Item/ItemId.proto\"h\n\tItemAward\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12\x12\n\nitem_count\x18\x02 \x01(\x05\x12\x13\n\x0b\x62onus_count\x18\x03 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -49,6 +49,13 @@ _ITEMAWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='bonus_count', full_name='POGOProtos.Inventory.Item.ItemAward.bonus_count', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -62,7 +69,7 @@ _ITEMAWARD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=112,
-  serialized_end=195,
+  serialized_end=216,
 )
 
 _ITEMAWARD.fields_by_name['item_id'].enum_type = POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2._ITEMID

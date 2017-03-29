@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Enums/Gender.proto',
   package='POGOProtos.Enums',
   syntax='proto3',
-  serialized_pb=_b('\n\x1dPOGOProtos/Enums/Gender.proto\x12\x10POGOProtos.Enums*\x1e\n\x06Gender\x12\x08\n\x04MALE\x10\x00\x12\n\n\x06\x46\x45MALE\x10\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1dPOGOProtos/Enums/Gender.proto\x12\x10POGOProtos.Enums*@\n\x06Gender\x12\x10\n\x0cGENDER_UNSET\x10\x00\x12\x08\n\x04MALE\x10\x01\x12\n\n\x06\x46\x45MALE\x10\x02\x12\x0e\n\nGENDERLESS\x10\x03\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -31,24 +31,34 @@ _GENDER = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='MALE', index=0, number=0,
+      name='GENDER_UNSET', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='FEMALE', index=1, number=1,
+      name='MALE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FEMALE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GENDERLESS', index=3, number=3,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=51,
-  serialized_end=81,
+  serialized_end=115,
 )
 _sym_db.RegisterEnumDescriptor(_GENDER)
 
 Gender = enum_type_wrapper.EnumTypeWrapper(_GENDER)
-MALE = 0
-FEMALE = 1
+GENDER_UNSET = 0
+MALE = 1
+FEMALE = 2
+GENDERLESS = 3
 
 
 DESCRIPTOR.enum_types_by_name['Gender'] = _GENDER

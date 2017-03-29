@@ -13,6 +13,9 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from POGOProtos.Enums import Costume_pb2 as POGOProtos_dot_Enums_dot_Costume__pb2
+from POGOProtos.Enums import Form_pb2 as POGOProtos_dot_Enums_dot_Form__pb2
+from POGOProtos.Enums import Gender_pb2 as POGOProtos_dot_Enums_dot_Gender__pb2
 from POGOProtos.Enums import PokemonId_pb2 as POGOProtos_dot_Enums_dot_PokemonId__pb2
 
 
@@ -20,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/PokedexEntry.proto',
   package='POGOProtos.Data',
   syntax='proto3',
-  serialized_pb=_b('\n\"POGOProtos/Data/PokedexEntry.proto\x12\x0fPOGOProtos.Data\x1a POGOProtos/Enums/PokemonId.proto\"\xac\x01\n\x0cPokedexEntry\x12/\n\npokemon_id\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x19\n\x11times_encountered\x18\x02 \x01(\x05\x12\x16\n\x0etimes_captured\x18\x03 \x01(\x05\x12\x1e\n\x16\x65volution_stone_pieces\x18\x04 \x01(\x05\x12\x18\n\x10\x65volution_stones\x18\x05 \x01(\x05\x62\x06proto3')
+  serialized_pb=_b('\n\"POGOProtos/Data/PokedexEntry.proto\x12\x0fPOGOProtos.Data\x1a\x1ePOGOProtos/Enums/Costume.proto\x1a\x1bPOGOProtos/Enums/Form.proto\x1a\x1dPOGOProtos/Enums/Gender.proto\x1a POGOProtos/Enums/PokemonId.proto\"\x9c\x04\n\x0cPokedexEntry\x12/\n\npokemon_id\x18\x01 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\x19\n\x11times_encountered\x18\x02 \x01(\x05\x12\x16\n\x0etimes_captured\x18\x03 \x01(\x05\x12\x1e\n\x16\x65volution_stone_pieces\x18\x04 \x01(\x05\x12\x18\n\x10\x65volution_stones\x18\x05 \x01(\x05\x12\x34\n\x11\x63\x61ptured_costumes\x18\x06 \x03(\x0e\x32\x19.POGOProtos.Enums.Costume\x12.\n\x0e\x63\x61ptured_forms\x18\x07 \x03(\x0e\x32\x16.POGOProtos.Enums.Form\x12\x32\n\x10\x63\x61ptured_genders\x18\x08 \x03(\x0e\x32\x18.POGOProtos.Enums.Gender\x12\x16\n\x0e\x63\x61ptured_shiny\x18\t \x01(\x08\x12\x37\n\x14\x65ncountered_costumes\x18\n \x03(\x0e\x32\x19.POGOProtos.Enums.Costume\x12\x31\n\x11\x65ncountered_forms\x18\x0b \x03(\x0e\x32\x16.POGOProtos.Enums.Form\x12\x35\n\x13\x65ncountered_genders\x18\x0c \x03(\x0e\x32\x18.POGOProtos.Enums.Gender\x12\x19\n\x11\x65ncountered_shiny\x18\r \x01(\x08\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Enums_dot_Costume__pb2.DESCRIPTOR,POGOProtos_dot_Enums_dot_Form__pb2.DESCRIPTOR,POGOProtos_dot_Enums_dot_Gender__pb2.DESCRIPTOR,POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -70,6 +73,62 @@ _POKEDEXENTRY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='captured_costumes', full_name='POGOProtos.Data.PokedexEntry.captured_costumes', index=5,
+      number=6, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='captured_forms', full_name='POGOProtos.Data.PokedexEntry.captured_forms', index=6,
+      number=7, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='captured_genders', full_name='POGOProtos.Data.PokedexEntry.captured_genders', index=7,
+      number=8, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='captured_shiny', full_name='POGOProtos.Data.PokedexEntry.captured_shiny', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encountered_costumes', full_name='POGOProtos.Data.PokedexEntry.encountered_costumes', index=9,
+      number=10, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encountered_forms', full_name='POGOProtos.Data.PokedexEntry.encountered_forms', index=10,
+      number=11, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encountered_genders', full_name='POGOProtos.Data.PokedexEntry.encountered_genders', index=11,
+      number=12, type=14, cpp_type=8, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='encountered_shiny', full_name='POGOProtos.Data.PokedexEntry.encountered_shiny', index=12,
+      number=13, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -82,11 +141,17 @@ _POKEDEXENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=90,
-  serialized_end=262,
+  serialized_start=182,
+  serialized_end=722,
 )
 
 _POKEDEXENTRY.fields_by_name['pokemon_id'].enum_type = POGOProtos_dot_Enums_dot_PokemonId__pb2._POKEMONID
+_POKEDEXENTRY.fields_by_name['captured_costumes'].enum_type = POGOProtos_dot_Enums_dot_Costume__pb2._COSTUME
+_POKEDEXENTRY.fields_by_name['captured_forms'].enum_type = POGOProtos_dot_Enums_dot_Form__pb2._FORM
+_POKEDEXENTRY.fields_by_name['captured_genders'].enum_type = POGOProtos_dot_Enums_dot_Gender__pb2._GENDER
+_POKEDEXENTRY.fields_by_name['encountered_costumes'].enum_type = POGOProtos_dot_Enums_dot_Costume__pb2._COSTUME
+_POKEDEXENTRY.fields_by_name['encountered_forms'].enum_type = POGOProtos_dot_Enums_dot_Form__pb2._FORM
+_POKEDEXENTRY.fields_by_name['encountered_genders'].enum_type = POGOProtos_dot_Enums_dot_Gender__pb2._GENDER
 DESCRIPTOR.message_types_by_name['PokedexEntry'] = _POKEDEXENTRY
 
 PokedexEntry = _reflection.GeneratedProtocolMessageType('PokedexEntry', (_message.Message,), dict(

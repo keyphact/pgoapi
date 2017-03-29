@@ -13,6 +13,7 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from POGOProtos.Data import PokemonDisplay_pb2 as POGOProtos_dot_Data_dot_PokemonDisplay__pb2
 from POGOProtos.Enums import PokemonId_pb2 as POGOProtos_dot_Enums_dot_PokemonId__pb2
 from POGOProtos.Enums import PokemonMove_pb2 as POGOProtos_dot_Enums_dot_PokemonMove__pb2
 from POGOProtos.Inventory.Item import ItemId_pb2 as POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2
@@ -22,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/PokemonData.proto',
   package='POGOProtos.Data',
   syntax='proto3',
-  serialized_pb=_b('\n!POGOProtos/Data/PokemonData.proto\x12\x0fPOGOProtos.Data\x1a POGOProtos/Enums/PokemonId.proto\x1a\"POGOProtos/Enums/PokemonMove.proto\x1a&POGOProtos/Inventory/Item/ItemId.proto\"\xb5\x06\n\x0bPokemonData\x12\n\n\x02id\x18\x01 \x01(\x06\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\n\n\x02\x63p\x18\x03 \x01(\x05\x12\x0f\n\x07stamina\x18\x04 \x01(\x05\x12\x13\n\x0bstamina_max\x18\x05 \x01(\x05\x12-\n\x06move_1\x18\x06 \x01(\x0e\x32\x1d.POGOProtos.Enums.PokemonMove\x12-\n\x06move_2\x18\x07 \x01(\x0e\x32\x1d.POGOProtos.Enums.PokemonMove\x12\x18\n\x10\x64\x65ployed_fort_id\x18\x08 \x01(\t\x12\x12\n\nowner_name\x18\t \x01(\t\x12\x0e\n\x06is_egg\x18\n \x01(\x08\x12\x1c\n\x14\x65gg_km_walked_target\x18\x0b \x01(\x01\x12\x1b\n\x13\x65gg_km_walked_start\x18\x0c \x01(\x01\x12\x0e\n\x06origin\x18\x0e \x01(\x05\x12\x10\n\x08height_m\x18\x0f \x01(\x02\x12\x11\n\tweight_kg\x18\x10 \x01(\x02\x12\x19\n\x11individual_attack\x18\x11 \x01(\x05\x12\x1a\n\x12individual_defense\x18\x12 \x01(\x05\x12\x1a\n\x12individual_stamina\x18\x13 \x01(\x05\x12\x15\n\rcp_multiplier\x18\x14 \x01(\x02\x12\x33\n\x08pokeball\x18\x15 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12\x18\n\x10\x63\x61ptured_cell_id\x18\x16 \x01(\x04\x12\x18\n\x10\x62\x61ttles_attacked\x18\x17 \x01(\x05\x12\x18\n\x10\x62\x61ttles_defended\x18\x18 \x01(\x05\x12\x18\n\x10\x65gg_incubator_id\x18\x19 \x01(\t\x12\x18\n\x10\x63reation_time_ms\x18\x1a \x01(\x04\x12\x14\n\x0cnum_upgrades\x18\x1b \x01(\x05\x12 \n\x18\x61\x64\x64itional_cp_multiplier\x18\x1c \x01(\x02\x12\x10\n\x08\x66\x61vorite\x18\x1d \x01(\x05\x12\x10\n\x08nickname\x18\x1e \x01(\t\x12\x11\n\tfrom_fort\x18\x1f \x01(\x05\x12\x1b\n\x13\x62uddy_candy_awarded\x18  \x01(\x05\x62\x06proto3')
+  serialized_pb=_b('\n!POGOProtos/Data/PokemonData.proto\x12\x0fPOGOProtos.Data\x1a$POGOProtos/Data/PokemonDisplay.proto\x1a POGOProtos/Enums/PokemonId.proto\x1a\"POGOProtos/Enums/PokemonMove.proto\x1a&POGOProtos/Inventory/Item/ItemId.proto\"\xbe\x07\n\x0bPokemonData\x12\n\n\x02id\x18\x01 \x01(\x06\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.POGOProtos.Enums.PokemonId\x12\n\n\x02\x63p\x18\x03 \x01(\x05\x12\x0f\n\x07stamina\x18\x04 \x01(\x05\x12\x13\n\x0bstamina_max\x18\x05 \x01(\x05\x12-\n\x06move_1\x18\x06 \x01(\x0e\x32\x1d.POGOProtos.Enums.PokemonMove\x12-\n\x06move_2\x18\x07 \x01(\x0e\x32\x1d.POGOProtos.Enums.PokemonMove\x12\x18\n\x10\x64\x65ployed_fort_id\x18\x08 \x01(\t\x12\x12\n\nowner_name\x18\t \x01(\t\x12\x0e\n\x06is_egg\x18\n \x01(\x08\x12\x1c\n\x14\x65gg_km_walked_target\x18\x0b \x01(\x01\x12\x1b\n\x13\x65gg_km_walked_start\x18\x0c \x01(\x01\x12\x0e\n\x06origin\x18\x0e \x01(\x05\x12\x10\n\x08height_m\x18\x0f \x01(\x02\x12\x11\n\tweight_kg\x18\x10 \x01(\x02\x12\x19\n\x11individual_attack\x18\x11 \x01(\x05\x12\x1a\n\x12individual_defense\x18\x12 \x01(\x05\x12\x1a\n\x12individual_stamina\x18\x13 \x01(\x05\x12\x15\n\rcp_multiplier\x18\x14 \x01(\x02\x12\x33\n\x08pokeball\x18\x15 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemId\x12\x18\n\x10\x63\x61ptured_cell_id\x18\x16 \x01(\x04\x12\x18\n\x10\x62\x61ttles_attacked\x18\x17 \x01(\x05\x12\x18\n\x10\x62\x61ttles_defended\x18\x18 \x01(\x05\x12\x18\n\x10\x65gg_incubator_id\x18\x19 \x01(\t\x12\x18\n\x10\x63reation_time_ms\x18\x1a \x01(\x04\x12\x14\n\x0cnum_upgrades\x18\x1b \x01(\x05\x12 \n\x18\x61\x64\x64itional_cp_multiplier\x18\x1c \x01(\x02\x12\x10\n\x08\x66\x61vorite\x18\x1d \x01(\x05\x12\x10\n\x08nickname\x18\x1e \x01(\t\x12\x11\n\tfrom_fort\x18\x1f \x01(\x05\x12\x1b\n\x13\x62uddy_candy_awarded\x18  \x01(\x05\x12\x1d\n\x15\x62uddy_total_km_walked\x18! \x01(\x02\x12\x1a\n\x12\x64isplay_pokemon_id\x18\" \x01(\x05\x12\x12\n\ndisplay_cp\x18# \x01(\x05\x12\x38\n\x0fpokemon_display\x18$ \x01(\x0b\x32\x1f.POGOProtos.Data.PokemonDisplayb\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,POGOProtos_dot_Enums_dot_PokemonMove__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Data_dot_PokemonDisplay__pb2.DESCRIPTOR,POGOProtos_dot_Enums_dot_PokemonId__pb2.DESCRIPTOR,POGOProtos_dot_Enums_dot_PokemonMove__pb2.DESCRIPTOR,POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -254,6 +255,34 @@ _POKEMONDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='buddy_total_km_walked', full_name='POGOProtos.Data.PokemonData.buddy_total_km_walked', index=31,
+      number=33, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='display_pokemon_id', full_name='POGOProtos.Data.PokemonData.display_pokemon_id', index=32,
+      number=34, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='display_cp', full_name='POGOProtos.Data.PokemonData.display_cp', index=33,
+      number=35, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pokemon_display', full_name='POGOProtos.Data.PokemonData.pokemon_display', index=34,
+      number=36, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -266,14 +295,15 @@ _POKEMONDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=165,
-  serialized_end=986,
+  serialized_start=203,
+  serialized_end=1161,
 )
 
 _POKEMONDATA.fields_by_name['pokemon_id'].enum_type = POGOProtos_dot_Enums_dot_PokemonId__pb2._POKEMONID
 _POKEMONDATA.fields_by_name['move_1'].enum_type = POGOProtos_dot_Enums_dot_PokemonMove__pb2._POKEMONMOVE
 _POKEMONDATA.fields_by_name['move_2'].enum_type = POGOProtos_dot_Enums_dot_PokemonMove__pb2._POKEMONMOVE
 _POKEMONDATA.fields_by_name['pokeball'].enum_type = POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2._ITEMID
+_POKEMONDATA.fields_by_name['pokemon_display'].message_type = POGOProtos_dot_Data_dot_PokemonDisplay__pb2._POKEMONDISPLAY
 DESCRIPTOR.message_types_by_name['PokemonData'] = _POKEMONDATA
 
 PokemonData = _reflection.GeneratedProtocolMessageType('PokemonData', (_message.Message,), dict(

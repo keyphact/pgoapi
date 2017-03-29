@@ -13,20 +13,24 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from POGOProtos.Settings import EventSettings_pb2 as POGOProtos_dot_Settings_dot_EventSettings__pb2
+from POGOProtos.Settings import FestivalSettings_pb2 as POGOProtos_dot_Settings_dot_FestivalSettings__pb2
 from POGOProtos.Settings import FortSettings_pb2 as POGOProtos_dot_Settings_dot_FortSettings__pb2
 from POGOProtos.Settings import GpsSettings_pb2 as POGOProtos_dot_Settings_dot_GpsSettings__pb2
 from POGOProtos.Settings import InventorySettings_pb2 as POGOProtos_dot_Settings_dot_InventorySettings__pb2
 from POGOProtos.Settings import LevelSettings_pb2 as POGOProtos_dot_Settings_dot_LevelSettings__pb2
 from POGOProtos.Settings import MapSettings_pb2 as POGOProtos_dot_Settings_dot_MapSettings__pb2
+from POGOProtos.Settings import NewsSettings_pb2 as POGOProtos_dot_Settings_dot_NewsSettings__pb2
+from POGOProtos.Settings import SfidaSettings_pb2 as POGOProtos_dot_Settings_dot_SfidaSettings__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Settings/GlobalSettings.proto',
   package='POGOProtos.Settings',
   syntax='proto3',
-  serialized_pb=_b('\n(POGOProtos/Settings/GlobalSettings.proto\x12\x13POGOProtos.Settings\x1a&POGOProtos/Settings/FortSettings.proto\x1a%POGOProtos/Settings/GpsSettings.proto\x1a+POGOProtos/Settings/InventorySettings.proto\x1a\'POGOProtos/Settings/LevelSettings.proto\x1a%POGOProtos/Settings/MapSettings.proto\"\xda\x02\n\x0eGlobalSettings\x12\x38\n\rfort_settings\x18\x02 \x01(\x0b\x32!.POGOProtos.Settings.FortSettings\x12\x36\n\x0cmap_settings\x18\x03 \x01(\x0b\x32 .POGOProtos.Settings.MapSettings\x12:\n\x0elevel_settings\x18\x04 \x01(\x0b\x32\".POGOProtos.Settings.LevelSettings\x12\x42\n\x12inventory_settings\x18\x05 \x01(\x0b\x32&.POGOProtos.Settings.InventorySettings\x12\x1e\n\x16minimum_client_version\x18\x06 \x01(\t\x12\x36\n\x0cgps_settings\x18\x07 \x01(\x0b\x32 .POGOProtos.Settings.GpsSettingsb\x06proto3')
+  serialized_pb=_b('\n(POGOProtos/Settings/GlobalSettings.proto\x12\x13POGOProtos.Settings\x1a\'POGOProtos/Settings/EventSettings.proto\x1a*POGOProtos/Settings/FestivalSettings.proto\x1a&POGOProtos/Settings/FortSettings.proto\x1a%POGOProtos/Settings/GpsSettings.proto\x1a+POGOProtos/Settings/InventorySettings.proto\x1a\'POGOProtos/Settings/LevelSettings.proto\x1a%POGOProtos/Settings/MapSettings.proto\x1a&POGOProtos/Settings/NewsSettings.proto\x1a\'POGOProtos/Settings/SfidaSettings.proto\"\xe9\x04\n\x0eGlobalSettings\x12\x38\n\rfort_settings\x18\x02 \x01(\x0b\x32!.POGOProtos.Settings.FortSettings\x12\x36\n\x0cmap_settings\x18\x03 \x01(\x0b\x32 .POGOProtos.Settings.MapSettings\x12:\n\x0elevel_settings\x18\x04 \x01(\x0b\x32\".POGOProtos.Settings.LevelSettings\x12\x42\n\x12inventory_settings\x18\x05 \x01(\x0b\x32&.POGOProtos.Settings.InventorySettings\x12\x1e\n\x16minimum_client_version\x18\x06 \x01(\t\x12\x36\n\x0cgps_settings\x18\x07 \x01(\x0b\x32 .POGOProtos.Settings.GpsSettings\x12@\n\x11\x66\x65stival_settings\x18\x08 \x01(\x0b\x32%.POGOProtos.Settings.FestivalSettings\x12:\n\x0e\x65vent_settings\x18\t \x01(\x0b\x32\".POGOProtos.Settings.EventSettings\x12\x19\n\x11max_pokemon_types\x18\n \x01(\x05\x12:\n\x0esfida_settings\x18\x0b \x01(\x0b\x32\".POGOProtos.Settings.SfidaSettings\x12\x38\n\rnews_settings\x18\x0c \x01(\x0b\x32!.POGOProtos.Settings.NewsSettingsb\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Settings_dot_FortSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_GpsSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_InventorySettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_LevelSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_MapSettings__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Settings_dot_EventSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_FestivalSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_FortSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_GpsSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_InventorySettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_LevelSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_MapSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_NewsSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_SfidaSettings__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -81,6 +85,41 @@ _GLOBALSETTINGS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='festival_settings', full_name='POGOProtos.Settings.GlobalSettings.festival_settings', index=6,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='event_settings', full_name='POGOProtos.Settings.GlobalSettings.event_settings', index=7,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='max_pokemon_types', full_name='POGOProtos.Settings.GlobalSettings.max_pokemon_types', index=8,
+      number=10, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sfida_settings', full_name='POGOProtos.Settings.GlobalSettings.sfida_settings', index=9,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='news_settings', full_name='POGOProtos.Settings.GlobalSettings.news_settings', index=10,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -93,8 +132,8 @@ _GLOBALSETTINGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=270,
-  serialized_end=616,
+  serialized_start=436,
+  serialized_end=1053,
 )
 
 _GLOBALSETTINGS.fields_by_name['fort_settings'].message_type = POGOProtos_dot_Settings_dot_FortSettings__pb2._FORTSETTINGS
@@ -102,6 +141,10 @@ _GLOBALSETTINGS.fields_by_name['map_settings'].message_type = POGOProtos_dot_Set
 _GLOBALSETTINGS.fields_by_name['level_settings'].message_type = POGOProtos_dot_Settings_dot_LevelSettings__pb2._LEVELSETTINGS
 _GLOBALSETTINGS.fields_by_name['inventory_settings'].message_type = POGOProtos_dot_Settings_dot_InventorySettings__pb2._INVENTORYSETTINGS
 _GLOBALSETTINGS.fields_by_name['gps_settings'].message_type = POGOProtos_dot_Settings_dot_GpsSettings__pb2._GPSSETTINGS
+_GLOBALSETTINGS.fields_by_name['festival_settings'].message_type = POGOProtos_dot_Settings_dot_FestivalSettings__pb2._FESTIVALSETTINGS
+_GLOBALSETTINGS.fields_by_name['event_settings'].message_type = POGOProtos_dot_Settings_dot_EventSettings__pb2._EVENTSETTINGS
+_GLOBALSETTINGS.fields_by_name['sfida_settings'].message_type = POGOProtos_dot_Settings_dot_SfidaSettings__pb2._SFIDASETTINGS
+_GLOBALSETTINGS.fields_by_name['news_settings'].message_type = POGOProtos_dot_Settings_dot_NewsSettings__pb2._NEWSSETTINGS
 DESCRIPTOR.message_types_by_name['GlobalSettings'] = _GLOBALSETTINGS
 
 GlobalSettings = _reflection.GeneratedProtocolMessageType('GlobalSettings', (_message.Message,), dict(

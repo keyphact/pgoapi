@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Responses/CatchPokemonResponse.proto',
   package='POGOProtos.Networking.Responses',
   syntax='proto3',
-  serialized_pb=_b('\n:POGOProtos/Networking/Responses/CatchPokemonResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a*POGOProtos/Data/Capture/CaptureAward.proto\"\xc1\x02\n\x14\x43\x61tchPokemonResponse\x12Q\n\x06status\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus\x12\x14\n\x0cmiss_percent\x18\x02 \x01(\x01\x12\x1b\n\x13\x63\x61ptured_pokemon_id\x18\x03 \x01(\x06\x12<\n\rcapture_award\x18\x04 \x01(\x0b\x32%.POGOProtos.Data.Capture.CaptureAward\"e\n\x0b\x43\x61tchStatus\x12\x0f\n\x0b\x43\x41TCH_ERROR\x10\x00\x12\x11\n\rCATCH_SUCCESS\x10\x01\x12\x10\n\x0c\x43\x41TCH_ESCAPE\x10\x02\x12\x0e\n\nCATCH_FLEE\x10\x03\x12\x10\n\x0c\x43\x41TCH_MISSED\x10\x04\x62\x06proto3')
+  serialized_pb=_b('\n:POGOProtos/Networking/Responses/CatchPokemonResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a*POGOProtos/Data/Capture/CaptureAward.proto\"\x8c\x04\n\x14\x43\x61tchPokemonResponse\x12Q\n\x06status\x18\x01 \x01(\x0e\x32\x41.POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus\x12\x14\n\x0cmiss_percent\x18\x02 \x01(\x01\x12\x1b\n\x13\x63\x61ptured_pokemon_id\x18\x03 \x01(\x06\x12<\n\rcapture_award\x18\x04 \x01(\x0b\x32%.POGOProtos.Data.Capture.CaptureAward\x12[\n\x0e\x63\x61pture_reason\x18\x05 \x01(\x0e\x32\x43.POGOProtos.Networking.Responses.CatchPokemonResponse.CaptureReason\x12\x1a\n\x12\x64isplay_pokedex_id\x18\x06 \x01(\x05\"e\n\x0b\x43\x61tchStatus\x12\x0f\n\x0b\x43\x41TCH_ERROR\x10\x00\x12\x11\n\rCATCH_SUCCESS\x10\x01\x12\x10\n\x0c\x43\x41TCH_ESCAPE\x10\x02\x12\x0e\n\nCATCH_FLEE\x10\x03\x12\x10\n\x0c\x43\x41TCH_MISSED\x10\x04\"P\n\rCaptureReason\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x01\x12\x13\n\x0f\x45LEMENTAL_BADGE\x10\x02\x12\x12\n\x0e\x43RITICAL_CATCH\x10\x03\x62\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Data_dot_Capture_dot_CaptureAward__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -56,10 +56,40 @@ _CATCHPOKEMONRESPONSE_CATCHSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=360,
-  serialized_end=461,
+  serialized_start=481,
+  serialized_end=582,
 )
 _sym_db.RegisterEnumDescriptor(_CATCHPOKEMONRESPONSE_CATCHSTATUS)
+
+_CATCHPOKEMONRESPONSE_CAPTUREREASON = _descriptor.EnumDescriptor(
+  name='CaptureReason',
+  full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.CaptureReason',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DEFAULT', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ELEMENTAL_BADGE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CRITICAL_CATCH', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=584,
+  serialized_end=664,
+)
+_sym_db.RegisterEnumDescriptor(_CATCHPOKEMONRESPONSE_CAPTUREREASON)
 
 
 _CATCHPOKEMONRESPONSE = _descriptor.Descriptor(
@@ -97,12 +127,27 @@ _CATCHPOKEMONRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='capture_reason', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.capture_reason', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='display_pokedex_id', full_name='POGOProtos.Networking.Responses.CatchPokemonResponse.display_pokedex_id', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
     _CATCHPOKEMONRESPONSE_CATCHSTATUS,
+    _CATCHPOKEMONRESPONSE_CAPTUREREASON,
   ],
   options=None,
   is_extendable=False,
@@ -111,12 +156,14 @@ _CATCHPOKEMONRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=140,
-  serialized_end=461,
+  serialized_end=664,
 )
 
 _CATCHPOKEMONRESPONSE.fields_by_name['status'].enum_type = _CATCHPOKEMONRESPONSE_CATCHSTATUS
 _CATCHPOKEMONRESPONSE.fields_by_name['capture_award'].message_type = POGOProtos_dot_Data_dot_Capture_dot_CaptureAward__pb2._CAPTUREAWARD
+_CATCHPOKEMONRESPONSE.fields_by_name['capture_reason'].enum_type = _CATCHPOKEMONRESPONSE_CAPTUREREASON
 _CATCHPOKEMONRESPONSE_CATCHSTATUS.containing_type = _CATCHPOKEMONRESPONSE
+_CATCHPOKEMONRESPONSE_CAPTUREREASON.containing_type = _CATCHPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['CatchPokemonResponse'] = _CATCHPOKEMONRESPONSE
 
 CatchPokemonResponse = _reflection.GeneratedProtocolMessageType('CatchPokemonResponse', (_message.Message,), dict(

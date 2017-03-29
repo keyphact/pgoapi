@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Requests/Messages/AttackGymMessage.proto',
   package='POGOProtos.Networking.Requests.Messages',
   syntax='proto3',
-  serialized_pb=_b('\n>POGOProtos/Networking/Requests/Messages/AttackGymMessage.proto\x12\'POGOProtos.Networking.Requests.Messages\x1a)POGOProtos/Data/Battle/BattleAction.proto\"\xec\x01\n\x10\x41ttackGymMessage\x12\x0e\n\x06gym_id\x18\x01 \x01(\t\x12\x11\n\tbattle_id\x18\x02 \x01(\t\x12<\n\x0e\x61ttack_actions\x18\x03 \x03(\x0b\x32$.POGOProtos.Data.Battle.BattleAction\x12\x44\n\x16last_retrieved_actions\x18\x04 \x01(\x0b\x32$.POGOProtos.Data.Battle.BattleAction\x12\x17\n\x0fplayer_latitude\x18\x05 \x01(\x01\x12\x18\n\x10player_longitude\x18\x06 \x01(\x01\x62\x06proto3')
+  serialized_pb=_b('\n>POGOProtos/Networking/Requests/Messages/AttackGymMessage.proto\x12\'POGOProtos.Networking.Requests.Messages\x1a)POGOProtos/Data/Battle/BattleAction.proto\"\xeb\x01\n\x10\x41ttackGymMessage\x12\x0e\n\x06gym_id\x18\x01 \x01(\t\x12\x11\n\tbattle_id\x18\x02 \x01(\t\x12<\n\x0e\x61ttack_actions\x18\x03 \x03(\x0b\x32$.POGOProtos.Data.Battle.BattleAction\x12\x43\n\x15last_retrieved_action\x18\x04 \x01(\x0b\x32$.POGOProtos.Data.Battle.BattleAction\x12\x17\n\x0fplayer_latitude\x18\x05 \x01(\x01\x12\x18\n\x10player_longitude\x18\x06 \x01(\x01\x62\x06proto3')
   ,
   dependencies=[POGOProtos_dot_Data_dot_Battle_dot_BattleAction__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -57,7 +57,7 @@ _ATTACKGYMMESSAGE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='last_retrieved_actions', full_name='POGOProtos.Networking.Requests.Messages.AttackGymMessage.last_retrieved_actions', index=3,
+      name='last_retrieved_action', full_name='POGOProtos.Networking.Requests.Messages.AttackGymMessage.last_retrieved_action', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -90,11 +90,11 @@ _ATTACKGYMMESSAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=151,
-  serialized_end=387,
+  serialized_end=386,
 )
 
 _ATTACKGYMMESSAGE.fields_by_name['attack_actions'].message_type = POGOProtos_dot_Data_dot_Battle_dot_BattleAction__pb2._BATTLEACTION
-_ATTACKGYMMESSAGE.fields_by_name['last_retrieved_actions'].message_type = POGOProtos_dot_Data_dot_Battle_dot_BattleAction__pb2._BATTLEACTION
+_ATTACKGYMMESSAGE.fields_by_name['last_retrieved_action'].message_type = POGOProtos_dot_Data_dot_Battle_dot_BattleAction__pb2._BATTLEACTION
 DESCRIPTOR.message_types_by_name['AttackGymMessage'] = _ATTACKGYMMESSAGE
 
 AttackGymMessage = _reflection.GeneratedProtocolMessageType('AttackGymMessage', (_message.Message,), dict(

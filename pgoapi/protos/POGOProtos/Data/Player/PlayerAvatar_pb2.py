@@ -13,16 +13,14 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from POGOProtos.Enums import Gender_pb2 as POGOProtos_dot_Enums_dot_Gender__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Data/Player/PlayerAvatar.proto',
   package='POGOProtos.Data.Player',
   syntax='proto3',
-  serialized_pb=_b('\n)POGOProtos/Data/Player/PlayerAvatar.proto\x12\x16POGOProtos.Data.Player\x1a\x1dPOGOProtos/Enums/Gender.proto\"\xae\x01\n\x0cPlayerAvatar\x12\x0c\n\x04skin\x18\x02 \x01(\x05\x12\x0c\n\x04hair\x18\x03 \x01(\x05\x12\r\n\x05shirt\x18\x04 \x01(\x05\x12\r\n\x05pants\x18\x05 \x01(\x05\x12\x0b\n\x03hat\x18\x06 \x01(\x05\x12\r\n\x05shoes\x18\x07 \x01(\x05\x12(\n\x06gender\x18\x08 \x01(\x0e\x32\x18.POGOProtos.Enums.Gender\x12\x0c\n\x04\x65yes\x18\t \x01(\x05\x12\x10\n\x08\x62\x61\x63kpack\x18\n \x01(\x05\x62\x06proto3')
-  ,
-  dependencies=[POGOProtos_dot_Enums_dot_Gender__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n)POGOProtos/Data/Player/PlayerAvatar.proto\x12\x16POGOProtos.Data.Player\"\xa0\x03\n\x0cPlayerAvatar\x12\x0c\n\x04skin\x18\x02 \x01(\x05\x12\x0c\n\x04hair\x18\x03 \x01(\x05\x12\r\n\x05shirt\x18\x04 \x01(\x05\x12\r\n\x05pants\x18\x05 \x01(\x05\x12\x0b\n\x03hat\x18\x06 \x01(\x05\x12\r\n\x05shoes\x18\x07 \x01(\x05\x12\x0e\n\x06\x61vatar\x18\x08 \x01(\x05\x12\x0c\n\x04\x65yes\x18\t \x01(\x05\x12\x10\n\x08\x62\x61\x63kpack\x18\n \x01(\x05\x12\x13\n\x0b\x61vatar_hair\x18\x0b \x01(\t\x12\x14\n\x0c\x61vatar_shirt\x18\x0c \x01(\t\x12\x14\n\x0c\x61vatar_pants\x18\r \x01(\t\x12\x12\n\navatar_hat\x18\x0e \x01(\t\x12\x14\n\x0c\x61vatar_shoes\x18\x0f \x01(\t\x12\x13\n\x0b\x61vatar_eyes\x18\x10 \x01(\t\x12\x17\n\x0f\x61vatar_backpack\x18\x11 \x01(\t\x12\x15\n\ravatar_gloves\x18\x12 \x01(\t\x12\x14\n\x0c\x61vatar_socks\x18\x13 \x01(\t\x12\x13\n\x0b\x61vatar_belt\x18\x14 \x01(\t\x12\x16\n\x0e\x61vatar_glasses\x18\x15 \x01(\t\x12\x17\n\x0f\x61vatar_necklace\x18\x16 \x01(\tb\x06proto3')
+)
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -78,8 +76,8 @@ _PLAYERAVATAR = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gender', full_name='POGOProtos.Data.Player.PlayerAvatar.gender', index=6,
-      number=8, type=14, cpp_type=8, label=1,
+      name='avatar', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar', index=6,
+      number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -98,6 +96,90 @@ _PLAYERAVATAR = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_hair', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_hair', index=9,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_shirt', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_shirt', index=10,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_pants', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_pants', index=11,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_hat', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_hat', index=12,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_shoes', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_shoes', index=13,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_eyes', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_eyes', index=14,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_backpack', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_backpack', index=15,
+      number=17, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_gloves', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_gloves', index=16,
+      number=18, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_socks', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_socks', index=17,
+      number=19, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_belt', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_belt', index=18,
+      number=20, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_glasses', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_glasses', index=19,
+      number=21, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_necklace', full_name='POGOProtos.Data.Player.PlayerAvatar.avatar_necklace', index=20,
+      number=22, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -110,11 +192,10 @@ _PLAYERAVATAR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=101,
-  serialized_end=275,
+  serialized_start=70,
+  serialized_end=486,
 )
 
-_PLAYERAVATAR.fields_by_name['gender'].enum_type = POGOProtos_dot_Enums_dot_Gender__pb2._GENDER
 DESCRIPTOR.message_types_by_name['PlayerAvatar'] = _PLAYERAVATAR
 
 PlayerAvatar = _reflection.GeneratedProtocolMessageType('PlayerAvatar', (_message.Message,), dict(

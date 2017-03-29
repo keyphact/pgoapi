@@ -13,14 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from POGOProtos.Inventory.Item import ItemId_pb2 as POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Requests/Messages/EvolvePokemonMessage.proto',
   package='POGOProtos.Networking.Requests.Messages',
   syntax='proto3',
-  serialized_pb=_b('\nBPOGOProtos/Networking/Requests/Messages/EvolvePokemonMessage.proto\x12\'POGOProtos.Networking.Requests.Messages\"*\n\x14\x45volvePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x62\x06proto3')
-)
+  serialized_pb=_b('\nBPOGOProtos/Networking/Requests/Messages/EvolvePokemonMessage.proto\x12\'POGOProtos.Networking.Requests.Messages\x1a&POGOProtos/Inventory/Item/ItemId.proto\"q\n\x14\x45volvePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x12\x45\n\x1a\x65volution_item_requirement\x18\x02 \x01(\x0e\x32!.POGOProtos.Inventory.Item.ItemIdb\x06proto3')
+  ,
+  dependencies=[POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -40,6 +42,13 @@ _EVOLVEPOKEMONMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='evolution_item_requirement', full_name='POGOProtos.Networking.Requests.Messages.EvolvePokemonMessage.evolution_item_requirement', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -52,10 +61,11 @@ _EVOLVEPOKEMONMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=111,
-  serialized_end=153,
+  serialized_start=151,
+  serialized_end=264,
 )
 
+_EVOLVEPOKEMONMESSAGE.fields_by_name['evolution_item_requirement'].enum_type = POGOProtos_dot_Inventory_dot_Item_dot_ItemId__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['EvolvePokemonMessage'] = _EVOLVEPOKEMONMESSAGE
 
 EvolvePokemonMessage = _reflection.GeneratedProtocolMessageType('EvolvePokemonMessage', (_message.Message,), dict(

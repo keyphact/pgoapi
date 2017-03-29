@@ -13,10 +13,12 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from POGOProtos.Settings.Master import AvatarCustomizationSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_AvatarCustomizationSettings__pb2
 from POGOProtos.Settings.Master import BadgeSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_BadgeSettings__pb2
 from POGOProtos.Settings.Master import CameraSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_CameraSettings__pb2
 from POGOProtos.Settings.Master import EncounterSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_EncounterSettings__pb2
 from POGOProtos.Settings.Master import EquippedBadgeSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_EquippedBadgeSettings__pb2
+from POGOProtos.Settings.Master import FormSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_FormSettings__pb2
 from POGOProtos.Settings.Master import GymBattleSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_GymBattleSettings__pb2
 from POGOProtos.Settings.Master import GymLevelSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_GymLevelSettings__pb2
 from POGOProtos.Settings.Master import IapItemDisplay_pb2 as POGOProtos_dot_Settings_dot_Master_dot_IapItemDisplay__pb2
@@ -27,19 +29,51 @@ from POGOProtos.Settings.Master import MoveSettings_pb2 as POGOProtos_dot_Settin
 from POGOProtos.Settings.Master import PlayerLevelSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_PlayerLevelSettings__pb2
 from POGOProtos.Settings.Master import PokemonSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_PokemonSettings__pb2
 from POGOProtos.Settings.Master import PokemonUpgradeSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_PokemonUpgradeSettings__pb2
+from POGOProtos.Settings.Master import QuestSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_QuestSettings__pb2
 from POGOProtos.Settings.Master import TypeEffectiveSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_TypeEffectiveSettings__pb2
+from POGOProtos.Settings.Master import GenderSettings_pb2 as POGOProtos_dot_Settings_dot_Master_dot_GenderSettings__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='POGOProtos/Networking/Responses/DownloadItemTemplatesResponse.proto',
   package='POGOProtos.Networking.Responses',
   syntax='proto3',
-  serialized_pb=_b('\nCPOGOProtos/Networking/Responses/DownloadItemTemplatesResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a.POGOProtos/Settings/Master/BadgeSettings.proto\x1a/POGOProtos/Settings/Master/CameraSettings.proto\x1a\x32POGOProtos/Settings/Master/EncounterSettings.proto\x1a\x36POGOProtos/Settings/Master/EquippedBadgeSettings.proto\x1a\x32POGOProtos/Settings/Master/GymBattleSettings.proto\x1a\x31POGOProtos/Settings/Master/GymLevelSettings.proto\x1a/POGOProtos/Settings/Master/IapItemDisplay.proto\x1a,POGOProtos/Settings/Master/IapSettings.proto\x1a-POGOProtos/Settings/Master/ItemSettings.proto\x1a\x35POGOProtos/Settings/Master/MoveSequenceSettings.proto\x1a-POGOProtos/Settings/Master/MoveSettings.proto\x1a\x34POGOProtos/Settings/Master/PlayerLevelSettings.proto\x1a\x30POGOProtos/Settings/Master/PokemonSettings.proto\x1a\x37POGOProtos/Settings/Master/PokemonUpgradeSettings.proto\x1a\x36POGOProtos/Settings/Master/TypeEffectiveSettings.proto\"\xf0\t\n\x1d\x44ownloadItemTemplatesResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x63\n\x0eitem_templates\x18\x02 \x03(\x0b\x32K.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate\x12\x14\n\x0ctimestamp_ms\x18\x03 \x01(\x04\x1a\xc2\x08\n\x0cItemTemplate\x12\x13\n\x0btemplate_id\x18\x01 \x01(\t\x12\x45\n\x10pokemon_settings\x18\x02 \x01(\x0b\x32+.POGOProtos.Settings.Master.PokemonSettings\x12?\n\ritem_settings\x18\x03 \x01(\x0b\x32(.POGOProtos.Settings.Master.ItemSettings\x12?\n\rmove_settings\x18\x04 \x01(\x0b\x32(.POGOProtos.Settings.Master.MoveSettings\x12P\n\x16move_sequence_settings\x18\x05 \x01(\x0b\x32\x30.POGOProtos.Settings.Master.MoveSequenceSettings\x12I\n\x0etype_effective\x18\x08 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.TypeEffectiveSettings\x12\x41\n\x0e\x62\x61\x64ge_settings\x18\n \x01(\x0b\x32).POGOProtos.Settings.Master.BadgeSettings\x12:\n\x06\x63\x61mera\x18\x0b \x01(\x0b\x32*.POGOProtos.Settings.Master.CameraSettings\x12\x45\n\x0cplayer_level\x18\x0c \x01(\x0b\x32/.POGOProtos.Settings.Master.PlayerLevelSettings\x12?\n\tgym_level\x18\r \x01(\x0b\x32,.POGOProtos.Settings.Master.GymLevelSettings\x12\x46\n\x0f\x62\x61ttle_settings\x18\x0e \x01(\x0b\x32-.POGOProtos.Settings.Master.GymBattleSettings\x12I\n\x12\x65ncounter_settings\x18\x0f \x01(\x0b\x32-.POGOProtos.Settings.Master.EncounterSettings\x12\x44\n\x10iap_item_display\x18\x10 \x01(\x0b\x32*.POGOProtos.Settings.Master.IapItemDisplay\x12=\n\x0ciap_settings\x18\x11 \x01(\x0b\x32\'.POGOProtos.Settings.Master.IapSettings\x12L\n\x10pokemon_upgrades\x18\x12 \x01(\x0b\x32\x32.POGOProtos.Settings.Master.PokemonUpgradeSettings\x12J\n\x0f\x65quipped_badges\x18\x13 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.EquippedBadgeSettingsb\x06proto3')
+  serialized_pb=_b('\nCPOGOProtos/Networking/Responses/DownloadItemTemplatesResponse.proto\x12\x1fPOGOProtos.Networking.Responses\x1a<POGOProtos/Settings/Master/AvatarCustomizationSettings.proto\x1a.POGOProtos/Settings/Master/BadgeSettings.proto\x1a/POGOProtos/Settings/Master/CameraSettings.proto\x1a\x32POGOProtos/Settings/Master/EncounterSettings.proto\x1a\x36POGOProtos/Settings/Master/EquippedBadgeSettings.proto\x1a-POGOProtos/Settings/Master/FormSettings.proto\x1a\x32POGOProtos/Settings/Master/GymBattleSettings.proto\x1a\x31POGOProtos/Settings/Master/GymLevelSettings.proto\x1a/POGOProtos/Settings/Master/IapItemDisplay.proto\x1a,POGOProtos/Settings/Master/IapSettings.proto\x1a-POGOProtos/Settings/Master/ItemSettings.proto\x1a\x35POGOProtos/Settings/Master/MoveSequenceSettings.proto\x1a-POGOProtos/Settings/Master/MoveSettings.proto\x1a\x34POGOProtos/Settings/Master/PlayerLevelSettings.proto\x1a\x30POGOProtos/Settings/Master/PokemonSettings.proto\x1a\x37POGOProtos/Settings/Master/PokemonUpgradeSettings.proto\x1a.POGOProtos/Settings/Master/QuestSettings.proto\x1a\x36POGOProtos/Settings/Master/TypeEffectiveSettings.proto\x1a/POGOProtos/Settings/Master/GenderSettings.proto\"\xa2\r\n\x1d\x44ownloadItemTemplatesResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x45.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.Result\x12\x63\n\x0eitem_templates\x18\x02 \x03(\x0b\x32K.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate\x12\x14\n\x0ctimestamp_ms\x18\x03 \x01(\x04\x12\x13\n\x0bpage_offset\x18\x04 \x01(\x05\x1a\xe2\n\n\x0cItemTemplate\x12\x13\n\x0btemplate_id\x18\x01 \x01(\t\x12\x45\n\x10pokemon_settings\x18\x02 \x01(\x0b\x32+.POGOProtos.Settings.Master.PokemonSettings\x12?\n\ritem_settings\x18\x03 \x01(\x0b\x32(.POGOProtos.Settings.Master.ItemSettings\x12?\n\rmove_settings\x18\x04 \x01(\x0b\x32(.POGOProtos.Settings.Master.MoveSettings\x12P\n\x16move_sequence_settings\x18\x05 \x01(\x0b\x32\x30.POGOProtos.Settings.Master.MoveSequenceSettings\x12I\n\x0etype_effective\x18\x08 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.TypeEffectiveSettings\x12\x41\n\x0e\x62\x61\x64ge_settings\x18\n \x01(\x0b\x32).POGOProtos.Settings.Master.BadgeSettings\x12:\n\x06\x63\x61mera\x18\x0b \x01(\x0b\x32*.POGOProtos.Settings.Master.CameraSettings\x12\x45\n\x0cplayer_level\x18\x0c \x01(\x0b\x32/.POGOProtos.Settings.Master.PlayerLevelSettings\x12?\n\tgym_level\x18\r \x01(\x0b\x32,.POGOProtos.Settings.Master.GymLevelSettings\x12\x46\n\x0f\x62\x61ttle_settings\x18\x0e \x01(\x0b\x32-.POGOProtos.Settings.Master.GymBattleSettings\x12I\n\x12\x65ncounter_settings\x18\x0f \x01(\x0b\x32-.POGOProtos.Settings.Master.EncounterSettings\x12\x44\n\x10iap_item_display\x18\x10 \x01(\x0b\x32*.POGOProtos.Settings.Master.IapItemDisplay\x12=\n\x0ciap_settings\x18\x11 \x01(\x0b\x32\'.POGOProtos.Settings.Master.IapSettings\x12L\n\x10pokemon_upgrades\x18\x12 \x01(\x0b\x32\x32.POGOProtos.Settings.Master.PokemonUpgradeSettings\x12J\n\x0f\x65quipped_badges\x18\x13 \x01(\x0b\x32\x31.POGOProtos.Settings.Master.EquippedBadgeSettings\x12\x41\n\x0equest_settings\x18\x14 \x01(\x0b\x32).POGOProtos.Settings.Master.QuestSettings\x12U\n\x14\x61vatar_customization\x18\x15 \x01(\x0b\x32\x37.POGOProtos.Settings.Master.AvatarCustomizationSettings\x12?\n\rform_settings\x18\x16 \x01(\x0b\x32(.POGOProtos.Settings.Master.FormSettings\x12\x43\n\x0fgender_settings\x18\x17 \x01(\x0b\x32*.POGOProtos.Settings.Master.GenderSettings\"5\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x08\n\x04PAGE\x10\x02\x12\t\n\x05RETRY\x10\x03\x62\x06proto3')
   ,
-  dependencies=[POGOProtos_dot_Settings_dot_Master_dot_BadgeSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_CameraSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_EncounterSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_EquippedBadgeSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_GymBattleSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_GymLevelSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_IapItemDisplay__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_IapSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_ItemSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_MoveSequenceSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_MoveSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_PlayerLevelSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_PokemonSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_PokemonUpgradeSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_TypeEffectiveSettings__pb2.DESCRIPTOR,])
+  dependencies=[POGOProtos_dot_Settings_dot_Master_dot_AvatarCustomizationSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_BadgeSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_CameraSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_EncounterSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_EquippedBadgeSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_FormSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_GymBattleSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_GymLevelSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_IapItemDisplay__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_IapSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_ItemSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_MoveSequenceSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_MoveSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_PlayerLevelSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_PokemonSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_PokemonUpgradeSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_QuestSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_TypeEffectiveSettings__pb2.DESCRIPTOR,POGOProtos_dot_Settings_dot_Master_dot_GenderSettings__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
+
+_DOWNLOADITEMTEMPLATESRESPONSE_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PAGE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RETRY', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2725,
+  serialized_end=2778,
+)
+_sym_db.RegisterEnumDescriptor(_DOWNLOADITEMTEMPLATESRESPONSE_RESULT)
 
 
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE = _descriptor.Descriptor(
@@ -161,6 +195,34 @@ _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='quest_settings', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate.quest_settings', index=16,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='avatar_customization', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate.avatar_customization', index=17,
+      number=21, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='form_settings', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate.form_settings', index=18,
+      number=22, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gender_settings', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate.gender_settings', index=19,
+      number=23, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -173,8 +235,8 @@ _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1048,
-  serialized_end=2138,
+  serialized_start=1345,
+  serialized_end=2723,
 )
 
 _DOWNLOADITEMTEMPLATESRESPONSE = _descriptor.Descriptor(
@@ -185,9 +247,9 @@ _DOWNLOADITEMTEMPLATESRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='success', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.success', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='result', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -205,11 +267,19 @@ _DOWNLOADITEMTEMPLATESRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='page_offset', full_name='POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.page_offset', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
   nested_types=[_DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE, ],
   enum_types=[
+    _DOWNLOADITEMTEMPLATESRESPONSE_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -217,8 +287,8 @@ _DOWNLOADITEMTEMPLATESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=874,
-  serialized_end=2138,
+  serialized_start=1080,
+  serialized_end=2778,
 )
 
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['pokemon_settings'].message_type = POGOProtos_dot_Settings_dot_Master_dot_PokemonSettings__pb2._POKEMONSETTINGS
@@ -236,8 +306,14 @@ _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['iap_item_display'].m
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['iap_settings'].message_type = POGOProtos_dot_Settings_dot_Master_dot_IapSettings__pb2._IAPSETTINGS
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['pokemon_upgrades'].message_type = POGOProtos_dot_Settings_dot_Master_dot_PokemonUpgradeSettings__pb2._POKEMONUPGRADESETTINGS
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['equipped_badges'].message_type = POGOProtos_dot_Settings_dot_Master_dot_EquippedBadgeSettings__pb2._EQUIPPEDBADGESETTINGS
+_DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['quest_settings'].message_type = POGOProtos_dot_Settings_dot_Master_dot_QuestSettings__pb2._QUESTSETTINGS
+_DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['avatar_customization'].message_type = POGOProtos_dot_Settings_dot_Master_dot_AvatarCustomizationSettings__pb2._AVATARCUSTOMIZATIONSETTINGS
+_DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['form_settings'].message_type = POGOProtos_dot_Settings_dot_Master_dot_FormSettings__pb2._FORMSETTINGS
+_DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.fields_by_name['gender_settings'].message_type = POGOProtos_dot_Settings_dot_Master_dot_GenderSettings__pb2._GENDERSETTINGS
 _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE.containing_type = _DOWNLOADITEMTEMPLATESRESPONSE
+_DOWNLOADITEMTEMPLATESRESPONSE.fields_by_name['result'].enum_type = _DOWNLOADITEMTEMPLATESRESPONSE_RESULT
 _DOWNLOADITEMTEMPLATESRESPONSE.fields_by_name['item_templates'].message_type = _DOWNLOADITEMTEMPLATESRESPONSE_ITEMTEMPLATE
+_DOWNLOADITEMTEMPLATESRESPONSE_RESULT.containing_type = _DOWNLOADITEMTEMPLATESRESPONSE
 DESCRIPTOR.message_types_by_name['DownloadItemTemplatesResponse'] = _DOWNLOADITEMTEMPLATESRESPONSE
 
 DownloadItemTemplatesResponse = _reflection.GeneratedProtocolMessageType('DownloadItemTemplatesResponse', (_message.Message,), dict(

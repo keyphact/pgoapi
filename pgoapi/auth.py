@@ -114,7 +114,7 @@ class Auth:
         Add few seconds to now so the token get refreshed 
         before it invalidates in the middle of the request
         """
-        now_s = get_time() + 120
+        now_s = get_time(False) + 120
 
         if self._access_token is not None:
             if self._access_token_expiry == 0:

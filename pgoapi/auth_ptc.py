@@ -40,7 +40,7 @@ from requests.exceptions import RequestException, Timeout
 
 class AuthPtc(Auth):
 
-    PTC_LOGIN_URL = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
+    PTC_LOGIN_URL = 'https://sso.pokemon.com/sso/login?locale=en&service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
     PTC_LOGIN_OAUTH = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
     PTC_LOGIN_CLIENT_SECRET = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
 
@@ -50,7 +50,7 @@ class AuthPtc(Auth):
         self._auth_provider = 'ptc'
 
         self._session = requests.session()
-        self._session.headers = {'User-Agent': user_agent or 'pokemongo/0 CFNetwork/758.5.3 Darwin/15.6.0'}
+        self._session.headers = {'User-Agent': user_agent or 'pokemongo/1 CFNetwork/808.2.16 Darwin/16.3.0'}
         self._username = username
         self._password = password
         self.timeout = timeout or 15

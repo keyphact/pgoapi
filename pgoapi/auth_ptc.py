@@ -25,138 +25,104 @@ Author: tjado <https://github.com/tejado>
 
 from __future__ import absolute_import
 from future.standard_library import install_aliases
+
 install_aliases()
 
-import re
-import six
-import json
-import logging
 import requests
 
-from urllib.parse import parse_qs
+from urllib.parse import parse_qs, urlsplit
+from six import string_types
 
 from pgoapi.auth import Auth
 from pgoapi.utilities import get_time
-from pgoapi.exceptions import AuthException
+from pgoapi.exceptions import AuthException, AuthTimeoutException, InvalidCredentialsException
 
-from requests.exceptions import ConnectionError
+from requests.exceptions import RequestException, Timeout
+
 
 class AuthPtc(Auth):
-
-    PTC_LOGIN_URL = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
+    PTC_LOGIN_URL1 = 'https://sso.pokemon.com/sso/oauth2.0/authorize?client_id=mobile-app_pokemon-go&redirect_uri=https%3A%2F%2Fwww.nianticlabs.com%2Fpokemongo%2Ferror'
+    PTC_LOGIN_URL2 = 'https://sso.pokemon.com/sso/login?service=http%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
     PTC_LOGIN_OAUTH = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
     PTC_LOGIN_CLIENT_SECRET = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
 
-    def __init__(self):
+    def __init__(self, username=None, password=None, user_agent=None, timeout=None, locale=None):
         Auth.__init__(self)
 
         self._auth_provider = 'ptc'
 
         self._session = requests.session()
-        self._session.verify = True
+        self._session.headers = {'User-Agent': user_agent or 'pokemongo/1 CFNetwork/811.4.18 Darwin/16.5.0',
+                                 'Host': 'sso.pokemon.com', 'X-Unity-Version': '5.5.1f1'}
+        self._username = username
+        self._password = password
+        self.timeout = timeout or 15
+        self.locale = locale or 'en_US'
 
     def set_proxy(self, proxy_config):
         self._session.proxies = proxy_config
 
-    def user_login(self, username, password):
-        self.log.info('PTC User Login for: {}'.format(username))
+    def user_login(self, username=None, password=None, retry=True):
+        self._username = username or self._username
+        self._password = password or self._password
+        if not isinstance(self._username, string_types) or not isinstance(self._password, string_types):
+            raise InvalidCredentialsException("Username/password not correctly specified")
 
-        if not isinstance(username, six.string_types) or not isinstance(password, six.string_types):
-            raise AuthException("Username/password not correctly specified")
-
-        head = {'User-Agent': 'niantic'}
-
-        try:
-            r = self._session.get(self.PTC_LOGIN_URL, headers=head)
-        except ConnectionError as e:
-            raise AuthException("Caught ConnectionError: %s", e)
+        self.log.info('PTC User Login for: {}'.format(self._username))
+        self._session.cookies.clear()
+        now = get_time()
 
         try:
-            jdata = json.loads(r.content.decode('utf-8'))
-            data = {
-                'lt': jdata['lt'],
-                'execution': jdata['execution'],
-                '_eventId': 'submit',
-                'username': username,
-                'password': password,
-            }
-        except ValueError as e:
-            self.log.error('PTC User Login Error - Field missing in response: %s', e)
-            return False
-        except KeyError as e:
-            self.log.error('PTC User Login Error - Field missing in response.content: %s', e)
-            return False
+            headers = {'Host': 'sso.pokemon.com',
+                       'Connection': 'keep-alive',
+                       'User-Agent': 'pokemongo/1 CFNetwork/811.4.18 Darwin/16.5.0',
+                       'Accept-Language': self.locale.lower().replace('_', '-'),
+                       'X-Unity-Version': '5.5.1f1',
+                       'Content-Length': '-1'}
+            r = self._session.get('https://sso.pokemon.com/sso/oauth2.0/authorize', timeout=self.timeout,
+                                  headers=headers, params={'client_id': 'mobile-app_pokemon-go',
+                                                           'redirect_uri': 'https://www.nianticlabs.com/pokemongo/error',
+                                                           'locale': self.locale})
+            data = r.json(encoding='utf-8', content_type=None)
+            assert 'lt' in data and 'execution' in data
 
-        r1 = self._session.post(self.PTC_LOGIN_URL, data=data, headers=head)
+            data['_eventId'] = 'submit'
+            data['username'] = self._username
+            data['password'] = self._password
+            data['locale'] = self.locale
 
-        ticket = None
-        try:
-            ticket = re.sub('.*ticket=', '', r1.history[0].headers['Location'])
-        except Exception as e:
+            headers.update({
+                'Content-Type': 'application/x-www-form-urlencoded'
+            })
+
+            # 2nd Request
+
+            r = self._session.post(url='https://sso.pokemon.com/sso/login', headers=headers, params={'service': 'http://sso.pokemon.com/sso/oauth2.0/callbackAuthorize', 'locale': self.locale}, data=data)
+
             try:
-                self.log.error('Could not retrieve token: %s', r1.json()['errors'][0])
-            except Exception as e:
-                self.log.error('Could not retrieve token! (%s)', e)
-            return False
+                self._access_token = r.cookies['CASTGC'].value
+            except (AttributeError, KeyError, TypeError) as e:
+                raise AuthException(e)
+        except Timeout:
+            raise AuthTimeoutException('Auth timed out.')
+        except RequestException as e:
+            raise AuthException('Caught RequestException: {}'.format(e))
 
-        self._refresh_token = ticket
-        self.log.info('PTC User Login successful.')
-
-        self.get_access_token()
-        return self._login
+        if self._access_token:
+            self._access_token_expiry = now + 7195.0
+            self.log.info('PTC User Login successful.')
 
     def set_refresh_token(self, refresh_token):
         self.log.info('PTC Refresh Token provided by user')
         self._refresh_token = refresh_token
 
-    def get_access_token(self, force_refresh = False):
+    def get_access_token(self, force_refresh=False):
         token_validity = self.check_access_token()
 
         if token_validity is True and force_refresh is False:
             self.log.debug('Using cached PTC Access Token')
             return self._access_token
-        else:
-            if force_refresh:
-                self.log.info('Forced request of PTC Access Token!')
-            else:
-                self.log.info('Request PTC Access Token...')
 
-            data1 = {
-                'client_id': 'mobile-app_pokemon-go',
-                'redirect_uri': 'https://www.nianticlabs.com/pokemongo/error',
-                'client_secret': self.PTC_LOGIN_CLIENT_SECRET,
-                'grant_type': 'refresh_token',
-                'code': self._refresh_token,
-            }
-
-            r2 = self._session.post(self.PTC_LOGIN_OAUTH, data=data1)
-
-            qs = r2.content.decode('utf-8')
-            token_data = parse_qs(qs)
-
-            access_token = token_data.get('access_token', None)
-            if access_token is not None:
-                self._access_token = access_token[0]
-
-                now_s = get_time()
-                # set expiration to an hour less than value received because Pokemon OAuth
-                # login servers return an access token with an explicit expiry time of
-                # three hours, however, the token stops being valid after two hours.
-                # See issue #86
-                expires = int(token_data.get('expires', [0])[0]) - 3600
-                if expires > 0:
-                    self._access_token_expiry = expires + now_s
-                else:
-                    self._access_token_expiry = 0
-
-                self._login = True
-
-                self.log.info('PTC Access Token successfully retrieved.')
-                self.log.debug('PTC Access Token: %s...', self._access_token[:25])
-            else:
-                self._access_token = None
-                self._login = False
-                raise AuthException("Could not retrieve a PTC Access Token")
-
-
-
+        self._access_token = None
+        self.user_login()
+        return self._access_token

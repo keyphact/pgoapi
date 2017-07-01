@@ -170,3 +170,4 @@ class AuthPtc(Auth):
                     self.log.info('Reauthenticating with refresh token failed, using credentials instead.')
                     return self.user_login(retry=False)
                 raise AuthException("Could not retrieve a PTC Access Token")
+                

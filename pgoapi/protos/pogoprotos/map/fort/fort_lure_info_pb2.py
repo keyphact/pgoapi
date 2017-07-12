@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n(pogoprotos/map/fort/fort_lure_info.proto\x12\x13pogoprotos.map.fort\x1a!pogoprotos/enums/pokemon_id.proto\"\x90\x01\n\x0c\x46ortLureInfo\x12\x0f\n\x07\x66ort_id\x18\x01 \x01(\t\x12\x14\n\x0c\x65ncounter_id\x18\x02 \x01(\x06\x12\x36\n\x11\x61\x63tive_pokemon_id\x18\x03 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12!\n\x19lure_expires_timestamp_ms\x18\x04 \x01(\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _FORTLUREINFO = _descriptor.Descriptor(
 
 _FORTLUREINFO.fields_by_name['active_pokemon_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 DESCRIPTOR.message_types_by_name['FortLureInfo'] = _FORTLUREINFO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortLureInfo = _reflection.GeneratedProtocolMessageType('FortLureInfo', (_message.Message,), dict(
   DESCRIPTOR = _FORTLUREINFO,

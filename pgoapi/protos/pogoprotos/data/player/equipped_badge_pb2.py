@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n+pogoprotos/data/player/equipped_badge.proto\x12\x16pogoprotos.data.player\x1a!pogoprotos/enums/badge_type.proto\"\x7f\n\rEquippedBadge\x12/\n\nbadge_type\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.BadgeType\x12\r\n\x05level\x18\x02 \x01(\x05\x12.\n&next_equip_change_allowed_timestamp_ms\x18\x03 \x01(\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_badge__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _EQUIPPEDBADGE = _descriptor.Descriptor(
 
 _EQUIPPEDBADGE.fields_by_name['badge_type'].enum_type = pogoprotos_dot_enums_dot_badge__type__pb2._BADGETYPE
 DESCRIPTOR.message_types_by_name['EquippedBadge'] = _EQUIPPEDBADGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EquippedBadge = _reflection.GeneratedProtocolMessageType('EquippedBadge', (_message.Message,), dict(
   DESCRIPTOR = _EQUIPPEDBADGE,

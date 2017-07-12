@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n0pogoprotos/data/battle/battle_pokemon_info.proto\x12\x16pogoprotos.data.battle\x1a\"pogoprotos/data/pokemon_data.proto\"w\n\x11\x42\x61ttlePokemonInfo\x12\x32\n\x0cpokemon_data\x18\x01 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\x12\x16\n\x0e\x63urrent_health\x18\x02 \x01(\x05\x12\x16\n\x0e\x63urrent_energy\x18\x03 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _BATTLEPOKEMONINFO = _descriptor.Descriptor(
 
 _BATTLEPOKEMONINFO.fields_by_name['pokemon_data'].message_type = pogoprotos_dot_data_dot_pokemon__data__pb2._POKEMONDATA
 DESCRIPTOR.message_types_by_name['BattlePokemonInfo'] = _BATTLEPOKEMONINFO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BattlePokemonInfo = _reflection.GeneratedProtocolMessageType('BattlePokemonInfo', (_message.Message,), dict(
   DESCRIPTOR = _BATTLEPOKEMONINFO,

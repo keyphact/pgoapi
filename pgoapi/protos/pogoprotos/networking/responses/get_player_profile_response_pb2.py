@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nApogoprotos/networking/responses/get_player_profile_response.proto\x12\x1fpogoprotos.networking.responses\x1a\"pogoprotos/data/player_badge.proto\x1a-pogoprotos/data/badge/awarded_gym_badge.proto\"\x80\x03\n\x18GetPlayerProfileResponse\x12P\n\x06result\x18\x01 \x01(\x0e\x32@.pogoprotos.networking.responses.GetPlayerProfileResponse.Result\x12\x12\n\nstart_time\x18\x02 \x01(\x03\x12,\n\x06\x62\x61\x64ges\x18\x03 \x03(\x0b\x32\x1c.pogoprotos.data.PlayerBadge\x12W\n\ngym_badges\x18\x04 \x01(\x0b\x32\x43.pogoprotos.networking.responses.GetPlayerProfileResponse.GymBadges\x1aU\n\tGymBadges\x12\x39\n\tgym_badge\x18\x01 \x03(\x0b\x32&.pogoprotos.data.badge.AwardedGymBadge\x12\r\n\x05total\x18\x02 \x01(\x05\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player__badge__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_badge_dot_awarded__gym__badge__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -147,6 +146,7 @@ _GETPLAYERPROFILERESPONSE.fields_by_name['badges'].message_type = pogoprotos_dot
 _GETPLAYERPROFILERESPONSE.fields_by_name['gym_badges'].message_type = _GETPLAYERPROFILERESPONSE_GYMBADGES
 _GETPLAYERPROFILERESPONSE_RESULT.containing_type = _GETPLAYERPROFILERESPONSE
 DESCRIPTOR.message_types_by_name['GetPlayerProfileResponse'] = _GETPLAYERPROFILERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetPlayerProfileResponse = _reflection.GeneratedProtocolMessageType('GetPlayerProfileResponse', (_message.Message,), dict(
 

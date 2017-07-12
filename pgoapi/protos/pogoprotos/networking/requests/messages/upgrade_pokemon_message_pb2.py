@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nEpogoprotos/networking/requests/messages/upgrade_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\"+\n\x15UpgradePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _UPGRADEPOKEMONMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['UpgradePokemonMessage'] = _UPGRADEPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UpgradePokemonMessage = _reflection.GeneratedProtocolMessageType('UpgradePokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _UPGRADEPOKEMONMESSAGE,

@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n6pogoprotos/networking/envelopes/request_envelope.proto\x12\x1fpogoprotos.networking.envelopes\x1a,pogoprotos/networking/requests/request.proto\x1a\x31pogoprotos/networking/envelopes/auth_ticket.proto\x1a:pogoprotos/networking/platform/platform_request_type.proto\"\xc3\x05\n\x0fRequestEnvelope\x12\x13\n\x0bstatus_code\x18\x01 \x01(\x05\x12\x12\n\nrequest_id\x18\x03 \x01(\x04\x12\x39\n\x08requests\x18\x04 \x03(\x0b\x32\'.pogoprotos.networking.requests.Request\x12[\n\x11platform_requests\x18\x06 \x03(\x0b\x32@.pogoprotos.networking.envelopes.RequestEnvelope.PlatformRequest\x12\x10\n\x08latitude\x18\x07 \x01(\x01\x12\x11\n\tlongitude\x18\x08 \x01(\x01\x12\x10\n\x08\x61\x63\x63uracy\x18\t \x01(\x01\x12L\n\tauth_info\x18\n \x01(\x0b\x32\x39.pogoprotos.networking.envelopes.RequestEnvelope.AuthInfo\x12@\n\x0b\x61uth_ticket\x18\x0b \x01(\x0b\x32+.pogoprotos.networking.envelopes.AuthTicket\x12!\n\x19ms_since_last_locationfix\x18\x0c \x01(\x03\x1a\x95\x01\n\x08\x41uthInfo\x12\x10\n\x08provider\x18\x01 \x01(\t\x12L\n\x05token\x18\x02 \x01(\x0b\x32=.pogoprotos.networking.envelopes.RequestEnvelope.AuthInfo.JWT\x1a)\n\x03JWT\x12\x10\n\x08\x63ontents\x18\x01 \x01(\t\x12\x10\n\x08unknown2\x18\x02 \x01(\x05\x1am\n\x0fPlatformRequest\x12\x41\n\x04type\x18\x01 \x01(\x0e\x32\x33.pogoprotos.networking.platform.PlatformRequestType\x12\x17\n\x0frequest_message\x18\x02 \x01(\x0c\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_networking_dot_requests_dot_request__pb2.DESCRIPTOR,pogoprotos_dot_networking_dot_envelopes_dot_auth__ticket__pb2.DESCRIPTOR,pogoprotos_dot_networking_dot_platform_dot_platform__request__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -244,6 +243,7 @@ _REQUESTENVELOPE.fields_by_name['platform_requests'].message_type = _REQUESTENVE
 _REQUESTENVELOPE.fields_by_name['auth_info'].message_type = _REQUESTENVELOPE_AUTHINFO
 _REQUESTENVELOPE.fields_by_name['auth_ticket'].message_type = pogoprotos_dot_networking_dot_envelopes_dot_auth__ticket__pb2._AUTHTICKET
 DESCRIPTOR.message_types_by_name['RequestEnvelope'] = _REQUESTENVELOPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RequestEnvelope = _reflection.GeneratedProtocolMessageType('RequestEnvelope', (_message.Message,), dict(
 

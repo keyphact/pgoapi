@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/platform/requests/buy_item_android_request.proto\x12\'pogoprotos.networking.platform.requests\"0\n\x15\x42uyItemAndroidRequest\x12\x17\n\x0f\x62uy_item_intent\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _BUYITEMANDROIDREQUEST = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['BuyItemAndroidRequest'] = _BUYITEMANDROIDREQUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BuyItemAndroidRequest = _reflection.GeneratedProtocolMessageType('BuyItemAndroidRequest', (_message.Message,), dict(
   DESCRIPTOR = _BUYITEMANDROIDREQUEST,

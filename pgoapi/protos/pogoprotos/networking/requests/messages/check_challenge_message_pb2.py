@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nEpogoprotos/networking/requests/messages/check_challenge_message.proto\x12\'pogoprotos.networking.requests.messages\".\n\x15\x43heckChallengeMessage\x12\x15\n\rdebug_request\x18\x01 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _CHECKCHALLENGEMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['CheckChallengeMessage'] = _CHECKCHALLENGEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CheckChallengeMessage = _reflection.GeneratedProtocolMessageType('CheckChallengeMessage', (_message.Message,), dict(
   DESCRIPTOR = _CHECKCHALLENGEMESSAGE,

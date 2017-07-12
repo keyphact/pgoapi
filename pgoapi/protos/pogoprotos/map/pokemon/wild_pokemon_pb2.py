@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n)pogoprotos/map/pokemon/wild_pokemon.proto\x12\x16pogoprotos.map.pokemon\x1a\"pogoprotos/data/pokemon_data.proto\"\xd5\x01\n\x0bWildPokemon\x12\x14\n\x0c\x65ncounter_id\x18\x01 \x01(\x06\x12\"\n\x1alast_modified_timestamp_ms\x18\x02 \x01(\x03\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x16\n\x0espawn_point_id\x18\x05 \x01(\t\x12\x32\n\x0cpokemon_data\x18\x07 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\x12\x1b\n\x13time_till_hidden_ms\x18\x0b \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -102,6 +101,7 @@ _WILDPOKEMON = _descriptor.Descriptor(
 
 _WILDPOKEMON.fields_by_name['pokemon_data'].message_type = pogoprotos_dot_data_dot_pokemon__data__pb2._POKEMONDATA
 DESCRIPTOR.message_types_by_name['WildPokemon'] = _WILDPOKEMON
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 WildPokemon = _reflection.GeneratedProtocolMessageType('WildPokemon', (_message.Message,), dict(
   DESCRIPTOR = _WILDPOKEMON,

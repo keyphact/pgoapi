@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n;pogoprotos/networking/responses/use_item_gym_response.proto\x12\x1fpogoprotos.networking.responses\"\xc4\x01\n\x12UseItemGymResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.pogoprotos.networking.responses.UseItemGymResponse.Result\x12\x12\n\nupdated_gp\x18\x02 \x01(\x03\"N\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -97,6 +96,7 @@ _USEITEMGYMRESPONSE = _descriptor.Descriptor(
 _USEITEMGYMRESPONSE.fields_by_name['result'].enum_type = _USEITEMGYMRESPONSE_RESULT
 _USEITEMGYMRESPONSE_RESULT.containing_type = _USEITEMGYMRESPONSE
 DESCRIPTOR.message_types_by_name['UseItemGymResponse'] = _USEITEMGYMRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemGymResponse = _reflection.GeneratedProtocolMessageType('UseItemGymResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMGYMRESPONSE,

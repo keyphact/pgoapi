@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nApogoprotos/networking/requests/messages/use_incense_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"L\n\x11UseIncenseMessage\x12\x37\n\x0cincense_type\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemIdb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _USEINCENSEMESSAGE = _descriptor.Descriptor(
 
 _USEINCENSEMESSAGE.fields_by_name['incense_type'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['UseIncenseMessage'] = _USEINCENSEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseIncenseMessage = _reflection.GeneratedProtocolMessageType('UseIncenseMessage', (_message.Message,), dict(
   DESCRIPTOR = _USEINCENSEMESSAGE,

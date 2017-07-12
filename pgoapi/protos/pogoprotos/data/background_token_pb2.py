@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n&pogoprotos/data/background_token.proto\x12\x0fpogoprotos.data\"E\n\x0f\x42\x61\x63kgroundToken\x12\r\n\x05token\x18\x01 \x01(\x0c\x12\x17\n\x0f\x65xpiration_time\x18\x02 \x01(\x03\x12\n\n\x02iv\x18\x03 \x01(\x0c\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _BACKGROUNDTOKEN = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['BackgroundToken'] = _BACKGROUNDTOKEN
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BackgroundToken = _reflection.GeneratedProtocolMessageType('BackgroundToken', (_message.Message,), dict(
   DESCRIPTOR = _BACKGROUNDTOKEN,

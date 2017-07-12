@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n)pogoprotos/enums/notification_state.proto\x12\x10pogoprotos.enums*0\n\x11NotificationState\x12\x0f\n\x0bUNSET_STATE\x10\x00\x12\n\n\x06VIEWED\x10\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _NOTIFICATIONSTATE = _descriptor.EnumDescriptor(
   name='NotificationState',
@@ -52,6 +51,7 @@ VIEWED = 1
 
 
 DESCRIPTOR.enum_types_by_name['NotificationState'] = _NOTIFICATIONSTATE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

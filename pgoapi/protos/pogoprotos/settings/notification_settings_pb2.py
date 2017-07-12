@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n/pogoprotos/settings/notification_settings.proto\x12\x13pogoprotos.settings\"N\n\x14NotificationSettings\x12\x1a\n\x12pull_notifications\x18\x01 \x01(\x08\x12\x1a\n\x12show_notifications\x18\x02 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _NOTIFICATIONSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['NotificationSettings'] = _NOTIFICATIONSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 NotificationSettings = _reflection.GeneratedProtocolMessageType('NotificationSettings', (_message.Message,), dict(
   DESCRIPTOR = _NOTIFICATIONSETTINGS,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nEpogoprotos/networking/responses/recycle_inventory_item_response.proto\x12\x1fpogoprotos.networking.responses\"\xeb\x01\n\x1cRecycleInventoryItemResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x44.pogoprotos.networking.responses.RecycleInventoryItemResponse.Result\x12\x11\n\tnew_count\x18\x02 \x01(\x05\"b\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_NOT_ENOUGH_COPIES\x10\x02\x12#\n\x1f\x45RROR_CANNOT_RECYCLE_INCUBATORS\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -97,6 +96,7 @@ _RECYCLEINVENTORYITEMRESPONSE = _descriptor.Descriptor(
 _RECYCLEINVENTORYITEMRESPONSE.fields_by_name['result'].enum_type = _RECYCLEINVENTORYITEMRESPONSE_RESULT
 _RECYCLEINVENTORYITEMRESPONSE_RESULT.containing_type = _RECYCLEINVENTORYITEMRESPONSE
 DESCRIPTOR.message_types_by_name['RecycleInventoryItemResponse'] = _RECYCLEINVENTORYITEMRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RecycleInventoryItemResponse = _reflection.GeneratedProtocolMessageType('RecycleInventoryItemResponse', (_message.Message,), dict(
   DESCRIPTOR = _RECYCLEINVENTORYITEMRESPONSE,

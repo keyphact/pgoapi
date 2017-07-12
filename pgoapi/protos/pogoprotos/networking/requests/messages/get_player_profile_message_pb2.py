@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nHpogoprotos/networking/requests/messages/get_player_profile_message.proto\x12\'pogoprotos.networking.requests.messages\".\n\x17GetPlayerProfileMessage\x12\x13\n\x0bplayer_name\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _GETPLAYERPROFILEMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetPlayerProfileMessage'] = _GETPLAYERPROFILEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetPlayerProfileMessage = _reflection.GeneratedProtocolMessageType('GetPlayerProfileMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETPLAYERPROFILEMESSAGE,

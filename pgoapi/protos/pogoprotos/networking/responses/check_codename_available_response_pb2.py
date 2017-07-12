@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nGpogoprotos/networking/responses/check_codename_available_response.proto\x12\x1fpogoprotos.networking.responses\"\xc2\x02\n\x1e\x43heckCodenameAvailableResponse\x12\x10\n\x08\x63odename\x18\x01 \x01(\t\x12\x14\n\x0cuser_message\x18\x02 \x01(\t\x12\x15\n\ris_assignable\x18\x03 \x01(\x08\x12V\n\x06status\x18\x04 \x01(\x0e\x32\x46.pogoprotos.networking.responses.CheckCodenameAvailableResponse.Status\"\x88\x01\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16\x43ODENAME_NOT_AVAILABLE\x10\x02\x12\x16\n\x12\x43ODENAME_NOT_VALID\x10\x03\x12\x11\n\rCURRENT_OWNER\x10\x04\x12\x1f\n\x1b\x43ODENAME_CHANGE_NOT_ALLOWED\x10\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -119,6 +118,7 @@ _CHECKCODENAMEAVAILABLERESPONSE = _descriptor.Descriptor(
 _CHECKCODENAMEAVAILABLERESPONSE.fields_by_name['status'].enum_type = _CHECKCODENAMEAVAILABLERESPONSE_STATUS
 _CHECKCODENAMEAVAILABLERESPONSE_STATUS.containing_type = _CHECKCODENAMEAVAILABLERESPONSE
 DESCRIPTOR.message_types_by_name['CheckCodenameAvailableResponse'] = _CHECKCODENAMEAVAILABLERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CheckCodenameAvailableResponse = _reflection.GeneratedProtocolMessageType('CheckCodenameAvailableResponse', (_message.Message,), dict(
   DESCRIPTOR = _CHECKCODENAMEAVAILABLERESPONSE,

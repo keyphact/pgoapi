@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n pogoprotos/map/spawn_point.proto\x12\x0epogoprotos.map\"1\n\nSpawnPoint\x12\x10\n\x08latitude\x18\x02 \x01(\x01\x12\x11\n\tlongitude\x18\x03 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _SPAWNPOINT = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SpawnPoint'] = _SPAWNPOINT
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SpawnPoint = _reflection.GeneratedProtocolMessageType('SpawnPoint', (_message.Message,), dict(
   DESCRIPTOR = _SPAWNPOINT,

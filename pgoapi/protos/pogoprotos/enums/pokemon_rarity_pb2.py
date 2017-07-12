@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n%pogoprotos/enums/pokemon_rarity.proto\x12\x10pogoprotos.enums*c\n\rPokemonRarity\x12\x19\n\x15POKEMON_RARITY_NORMAL\x10\x00\x12\x1c\n\x18POKEMON_RARITY_LEGENDARY\x10\x01\x12\x19\n\x15POKEMON_RARITY_MYTHIC\x10\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _POKEMONRARITY = _descriptor.EnumDescriptor(
   name='PokemonRarity',
@@ -57,6 +56,7 @@ POKEMON_RARITY_MYTHIC = 2
 
 
 DESCRIPTOR.enum_types_by_name['PokemonRarity'] = _POKEMONRARITY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

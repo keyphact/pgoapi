@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\x1fpogoprotos/inventory/loot.proto\x12\x14pogoprotos.inventory\x1a$pogoprotos/inventory/loot_item.proto\"9\n\x04Loot\x12\x31\n\tloot_item\x18\x01 \x03(\x0b\x32\x1e.pogoprotos.inventory.LootItemb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_loot__item__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _LOOT = _descriptor.Descriptor(
 
 _LOOT.fields_by_name['loot_item'].message_type = pogoprotos_dot_inventory_dot_loot__item__pb2._LOOTITEM
 DESCRIPTOR.message_types_by_name['Loot'] = _LOOT
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Loot = _reflection.GeneratedProtocolMessageType('Loot', (_message.Message,), dict(
   DESCRIPTOR = _LOOT,

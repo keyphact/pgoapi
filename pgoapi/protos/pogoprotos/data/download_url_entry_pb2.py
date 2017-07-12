@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n(pogoprotos/data/download_url_entry.proto\x12\x0fpogoprotos.data\"Q\n\x10\x44ownloadUrlEntry\x12\x10\n\x08\x61sset_id\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0c\n\x04size\x18\x03 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x04 \x01(\x07\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _DOWNLOADURLENTRY = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['DownloadUrlEntry'] = _DOWNLOADURLENTRY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DownloadUrlEntry = _reflection.GeneratedProtocolMessageType('DownloadUrlEntry', (_message.Message,), dict(
   DESCRIPTOR = _DOWNLOADURLENTRY,

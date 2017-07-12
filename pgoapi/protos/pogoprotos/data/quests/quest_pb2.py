@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\"pogoprotos/data/quests/quest.proto\x12\x16pogoprotos.data.quests\x1a!pogoprotos/enums/quest_type.proto\x1a(pogoprotos/data/quests/daily_quest.proto\"q\n\x05Quest\x12/\n\nquest_type\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.QuestType\x12\x37\n\x0b\x64\x61ily_quest\x18\x02 \x01(\x0b\x32\".pogoprotos.data.quests.DailyQuestb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_quest__type__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_quests_dot_daily__quest__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -69,6 +68,7 @@ _QUEST = _descriptor.Descriptor(
 _QUEST.fields_by_name['quest_type'].enum_type = pogoprotos_dot_enums_dot_quest__type__pb2._QUESTTYPE
 _QUEST.fields_by_name['daily_quest'].message_type = pogoprotos_dot_data_dot_quests_dot_daily__quest__pb2._DAILYQUEST
 DESCRIPTOR.message_types_by_name['Quest'] = _QUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Quest = _reflection.GeneratedProtocolMessageType('Quest', (_message.Message,), dict(
   DESCRIPTOR = _QUEST,

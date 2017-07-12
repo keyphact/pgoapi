@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n+pogoprotos/data/logs/action_log_entry.proto\x12\x14pogoprotos.data.logs\x1a\x32pogoprotos/data/logs/catch_pokemon_log_entry.proto\x1a\x30pogoprotos/data/logs/fort_search_log_entry.proto\x1a\x32pogoprotos/data/logs/buddy_pokemon_log_entry.proto\"\x8a\x02\n\x0e\x41\x63tionLogEntry\x12\x14\n\x0ctimestamp_ms\x18\x01 \x01(\x03\x12\r\n\x05sfida\x18\x02 \x01(\x08\x12\x43\n\rcatch_pokemon\x18\x03 \x01(\x0b\x32*.pogoprotos.data.logs.CatchPokemonLogEntryH\x00\x12?\n\x0b\x66ort_search\x18\x04 \x01(\x0b\x32(.pogoprotos.data.logs.FortSearchLogEntryH\x00\x12\x43\n\rbuddy_pokemon\x18\x05 \x01(\x0b\x32*.pogoprotos.data.logs.BuddyPokemonLogEntryH\x00\x42\x08\n\x06\x41\x63tionb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_logs_dot_catch__pokemon__log__entry__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_logs_dot_fort__search__log__entry__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_logs_dot_buddy__pokemon__log__entry__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -104,6 +103,7 @@ _ACTIONLOGENTRY.oneofs_by_name['Action'].fields.append(
   _ACTIONLOGENTRY.fields_by_name['buddy_pokemon'])
 _ACTIONLOGENTRY.fields_by_name['buddy_pokemon'].containing_oneof = _ACTIONLOGENTRY.oneofs_by_name['Action']
 DESCRIPTOR.message_types_by_name['ActionLogEntry'] = _ACTIONLOGENTRY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ActionLogEntry = _reflection.GeneratedProtocolMessageType('ActionLogEntry', (_message.Message,), dict(
   DESCRIPTOR = _ACTIONLOGENTRY,

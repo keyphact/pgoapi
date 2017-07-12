@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n&pogoprotos/map/fort/fort_summary.proto\x12\x13pogoprotos.map.fort\"o\n\x0b\x46ortSummary\x12\x17\n\x0f\x66ort_summary_id\x18\x01 \x01(\t\x12\"\n\x1alast_modified_timestamp_ms\x18\x02 \x01(\x03\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _FORTSUMMARY = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['FortSummary'] = _FORTSUMMARY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortSummary = _reflection.GeneratedProtocolMessageType('FortSummary', (_message.Message,), dict(
   DESCRIPTOR = _FORTSUMMARY,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n=pogoprotos/settings/master/pokemon/encounter_attributes.proto\x12\"pogoprotos.settings.master.pokemon\x1a,pogoprotos/enums/pokemon_movement_type.proto\"\xc3\x04\n\x13\x45ncounterAttributes\x12\x19\n\x11\x62\x61se_capture_rate\x18\x01 \x01(\x02\x12\x16\n\x0e\x62\x61se_flee_rate\x18\x02 \x01(\x02\x12\x1a\n\x12\x63ollision_radius_m\x18\x03 \x01(\x02\x12\x1a\n\x12\x63ollision_height_m\x18\x04 \x01(\x02\x12\x1f\n\x17\x63ollision_head_radius_m\x18\x05 \x01(\x02\x12<\n\rmovement_type\x18\x06 \x01(\x0e\x32%.pogoprotos.enums.PokemonMovementType\x12\x18\n\x10movement_timer_s\x18\x07 \x01(\x02\x12\x13\n\x0bjump_time_s\x18\x08 \x01(\x02\x12\x16\n\x0e\x61ttack_timer_s\x18\t \x01(\x02\x12\"\n\x1a\x62onus_candy_capture_reward\x18\n \x01(\x05\x12%\n\x1d\x62onus_stardust_capture_reward\x18\x0b \x01(\x05\x12\x1a\n\x12\x61ttack_probability\x18\x0c \x01(\x02\x12\x19\n\x11\x64odge_probability\x18\r \x01(\x02\x12\x18\n\x10\x64odge_duration_s\x18\x0e \x01(\x02\x12\x16\n\x0e\x64odge_distance\x18\x0f \x01(\x02\x12\x17\n\x0f\x63\x61mera_distance\x18\x10 \x01(\x02\x12&\n\x1emin_pokemon_action_frequency_s\x18\x11 \x01(\x02\x12&\n\x1emax_pokemon_action_frequency_s\x18\x12 \x01(\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__movement__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -179,6 +178,7 @@ _ENCOUNTERATTRIBUTES = _descriptor.Descriptor(
 
 _ENCOUNTERATTRIBUTES.fields_by_name['movement_type'].enum_type = pogoprotos_dot_enums_dot_pokemon__movement__type__pb2._POKEMONMOVEMENTTYPE
 DESCRIPTOR.message_types_by_name['EncounterAttributes'] = _ENCOUNTERATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EncounterAttributes = _reflection.GeneratedProtocolMessageType('EncounterAttributes', (_message.Message,), dict(
   DESCRIPTOR = _ENCOUNTERATTRIBUTES,

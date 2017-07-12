@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nCpogoprotos/networking/responses/set_favorite_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\"\xc9\x01\n\x1aSetFavoritePokemonResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x42.pogoprotos.networking.responses.SetFavoritePokemonResponse.Result\"W\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x02\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -90,6 +89,7 @@ _SETFAVORITEPOKEMONRESPONSE = _descriptor.Descriptor(
 _SETFAVORITEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _SETFAVORITEPOKEMONRESPONSE_RESULT
 _SETFAVORITEPOKEMONRESPONSE_RESULT.containing_type = _SETFAVORITEPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['SetFavoritePokemonResponse'] = _SETFAVORITEPOKEMONRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetFavoritePokemonResponse = _reflection.GeneratedProtocolMessageType('SetFavoritePokemonResponse', (_message.Message,), dict(
   DESCRIPTOR = _SETFAVORITEPOKEMONRESPONSE,

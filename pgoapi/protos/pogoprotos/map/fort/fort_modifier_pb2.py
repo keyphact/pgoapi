@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\'pogoprotos/map/fort/fort_modifier.proto\x12\x13pogoprotos.map.fort\x1a\'pogoprotos/inventory/item/item_id.proto\"\x85\x01\n\x0c\x46ortModifier\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x1f\n\x17\x65xpiration_timestamp_ms\x18\x02 \x01(\x03\x12 \n\x18\x64\x65ployer_player_codename\x18\x03 \x01(\tb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _FORTMODIFIER = _descriptor.Descriptor(
 
 _FORTMODIFIER.fields_by_name['item_id'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['FortModifier'] = _FORTMODIFIER
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortModifier = _reflection.GeneratedProtocolMessageType('FortModifier', (_message.Message,), dict(
   DESCRIPTOR = _FORTMODIFIER,

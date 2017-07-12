@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nKpogoprotos/networking/platform/responses/buy_item_poke_coins_response.proto\x12(pogoprotos.networking.platform.responses\"\xb3\x01\n\x18\x42uyItemPokeCoinsResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.pogoprotos.networking.platform.responses.BuyItemPokeCoinsResponse.Status\"<\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x18\n\x14NOT_ENOUGH_POKECOINS\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -86,6 +85,7 @@ _BUYITEMPOKECOINSRESPONSE = _descriptor.Descriptor(
 _BUYITEMPOKECOINSRESPONSE.fields_by_name['result'].enum_type = _BUYITEMPOKECOINSRESPONSE_STATUS
 _BUYITEMPOKECOINSRESPONSE_STATUS.containing_type = _BUYITEMPOKECOINSRESPONSE
 DESCRIPTOR.message_types_by_name['BuyItemPokeCoinsResponse'] = _BUYITEMPOKECOINSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BuyItemPokeCoinsResponse = _reflection.GeneratedProtocolMessageType('BuyItemPokeCoinsResponse', (_message.Message,), dict(
   DESCRIPTOR = _BUYITEMPOKECOINSRESPONSE,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n9pogoprotos/networking/responses/get_player_response.proto\x12\x1fpogoprotos.networking.responses\x1a!pogoprotos/data/player_data.proto\"t\n\x11GetPlayerResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.pogoprotos.data.PlayerData\x12\x0e\n\x06\x62\x61nned\x18\x03 \x01(\x08\x12\x0c\n\x04warn\x18\x04 \x01(\x08\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _GETPLAYERRESPONSE = _descriptor.Descriptor(
 
 _GETPLAYERRESPONSE.fields_by_name['player_data'].message_type = pogoprotos_dot_data_dot_player__data__pb2._PLAYERDATA
 DESCRIPTOR.message_types_by_name['GetPlayerResponse'] = _GETPLAYERRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetPlayerResponse = _reflection.GeneratedProtocolMessageType('GetPlayerResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETPLAYERRESPONSE,

@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\'pogoprotos/inventory/applied_item.proto\x12\x14pogoprotos.inventory\x1a\'pogoprotos/inventory/item/item_id.proto\x1a)pogoprotos/inventory/item/item_type.proto\"\xa0\x01\n\x0b\x41ppliedItem\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x36\n\titem_type\x18\x02 \x01(\x0e\x32#.pogoprotos.inventory.item.ItemType\x12\x11\n\texpire_ms\x18\x03 \x01(\x03\x12\x12\n\napplied_ms\x18\x04 \x01(\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_item_dot_item__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -83,6 +82,7 @@ _APPLIEDITEM = _descriptor.Descriptor(
 _APPLIEDITEM.fields_by_name['item_id'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 _APPLIEDITEM.fields_by_name['item_type'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__type__pb2._ITEMTYPE
 DESCRIPTOR.message_types_by_name['AppliedItem'] = _APPLIEDITEM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AppliedItem = _reflection.GeneratedProtocolMessageType('AppliedItem', (_message.Message,), dict(
   DESCRIPTOR = _APPLIEDITEM,

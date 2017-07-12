@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nTpogoprotos/networking/requests/messages/download_remote_config_version_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\x1fpogoprotos/enums/platform.proto\"\xaa\x01\n\"DownloadRemoteConfigVersionMessage\x12,\n\x08platform\x18\x01 \x01(\x0e\x32\x1a.pogoprotos.enums.Platform\x12\x1b\n\x13\x64\x65vice_manufacturer\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x03 \x01(\t\x12\x0e\n\x06locale\x18\x04 \x01(\t\x12\x13\n\x0b\x61pp_version\x18\x05 \x01(\rb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_platform__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -88,6 +87,7 @@ _DOWNLOADREMOTECONFIGVERSIONMESSAGE = _descriptor.Descriptor(
 
 _DOWNLOADREMOTECONFIGVERSIONMESSAGE.fields_by_name['platform'].enum_type = pogoprotos_dot_enums_dot_platform__pb2._PLATFORM
 DESCRIPTOR.message_types_by_name['DownloadRemoteConfigVersionMessage'] = _DOWNLOADREMOTECONFIGVERSIONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DownloadRemoteConfigVersionMessage = _reflection.GeneratedProtocolMessageType('DownloadRemoteConfigVersionMessage', (_message.Message,), dict(
   DESCRIPTOR = _DOWNLOADREMOTECONFIGVERSIONMESSAGE,

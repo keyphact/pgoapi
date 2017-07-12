@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n@pogoprotos/networking/responses/get_download_urls_response.proto\x12\x1fpogoprotos.networking.responses\x1a(pogoprotos/data/download_url_entry.proto\"S\n\x17GetDownloadUrlsResponse\x12\x38\n\rdownload_urls\x18\x01 \x03(\x0b\x32!.pogoprotos.data.DownloadUrlEntryb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_download__url__entry__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _GETDOWNLOADURLSRESPONSE = _descriptor.Descriptor(
 
 _GETDOWNLOADURLSRESPONSE.fields_by_name['download_urls'].message_type = pogoprotos_dot_data_dot_download__url__entry__pb2._DOWNLOADURLENTRY
 DESCRIPTOR.message_types_by_name['GetDownloadUrlsResponse'] = _GETDOWNLOADURLSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetDownloadUrlsResponse = _reflection.GeneratedProtocolMessageType('GetDownloadUrlsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETDOWNLOADURLSRESPONSE,

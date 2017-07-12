@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nHpogoprotos/networking/responses/set_avatar_item_as_viewed_response.proto\x12\x1fpogoprotos.networking.responses\"\xa5\x01\n\x1dSetAvatarItemAsViewedResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x45.pogoprotos.networking.responses.SetAvatarItemAsViewedResponse.Result\"-\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -86,6 +85,7 @@ _SETAVATARITEMASVIEWEDRESPONSE = _descriptor.Descriptor(
 _SETAVATARITEMASVIEWEDRESPONSE.fields_by_name['result'].enum_type = _SETAVATARITEMASVIEWEDRESPONSE_RESULT
 _SETAVATARITEMASVIEWEDRESPONSE_RESULT.containing_type = _SETAVATARITEMASVIEWEDRESPONSE
 DESCRIPTOR.message_types_by_name['SetAvatarItemAsViewedResponse'] = _SETAVATARITEMASVIEWEDRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetAvatarItemAsViewedResponse = _reflection.GeneratedProtocolMessageType('SetAvatarItemAsViewedResponse', (_message.Message,), dict(
   DESCRIPTOR = _SETAVATARITEMASVIEWEDRESPONSE,

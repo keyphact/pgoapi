@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n%pogoprotos/data/pokemon_display.proto\x12\x0fpogoprotos.data\x1a\x1epogoprotos/enums/costume.proto\x1a\x1bpogoprotos/enums/form.proto\x1a\x1dpogoprotos/enums/gender.proto\"\x9b\x01\n\x0ePokemonDisplay\x12*\n\x07\x63ostume\x18\x01 \x01(\x0e\x32\x19.pogoprotos.enums.Costume\x12(\n\x06gender\x18\x02 \x01(\x0e\x32\x18.pogoprotos.enums.Gender\x12\r\n\x05shiny\x18\x03 \x01(\x08\x12$\n\x04\x66orm\x18\x04 \x01(\x0e\x32\x16.pogoprotos.enums.Formb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_costume__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_form__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_gender__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _POKEMONDISPLAY.fields_by_name['costume'].enum_type = pogoprotos_dot_enums_dot_c
 _POKEMONDISPLAY.fields_by_name['gender'].enum_type = pogoprotos_dot_enums_dot_gender__pb2._GENDER
 _POKEMONDISPLAY.fields_by_name['form'].enum_type = pogoprotos_dot_enums_dot_form__pb2._FORM
 DESCRIPTOR.message_types_by_name['PokemonDisplay'] = _POKEMONDISPLAY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PokemonDisplay = _reflection.GeneratedProtocolMessageType('PokemonDisplay', (_message.Message,), dict(
   DESCRIPTOR = _POKEMONDISPLAY,

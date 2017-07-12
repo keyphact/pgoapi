@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nApogoprotos/networking/responses/use_item_encounter_response.proto\x12\x1fpogoprotos.networking.responses\x1a\x31pogoprotos/data/capture/capture_probability.proto\x1a\'pogoprotos/inventory/item/item_id.proto\"\xe9\x02\n\x18UseItemEncounterResponse\x12P\n\x06status\x18\x01 \x01(\x0e\x32@.pogoprotos.networking.responses.UseItemEncounterResponse.Status\x12H\n\x13\x63\x61pture_probability\x18\x02 \x01(\x0b\x32+.pogoprotos.data.capture.CaptureProbability\x12\x36\n\x0b\x61\x63tive_item\x18\x03 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\"y\n\x06Status\x12\x0b\n\x07SUCCESS\x10\x00\x12\x15\n\x11\x41LREADY_COMPLETED\x10\x01\x12\x16\n\x12\x41\x43TIVE_ITEM_EXISTS\x10\x02\x12\x18\n\x14NO_ITEM_IN_INVENTORY\x10\x03\x12\x19\n\x15INVALID_ITEM_CATEGORY\x10\x04\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_capture_dot_capture__probability__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -113,6 +112,7 @@ _USEITEMENCOUNTERRESPONSE.fields_by_name['capture_probability'].message_type = p
 _USEITEMENCOUNTERRESPONSE.fields_by_name['active_item'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 _USEITEMENCOUNTERRESPONSE_STATUS.containing_type = _USEITEMENCOUNTERRESPONSE
 DESCRIPTOR.message_types_by_name['UseItemEncounterResponse'] = _USEITEMENCOUNTERRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemEncounterResponse = _reflection.GeneratedProtocolMessageType('UseItemEncounterResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMENCOUNTERRESPONSE,

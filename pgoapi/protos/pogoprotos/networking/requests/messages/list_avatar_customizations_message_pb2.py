@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nPpogoprotos/networking/requests/messages/list_avatar_customizations_message.proto\x12\'pogoprotos.networking.requests.messages\x1a/pogoprotos/data/player/player_avatar_type.proto\x1a\x1bpogoprotos/enums/slot.proto\x1a\x1dpogoprotos/enums/filter.proto\"\xcf\x01\n\x1fListAvatarCustomizationsMessage\x12=\n\x0b\x61vatar_type\x18\x01 \x01(\x0e\x32(.pogoprotos.data.player.PlayerAvatarType\x12$\n\x04slot\x18\x02 \x03(\x0e\x32\x16.pogoprotos.enums.Slot\x12)\n\x07\x66ilters\x18\x03 \x03(\x0e\x32\x18.pogoprotos.enums.Filter\x12\r\n\x05start\x18\x04 \x01(\x05\x12\r\n\x05limit\x18\x05 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player_dot_player__avatar__type__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_slot__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_filter__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -92,6 +91,7 @@ _LISTAVATARCUSTOMIZATIONSMESSAGE.fields_by_name['avatar_type'].enum_type = pogop
 _LISTAVATARCUSTOMIZATIONSMESSAGE.fields_by_name['slot'].enum_type = pogoprotos_dot_enums_dot_slot__pb2._SLOT
 _LISTAVATARCUSTOMIZATIONSMESSAGE.fields_by_name['filters'].enum_type = pogoprotos_dot_enums_dot_filter__pb2._FILTER
 DESCRIPTOR.message_types_by_name['ListAvatarCustomizationsMessage'] = _LISTAVATARCUSTOMIZATIONSMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ListAvatarCustomizationsMessage = _reflection.GeneratedProtocolMessageType('ListAvatarCustomizationsMessage', (_message.Message,), dict(
   DESCRIPTOR = _LISTAVATARCUSTOMIZATIONSMESSAGE,

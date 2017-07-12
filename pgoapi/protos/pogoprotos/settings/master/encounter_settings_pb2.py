@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n3pogoprotos/settings/master/encounter_settings.proto\x12\x1apogoprotos.settings.master\"\xae\x01\n\x11\x45ncounterSettings\x12\x1c\n\x14spin_bonus_threshold\x18\x01 \x01(\x02\x12!\n\x19\x65xcellent_throw_threshold\x18\x02 \x01(\x02\x12\x1d\n\x15great_throw_threshold\x18\x03 \x01(\x02\x12\x1c\n\x14nice_throw_threshold\x18\x04 \x01(\x02\x12\x1b\n\x13milestone_threshold\x18\x05 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _ENCOUNTERSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['EncounterSettings'] = _ENCOUNTERSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EncounterSettings = _reflection.GeneratedProtocolMessageType('EncounterSettings', (_message.Message,), dict(
   DESCRIPTOR = _ENCOUNTERSETTINGS,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n(pogoprotos/settings/sfida_settings.proto\x12\x13pogoprotos.settings\".\n\rSfidaSettings\x12\x1d\n\x15low_battery_threshold\x18\x01 \x01(\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _SFIDASETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SfidaSettings'] = _SFIDASETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SfidaSettings = _reflection.GeneratedProtocolMessageType('SfidaSettings', (_message.Message,), dict(
   DESCRIPTOR = _SFIDASETTINGS,

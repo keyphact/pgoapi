@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n%pogoprotos/map/fort/gym_display.proto\x12\x13pogoprotos.map.fort\x1a#pogoprotos/map/fort/gym_event.proto\"\xa9\x01\n\nGymDisplay\x12\x30\n\tgym_event\x18\x01 \x03(\x0b\x32\x1d.pogoprotos.map.fort.GymEvent\x12\x14\n\x0ctotal_gym_cp\x18\x02 \x01(\x05\x12!\n\x19lowest_pokemon_motivation\x18\x03 \x01(\x01\x12\x17\n\x0fslots_available\x18\x04 \x01(\x05\x12\x17\n\x0foccupied_millis\x18\x05 \x01(\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_map_dot_fort_dot_gym__event__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -88,6 +87,7 @@ _GYMDISPLAY = _descriptor.Descriptor(
 
 _GYMDISPLAY.fields_by_name['gym_event'].message_type = pogoprotos_dot_map_dot_fort_dot_gym__event__pb2._GYMEVENT
 DESCRIPTOR.message_types_by_name['GymDisplay'] = _GYMDISPLAY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymDisplay = _reflection.GeneratedProtocolMessageType('GymDisplay', (_message.Message,), dict(
   DESCRIPTOR = _GYMDISPLAY,

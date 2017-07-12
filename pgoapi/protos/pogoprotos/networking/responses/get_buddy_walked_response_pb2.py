@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n?pogoprotos/networking/responses/get_buddy_walked_response.proto\x12\x1fpogoprotos.networking.responses\x1a(pogoprotos/enums/pokemon_family_id.proto\"\x81\x01\n\x16GetBuddyWalkedResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12:\n\x0f\x66\x61mily_candy_id\x18\x02 \x01(\x0e\x32!.pogoprotos.enums.PokemonFamilyId\x12\x1a\n\x12\x63\x61ndy_earned_count\x18\x03 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__family__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _GETBUDDYWALKEDRESPONSE = _descriptor.Descriptor(
 
 _GETBUDDYWALKEDRESPONSE.fields_by_name['family_candy_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__family__id__pb2._POKEMONFAMILYID
 DESCRIPTOR.message_types_by_name['GetBuddyWalkedResponse'] = _GETBUDDYWALKEDRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetBuddyWalkedResponse = _reflection.GeneratedProtocolMessageType('GetBuddyWalkedResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETBUDDYWALKEDRESPONSE,

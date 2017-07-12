@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nHpogoprotos/networking/requests/messages/use_item_encounter_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"z\n\x17UseItemEncounterMessage\x12/\n\x04item\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x14\n\x0c\x65ncounter_id\x18\x02 \x01(\x06\x12\x18\n\x10spawn_point_guid\x18\x03 \x01(\tb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _USEITEMENCOUNTERMESSAGE = _descriptor.Descriptor(
 
 _USEITEMENCOUNTERMESSAGE.fields_by_name['item'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['UseItemEncounterMessage'] = _USEITEMENCOUNTERMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemEncounterMessage = _reflection.GeneratedProtocolMessageType('UseItemEncounterMessage', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMENCOUNTERMESSAGE,

@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n#pogoprotos/enums/pokemon_type.proto\x12\x10pogoprotos.enums*\xda\x03\n\x0bPokemonType\x12\x15\n\x11POKEMON_TYPE_NONE\x10\x00\x12\x17\n\x13POKEMON_TYPE_NORMAL\x10\x01\x12\x19\n\x15POKEMON_TYPE_FIGHTING\x10\x02\x12\x17\n\x13POKEMON_TYPE_FLYING\x10\x03\x12\x17\n\x13POKEMON_TYPE_POISON\x10\x04\x12\x17\n\x13POKEMON_TYPE_GROUND\x10\x05\x12\x15\n\x11POKEMON_TYPE_ROCK\x10\x06\x12\x14\n\x10POKEMON_TYPE_BUG\x10\x07\x12\x16\n\x12POKEMON_TYPE_GHOST\x10\x08\x12\x16\n\x12POKEMON_TYPE_STEEL\x10\t\x12\x15\n\x11POKEMON_TYPE_FIRE\x10\n\x12\x16\n\x12POKEMON_TYPE_WATER\x10\x0b\x12\x16\n\x12POKEMON_TYPE_GRASS\x10\x0c\x12\x19\n\x15POKEMON_TYPE_ELECTRIC\x10\r\x12\x18\n\x14POKEMON_TYPE_PSYCHIC\x10\x0e\x12\x14\n\x10POKEMON_TYPE_ICE\x10\x0f\x12\x17\n\x13POKEMON_TYPE_DRAGON\x10\x10\x12\x15\n\x11POKEMON_TYPE_DARK\x10\x11\x12\x16\n\x12POKEMON_TYPE_FAIRY\x10\x12\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _POKEMONTYPE = _descriptor.EnumDescriptor(
   name='PokemonType',
@@ -137,6 +136,7 @@ POKEMON_TYPE_FAIRY = 18
 
 
 DESCRIPTOR.enum_types_by_name['PokemonType'] = _POKEMONTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

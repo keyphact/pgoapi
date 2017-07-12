@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nKpogoprotos/networking/responses/collect_daily_defender_bonus_response.proto\x12\x1fpogoprotos.networking.responses\"\x97\x02\n!CollectDailyDefenderBonusResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.pogoprotos.networking.responses.CollectDailyDefenderBonusResponse.Result\x12\x15\n\rcurrency_type\x18\x02 \x03(\t\x12\x18\n\x10\x63urrency_awarded\x18\x03 \x03(\x05\x12\x17\n\x0f\x64\x65\x66\x65nders_count\x18\x04 \x01(\x05\"M\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x12\x0c\n\x08TOO_SOON\x10\x03\x12\x10\n\x0cNO_DEFENDERS\x10\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -115,6 +114,7 @@ _COLLECTDAILYDEFENDERBONUSRESPONSE = _descriptor.Descriptor(
 _COLLECTDAILYDEFENDERBONUSRESPONSE.fields_by_name['result'].enum_type = _COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT
 _COLLECTDAILYDEFENDERBONUSRESPONSE_RESULT.containing_type = _COLLECTDAILYDEFENDERBONUSRESPONSE
 DESCRIPTOR.message_types_by_name['CollectDailyDefenderBonusResponse'] = _COLLECTDAILYDEFENDERBONUSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CollectDailyDefenderBonusResponse = _reflection.GeneratedProtocolMessageType('CollectDailyDefenderBonusResponse', (_message.Message,), dict(
   DESCRIPTOR = _COLLECTDAILYDEFENDERBONUSRESPONSE,

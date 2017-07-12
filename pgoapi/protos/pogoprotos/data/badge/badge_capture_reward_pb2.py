@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n0pogoprotos/data/badge/badge_capture_reward.proto\x12\x15pogoprotos.data.badge\"T\n\x12\x42\x61\x64geCaptureReward\x12!\n\x19\x63\x61pture_reward_multiplier\x18\x01 \x01(\x02\x12\x1b\n\x13\x61vatar_template_ids\x18\x02 \x03(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _BADGECAPTUREREWARD = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['BadgeCaptureReward'] = _BADGECAPTUREREWARD
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BadgeCaptureReward = _reflection.GeneratedProtocolMessageType('BadgeCaptureReward', (_message.Message,), dict(
   DESCRIPTOR = _BADGECAPTUREREWARD,

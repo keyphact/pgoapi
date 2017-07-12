@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nBpogoprotos/networking/responses/fort_recall_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\x1a;pogoprotos/networking/responses/fort_details_response.proto\"\xb0\x02\n\x19\x46ortRecallPokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.pogoprotos.networking.responses.FortRecallPokemonResponse.Result\x12J\n\x0c\x66ort_details\x18\x02 \x01(\x0b\x32\x34.pogoprotos.networking.responses.FortDetailsResponse\"t\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\x12\x1d\n\x19\x45RROR_POKEMON_NOT_ON_FORT\x10\x03\x12\x13\n\x0f\x45RROR_NO_PLAYER\x10\x04\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_networking_dot_responses_dot_fort__details__response__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -104,6 +103,7 @@ _FORTRECALLPOKEMONRESPONSE.fields_by_name['result'].enum_type = _FORTRECALLPOKEM
 _FORTRECALLPOKEMONRESPONSE.fields_by_name['fort_details'].message_type = pogoprotos_dot_networking_dot_responses_dot_fort__details__response__pb2._FORTDETAILSRESPONSE
 _FORTRECALLPOKEMONRESPONSE_RESULT.containing_type = _FORTRECALLPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['FortRecallPokemonResponse'] = _FORTRECALLPOKEMONRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortRecallPokemonResponse = _reflection.GeneratedProtocolMessageType('FortRecallPokemonResponse', (_message.Message,), dict(
   DESCRIPTOR = _FORTRECALLPOKEMONRESPONSE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n2pogoprotos/settings/download_settings_action.proto\x12\x13pogoprotos.settings\"&\n\x16\x44ownloadSettingsAction\x12\x0c\n\x04hash\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _DOWNLOADSETTINGSACTION = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['DownloadSettingsAction'] = _DOWNLOADSETTINGSACTION
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DownloadSettingsAction = _reflection.GeneratedProtocolMessageType('DownloadSettingsAction', (_message.Message,), dict(
   DESCRIPTOR = _DOWNLOADSETTINGSACTION,

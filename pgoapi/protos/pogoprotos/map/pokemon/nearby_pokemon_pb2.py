@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n+pogoprotos/map/pokemon/nearby_pokemon.proto\x12\x16pogoprotos.map.pokemon\x1a!pogoprotos/enums/pokemon_id.proto\x1a%pogoprotos/data/pokemon_display.proto\"\xd5\x01\n\rNearbyPokemon\x12/\n\npokemon_id\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\x1a\n\x12\x64istance_in_meters\x18\x02 \x01(\x02\x12\x14\n\x0c\x65ncounter_id\x18\x03 \x01(\x06\x12\x0f\n\x07\x66ort_id\x18\x04 \x01(\t\x12\x16\n\x0e\x66ort_image_url\x18\x05 \x01(\t\x12\x38\n\x0fpokemon_display\x18\x06 \x01(\x0b\x32\x1f.pogoprotos.data.PokemonDisplayb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_pokemon__display__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -97,6 +96,7 @@ _NEARBYPOKEMON = _descriptor.Descriptor(
 _NEARBYPOKEMON.fields_by_name['pokemon_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 _NEARBYPOKEMON.fields_by_name['pokemon_display'].message_type = pogoprotos_dot_data_dot_pokemon__display__pb2._POKEMONDISPLAY
 DESCRIPTOR.message_types_by_name['NearbyPokemon'] = _NEARBYPOKEMON
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 NearbyPokemon = _reflection.GeneratedProtocolMessageType('NearbyPokemon', (_message.Message,), dict(
   DESCRIPTOR = _NEARBYPOKEMON,

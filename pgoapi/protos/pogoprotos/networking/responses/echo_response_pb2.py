@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n3pogoprotos/networking/responses/echo_response.proto\x12\x1fpogoprotos.networking.responses\"\x1f\n\x0c\x45\x63hoResponse\x12\x0f\n\x07\x63ontext\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _ECHORESPONSE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['EchoResponse'] = _ECHORESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EchoResponse = _reflection.GeneratedProtocolMessageType('EchoResponse', (_message.Message,), dict(
   DESCRIPTOR = _ECHORESPONSE,

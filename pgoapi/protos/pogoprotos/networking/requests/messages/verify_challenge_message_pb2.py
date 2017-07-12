@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/verify_challenge_message.proto\x12\'pogoprotos.networking.requests.messages\"\'\n\x16VerifyChallengeMessage\x12\r\n\x05token\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _VERIFYCHALLENGEMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['VerifyChallengeMessage'] = _VERIFYCHALLENGEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 VerifyChallengeMessage = _reflection.GeneratedProtocolMessageType('VerifyChallengeMessage', (_message.Message,), dict(
   DESCRIPTOR = _VERIFYCHALLENGEMESSAGE,

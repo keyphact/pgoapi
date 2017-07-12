@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n8pogoprotos/networking/responses/encounter_response.proto\x12\x1fpogoprotos.networking.responses\x1a\x31pogoprotos/data/capture/capture_probability.proto\x1a\'pogoprotos/inventory/item/item_id.proto\x1a)pogoprotos/map/pokemon/wild_pokemon.proto\"\xec\x04\n\x11\x45ncounterResponse\x12\x39\n\x0cwild_pokemon\x18\x01 \x01(\x0b\x32#.pogoprotos.map.pokemon.WildPokemon\x12Q\n\nbackground\x18\x02 \x01(\x0e\x32=.pogoprotos.networking.responses.EncounterResponse.Background\x12I\n\x06status\x18\x03 \x01(\x0e\x32\x39.pogoprotos.networking.responses.EncounterResponse.Status\x12H\n\x13\x63\x61pture_probability\x18\x04 \x01(\x0b\x32+.pogoprotos.data.capture.CaptureProbability\x12\x36\n\x0b\x61\x63tive_item\x18\x05 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\"\"\n\nBackground\x12\x08\n\x04PARK\x10\x00\x12\n\n\x06\x44\x45SERT\x10\x01\"\xd7\x01\n\x06Status\x12\x13\n\x0f\x45NCOUNTER_ERROR\x10\x00\x12\x15\n\x11\x45NCOUNTER_SUCCESS\x10\x01\x12\x17\n\x13\x45NCOUNTER_NOT_FOUND\x10\x02\x12\x14\n\x10\x45NCOUNTER_CLOSED\x10\x03\x12\x1a\n\x16\x45NCOUNTER_POKEMON_FLED\x10\x04\x12\x1a\n\x16\x45NCOUNTER_NOT_IN_RANGE\x10\x05\x12\x1e\n\x1a\x45NCOUNTER_ALREADY_HAPPENED\x10\x06\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x07\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_capture_dot_capture__probability__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_pokemon_dot_wild__pokemon__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -166,6 +165,7 @@ _ENCOUNTERRESPONSE.fields_by_name['active_item'].enum_type = pogoprotos_dot_inve
 _ENCOUNTERRESPONSE_BACKGROUND.containing_type = _ENCOUNTERRESPONSE
 _ENCOUNTERRESPONSE_STATUS.containing_type = _ENCOUNTERRESPONSE
 DESCRIPTOR.message_types_by_name['EncounterResponse'] = _ENCOUNTERRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EncounterResponse = _reflection.GeneratedProtocolMessageType('EncounterResponse', (_message.Message,), dict(
   DESCRIPTOR = _ENCOUNTERRESPONSE,

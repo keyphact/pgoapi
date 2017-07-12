@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n:pogoprotos/networking/platform/platform_request_type.proto\x12\x1epogoprotos.networking.platform*\xad\x01\n\x13PlatformRequestType\x12\x10\n\x0cMETHOD_UNSET\x10\x00\x12\x16\n\x12\x42UY_ITEM_POKECOINS\x10\x02\x12\x14\n\x10\x42UY_ITEM_ANDROID\x10\x03\x12\x10\n\x0c\x42UY_ITEM_IOS\x10\x04\x12\x13\n\x0fGET_STORE_ITEMS\x10\x05\x12\x1c\n\x18SEND_ENCRYPTED_SIGNATURE\x10\x06\x12\x11\n\rUNKNOWN_PTR_8\x10\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _PLATFORMREQUESTTYPE = _descriptor.EnumDescriptor(
   name='PlatformRequestType',
@@ -77,6 +76,7 @@ UNKNOWN_PTR_8 = 8
 
 
 DESCRIPTOR.enum_types_by_name['PlatformRequestType'] = _PLATFORMREQUESTTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nQpogoprotos/networking/requests/messages/encounter_tutorial_complete_message.proto\x12\'pogoprotos.networking.requests.messages\x1a!pogoprotos/enums/pokemon_id.proto\"S\n EncounterTutorialCompleteMessage\x12/\n\npokemon_id\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonIdb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _ENCOUNTERTUTORIALCOMPLETEMESSAGE = _descriptor.Descriptor(
 
 _ENCOUNTERTUTORIALCOMPLETEMESSAGE.fields_by_name['pokemon_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 DESCRIPTOR.message_types_by_name['EncounterTutorialCompleteMessage'] = _ENCOUNTERTUTORIALCOMPLETEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EncounterTutorialCompleteMessage = _reflection.GeneratedProtocolMessageType('EncounterTutorialCompleteMessage', (_message.Message,), dict(
   DESCRIPTOR = _ENCOUNTERTUTORIALCOMPLETEMESSAGE,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n>pogoprotos/networking/responses/get_gym_details_response.proto\x12\x1fpogoprotos.networking.responses\x1a#pogoprotos/data/gym/gym_state.proto\"\xb5\x02\n\x15GetGymDetailsResponse\x12\x30\n\tgym_state\x18\x01 \x01(\x0b\x32\x1d.pogoprotos.data.gym.GymState\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04urls\x18\x03 \x03(\t\x12M\n\x06result\x18\x04 \x01(\x0e\x32=.pogoprotos.networking.responses.GetGymDetailsResponse.Result\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x15\n\rsecondary_url\x18\x06 \x03(\t\x12\x19\n\x11\x63heckin_image_url\x18\x07 \x01(\t\"8\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_gym_dot_gym__state__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -131,6 +130,7 @@ _GETGYMDETAILSRESPONSE.fields_by_name['gym_state'].message_type = pogoprotos_dot
 _GETGYMDETAILSRESPONSE.fields_by_name['result'].enum_type = _GETGYMDETAILSRESPONSE_RESULT
 _GETGYMDETAILSRESPONSE_RESULT.containing_type = _GETGYMDETAILSRESPONSE
 DESCRIPTOR.message_types_by_name['GetGymDetailsResponse'] = _GETGYMDETAILSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetGymDetailsResponse = _reflection.GeneratedProtocolMessageType('GetGymDetailsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETGYMDETAILSRESPONSE,

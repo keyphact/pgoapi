@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n8pogoprotos/settings/master/type_effective_settings.proto\x12\x1apogoprotos.settings.master\x1a#pogoprotos/enums/pokemon_type.proto\"b\n\x15TypeEffectiveSettings\x12\x15\n\rattack_scalar\x18\x01 \x03(\x02\x12\x32\n\x0b\x61ttack_type\x18\x02 \x01(\x0e\x32\x1d.pogoprotos.enums.PokemonTypeb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _TYPEEFFECTIVESETTINGS = _descriptor.Descriptor(
 
 _TYPEEFFECTIVESETTINGS.fields_by_name['attack_type'].enum_type = pogoprotos_dot_enums_dot_pokemon__type__pb2._POKEMONTYPE
 DESCRIPTOR.message_types_by_name['TypeEffectiveSettings'] = _TYPEEFFECTIVESETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TypeEffectiveSettings = _reflection.GeneratedProtocolMessageType('TypeEffectiveSettings', (_message.Message,), dict(
   DESCRIPTOR = _TYPEEFFECTIVESETTINGS,

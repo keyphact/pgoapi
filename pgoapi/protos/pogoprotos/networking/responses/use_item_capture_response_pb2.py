@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n?pogoprotos/networking/responses/use_item_capture_response.proto\x12\x1fpogoprotos.networking.responses\"\xb1\x01\n\x16UseItemCaptureResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x19\n\x11item_capture_mult\x18\x02 \x01(\x01\x12\x16\n\x0eitem_flee_mult\x18\x03 \x01(\x01\x12\x15\n\rstop_movement\x18\x04 \x01(\x08\x12\x13\n\x0bstop_attack\x18\x05 \x01(\x08\x12\x12\n\ntarget_max\x18\x06 \x01(\x08\x12\x13\n\x0btarget_slow\x18\x07 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -99,6 +98,7 @@ _USEITEMCAPTURERESPONSE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['UseItemCaptureResponse'] = _USEITEMCAPTURERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemCaptureResponse = _reflection.GeneratedProtocolMessageType('UseItemCaptureResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMCAPTURERESPONSE,

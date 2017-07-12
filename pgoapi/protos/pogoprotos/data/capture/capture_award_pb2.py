@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n+pogoprotos/data/capture/capture_award.proto\x12\x17pogoprotos.data.capture\x1a$pogoprotos/enums/activity_type.proto\"\x82\x01\n\x0c\x43\x61ptureAward\x12\x39\n\ractivity_type\x18\x01 \x03(\x0e\x32\x1e.pogoprotos.enums.ActivityTypeB\x02\x10\x01\x12\x0e\n\x02xp\x18\x02 \x03(\x05\x42\x02\x10\x01\x12\x11\n\x05\x63\x61ndy\x18\x03 \x03(\x05\x42\x02\x10\x01\x12\x14\n\x08stardust\x18\x04 \x03(\x05\x42\x02\x10\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_activity__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _CAPTUREAWARD = _descriptor.Descriptor(
 
 _CAPTUREAWARD.fields_by_name['activity_type'].enum_type = pogoprotos_dot_enums_dot_activity__type__pb2._ACTIVITYTYPE
 DESCRIPTOR.message_types_by_name['CaptureAward'] = _CAPTUREAWARD
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CaptureAward = _reflection.GeneratedProtocolMessageType('CaptureAward', (_message.Message,), dict(
   DESCRIPTOR = _CAPTUREAWARD,

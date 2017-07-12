@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n0pogoprotos/settings/master/gender_settings.proto\x12\x1apogoprotos.settings.master\x1a!pogoprotos/enums/pokemon_id.proto\x1a@pogoprotos/settings/master/pokemon/pokemon_gender_settings.proto\"\x89\x01\n\x0eGenderSettings\x12,\n\x07pokemon\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12I\n\x06gender\x18\x02 \x01(\x0b\x32\x39.pogoprotos.settings.master.pokemon.PokemonGenderSettingsb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,pogoprotos_dot_settings_dot_master_dot_pokemon_dot_pokemon__gender__settings__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -69,6 +68,7 @@ _GENDERSETTINGS = _descriptor.Descriptor(
 _GENDERSETTINGS.fields_by_name['pokemon'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 _GENDERSETTINGS.fields_by_name['gender'].message_type = pogoprotos_dot_settings_dot_master_dot_pokemon_dot_pokemon__gender__settings__pb2._POKEMONGENDERSETTINGS
 DESCRIPTOR.message_types_by_name['GenderSettings'] = _GENDERSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GenderSettings = _reflection.GeneratedProtocolMessageType('GenderSettings', (_message.Message,), dict(
   DESCRIPTOR = _GENDERSETTINGS,

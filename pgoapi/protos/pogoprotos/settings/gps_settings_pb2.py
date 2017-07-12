@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n&pogoprotos/settings/gps_settings.proto\x12\x13pogoprotos.settings\"\xbb\x01\n\x0bGpsSettings\x12/\n\'driving_warning_speed_meters_per_second\x18\x01 \x01(\x02\x12(\n driving_warning_cooldown_minutes\x18\x02 \x01(\x02\x12-\n%driving_speed_sample_interval_seconds\x18\x03 \x01(\x02\x12\"\n\x1a\x64riving_speed_sample_count\x18\x04 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _GPSSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GpsSettings'] = _GPSSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GpsSettings = _reflection.GeneratedProtocolMessageType('GpsSettings', (_message.Message,), dict(
   DESCRIPTOR = _GPSSETTINGS,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nEpogoprotos/networking/responses/mark_tutorial_complete_response.proto\x12\x1fpogoprotos.networking.responses\x1a!pogoprotos/data/player_data.proto\"a\n\x1cMarkTutorialCompleteResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.pogoprotos.data.PlayerDatab\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _MARKTUTORIALCOMPLETERESPONSE = _descriptor.Descriptor(
 
 _MARKTUTORIALCOMPLETERESPONSE.fields_by_name['player_data'].message_type = pogoprotos_dot_data_dot_player__data__pb2._PLAYERDATA
 DESCRIPTOR.message_types_by_name['MarkTutorialCompleteResponse'] = _MARKTUTORIALCOMPLETERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MarkTutorialCompleteResponse = _reflection.GeneratedProtocolMessageType('MarkTutorialCompleteResponse', (_message.Message,), dict(
   DESCRIPTOR = _MARKTUTORIALCOMPLETERESPONSE,

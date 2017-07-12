@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n/pogoprotos/data/battle/battle_participant.proto\x12\x16pogoprotos.data.battle\x1a\x30pogoprotos/data/battle/battle_pokemon_info.proto\x1a\x32pogoprotos/data/player/player_public_profile.proto\x1a*pogoprotos/map/pokemon/lobby_pokemon.proto\"\xff\x02\n\x11\x42\x61ttleParticipant\x12\x41\n\x0e\x61\x63tive_pokemon\x18\x01 \x01(\x0b\x32).pogoprotos.data.battle.BattlePokemonInfo\x12K\n\x16trainer_public_profile\x18\x02 \x01(\x0b\x32+.pogoprotos.data.player.PlayerPublicProfile\x12\x42\n\x0freverse_pokemon\x18\x03 \x03(\x0b\x32).pogoprotos.data.battle.BattlePokemonInfo\x12\x43\n\x10\x64\x65\x66\x65\x61ted_pokemon\x18\x04 \x03(\x0b\x32).pogoprotos.data.battle.BattlePokemonInfo\x12;\n\rlobby_pokemon\x18\x05 \x03(\x0b\x32$.pogoprotos.map.pokemon.LobbyPokemon\x12\x14\n\x0c\x64\x61mage_dealt\x18\x06 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_battle_dot_battle__pokemon__info__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_player_dot_player__public__profile__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_pokemon_dot_lobby__pokemon__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -101,6 +100,7 @@ _BATTLEPARTICIPANT.fields_by_name['reverse_pokemon'].message_type = pogoprotos_d
 _BATTLEPARTICIPANT.fields_by_name['defeated_pokemon'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__pokemon__info__pb2._BATTLEPOKEMONINFO
 _BATTLEPARTICIPANT.fields_by_name['lobby_pokemon'].message_type = pogoprotos_dot_map_dot_pokemon_dot_lobby__pokemon__pb2._LOBBYPOKEMON
 DESCRIPTOR.message_types_by_name['BattleParticipant'] = _BATTLEPARTICIPANT
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BattleParticipant = _reflection.GeneratedProtocolMessageType('BattleParticipant', (_message.Message,), dict(
   DESCRIPTOR = _BATTLEPARTICIPANT,

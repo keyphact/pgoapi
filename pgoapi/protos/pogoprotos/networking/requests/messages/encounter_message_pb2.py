@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n?pogoprotos/networking/requests/messages/encounter_message.proto\x12\'pogoprotos.networking.requests.messages\"s\n\x10\x45ncounterMessage\x12\x14\n\x0c\x65ncounter_id\x18\x01 \x01(\x06\x12\x16\n\x0espawn_point_id\x18\x02 \x01(\t\x12\x17\n\x0fplayer_latitude\x18\x03 \x01(\x01\x12\x18\n\x10player_longitude\x18\x04 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _ENCOUNTERMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['EncounterMessage'] = _ENCOUNTERMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EncounterMessage = _reflection.GeneratedProtocolMessageType('EncounterMessage', (_message.Message,), dict(
   DESCRIPTOR = _ENCOUNTERMESSAGE,

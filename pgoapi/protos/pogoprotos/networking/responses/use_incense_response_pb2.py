@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n:pogoprotos/networking/responses/use_incense_response.proto\x12\x1fpogoprotos.networking.responses\x1a\'pogoprotos/inventory/applied_item.proto\"\x87\x02\n\x12UseIncenseResponse\x12J\n\x06result\x18\x01 \x01(\x0e\x32:.pogoprotos.networking.responses.UseIncenseResponse.Result\x12:\n\x0f\x61pplied_incense\x18\x02 \x01(\x0b\x32!.pogoprotos.inventory.AppliedItem\"i\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1a\n\x16INCENSE_ALREADY_ACTIVE\x10\x02\x12\x15\n\x11NONE_IN_INVENTORY\x10\x03\x12\x12\n\x0eLOCATION_UNSET\x10\x04\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_applied__item__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -104,6 +103,7 @@ _USEINCENSERESPONSE.fields_by_name['result'].enum_type = _USEINCENSERESPONSE_RES
 _USEINCENSERESPONSE.fields_by_name['applied_incense'].message_type = pogoprotos_dot_inventory_dot_applied__item__pb2._APPLIEDITEM
 _USEINCENSERESPONSE_RESULT.containing_type = _USEINCENSERESPONSE
 DESCRIPTOR.message_types_by_name['UseIncenseResponse'] = _USEINCENSERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseIncenseResponse = _reflection.GeneratedProtocolMessageType('UseIncenseResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEINCENSERESPONSE,

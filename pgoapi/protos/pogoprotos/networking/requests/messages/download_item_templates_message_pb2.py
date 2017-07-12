@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nMpogoprotos/networking/requests/messages/download_item_templates_message.proto\x12\'pogoprotos.networking.requests.messages\"]\n\x1c\x44ownloadItemTemplatesMessage\x12\x10\n\x08paginate\x18\x01 \x01(\x08\x12\x13\n\x0bpage_offset\x18\x02 \x01(\x05\x12\x16\n\x0epage_timestamp\x18\x03 \x01(\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _DOWNLOADITEMTEMPLATESMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['DownloadItemTemplatesMessage'] = _DOWNLOADITEMTEMPLATESMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DownloadItemTemplatesMessage = _reflection.GeneratedProtocolMessageType('DownloadItemTemplatesMessage', (_message.Message,), dict(
   DESCRIPTOR = _DOWNLOADITEMTEMPLATESMESSAGE,

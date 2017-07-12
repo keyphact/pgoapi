@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n&pogoprotos/data/gym/gym_defender.proto\x12\x13pogoprotos.data.gym\x1a.pogoprotos/map/pokemon/motivated_pokemon.proto\x1a\x32pogoprotos/data/player/player_public_profile.proto\"\xdf\x02\n\x0bGymDefender\x12\x43\n\x11motivated_pokemon\x18\x01 \x01(\x0b\x32(.pogoprotos.map.pokemon.MotivatedPokemon\x12L\n\x11\x64\x65ployment_totals\x18\x02 \x01(\x0b\x32\x31.pogoprotos.data.gym.GymDefender.DeploymentTotals\x12K\n\x16trainer_public_profile\x18\x03 \x01(\x0b\x32+.pogoprotos.data.player.PlayerPublicProfile\x1ap\n\x10\x44\x65ploymentTotals\x12\x11\n\ttimes_fed\x18\x01 \x01(\x05\x12\x13\n\x0b\x62\x61ttles_won\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61ttles_lost\x18\x03 \x01(\x05\x12\x1e\n\x16\x64\x65ployment_duration_ms\x18\x04 \x01(\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_map_dot_pokemon_dot_motivated__pokemon__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_player_dot_player__public__profile__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -129,6 +128,7 @@ _GYMDEFENDER.fields_by_name['motivated_pokemon'].message_type = pogoprotos_dot_m
 _GYMDEFENDER.fields_by_name['deployment_totals'].message_type = _GYMDEFENDER_DEPLOYMENTTOTALS
 _GYMDEFENDER.fields_by_name['trainer_public_profile'].message_type = pogoprotos_dot_data_dot_player_dot_player__public__profile__pb2._PLAYERPUBLICPROFILE
 DESCRIPTOR.message_types_by_name['GymDefender'] = _GYMDEFENDER
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymDefender = _reflection.GeneratedProtocolMessageType('GymDefender', (_message.Message,), dict(
 

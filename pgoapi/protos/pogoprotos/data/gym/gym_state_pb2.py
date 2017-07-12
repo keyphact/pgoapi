@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n#pogoprotos/data/gym/gym_state.proto\x12\x13pogoprotos.data.gym\x1a#pogoprotos/map/fort/fort_data.proto\x1a(pogoprotos/data/gym/gym_membership.proto\"\x8d\x01\n\x08GymState\x12\x30\n\tfort_data\x18\x01 \x01(\x0b\x32\x1d.pogoprotos.map.fort.FortData\x12\x37\n\x0bmemberships\x18\x02 \x03(\x0b\x32\".pogoprotos.data.gym.GymMembership\x12\x16\n\x0e\x64\x65ploy_lockout\x18\x03 \x01(\x08\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_map_dot_fort_dot_fort__data__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_gym_dot_gym__membership__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -76,6 +75,7 @@ _GYMSTATE = _descriptor.Descriptor(
 _GYMSTATE.fields_by_name['fort_data'].message_type = pogoprotos_dot_map_dot_fort_dot_fort__data__pb2._FORTDATA
 _GYMSTATE.fields_by_name['memberships'].message_type = pogoprotos_dot_data_dot_gym_dot_gym__membership__pb2._GYMMEMBERSHIP
 DESCRIPTOR.message_types_by_name['GymState'] = _GYMSTATE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymState = _reflection.GeneratedProtocolMessageType('GymState', (_message.Message,), dict(
   DESCRIPTOR = _GYMSTATE,

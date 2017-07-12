@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n(pogoprotos/data/avatar/avatar_item.proto\x12\x16pogoprotos.data.avatar\"R\n\nAvatarItem\x12\x1a\n\x12\x61vatar_template_id\x18\x01 \x01(\t\x12\x18\n\x10new_timestamp_ms\x18\x02 \x01(\x03\x12\x0e\n\x06viewed\x18\x03 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _AVATARITEM = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['AvatarItem'] = _AVATARITEM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AvatarItem = _reflection.GeneratedProtocolMessageType('AvatarItem', (_message.Message,), dict(
   DESCRIPTOR = _AVATARITEM,

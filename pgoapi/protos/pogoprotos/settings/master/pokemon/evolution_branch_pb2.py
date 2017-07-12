@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n9pogoprotos/settings/master/pokemon/evolution_branch.proto\x12\"pogoprotos.settings.master.pokemon\x1a!pogoprotos/enums/pokemon_id.proto\x1a\'pogoprotos/inventory/item/item_id.proto\"\x9c\x01\n\x0f\x45volutionBranch\x12.\n\tevolution\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\x45\n\x1a\x65volution_item_requirement\x18\x02 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x12\n\ncandy_cost\x18\x03 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -76,6 +75,7 @@ _EVOLUTIONBRANCH = _descriptor.Descriptor(
 _EVOLUTIONBRANCH.fields_by_name['evolution'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 _EVOLUTIONBRANCH.fields_by_name['evolution_item_requirement'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['EvolutionBranch'] = _EVOLUTIONBRANCH
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EvolutionBranch = _reflection.GeneratedProtocolMessageType('EvolutionBranch', (_message.Message,), dict(
   DESCRIPTOR = _EVOLUTIONBRANCH,

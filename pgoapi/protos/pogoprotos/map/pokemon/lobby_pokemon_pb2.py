@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n*pogoprotos/map/pokemon/lobby_pokemon.proto\x12\x16pogoprotos.map.pokemon\x1a!pogoprotos/enums/pokemon_id.proto\"o\n\x0cLobbyPokemon\x12\n\n\x02id\x18\x01 \x01(\x03\x12/\n\npokedex_id\x18\x02 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\n\n\x02\x63p\x18\x03 \x01(\x05\x12\x16\n\x0epercent_health\x18\x04 \x01(\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _LOBBYPOKEMON = _descriptor.Descriptor(
 
 _LOBBYPOKEMON.fields_by_name['pokedex_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 DESCRIPTOR.message_types_by_name['LobbyPokemon'] = _LOBBYPOKEMON
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LobbyPokemon = _reflection.GeneratedProtocolMessageType('LobbyPokemon', (_message.Message,), dict(
   DESCRIPTOR = _LOBBYPOKEMON,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nEpogoprotos/networking/requests/messages/set_player_team_message.proto\x12\'pogoprotos.networking.requests.messages\x1a!pogoprotos/enums/team_color.proto\"A\n\x14SetPlayerTeamMessage\x12)\n\x04team\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.TeamColorb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_team__color__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _SETPLAYERTEAMMESSAGE = _descriptor.Descriptor(
 
 _SETPLAYERTEAMMESSAGE.fields_by_name['team'].enum_type = pogoprotos_dot_enums_dot_team__color__pb2._TEAMCOLOR
 DESCRIPTOR.message_types_by_name['SetPlayerTeamMessage'] = _SETPLAYERTEAMMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetPlayerTeamMessage = _reflection.GeneratedProtocolMessageType('SetPlayerTeamMessage', (_message.Message,), dict(
   DESCRIPTOR = _SETPLAYERTEAMMESSAGE,

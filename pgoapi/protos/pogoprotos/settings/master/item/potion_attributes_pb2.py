@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n7pogoprotos/settings/master/item/potion_attributes.proto\x12\x1fpogoprotos.settings.master.item\";\n\x10PotionAttributes\x12\x13\n\x0bsta_percent\x18\x01 \x01(\x02\x12\x12\n\nsta_amount\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _POTIONATTRIBUTES = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['PotionAttributes'] = _POTIONATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PotionAttributes = _reflection.GeneratedProtocolMessageType('PotionAttributes', (_message.Message,), dict(
   DESCRIPTOR = _POTIONATTRIBUTES,

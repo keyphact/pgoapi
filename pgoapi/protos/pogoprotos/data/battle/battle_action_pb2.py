@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n*pogoprotos/data/battle/battle_action.proto\x12\x16pogoprotos.data.battle\x1a+pogoprotos/data/battle/battle_results.proto\x1a/pogoprotos/data/battle/battle_action_type.proto\x1a/pogoprotos/data/battle/battle_participant.proto\"\x83\x04\n\x0c\x42\x61ttleAction\x12\x36\n\x04type\x18\x01 \x01(\x0e\x32(.pogoprotos.data.battle.BattleActionType\x12\x17\n\x0f\x61\x63tion_start_ms\x18\x02 \x01(\x03\x12\x13\n\x0b\x64uration_ms\x18\x03 \x01(\x05\x12\x14\n\x0c\x65nergy_delta\x18\x05 \x01(\x05\x12\x16\n\x0e\x61ttacker_index\x18\x06 \x01(\x05\x12\x14\n\x0ctarget_index\x18\x07 \x01(\x05\x12\x19\n\x11\x61\x63tive_pokemon_id\x18\x08 \x01(\x06\x12@\n\rplayer_joined\x18\t \x01(\x0b\x32).pogoprotos.data.battle.BattleParticipant\x12=\n\x0e\x62\x61ttle_results\x18\n \x01(\x0b\x32%.pogoprotos.data.battle.BattleResults\x12)\n!damage_windows_start_timestamp_ms\x18\x0b \x01(\x03\x12\'\n\x1f\x64\x61mage_windows_end_timestamp_ms\x18\x0c \x01(\x03\x12>\n\x0bplayer_left\x18\r \x01(\x0b\x32).pogoprotos.data.battle.BattleParticipant\x12\x19\n\x11target_pokemon_id\x18\x0e \x01(\x06\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_battle_dot_battle__results__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_battle_dot_battle__action__type__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_battle_dot_battle__participant__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -149,6 +148,7 @@ _BATTLEACTION.fields_by_name['player_joined'].message_type = pogoprotos_dot_data
 _BATTLEACTION.fields_by_name['battle_results'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__results__pb2._BATTLERESULTS
 _BATTLEACTION.fields_by_name['player_left'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__participant__pb2._BATTLEPARTICIPANT
 DESCRIPTOR.message_types_by_name['BattleAction'] = _BATTLEACTION
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BattleAction = _reflection.GeneratedProtocolMessageType('BattleAction', (_message.Message,), dict(
   DESCRIPTOR = _BATTLEACTION,

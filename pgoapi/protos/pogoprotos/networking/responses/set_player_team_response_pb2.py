@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n>pogoprotos/networking/responses/set_player_team_response.proto\x12\x1fpogoprotos.networking.responses\x1a!pogoprotos/data/player_data.proto\"\xdd\x01\n\x15SetPlayerTeamResponse\x12M\n\x06status\x18\x01 \x01(\x0e\x32=.pogoprotos.networking.responses.SetPlayerTeamResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.pogoprotos.data.PlayerData\"C\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10TEAM_ALREADY_SET\x10\x02\x12\x0b\n\x07\x46\x41ILURE\x10\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -100,6 +99,7 @@ _SETPLAYERTEAMRESPONSE.fields_by_name['status'].enum_type = _SETPLAYERTEAMRESPON
 _SETPLAYERTEAMRESPONSE.fields_by_name['player_data'].message_type = pogoprotos_dot_data_dot_player__data__pb2._PLAYERDATA
 _SETPLAYERTEAMRESPONSE_STATUS.containing_type = _SETPLAYERTEAMRESPONSE
 DESCRIPTOR.message_types_by_name['SetPlayerTeamResponse'] = _SETPLAYERTEAMRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetPlayerTeamResponse = _reflection.GeneratedProtocolMessageType('SetPlayerTeamResponse', (_message.Message,), dict(
   DESCRIPTOR = _SETPLAYERTEAMRESPONSE,

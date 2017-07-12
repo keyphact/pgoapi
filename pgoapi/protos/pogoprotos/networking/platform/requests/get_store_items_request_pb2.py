@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nEpogoprotos/networking/platform/requests/get_store_items_request.proto\x12\'pogoprotos.networking.platform.requests\"\x16\n\x14GetStoreItemsRequestb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -50,6 +49,7 @@ _GETSTOREITEMSREQUEST = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetStoreItemsRequest'] = _GETSTOREITEMSREQUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetStoreItemsRequest = _reflection.GeneratedProtocolMessageType('GetStoreItemsRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETSTOREITEMSREQUEST,

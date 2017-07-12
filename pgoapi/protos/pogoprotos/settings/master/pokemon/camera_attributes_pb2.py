@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n:pogoprotos/settings/master/pokemon/camera_attributes.proto\x12\"pogoprotos.settings.master.pokemon\"\x97\x01\n\x10\x43\x61meraAttributes\x12\x15\n\rdisk_radius_m\x18\x01 \x01(\x02\x12\x19\n\x11\x63ylinder_radius_m\x18\x02 \x01(\x02\x12\x19\n\x11\x63ylinder_height_m\x18\x03 \x01(\x02\x12\x19\n\x11\x63ylinder_ground_m\x18\x04 \x01(\x02\x12\x1b\n\x13shoulder_mode_scale\x18\x05 \x01(\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _CAMERAATTRIBUTES = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['CameraAttributes'] = _CAMERAATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CameraAttributes = _reflection.GeneratedProtocolMessageType('CameraAttributes', (_message.Message,), dict(
   DESCRIPTOR = _CAMERAATTRIBUTES,

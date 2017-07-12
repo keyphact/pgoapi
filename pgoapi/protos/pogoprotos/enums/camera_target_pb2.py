@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n$pogoprotos/enums/camera_target.proto\x12\x10pogoprotos.enums*\xfc\x03\n\x0c\x43\x61meraTarget\x12\x17\n\x13\x43\x41M_TARGET_ATTACKER\x10\x00\x12\x1c\n\x18\x43\x41M_TARGET_ATTACKER_EDGE\x10\x01\x12\x1e\n\x1a\x43\x41M_TARGET_ATTACKER_GROUND\x10\x02\x12\x17\n\x13\x43\x41M_TARGET_DEFENDER\x10\x03\x12\x1c\n\x18\x43\x41M_TARGET_DEFENDER_EDGE\x10\x04\x12\x1e\n\x1a\x43\x41M_TARGET_DEFENDER_GROUND\x10\x05\x12 \n\x1c\x43\x41M_TARGET_ATTACKER_DEFENDER\x10\x06\x12%\n!CAM_TARGET_ATTACKER_DEFENDER_EDGE\x10\x07\x12 \n\x1c\x43\x41M_TARGET_DEFENDER_ATTACKER\x10\x08\x12%\n!CAM_TARGET_DEFENDER_ATTACKER_EDGE\x10\t\x12\'\n#CAM_TARGET_ATTACKER_DEFENDER_MIRROR\x10\x0b\x12)\n%CAM_TARGET_SHOULDER_ATTACKER_DEFENDER\x10\x0c\x12\x30\n,CAM_TARGET_SHOULDER_ATTACKER_DEFENDER_MIRROR\x10\r\x12&\n\"CAM_TARGET_ATTACKER_DEFENDER_WORLD\x10\x0e\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CAMERATARGET = _descriptor.EnumDescriptor(
   name='CameraTarget',
@@ -112,6 +111,7 @@ CAM_TARGET_ATTACKER_DEFENDER_WORLD = 14
 
 
 DESCRIPTOR.enum_types_by_name['CameraTarget'] = _CAMERATARGET
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

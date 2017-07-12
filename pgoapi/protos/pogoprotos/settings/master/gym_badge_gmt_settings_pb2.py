@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n7pogoprotos/settings/master/gym_badge_gmt_settings.proto\x12\x1apogoprotos.settings.master\"\xf9\x01\n\x13GymBadgeGmtSettings\x12\x0e\n\x06target\x18\x01 \x03(\x05\x12,\n$battle_winning_score_per_defender_cp\x18\x02 \x01(\x02\x12&\n\x1egym_defending_score_per_minute\x18\x03 \x01(\x02\x12\x1b\n\x13\x62\x65rry_feeding_score\x18\x04 \x01(\x05\x12\x1c\n\x14pokemon_deploy_score\x18\x05 \x01(\x05\x12!\n\x19raid_battle_winning_score\x18\x06 \x01(\x05\x12\x1e\n\x16lose_all_battles_score\x18\x07 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -99,6 +98,7 @@ _GYMBADGEGMTSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GymBadgeGmtSettings'] = _GYMBADGEGMTSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymBadgeGmtSettings = _reflection.GeneratedProtocolMessageType('GymBadgeGmtSettings', (_message.Message,), dict(
   DESCRIPTOR = _GYMBADGEGMTSETTINGS,

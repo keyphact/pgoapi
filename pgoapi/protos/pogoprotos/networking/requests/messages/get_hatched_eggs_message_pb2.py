@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/get_hatched_eggs_message.proto\x12\'pogoprotos.networking.requests.messages\"\x17\n\x15GetHatchedEggsMessageb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -50,6 +49,7 @@ _GETHATCHEDEGGSMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetHatchedEggsMessage'] = _GETHATCHEDEGGSMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetHatchedEggsMessage = _reflection.GeneratedProtocolMessageType('GetHatchedEggsMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETHATCHEDEGGSMESSAGE,

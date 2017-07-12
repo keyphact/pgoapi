@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n2pogoprotos/data/logs/buddy_pokemon_log_entry.proto\x12\x14pogoprotos.data.logs\x1a!pogoprotos/enums/pokemon_id.proto\x1a%pogoprotos/data/pokemon_display.proto\"\x8b\x02\n\x14\x42uddyPokemonLogEntry\x12\x41\n\x06result\x18\x01 \x01(\x0e\x32\x31.pogoprotos.data.logs.BuddyPokemonLogEntry.Result\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\x0e\n\x06\x61mount\x18\x03 \x01(\x05\x12\x38\n\x0fpokemon_display\x18\x04 \x01(\x0b\x32\x1f.pogoprotos.data.PokemonDisplay\x12\x0f\n\x07pokemon\x18\x05 \x01(\x06\"$\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0f\n\x0b\x43\x41NDY_FOUND\x10\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_pokemon__display__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -115,6 +114,7 @@ _BUDDYPOKEMONLOGENTRY.fields_by_name['pokemon_id'].enum_type = pogoprotos_dot_en
 _BUDDYPOKEMONLOGENTRY.fields_by_name['pokemon_display'].message_type = pogoprotos_dot_data_dot_pokemon__display__pb2._POKEMONDISPLAY
 _BUDDYPOKEMONLOGENTRY_RESULT.containing_type = _BUDDYPOKEMONLOGENTRY
 DESCRIPTOR.message_types_by_name['BuddyPokemonLogEntry'] = _BUDDYPOKEMONLOGENTRY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BuddyPokemonLogEntry = _reflection.GeneratedProtocolMessageType('BuddyPokemonLogEntry', (_message.Message,), dict(
   DESCRIPTOR = _BUDDYPOKEMONLOGENTRY,

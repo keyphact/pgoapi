@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\'pogoprotos/settings/news_settings.proto\x12\x13pogoprotos.settings\"\x81\x01\n\x0cNewsSettings\x12\x34\n\x04news\x18\x01 \x03(\x0b\x32&.pogoprotos.settings.NewsSettings.News\x1a;\n\x04News\x12\x16\n\x0enews_bundle_id\x18\x01 \x01(\t\x12\x1b\n\x13\x65xclusive_countries\x18\x02 \x03(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -96,6 +95,7 @@ _NEWSSETTINGS = _descriptor.Descriptor(
 _NEWSSETTINGS_NEWS.containing_type = _NEWSSETTINGS
 _NEWSSETTINGS.fields_by_name['news'].message_type = _NEWSSETTINGS_NEWS
 DESCRIPTOR.message_types_by_name['NewsSettings'] = _NEWSSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 NewsSettings = _reflection.GeneratedProtocolMessageType('NewsSettings', (_message.Message,), dict(
 

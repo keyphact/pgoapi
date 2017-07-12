@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n,pogoprotos/networking/requests/request.proto\x12\x1epogoprotos.networking.requests\x1a\x31pogoprotos/networking/requests/request_type.proto\"e\n\x07Request\x12\x41\n\x0crequest_type\x18\x01 \x01(\x0e\x32+.pogoprotos.networking.requests.RequestType\x12\x17\n\x0frequest_message\x18\x02 \x01(\x0c\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_networking_dot_requests_dot_request__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _REQUEST = _descriptor.Descriptor(
 
 _REQUEST.fields_by_name['request_type'].enum_type = pogoprotos_dot_networking_dot_requests_dot_request__type__pb2._REQUESTTYPE
 DESCRIPTOR.message_types_by_name['Request'] = _REQUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), dict(
   DESCRIPTOR = _REQUEST,

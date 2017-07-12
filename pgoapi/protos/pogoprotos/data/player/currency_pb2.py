@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n%pogoprotos/data/player/currency.proto\x12\x16pogoprotos.data.player\"(\n\x08\x43urrency\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _CURRENCY = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['Currency'] = _CURRENCY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Currency = _reflection.GeneratedProtocolMessageType('Currency', (_message.Message,), dict(
   DESCRIPTOR = _CURRENCY,

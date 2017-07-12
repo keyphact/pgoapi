@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nLpogoprotos/networking/requests/messages/recycle_inventory_item_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"`\n\x1bRecycleInventoryItemMessage\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _RECYCLEINVENTORYITEMMESSAGE = _descriptor.Descriptor(
 
 _RECYCLEINVENTORYITEMMESSAGE.fields_by_name['item_id'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['RecycleInventoryItemMessage'] = _RECYCLEINVENTORYITEMMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RecycleInventoryItemMessage = _reflection.GeneratedProtocolMessageType('RecycleInventoryItemMessage', (_message.Message,), dict(
   DESCRIPTOR = _RECYCLEINVENTORYITEMMESSAGE,

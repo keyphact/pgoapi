@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nJpogoprotos/networking/requests/messages/set_favorite_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\"D\n\x19SetFavoritePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x03\x12\x13\n\x0bis_favorite\x18\x02 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _SETFAVORITEPOKEMONMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SetFavoritePokemonMessage'] = _SETFAVORITEPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetFavoritePokemonMessage = _reflection.GeneratedProtocolMessageType('SetFavoritePokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _SETFAVORITEPOKEMONMESSAGE,

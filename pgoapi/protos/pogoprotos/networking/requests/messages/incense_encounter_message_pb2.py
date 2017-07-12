@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nGpogoprotos/networking/requests/messages/incense_encounter_message.proto\x12\'pogoprotos.networking.requests.messages\"K\n\x17IncenseEncounterMessage\x12\x14\n\x0c\x65ncounter_id\x18\x01 \x01(\x04\x12\x1a\n\x12\x65ncounter_location\x18\x02 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _INCENSEENCOUNTERMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['IncenseEncounterMessage'] = _INCENSEENCOUNTERMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 IncenseEncounterMessage = _reflection.GeneratedProtocolMessageType('IncenseEncounterMessage', (_message.Message,), dict(
   DESCRIPTOR = _INCENSEENCOUNTERMESSAGE,

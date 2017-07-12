@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n8pogoprotos/settings/master/item/incense_attributes.proto\x12\x1fpogoprotos.settings.master.item\x1a#pogoprotos/enums/pokemon_type.proto\"\xd2\x02\n\x11IncenseAttributes\x12 \n\x18incense_lifetime_seconds\x18\x01 \x01(\x05\x12\x33\n\x0cpokemon_type\x18\x02 \x03(\x0e\x32\x1d.pogoprotos.enums.PokemonType\x12(\n pokemon_incense_type_probability\x18\x03 \x01(\x02\x12\x30\n(standing_time_between_encounters_seconds\x18\x04 \x01(\x05\x12-\n%moving_time_between_encounter_seconds\x18\x05 \x01(\x05\x12\x35\n-distance_required_for_shorter_interval_meters\x18\x06 \x01(\x05\x12$\n\x1cpokemon_attracted_length_sec\x18\x07 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -102,6 +101,7 @@ _INCENSEATTRIBUTES = _descriptor.Descriptor(
 
 _INCENSEATTRIBUTES.fields_by_name['pokemon_type'].enum_type = pogoprotos_dot_enums_dot_pokemon__type__pb2._POKEMONTYPE
 DESCRIPTOR.message_types_by_name['IncenseAttributes'] = _INCENSEATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 IncenseAttributes = _reflection.GeneratedProtocolMessageType('IncenseAttributes', (_message.Message,), dict(
   DESCRIPTOR = _INCENSEATTRIBUTES,

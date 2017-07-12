@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n3pogoprotos/settings/master/gym_level_settings.proto\x12\x1apogoprotos.settings.master\"w\n\x10GymLevelSettings\x12\x1b\n\x13required_experience\x18\x01 \x03(\x05\x12\x14\n\x0cleader_slots\x18\x02 \x03(\x05\x12\x15\n\rtrainer_slots\x18\x03 \x03(\x05\x12\x19\n\x11search_roll_bonus\x18\x04 \x03(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _GYMLEVELSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GymLevelSettings'] = _GYMLEVELSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymLevelSettings = _reflection.GeneratedProtocolMessageType('GymLevelSettings', (_message.Message,), dict(
   DESCRIPTOR = _GYMLEVELSETTINGS,

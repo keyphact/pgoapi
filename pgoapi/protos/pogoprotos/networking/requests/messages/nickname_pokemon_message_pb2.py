@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/nickname_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\">\n\x16NicknamePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x12\x10\n\x08nickname\x18\x02 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _NICKNAMEPOKEMONMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['NicknamePokemonMessage'] = _NICKNAMEPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 NicknamePokemonMessage = _reflection.GeneratedProtocolMessageType('NicknamePokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _NICKNAMEPOKEMONMESSAGE,

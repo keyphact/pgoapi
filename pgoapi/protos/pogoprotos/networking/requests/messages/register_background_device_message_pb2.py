@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nPpogoprotos/networking/requests/messages/register_background_device_message.proto\x12\'pogoprotos.networking.requests.messages\"I\n\x1fRegisterBackgroundDeviceMessage\x12\x13\n\x0b\x64\x65vice_type\x18\x01 \x01(\t\x12\x11\n\tdevice_id\x18\x02 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _REGISTERBACKGROUNDDEVICEMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['RegisterBackgroundDeviceMessage'] = _REGISTERBACKGROUNDDEVICEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RegisterBackgroundDeviceMessage = _reflection.GeneratedProtocolMessageType('RegisterBackgroundDeviceMessage', (_message.Message,), dict(
   DESCRIPTOR = _REGISTERBACKGROUNDDEVICEMESSAGE,

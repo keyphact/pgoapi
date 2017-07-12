@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n.pogoprotos/settings/master/form_settings.proto\x12\x1apogoprotos.settings.master\x1a\x1bpogoprotos/enums/form.proto\x1a!pogoprotos/enums/pokemon_id.proto\"\xc4\x01\n\x0c\x46ormSettings\x12,\n\x07pokemon\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12<\n\x05\x66orms\x18\x02 \x03(\x0b\x32-.pogoprotos.settings.master.FormSettings.Form\x1aH\n\x04\x46orm\x12$\n\x04\x66orm\x18\x01 \x01(\x0e\x32\x16.pogoprotos.enums.Form\x12\x1a\n\x12\x61sset_bundle_value\x18\x02 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_form__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -108,6 +107,7 @@ _FORMSETTINGS_FORM.containing_type = _FORMSETTINGS
 _FORMSETTINGS.fields_by_name['pokemon'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 _FORMSETTINGS.fields_by_name['forms'].message_type = _FORMSETTINGS_FORM
 DESCRIPTOR.message_types_by_name['FormSettings'] = _FORMSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FormSettings = _reflection.GeneratedProtocolMessageType('FormSettings', (_message.Message,), dict(
 

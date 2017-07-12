@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n@pogoprotos/networking/responses/use_item_xp_boost_response.proto\x12\x1fpogoprotos.networking.responses\x1a(pogoprotos/inventory/applied_items.proto\"\xbe\x02\n\x16UseItemXpBoostResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.pogoprotos.networking.responses.UseItemXpBoostResponse.Result\x12\x39\n\rapplied_items\x18\x02 \x01(\x0b\x32\".pogoprotos.inventory.AppliedItems\"\x98\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_INVALID_ITEM_TYPE\x10\x02\x12!\n\x1d\x45RROR_XP_BOOST_ALREADY_ACTIVE\x10\x03\x12\x1c\n\x18\x45RROR_NO_ITEMS_REMAINING\x10\x04\x12\x18\n\x14\x45RROR_LOCATION_UNSET\x10\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_applied__items__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -108,6 +107,7 @@ _USEITEMXPBOOSTRESPONSE.fields_by_name['result'].enum_type = _USEITEMXPBOOSTRESP
 _USEITEMXPBOOSTRESPONSE.fields_by_name['applied_items'].message_type = pogoprotos_dot_inventory_dot_applied__items__pb2._APPLIEDITEMS
 _USEITEMXPBOOSTRESPONSE_RESULT.containing_type = _USEITEMXPBOOSTRESPONSE
 DESCRIPTOR.message_types_by_name['UseItemXpBoostResponse'] = _USEITEMXPBOOSTRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemXpBoostResponse = _reflection.GeneratedProtocolMessageType('UseItemXpBoostResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMXPBOOSTRESPONSE,

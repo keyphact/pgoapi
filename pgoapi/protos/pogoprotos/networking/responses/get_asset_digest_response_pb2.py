@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n?pogoprotos/networking/responses/get_asset_digest_response.proto\x12\x1fpogoprotos.networking.responses\x1a(pogoprotos/data/asset_digest_entry.proto\"\xfd\x01\n\x16GetAssetDigestResponse\x12\x31\n\x06\x64igest\x18\x01 \x03(\x0b\x32!.pogoprotos.data.AssetDigestEntry\x12\x14\n\x0ctimestamp_ms\x18\x02 \x01(\x04\x12N\n\x06result\x18\x03 \x01(\x0e\x32>.pogoprotos.networking.responses.GetAssetDigestResponse.Result\x12\x13\n\x0bpage_offset\x18\x04 \x01(\x05\"5\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x08\n\x04PAGE\x10\x02\x12\t\n\x05RETRY\x10\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_asset__digest__entry__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -114,6 +113,7 @@ _GETASSETDIGESTRESPONSE.fields_by_name['digest'].message_type = pogoprotos_dot_d
 _GETASSETDIGESTRESPONSE.fields_by_name['result'].enum_type = _GETASSETDIGESTRESPONSE_RESULT
 _GETASSETDIGESTRESPONSE_RESULT.containing_type = _GETASSETDIGESTRESPONSE
 DESCRIPTOR.message_types_by_name['GetAssetDigestResponse'] = _GETASSETDIGESTRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetAssetDigestResponse = _reflection.GeneratedProtocolMessageType('GetAssetDigestResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETASSETDIGESTRESPONSE,

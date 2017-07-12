@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\x1fpogoprotos/enums/platform.proto\x12\x10pogoprotos.enums*R\n\x08Platform\x12\t\n\x05UNSET\x10\x00\x12\x07\n\x03IOS\x10\x01\x12\x0b\n\x07\x41NDROID\x10\x02\x12\x07\n\x03OSX\x10\x03\x12\x0b\n\x07WINDOWS\x10\x04\x12\x0f\n\x0b\x41PPLE_WATCH\x10\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _PLATFORM = _descriptor.EnumDescriptor(
   name='Platform',
@@ -72,6 +71,7 @@ APPLE_WATCH = 5
 
 
 DESCRIPTOR.enum_types_by_name['Platform'] = _PLATFORM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

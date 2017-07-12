@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n)pogoprotos/inventory/inventory_item.proto\x12\x14pogoprotos.inventory\x1a.pogoprotos/inventory/inventory_item_data.proto\"\xde\x01\n\rInventoryItem\x12\x1d\n\x15modified_timestamp_ms\x18\x01 \x01(\x03\x12\x45\n\x0c\x64\x65leted_item\x18\x02 \x01(\x0b\x32/.pogoprotos.inventory.InventoryItem.DeletedItem\x12\x44\n\x13inventory_item_data\x18\x03 \x01(\x0b\x32\'.pogoprotos.inventory.InventoryItemData\x1a!\n\x0b\x44\x65letedItem\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_inventory__item__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -106,6 +105,7 @@ _INVENTORYITEM_DELETEDITEM.containing_type = _INVENTORYITEM
 _INVENTORYITEM.fields_by_name['deleted_item'].message_type = _INVENTORYITEM_DELETEDITEM
 _INVENTORYITEM.fields_by_name['inventory_item_data'].message_type = pogoprotos_dot_inventory_dot_inventory__item__data__pb2._INVENTORYITEMDATA
 DESCRIPTOR.message_types_by_name['InventoryItem'] = _INVENTORYITEM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InventoryItem = _reflection.GeneratedProtocolMessageType('InventoryItem', (_message.Message,), dict(
 

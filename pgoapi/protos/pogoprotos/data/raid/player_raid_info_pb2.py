@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n+pogoprotos/data/raid/player_raid_info.proto\x12\x14pogoprotos.data.raid\x1a\x1fpogoprotos/data/raid/raid.proto\"\x83\x01\n\x0ePlayerRaidInfo\x12\x1d\n\x15total_completed_raids\x18\x03 \x01(\x05\x12\'\n\x1ftotal_completed_legendary_raids\x18\x04 \x01(\x05\x12)\n\x05raids\x18\x05 \x03(\x0b\x32\x1a.pogoprotos.data.raid.Raidb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_raid_dot_raid__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _PLAYERRAIDINFO = _descriptor.Descriptor(
 
 _PLAYERRAIDINFO.fields_by_name['raids'].message_type = pogoprotos_dot_data_dot_raid_dot_raid__pb2._RAID
 DESCRIPTOR.message_types_by_name['PlayerRaidInfo'] = _PLAYERRAIDINFO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PlayerRaidInfo = _reflection.GeneratedProtocolMessageType('PlayerRaidInfo', (_message.Message,), dict(
   DESCRIPTOR = _PLAYERRAIDINFO,

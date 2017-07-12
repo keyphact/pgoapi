@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n(pogoprotos/inventory/egg_incubator.proto\x12\x14pogoprotos.inventory\x1a\'pogoprotos/inventory/item/item_id.proto\x1a-pogoprotos/inventory/egg_incubator_type.proto\"\xed\x01\n\x0c\x45ggIncubator\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x07item_id\x18\x02 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12>\n\x0eincubator_type\x18\x03 \x01(\x0e\x32&.pogoprotos.inventory.EggIncubatorType\x12\x16\n\x0euses_remaining\x18\x04 \x01(\x05\x12\x12\n\npokemon_id\x18\x05 \x01(\x04\x12\x17\n\x0fstart_km_walked\x18\x06 \x01(\x01\x12\x18\n\x10target_km_walked\x18\x07 \x01(\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_egg__incubator__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -104,6 +103,7 @@ _EGGINCUBATOR = _descriptor.Descriptor(
 _EGGINCUBATOR.fields_by_name['item_id'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 _EGGINCUBATOR.fields_by_name['incubator_type'].enum_type = pogoprotos_dot_inventory_dot_egg__incubator__type__pb2._EGGINCUBATORTYPE
 DESCRIPTOR.message_types_by_name['EggIncubator'] = _EGGINCUBATOR
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EggIncubator = _reflection.GeneratedProtocolMessageType('EggIncubator', (_message.Message,), dict(
   DESCRIPTOR = _EGGINCUBATOR,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n*pogoprotos/data/player/player_camera.proto\x12\x16pogoprotos.data.player\")\n\x0cPlayerCamera\x12\x19\n\x11is_default_camera\x18\x01 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _PLAYERCAMERA = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['PlayerCamera'] = _PLAYERCAMERA
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PlayerCamera = _reflection.GeneratedProtocolMessageType('PlayerCamera', (_message.Message,), dict(
   DESCRIPTOR = _PLAYERCAMERA,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nDpogoprotos/networking/requests/messages/evolve_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"q\n\x14\x45volvePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x12\x45\n\x1a\x65volution_item_requirement\x18\x02 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemIdb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _EVOLVEPOKEMONMESSAGE = _descriptor.Descriptor(
 
 _EVOLVEPOKEMONMESSAGE.fields_by_name['evolution_item_requirement'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['EvolvePokemonMessage'] = _EVOLVEPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EvolvePokemonMessage = _reflection.GeneratedProtocolMessageType('EvolvePokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _EVOLVEPOKEMONMESSAGE,

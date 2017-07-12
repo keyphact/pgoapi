@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n>pogoprotos/networking/responses/upgrade_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\x1a\"pogoprotos/data/pokemon_data.proto\"\xc2\x02\n\x16UpgradePokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.pogoprotos.networking.responses.UpgradePokemonResponse.Result\x12\x36\n\x10upgraded_pokemon\x18\x02 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\"\x9f\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_POKEMON_NOT_FOUND\x10\x02\x12 \n\x1c\x45RROR_INSUFFICIENT_RESOURCES\x10\x03\x12\x1f\n\x1b\x45RROR_UPGRADE_NOT_AVAILABLE\x10\x04\x12\x1d\n\x19\x45RROR_POKEMON_IS_DEPLOYED\x10\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -108,6 +107,7 @@ _UPGRADEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _UPGRADEPOKEMONRESP
 _UPGRADEPOKEMONRESPONSE.fields_by_name['upgraded_pokemon'].message_type = pogoprotos_dot_data_dot_pokemon__data__pb2._POKEMONDATA
 _UPGRADEPOKEMONRESPONSE_RESULT.containing_type = _UPGRADEPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['UpgradePokemonResponse'] = _UPGRADEPOKEMONRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UpgradePokemonResponse = _reflection.GeneratedProtocolMessageType('UpgradePokemonResponse', (_message.Message,), dict(
   DESCRIPTOR = _UPGRADEPOKEMONRESPONSE,

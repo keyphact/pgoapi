@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n?pogoprotos/networking/responses/sfida_action_log_response.proto\x12\x1fpogoprotos.networking.responses\x1a+pogoprotos/data/logs/action_log_entry.proto\"\xc5\x01\n\x16SfidaActionLogResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.pogoprotos.networking.responses.SfidaActionLogResponse.Result\x12\x39\n\x0blog_entries\x18\x02 \x03(\x0b\x32$.pogoprotos.data.logs.ActionLogEntry\" \n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_logs_dot_action__log__entry__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -92,6 +91,7 @@ _SFIDAACTIONLOGRESPONSE.fields_by_name['result'].enum_type = _SFIDAACTIONLOGRESP
 _SFIDAACTIONLOGRESPONSE.fields_by_name['log_entries'].message_type = pogoprotos_dot_data_dot_logs_dot_action__log__entry__pb2._ACTIONLOGENTRY
 _SFIDAACTIONLOGRESPONSE_RESULT.containing_type = _SFIDAACTIONLOGRESPONSE
 DESCRIPTOR.message_types_by_name['SfidaActionLogResponse'] = _SFIDAACTIONLOGRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SfidaActionLogResponse = _reflection.GeneratedProtocolMessageType('SfidaActionLogResponse', (_message.Message,), dict(
   DESCRIPTOR = _SFIDAACTIONLOGRESPONSE,

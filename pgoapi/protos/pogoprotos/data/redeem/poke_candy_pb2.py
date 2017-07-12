@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\'pogoprotos/data/redeem/poke_candy.proto\x12\x16pogoprotos.data.redeem\"4\n\tPokeCandy\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x12\x13\n\x0b\x63\x61ndy_count\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _POKECANDY = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['PokeCandy'] = _POKECANDY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PokeCandy = _reflection.GeneratedProtocolMessageType('PokeCandy', (_message.Message,), dict(
   DESCRIPTOR = _POKECANDY,

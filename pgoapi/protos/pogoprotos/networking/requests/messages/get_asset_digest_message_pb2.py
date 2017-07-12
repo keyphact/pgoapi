@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/get_asset_digest_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\x1fpogoprotos/enums/platform.proto\"\xdc\x01\n\x15GetAssetDigestMessage\x12,\n\x08platform\x18\x01 \x01(\x0e\x32\x1a.pogoprotos.enums.Platform\x12\x1b\n\x13\x64\x65vice_manufacturer\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x65vice_model\x18\x03 \x01(\t\x12\x0e\n\x06locale\x18\x04 \x01(\t\x12\x13\n\x0b\x61pp_version\x18\x05 \x01(\r\x12\x10\n\x08paginate\x18\x06 \x01(\x08\x12\x13\n\x0bpage_offset\x18\x07 \x01(\x05\x12\x16\n\x0epage_timestamp\x18\x08 \x01(\x04\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_platform__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -109,6 +108,7 @@ _GETASSETDIGESTMESSAGE = _descriptor.Descriptor(
 
 _GETASSETDIGESTMESSAGE.fields_by_name['platform'].enum_type = pogoprotos_dot_enums_dot_platform__pb2._PLATFORM
 DESCRIPTOR.message_types_by_name['GetAssetDigestMessage'] = _GETASSETDIGESTMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetAssetDigestMessage = _reflection.GeneratedProtocolMessageType('GetAssetDigestMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETASSETDIGESTMESSAGE,

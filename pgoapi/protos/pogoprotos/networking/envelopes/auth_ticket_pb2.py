@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n1pogoprotos/networking/envelopes/auth_ticket.proto\x12\x1fpogoprotos.networking.envelopes\"E\n\nAuthTicket\x12\r\n\x05start\x18\x01 \x01(\x0c\x12\x1b\n\x13\x65xpire_timestamp_ms\x18\x02 \x01(\x04\x12\x0b\n\x03\x65nd\x18\x03 \x01(\x0c\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _AUTHTICKET = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['AuthTicket'] = _AUTHTICKET
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AuthTicket = _reflection.GeneratedProtocolMessageType('AuthTicket', (_message.Message,), dict(
   DESCRIPTOR = _AUTHTICKET,

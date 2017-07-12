@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n7pogoprotos/networking/envelopes/response_envelope.proto\x12\x1fpogoprotos.networking.envelopes\x1a\x31pogoprotos/networking/envelopes/auth_ticket.proto\x1a:pogoprotos/networking/platform/platform_request_type.proto\"\xf6\x04\n\x10ResponseEnvelope\x12Q\n\x0bstatus_code\x18\x01 \x01(\x0e\x32<.pogoprotos.networking.envelopes.ResponseEnvelope.StatusCode\x12\x12\n\nrequest_id\x18\x02 \x01(\x04\x12\x0f\n\x07\x61pi_url\x18\x03 \x01(\t\x12\\\n\x10platform_returns\x18\x06 \x03(\x0b\x32\x42.pogoprotos.networking.envelopes.ResponseEnvelope.PlatformResponse\x12@\n\x0b\x61uth_ticket\x18\x07 \x01(\x0b\x32+.pogoprotos.networking.envelopes.AuthTicket\x12\x0f\n\x07returns\x18\x64 \x03(\x0c\x12\r\n\x05\x65rror\x18\x65 \x01(\t\x1ag\n\x10PlatformResponse\x12\x41\n\x04type\x18\x01 \x01(\x0e\x32\x33.pogoprotos.networking.platform.PlatformRequestType\x12\x10\n\x08response\x18\x02 \x01(\x0c\"\xc0\x01\n\nStatusCode\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02OK\x10\x01\x12\x1a\n\x16OK_RPC_URL_IN_RESPONSE\x10\x02\x12\x0f\n\x0b\x42\x41\x44_REQUEST\x10\x03\x12\x13\n\x0fINVALID_REQUEST\x10\x33\x12\x1c\n\x18INVALID_PLATFORM_REQUEST\x10\x34\x12\x0c\n\x08REDIRECT\x10\x35\x12\x17\n\x13SESSION_INVALIDATED\x10\x64\x12\x16\n\x12INVALID_AUTH_TOKEN\x10\x66\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_networking_dot_envelopes_dot_auth__ticket__pb2.DESCRIPTOR,pogoprotos_dot_networking_dot_platform_dot_platform__request__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -196,6 +195,7 @@ _RESPONSEENVELOPE.fields_by_name['platform_returns'].message_type = _RESPONSEENV
 _RESPONSEENVELOPE.fields_by_name['auth_ticket'].message_type = pogoprotos_dot_networking_dot_envelopes_dot_auth__ticket__pb2._AUTHTICKET
 _RESPONSEENVELOPE_STATUSCODE.containing_type = _RESPONSEENVELOPE
 DESCRIPTOR.message_types_by_name['ResponseEnvelope'] = _RESPONSEENVELOPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ResponseEnvelope = _reflection.GeneratedProtocolMessageType('ResponseEnvelope', (_message.Message,), dict(
 

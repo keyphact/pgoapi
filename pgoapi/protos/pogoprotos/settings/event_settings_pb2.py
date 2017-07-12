@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n(pogoprotos/settings/event_settings.proto\x12\x13pogoprotos.settings\"2\n\rEventSettings\x12!\n\x19\x63ondolence_ribbon_country\x18\x01 \x03(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _EVENTSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['EventSettings'] = _EVENTSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EventSettings = _reflection.GeneratedProtocolMessageType('EventSettings', (_message.Message,), dict(
   DESCRIPTOR = _EVENTSETTINGS,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n*pogoprotos/inventory/inventory_delta.proto\x12\x14pogoprotos.inventory\x1a)pogoprotos/inventory/inventory_item.proto\"\x87\x01\n\x0eInventoryDelta\x12\x1d\n\x15original_timestamp_ms\x18\x01 \x01(\x03\x12\x18\n\x10new_timestamp_ms\x18\x02 \x01(\x03\x12<\n\x0finventory_items\x18\x03 \x03(\x0b\x32#.pogoprotos.inventory.InventoryItemb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_inventory__item__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _INVENTORYDELTA = _descriptor.Descriptor(
 
 _INVENTORYDELTA.fields_by_name['inventory_items'].message_type = pogoprotos_dot_inventory_dot_inventory__item__pb2._INVENTORYITEM
 DESCRIPTOR.message_types_by_name['InventoryDelta'] = _INVENTORYDELTA
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InventoryDelta = _reflection.GeneratedProtocolMessageType('InventoryDelta', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYDELTA,

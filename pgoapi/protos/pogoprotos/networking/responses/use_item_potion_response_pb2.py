@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n>pogoprotos/networking/responses/use_item_potion_response.proto\x12\x1fpogoprotos.networking.responses\"\xe1\x01\n\x15UseItemPotionResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.pogoprotos.networking.responses.UseItemPotionResponse.Result\x12\x0f\n\x07stamina\x18\x02 \x01(\x05\"h\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_NO_POKEMON\x10\x02\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x03\x12\x1a\n\x16\x45RROR_DEPLOYED_TO_FORT\x10\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -101,6 +100,7 @@ _USEITEMPOTIONRESPONSE = _descriptor.Descriptor(
 _USEITEMPOTIONRESPONSE.fields_by_name['result'].enum_type = _USEITEMPOTIONRESPONSE_RESULT
 _USEITEMPOTIONRESPONSE_RESULT.containing_type = _USEITEMPOTIONRESPONSE
 DESCRIPTOR.message_types_by_name['UseItemPotionResponse'] = _USEITEMPOTIONRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemPotionResponse = _reflection.GeneratedProtocolMessageType('UseItemPotionResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMPOTIONRESPONSE,

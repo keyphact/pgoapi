@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n@pogoprotos/networking/requests/messages/set_avatar_message.proto\x12\'pogoprotos.networking.requests.messages\x1a*pogoprotos/data/player/player_avatar.proto\"O\n\x10SetAvatarMessage\x12;\n\rplayer_avatar\x18\x02 \x01(\x0b\x32$.pogoprotos.data.player.PlayerAvatarb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player_dot_player__avatar__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _SETAVATARMESSAGE = _descriptor.Descriptor(
 
 _SETAVATARMESSAGE.fields_by_name['player_avatar'].message_type = pogoprotos_dot_data_dot_player_dot_player__avatar__pb2._PLAYERAVATAR
 DESCRIPTOR.message_types_by_name['SetAvatarMessage'] = _SETAVATARMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetAvatarMessage = _reflection.GeneratedProtocolMessageType('SetAvatarMessage', (_message.Message,), dict(
   DESCRIPTOR = _SETAVATARMESSAGE,

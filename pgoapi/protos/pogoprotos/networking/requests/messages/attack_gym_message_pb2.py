@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n@pogoprotos/networking/requests/messages/attack_gym_message.proto\x12\'pogoprotos.networking.requests.messages\x1a*pogoprotos/data/battle/battle_action.proto\"\xeb\x01\n\x10\x41ttackGymMessage\x12\x0e\n\x06gym_id\x18\x01 \x01(\t\x12\x11\n\tbattle_id\x18\x02 \x01(\t\x12<\n\x0e\x61ttack_actions\x18\x03 \x03(\x0b\x32$.pogoprotos.data.battle.BattleAction\x12\x43\n\x15last_retrieved_action\x18\x04 \x01(\x0b\x32$.pogoprotos.data.battle.BattleAction\x12\x17\n\x0fplayer_latitude\x18\x05 \x01(\x01\x12\x18\n\x10player_longitude\x18\x06 \x01(\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_battle_dot_battle__action__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -96,6 +95,7 @@ _ATTACKGYMMESSAGE = _descriptor.Descriptor(
 _ATTACKGYMMESSAGE.fields_by_name['attack_actions'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__action__pb2._BATTLEACTION
 _ATTACKGYMMESSAGE.fields_by_name['last_retrieved_action'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__action__pb2._BATTLEACTION
 DESCRIPTOR.message_types_by_name['AttackGymMessage'] = _ATTACKGYMMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AttackGymMessage = _reflection.GeneratedProtocolMessageType('AttackGymMessage', (_message.Message,), dict(
   DESCRIPTOR = _ATTACKGYMMESSAGE,

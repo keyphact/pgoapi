@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nCpogoprotos/networking/requests/messages/catch_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"\xe6\x01\n\x13\x43\x61tchPokemonMessage\x12\x14\n\x0c\x65ncounter_id\x18\x01 \x01(\x06\x12\x33\n\x08pokeball\x18\x02 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x1f\n\x17normalized_reticle_size\x18\x03 \x01(\x01\x12\x16\n\x0espawn_point_id\x18\x04 \x01(\t\x12\x13\n\x0bhit_pokemon\x18\x05 \x01(\x08\x12\x15\n\rspin_modifier\x18\x06 \x01(\x01\x12\x1f\n\x17normalized_hit_position\x18\x07 \x01(\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -102,6 +101,7 @@ _CATCHPOKEMONMESSAGE = _descriptor.Descriptor(
 
 _CATCHPOKEMONMESSAGE.fields_by_name['pokeball'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['CatchPokemonMessage'] = _CATCHPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CatchPokemonMessage = _reflection.GeneratedProtocolMessageType('CatchPokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _CATCHPOKEMONMESSAGE,

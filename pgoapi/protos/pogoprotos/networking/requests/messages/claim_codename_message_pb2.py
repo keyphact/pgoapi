@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nDpogoprotos/networking/requests/messages/claim_codename_message.proto\x12\'pogoprotos.networking.requests.messages\"7\n\x14\x43laimCodenameMessage\x12\x10\n\x08\x63odename\x18\x01 \x01(\t\x12\r\n\x05\x66orce\x18\x02 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _CLAIMCODENAMEMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['ClaimCodenameMessage'] = _CLAIMCODENAMEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ClaimCodenameMessage = _reflection.GeneratedProtocolMessageType('ClaimCodenameMessage', (_message.Message,), dict(
   DESCRIPTOR = _CLAIMCODENAMEMESSAGE,

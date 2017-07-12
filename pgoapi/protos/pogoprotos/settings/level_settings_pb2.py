@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n(pogoprotos/settings/level_settings.proto\x12\x13pogoprotos.settings\"Q\n\rLevelSettings\x12\x1b\n\x13trainer_cp_modifier\x18\x02 \x01(\x01\x12#\n\x1btrainer_difficulty_modifier\x18\x03 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _LEVELSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['LevelSettings'] = _LEVELSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LevelSettings = _reflection.GeneratedProtocolMessageType('LevelSettings', (_message.Message,), dict(
   DESCRIPTOR = _LEVELSETTINGS,

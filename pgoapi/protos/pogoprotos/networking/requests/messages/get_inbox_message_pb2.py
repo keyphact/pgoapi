@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n?pogoprotos/networking/requests/messages/get_inbox_message.proto\x12\'pogoprotos.networking.requests.messages\"P\n\x0fGetInboxMessage\x12\x12\n\nis_history\x18\x01 \x01(\x08\x12\x12\n\nis_reverse\x18\x02 \x01(\x08\x12\x15\n\rnot_before_ms\x18\x03 \x01(\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _GETINBOXMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetInboxMessage'] = _GETINBOXMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetInboxMessage = _reflection.GeneratedProtocolMessageType('GetInboxMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETINBOXMESSAGE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n+pogoprotos/settings/passcode_settings.proto\x12\x13pogoprotos.settings\"2\n\x10PasscodeSettings\x12\x1e\n\x16show_passcode_in_store\x18\x01 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _PASSCODESETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['PasscodeSettings'] = _PASSCODESETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PasscodeSettings = _reflection.GeneratedProtocolMessageType('PasscodeSettings', (_message.Message,), dict(
   DESCRIPTOR = _PASSCODESETTINGS,

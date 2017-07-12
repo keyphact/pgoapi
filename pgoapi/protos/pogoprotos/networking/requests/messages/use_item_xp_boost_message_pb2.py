@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nGpogoprotos/networking/requests/messages/use_item_xp_boost_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"K\n\x15UseItemXpBoostMessage\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemIdb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _USEITEMXPBOOSTMESSAGE = _descriptor.Descriptor(
 
 _USEITEMXPBOOSTMESSAGE.fields_by_name['item_id'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['UseItemXpBoostMessage'] = _USEITEMXPBOOSTMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemXpBoostMessage = _reflection.GeneratedProtocolMessageType('UseItemXpBoostMessage', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMXPBOOSTMESSAGE,

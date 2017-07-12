@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nEpogoprotos/networking/responses/use_item_egg_incubator_response.proto\x12\x1fpogoprotos.networking.responses\x1a(pogoprotos/inventory/egg_incubator.proto\"\x9f\x03\n\x1bUseItemEggIncubatorResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x43.pogoprotos.networking.responses.UseItemEggIncubatorResponse.Result\x12\x39\n\regg_incubator\x18\x02 \x01(\x0b\x32\".pogoprotos.inventory.EggIncubator\"\xef\x01\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1d\n\x19\x45RROR_INCUBATOR_NOT_FOUND\x10\x02\x12\x1f\n\x1b\x45RROR_POKEMON_EGG_NOT_FOUND\x10\x03\x12\x1c\n\x18\x45RROR_POKEMON_ID_NOT_EGG\x10\x04\x12\"\n\x1e\x45RROR_INCUBATOR_ALREADY_IN_USE\x10\x05\x12$\n ERROR_POKEMON_ALREADY_INCUBATING\x10\x06\x12%\n!ERROR_INCUBATOR_NO_USES_REMAINING\x10\x07\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_egg__incubator__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -116,6 +115,7 @@ _USEITEMEGGINCUBATORRESPONSE.fields_by_name['result'].enum_type = _USEITEMEGGINC
 _USEITEMEGGINCUBATORRESPONSE.fields_by_name['egg_incubator'].message_type = pogoprotos_dot_inventory_dot_egg__incubator__pb2._EGGINCUBATOR
 _USEITEMEGGINCUBATORRESPONSE_RESULT.containing_type = _USEITEMEGGINCUBATORRESPONSE
 DESCRIPTOR.message_types_by_name['UseItemEggIncubatorResponse'] = _USEITEMEGGINCUBATORRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemEggIncubatorResponse = _reflection.GeneratedProtocolMessageType('UseItemEggIncubatorResponse', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMEGGINCUBATORRESPONSE,

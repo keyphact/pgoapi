@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\x1dpogoprotos/enums/gender.proto\x12\x10pogoprotos.enums*@\n\x06Gender\x12\x10\n\x0cGENDER_UNSET\x10\x00\x12\x08\n\x04MALE\x10\x01\x12\n\n\x06\x46\x45MALE\x10\x02\x12\x0e\n\nGENDERLESS\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _GENDER = _descriptor.EnumDescriptor(
   name='Gender',
@@ -62,6 +61,7 @@ GENDERLESS = 3
 
 
 DESCRIPTOR.enum_types_by_name['Gender'] = _GENDER
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

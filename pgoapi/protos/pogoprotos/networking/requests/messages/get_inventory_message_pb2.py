@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nCpogoprotos/networking/requests/messages/get_inventory_message.proto\x12\'pogoprotos.networking.requests.messages\"H\n\x13GetInventoryMessage\x12\x19\n\x11last_timestamp_ms\x18\x01 \x01(\x03\x12\x16\n\x0eitem_been_seen\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _GETINVENTORYMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetInventoryMessage'] = _GETINVENTORYMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetInventoryMessage = _reflection.GeneratedProtocolMessageType('GetInventoryMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETINVENTORYMESSAGE,

@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n*pogoprotos/data/battle/battle_update.proto\x12\x16pogoprotos.data.battle\x1a\'pogoprotos/data/battle/battle_log.proto\x1a\x30pogoprotos/data/battle/battle_pokemon_info.proto\"\xe0\x01\n\x0c\x42\x61ttleUpdate\x12\x35\n\nbattle_log\x18\x01 \x01(\x0b\x32!.pogoprotos.data.battle.BattleLog\x12\x11\n\tbattle_id\x18\x02 \x01(\t\x12\x42\n\x0f\x61\x63tive_defender\x18\x03 \x01(\x0b\x32).pogoprotos.data.battle.BattlePokemonInfo\x12\x42\n\x0f\x61\x63tive_attacker\x18\x04 \x01(\x0b\x32).pogoprotos.data.battle.BattlePokemonInfob\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_battle_dot_battle__log__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_battle_dot_battle__pokemon__info__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -84,6 +83,7 @@ _BATTLEUPDATE.fields_by_name['battle_log'].message_type = pogoprotos_dot_data_do
 _BATTLEUPDATE.fields_by_name['active_defender'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__pokemon__info__pb2._BATTLEPOKEMONINFO
 _BATTLEUPDATE.fields_by_name['active_attacker'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__pokemon__info__pb2._BATTLEPOKEMONINFO
 DESCRIPTOR.message_types_by_name['BattleUpdate'] = _BATTLEUPDATE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BattleUpdate = _reflection.GeneratedProtocolMessageType('BattleUpdate', (_message.Message,), dict(
   DESCRIPTOR = _BATTLEUPDATE,

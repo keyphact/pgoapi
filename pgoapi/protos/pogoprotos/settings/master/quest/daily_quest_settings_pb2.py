@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n;pogoprotos/settings/master/quest/daily_quest_settings.proto\x12 pogoprotos.settings.master.quest\"\x7f\n\x12\x44\x61ilyQuestSettings\x12\x17\n\x0f\x62uckets_per_day\x18\x01 \x01(\x05\x12\x15\n\rstreak_length\x18\x02 \x01(\x05\x12\x18\n\x10\x62onus_multiplier\x18\x03 \x01(\x02\x12\x1f\n\x17streak_bonus_multiplier\x18\x04 \x01(\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _DAILYQUESTSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['DailyQuestSettings'] = _DAILYQUESTSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DailyQuestSettings = _reflection.GeneratedProtocolMessageType('DailyQuestSettings', (_message.Message,), dict(
   DESCRIPTOR = _DAILYQUESTSETTINGS,

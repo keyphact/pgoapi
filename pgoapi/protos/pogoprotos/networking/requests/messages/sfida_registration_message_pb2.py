@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nHpogoprotos/networking/requests/messages/sfida_registration_message.proto\x12\'pogoprotos.networking.requests.messages\",\n\x18SfidaRegistrationMessage\x12\x10\n\x08sfida_id\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _SFIDAREGISTRATIONMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SfidaRegistrationMessage'] = _SFIDAREGISTRATIONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SfidaRegistrationMessage = _reflection.GeneratedProtocolMessageType('SfidaRegistrationMessage', (_message.Message,), dict(
   DESCRIPTOR = _SFIDAREGISTRATIONMESSAGE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nApogoprotos/networking/requests/messages/fort_search_message.proto\x12\'pogoprotos.networking.requests.messages\"\x86\x01\n\x11\x46ortSearchMessage\x12\x0f\n\x07\x66ort_id\x18\x01 \x01(\t\x12\x17\n\x0fplayer_latitude\x18\x02 \x01(\x01\x12\x18\n\x10player_longitude\x18\x03 \x01(\x01\x12\x15\n\rfort_latitude\x18\x04 \x01(\x01\x12\x16\n\x0e\x66ort_longitude\x18\x05 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _FORTSEARCHMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['FortSearchMessage'] = _FORTSEARCHMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortSearchMessage = _reflection.GeneratedProtocolMessageType('FortSearchMessage', (_message.Message,), dict(
   DESCRIPTOR = _FORTSEARCHMESSAGE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n#pogoprotos/map/fort/gym_event.proto\x12\x13pogoprotos.map.fort\"\xb9\x02\n\x08GymEvent\x12\x0f\n\x07trainer\x18\x01 \x01(\t\x12\x14\n\x0ctimestamp_ms\x18\x02 \x01(\x03\x12\x32\n\x05\x65vent\x18\x03 \x01(\x0e\x32#.pogoprotos.map.fort.GymEvent.Event\x12\x12\n\npokedex_id\x18\x04 \x01(\x05\x12\x12\n\npokemon_id\x18\x05 \x01(\x06\"\xa9\x01\n\x05\x45vent\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0f\n\x0bPOKEMON_FED\x10\x01\x12\x14\n\x10POKEMON_DEPLOYED\x10\x02\x12\x14\n\x10POKEMON_RETURNED\x10\x03\x12\x0e\n\nBATTLE_WON\x10\x04\x12\x0f\n\x0b\x42\x41TTLE_LOSS\x10\x05\x12\x10\n\x0cRAID_STARTED\x10\x06\x12\x0e\n\nRAID_ENDED\x10\x07\x12\x13\n\x0fGYM_NEUTRALIZED\x10\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -138,6 +137,7 @@ _GYMEVENT = _descriptor.Descriptor(
 _GYMEVENT.fields_by_name['event'].enum_type = _GYMEVENT_EVENT
 _GYMEVENT_EVENT.containing_type = _GYMEVENT
 DESCRIPTOR.message_types_by_name['GymEvent'] = _GYMEVENT
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymEvent = _reflection.GeneratedProtocolMessageType('GymEvent', (_message.Message,), dict(
   DESCRIPTOR = _GYMEVENT,

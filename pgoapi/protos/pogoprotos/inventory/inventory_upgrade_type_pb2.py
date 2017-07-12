@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n1pogoprotos/inventory/inventory_upgrade_type.proto\x12\x14pogoprotos.inventory*b\n\x14InventoryUpgradeType\x12\x11\n\rUPGRADE_UNSET\x10\x00\x12\x19\n\x15INCREASE_ITEM_STORAGE\x10\x01\x12\x1c\n\x18INCREASE_POKEMON_STORAGE\x10\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _INVENTORYUPGRADETYPE = _descriptor.EnumDescriptor(
   name='InventoryUpgradeType',
@@ -57,6 +56,7 @@ INCREASE_POKEMON_STORAGE = 2
 
 
 DESCRIPTOR.enum_types_by_name['InventoryUpgradeType'] = _INVENTORYUPGRADETYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

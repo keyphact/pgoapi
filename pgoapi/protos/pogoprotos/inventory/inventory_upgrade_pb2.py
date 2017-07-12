@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n,pogoprotos/inventory/inventory_upgrade.proto\x12\x14pogoprotos.inventory\x1a\'pogoprotos/inventory/item/item_id.proto\x1a\x31pogoprotos/inventory/inventory_upgrade_type.proto\"\xa4\x01\n\x10InventoryUpgrade\x12\x32\n\x07item_id\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12@\n\x0cupgrade_type\x18\x02 \x01(\x0e\x32*.pogoprotos.inventory.InventoryUpgradeType\x12\x1a\n\x12\x61\x64\x64itional_storage\x18\x03 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_inventory__upgrade__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -76,6 +75,7 @@ _INVENTORYUPGRADE = _descriptor.Descriptor(
 _INVENTORYUPGRADE.fields_by_name['item_id'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 _INVENTORYUPGRADE.fields_by_name['upgrade_type'].enum_type = pogoprotos_dot_inventory_dot_inventory__upgrade__type__pb2._INVENTORYUPGRADETYPE
 DESCRIPTOR.message_types_by_name['InventoryUpgrade'] = _INVENTORYUPGRADE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InventoryUpgrade = _reflection.GeneratedProtocolMessageType('InventoryUpgrade', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYUPGRADE,

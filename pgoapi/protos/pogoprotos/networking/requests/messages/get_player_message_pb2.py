@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n@pogoprotos/networking/requests/messages/get_player_message.proto\x12\'pogoprotos.networking.requests.messages\"\xb6\x01\n\x10GetPlayerMessage\x12]\n\rplayer_locale\x18\x01 \x01(\x0b\x32\x46.pogoprotos.networking.requests.messages.GetPlayerMessage.PlayerLocale\x1a\x43\n\x0cPlayerLocale\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\t\x12\x10\n\x08timezone\x18\x03 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -103,6 +102,7 @@ _GETPLAYERMESSAGE = _descriptor.Descriptor(
 _GETPLAYERMESSAGE_PLAYERLOCALE.containing_type = _GETPLAYERMESSAGE
 _GETPLAYERMESSAGE.fields_by_name['player_locale'].message_type = _GETPLAYERMESSAGE_PLAYERLOCALE
 DESCRIPTOR.message_types_by_name['GetPlayerMessage'] = _GETPLAYERMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetPlayerMessage = _reflection.GeneratedProtocolMessageType('GetPlayerMessage', (_message.Message,), dict(
 

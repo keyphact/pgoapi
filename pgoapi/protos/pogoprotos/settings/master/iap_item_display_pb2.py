@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n1pogoprotos/settings/master/iap_item_display.proto\x12\x1apogoprotos.settings.master\x1a(pogoprotos/enums/iap_item_category.proto\x1a\'pogoprotos/inventory/item/item_id.proto\"\xaf\x01\n\x0eIapItemDisplay\x12\x0b\n\x03sku\x18\x01 \x01(\t\x12\x37\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32%.pogoprotos.enums.HoloIapItemCategory\x12\x12\n\nsort_order\x18\x03 \x01(\x05\x12\x33\n\x08item_ids\x18\x04 \x03(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x0e\n\x06\x63ounts\x18\x05 \x03(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_iap__item__category__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -90,6 +89,7 @@ _IAPITEMDISPLAY = _descriptor.Descriptor(
 _IAPITEMDISPLAY.fields_by_name['category'].enum_type = pogoprotos_dot_enums_dot_iap__item__category__pb2._HOLOIAPITEMCATEGORY
 _IAPITEMDISPLAY.fields_by_name['item_ids'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['IapItemDisplay'] = _IAPITEMDISPLAY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 IapItemDisplay = _reflection.GeneratedProtocolMessageType('IapItemDisplay', (_message.Message,), dict(
   DESCRIPTOR = _IAPITEMDISPLAY,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nJpogoprotos/networking/requests/messages/check_awarded_badges_message.proto\x12\'pogoprotos.networking.requests.messages\"\x1b\n\x19\x43heckAwardedBadgesMessageb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -50,6 +49,7 @@ _CHECKAWARDEDBADGESMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['CheckAwardedBadgesMessage'] = _CHECKAWARDEDBADGESMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CheckAwardedBadgesMessage = _reflection.GeneratedProtocolMessageType('CheckAwardedBadgesMessage', (_message.Message,), dict(
   DESCRIPTOR = _CHECKAWARDEDBADGESMESSAGE,

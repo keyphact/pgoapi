@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nLpogoprotos/networking/requests/messages/mark_tutorial_complete_message.proto\x12\'pogoprotos.networking.requests.messages\x1a%pogoprotos/enums/tutorial_state.proto\"\x9b\x01\n\x1bMarkTutorialCompleteMessage\x12<\n\x13tutorials_completed\x18\x01 \x03(\x0e\x32\x1f.pogoprotos.enums.TutorialState\x12\x1d\n\x15send_marketing_emails\x18\x02 \x01(\x08\x12\x1f\n\x17send_push_notifications\x18\x03 \x01(\x08\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_tutorial__state__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _MARKTUTORIALCOMPLETEMESSAGE = _descriptor.Descriptor(
 
 _MARKTUTORIALCOMPLETEMESSAGE.fields_by_name['tutorials_completed'].enum_type = pogoprotos_dot_enums_dot_tutorial__state__pb2._TUTORIALSTATE
 DESCRIPTOR.message_types_by_name['MarkTutorialCompleteMessage'] = _MARKTUTORIALCOMPLETEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MarkTutorialCompleteMessage = _reflection.GeneratedProtocolMessageType('MarkTutorialCompleteMessage', (_message.Message,), dict(
   DESCRIPTOR = _MARKTUTORIALCOMPLETEMESSAGE,

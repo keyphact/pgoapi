@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n2pogoprotos/data/logs/catch_pokemon_log_entry.proto\x12\x14pogoprotos.data.logs\x1a!pogoprotos/enums/pokemon_id.proto\x1a%pogoprotos/data/pokemon_display.proto\"\xc6\x02\n\x14\x43\x61tchPokemonLogEntry\x12\x41\n\x06result\x18\x01 \x01(\x0e\x32\x31.pogoprotos.data.logs.CatchPokemonLogEntry.Result\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\x15\n\rcombat_points\x18\x03 \x01(\x05\x12\x17\n\x0fpokemon_data_id\x18\x04 \x01(\x06\x12\x38\n\x0fpokemon_display\x18\x05 \x01(\x0b\x32\x1f.pogoprotos.data.PokemonDisplay\"P\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x14\n\x10POKEMON_CAPTURED\x10\x01\x12\x10\n\x0cPOKEMON_FLED\x10\x02\x12\x13\n\x0fPOKEMON_HATCHED\x10\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_pokemon__display__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -123,6 +122,7 @@ _CATCHPOKEMONLOGENTRY.fields_by_name['pokemon_id'].enum_type = pogoprotos_dot_en
 _CATCHPOKEMONLOGENTRY.fields_by_name['pokemon_display'].message_type = pogoprotos_dot_data_dot_pokemon__display__pb2._POKEMONDISPLAY
 _CATCHPOKEMONLOGENTRY_RESULT.containing_type = _CATCHPOKEMONLOGENTRY
 DESCRIPTOR.message_types_by_name['CatchPokemonLogEntry'] = _CATCHPOKEMONLOGENTRY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CatchPokemonLogEntry = _reflection.GeneratedProtocolMessageType('CatchPokemonLogEntry', (_message.Message,), dict(
   DESCRIPTOR = _CATCHPOKEMONLOGENTRY,

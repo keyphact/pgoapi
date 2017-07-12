@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n=pogoprotos/networking/responses/disk_encounter_response.proto\x12\x1fpogoprotos.networking.responses\x1a\"pogoprotos/data/pokemon_data.proto\x1a\x31pogoprotos/data/capture/capture_probability.proto\x1a\'pogoprotos/inventory/item/item_id.proto\"\xa2\x03\n\x15\x44iskEncounterResponse\x12M\n\x06result\x18\x01 \x01(\x0e\x32=.pogoprotos.networking.responses.DiskEncounterResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\x12H\n\x13\x63\x61pture_probability\x18\x03 \x01(\x0b\x32+.pogoprotos.data.capture.CaptureProbability\x12\x36\n\x0b\x61\x63tive_item\x18\x04 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\"\x83\x01\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x11\n\rNOT_AVAILABLE\x10\x02\x12\x10\n\x0cNOT_IN_RANGE\x10\x03\x12\x1e\n\x1a\x45NCOUNTER_ALREADY_FINISHED\x10\x04\x12\x1a\n\x16POKEMON_INVENTORY_FULL\x10\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_capture_dot_capture__probability__pb2.DESCRIPTOR,pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -126,6 +125,7 @@ _DISKENCOUNTERRESPONSE.fields_by_name['capture_probability'].message_type = pogo
 _DISKENCOUNTERRESPONSE.fields_by_name['active_item'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 _DISKENCOUNTERRESPONSE_RESULT.containing_type = _DISKENCOUNTERRESPONSE
 DESCRIPTOR.message_types_by_name['DiskEncounterResponse'] = _DISKENCOUNTERRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DiskEncounterResponse = _reflection.GeneratedProtocolMessageType('DiskEncounterResponse', (_message.Message,), dict(
   DESCRIPTOR = _DISKENCOUNTERRESPONSE,

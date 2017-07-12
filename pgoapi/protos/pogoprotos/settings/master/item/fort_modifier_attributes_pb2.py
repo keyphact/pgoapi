@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n>pogoprotos/settings/master/item/fort_modifier_attributes.proto\x12\x1fpogoprotos.settings.master.item\"b\n\x16\x46ortModifierAttributes\x12!\n\x19modifier_lifetime_seconds\x18\x01 \x01(\x05\x12%\n\x1dtroy_disk_num_pokemon_spawned\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _FORTMODIFIERATTRIBUTES = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['FortModifierAttributes'] = _FORTMODIFIERATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortModifierAttributes = _reflection.GeneratedProtocolMessageType('FortModifierAttributes', (_message.Message,), dict(
   DESCRIPTOR = _FORTMODIFIERATTRIBUTES,

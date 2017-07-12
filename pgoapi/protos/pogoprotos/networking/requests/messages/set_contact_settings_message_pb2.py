@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nJpogoprotos/networking/requests/messages/set_contact_settings_message.proto\x12\'pogoprotos.networking.requests.messages\x1a-pogoprotos/data/player/contact_settings.proto\"^\n\x19SetContactSettingsMessage\x12\x41\n\x10\x63ontact_settings\x18\x01 \x01(\x0b\x32\'.pogoprotos.data.player.ContactSettingsb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player_dot_contact__settings__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _SETCONTACTSETTINGSMESSAGE = _descriptor.Descriptor(
 
 _SETCONTACTSETTINGSMESSAGE.fields_by_name['contact_settings'].message_type = pogoprotos_dot_data_dot_player_dot_contact__settings__pb2._CONTACTSETTINGS
 DESCRIPTOR.message_types_by_name['SetContactSettingsMessage'] = _SETCONTACTSETTINGSMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetContactSettingsMessage = _reflection.GeneratedProtocolMessageType('SetContactSettingsMessage', (_message.Message,), dict(
   DESCRIPTOR = _SETCONTACTSETTINGSMESSAGE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n>pogoprotos/networking/responses/release_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\"\xf9\x01\n\x16ReleasePokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.pogoprotos.networking.responses.ReleasePokemonResponse.Result\x12\x15\n\rcandy_awarded\x18\x02 \x01(\x05\"x\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10POKEMON_DEPLOYED\x10\x02\x12\n\n\x06\x46\x41ILED\x10\x03\x12\x18\n\x14\x45RROR_POKEMON_IS_EGG\x10\x04\x12\x1a\n\x16\x45RROR_POKEMON_IS_BUDDY\x10\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -105,6 +104,7 @@ _RELEASEPOKEMONRESPONSE = _descriptor.Descriptor(
 _RELEASEPOKEMONRESPONSE.fields_by_name['result'].enum_type = _RELEASEPOKEMONRESPONSE_RESULT
 _RELEASEPOKEMONRESPONSE_RESULT.containing_type = _RELEASEPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['ReleasePokemonResponse'] = _RELEASEPOKEMONRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ReleasePokemonResponse = _reflection.GeneratedProtocolMessageType('ReleasePokemonResponse', (_message.Message,), dict(
   DESCRIPTOR = _RELEASEPOKEMONRESPONSE,

@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n-pogoprotos/map/fort/fort_rendering_type.proto\x12\x13pogoprotos.map.fort*3\n\x11\x46ortRenderingType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x11\n\rINTERNAL_TEST\x10\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _FORTRENDERINGTYPE = _descriptor.EnumDescriptor(
   name='FortRenderingType',
@@ -52,6 +51,7 @@ INTERNAL_TEST = 1
 
 
 DESCRIPTOR.enum_types_by_name['FortRenderingType'] = _FORTRENDERINGTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

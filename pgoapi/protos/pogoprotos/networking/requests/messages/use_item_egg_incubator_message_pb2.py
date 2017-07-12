@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nLpogoprotos/networking/requests/messages/use_item_egg_incubator_message.proto\x12\'pogoprotos.networking.requests.messages\"A\n\x1aUseItemEggIncubatorMessage\x12\x0f\n\x07item_id\x18\x01 \x01(\t\x12\x12\n\npokemon_id\x18\x02 \x01(\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _USEITEMEGGINCUBATORMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['UseItemEggIncubatorMessage'] = _USEITEMEGGINCUBATORMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UseItemEggIncubatorMessage = _reflection.GeneratedProtocolMessageType('UseItemEggIncubatorMessage', (_message.Message,), dict(
   DESCRIPTOR = _USEITEMEGGINCUBATORMESSAGE,

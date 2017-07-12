@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nIpogoprotos/networking/responses/push_notification_registry_response.proto\x12\x1fpogoprotos.networking.responses\"\xad\x01\n PushNotificationRegistryResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32H.pogoprotos.networking.responses.PushNotificationRegistryResponse.Result\"/\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\r\n\tNO_CHANGE\x10\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -86,6 +85,7 @@ _PUSHNOTIFICATIONREGISTRYRESPONSE = _descriptor.Descriptor(
 _PUSHNOTIFICATIONREGISTRYRESPONSE.fields_by_name['result'].enum_type = _PUSHNOTIFICATIONREGISTRYRESPONSE_RESULT
 _PUSHNOTIFICATIONREGISTRYRESPONSE_RESULT.containing_type = _PUSHNOTIFICATIONREGISTRYRESPONSE
 DESCRIPTOR.message_types_by_name['PushNotificationRegistryResponse'] = _PUSHNOTIFICATIONREGISTRYRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PushNotificationRegistryResponse = _reflection.GeneratedProtocolMessageType('PushNotificationRegistryResponse', (_message.Message,), dict(
   DESCRIPTOR = _PUSHNOTIFICATIONREGISTRYRESPONSE,

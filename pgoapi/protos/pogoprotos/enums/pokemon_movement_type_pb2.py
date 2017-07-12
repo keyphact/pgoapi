@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n,pogoprotos/enums/pokemon_movement_type.proto\x12\x10pogoprotos.enums*\xad\x01\n\x13PokemonMovementType\x12\x13\n\x0fMOVEMENT_STATIC\x10\x00\x12\x11\n\rMOVEMENT_JUMP\x10\x01\x12\x15\n\x11MOVEMENT_VERTICAL\x10\x02\x12\x14\n\x10MOVEMENT_PSYCHIC\x10\x03\x12\x15\n\x11MOVEMENT_ELECTRIC\x10\x04\x12\x13\n\x0fMOVEMENT_FLYING\x10\x05\x12\x15\n\x11MOVEMENT_HOVERING\x10\x06\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _POKEMONMOVEMENTTYPE = _descriptor.EnumDescriptor(
   name='PokemonMovementType',
@@ -77,6 +76,7 @@ MOVEMENT_HOVERING = 6
 
 
 DESCRIPTOR.enum_types_by_name['PokemonMovementType'] = _POKEMONMOVEMENTTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

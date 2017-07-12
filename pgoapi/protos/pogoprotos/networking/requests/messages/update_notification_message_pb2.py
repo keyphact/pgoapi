@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nIpogoprotos/networking/requests/messages/update_notification_message.proto\x12\'pogoprotos.networking.requests.messages\x1a)pogoprotos/enums/notification_state.proto\"\x86\x01\n\x19UpdateNotificationMessage\x12\x18\n\x10notification_ids\x18\x01 \x03(\t\x12\x1b\n\x13\x63reate_timestamp_ms\x18\x02 \x03(\x03\x12\x32\n\x05state\x18\x03 \x01(\x0e\x32#.pogoprotos.enums.NotificationStateb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_notification__state__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _UPDATENOTIFICATIONMESSAGE = _descriptor.Descriptor(
 
 _UPDATENOTIFICATIONMESSAGE.fields_by_name['state'].enum_type = pogoprotos_dot_enums_dot_notification__state__pb2._NOTIFICATIONSTATE
 DESCRIPTOR.message_types_by_name['UpdateNotificationMessage'] = _UPDATENOTIFICATIONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UpdateNotificationMessage = _reflection.GeneratedProtocolMessageType('UpdateNotificationMessage', (_message.Message,), dict(
   DESCRIPTOR = _UPDATENOTIFICATIONMESSAGE,

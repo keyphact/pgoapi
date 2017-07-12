@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nDpogoprotos/networking/responses/get_gym_badge_details_response.proto\x12\x1fpogoprotos.networking.responses\x1a-pogoprotos/data/badge/awarded_gym_badge.proto\x1a&pogoprotos/data/gym/gym_defender.proto\"\xa0\x01\n\x1aGetGymBadgeDetailsResponse\x12\x39\n\tgym_badge\x18\x01 \x01(\x0b\x32&.pogoprotos.data.badge.AwardedGymBadge\x12\x36\n\x0cgym_defender\x18\x02 \x01(\x0b\x32 .pogoprotos.data.gym.GymDefender\x12\x0f\n\x07success\x18\x03 \x01(\x08\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_badge_dot_awarded__gym__badge__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_gym_dot_gym__defender__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -76,6 +75,7 @@ _GETGYMBADGEDETAILSRESPONSE = _descriptor.Descriptor(
 _GETGYMBADGEDETAILSRESPONSE.fields_by_name['gym_badge'].message_type = pogoprotos_dot_data_dot_badge_dot_awarded__gym__badge__pb2._AWARDEDGYMBADGE
 _GETGYMBADGEDETAILSRESPONSE.fields_by_name['gym_defender'].message_type = pogoprotos_dot_data_dot_gym_dot_gym__defender__pb2._GYMDEFENDER
 DESCRIPTOR.message_types_by_name['GetGymBadgeDetailsResponse'] = _GETGYMBADGEDETAILSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetGymBadgeDetailsResponse = _reflection.GeneratedProtocolMessageType('GetGymBadgeDetailsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETGYMBADGEDETAILSRESPONSE,

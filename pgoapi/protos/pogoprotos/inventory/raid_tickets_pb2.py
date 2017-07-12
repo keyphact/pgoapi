@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\'pogoprotos/inventory/raid_tickets.proto\x12\x14pogoprotos.inventory\x1a&pogoprotos/inventory/raid_ticket.proto\"D\n\x0bRaidTickets\x12\x35\n\x0braid_ticket\x18\x01 \x03(\x0b\x32 .pogoprotos.inventory.RaidTicketb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_raid__ticket__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _RAIDTICKETS = _descriptor.Descriptor(
 
 _RAIDTICKETS.fields_by_name['raid_ticket'].message_type = pogoprotos_dot_inventory_dot_raid__ticket__pb2._RAIDTICKET
 DESCRIPTOR.message_types_by_name['RaidTickets'] = _RAIDTICKETS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RaidTickets = _reflection.GeneratedProtocolMessageType('RaidTickets', (_message.Message,), dict(
   DESCRIPTOR = _RAIDTICKETS,

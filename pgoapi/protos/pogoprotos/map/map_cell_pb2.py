@@ -28,7 +28,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\x1dpogoprotos/map/map_cell.proto\x12\x0epogoprotos.map\x1a pogoprotos/map/spawn_point.proto\x1a#pogoprotos/map/fort/fort_data.proto\x1a&pogoprotos/map/fort/fort_summary.proto\x1a+pogoprotos/map/pokemon/nearby_pokemon.proto\x1a)pogoprotos/map/pokemon/wild_pokemon.proto\x1a(pogoprotos/map/pokemon/map_pokemon.proto\"\x81\x04\n\x07MapCell\x12\x12\n\ns2_cell_id\x18\x01 \x01(\x04\x12\x1c\n\x14\x63urrent_timestamp_ms\x18\x02 \x01(\x03\x12,\n\x05\x66orts\x18\x03 \x03(\x0b\x32\x1d.pogoprotos.map.fort.FortData\x12\x30\n\x0cspawn_points\x18\x04 \x03(\x0b\x32\x1a.pogoprotos.map.SpawnPoint\x12\x17\n\x0f\x64\x65leted_objects\x18\x06 \x03(\t\x12\x19\n\x11is_truncated_list\x18\x07 \x01(\x08\x12\x38\n\x0e\x66ort_summaries\x18\x08 \x03(\x0b\x32 .pogoprotos.map.fort.FortSummary\x12:\n\x16\x64\x65\x63imated_spawn_points\x18\t \x03(\x0b\x32\x1a.pogoprotos.map.SpawnPoint\x12:\n\rwild_pokemons\x18\x05 \x03(\x0b\x32#.pogoprotos.map.pokemon.WildPokemon\x12>\n\x12\x63\x61tchable_pokemons\x18\n \x03(\x0b\x32\".pogoprotos.map.pokemon.MapPokemon\x12>\n\x0fnearby_pokemons\x18\x0b \x03(\x0b\x32%.pogoprotos.map.pokemon.NearbyPokemonb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_map_dot_spawn__point__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_fort_dot_fort__data__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_fort_dot_fort__summary__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_pokemon_dot_nearby__pokemon__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_pokemon_dot_wild__pokemon__pb2.DESCRIPTOR,pogoprotos_dot_map_dot_pokemon_dot_map__pokemon__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -141,6 +140,7 @@ _MAPCELL.fields_by_name['wild_pokemons'].message_type = pogoprotos_dot_map_dot_p
 _MAPCELL.fields_by_name['catchable_pokemons'].message_type = pogoprotos_dot_map_dot_pokemon_dot_map__pokemon__pb2._MAPPOKEMON
 _MAPCELL.fields_by_name['nearby_pokemons'].message_type = pogoprotos_dot_map_dot_pokemon_dot_nearby__pokemon__pb2._NEARBYPOKEMON
 DESCRIPTOR.message_types_by_name['MapCell'] = _MAPCELL
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MapCell = _reflection.GeneratedProtocolMessageType('MapCell', (_message.Message,), dict(
   DESCRIPTOR = _MAPCELL,

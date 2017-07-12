@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n,pogoprotos/settings/inventory_settings.proto\x12\x13pogoprotos.settings\"\x80\x01\n\x11InventorySettings\x12\x13\n\x0bmax_pokemon\x18\x01 \x01(\x05\x12\x15\n\rmax_bag_items\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61se_pokemon\x18\x03 \x01(\x05\x12\x16\n\x0e\x62\x61se_bag_items\x18\x04 \x01(\x05\x12\x11\n\tbase_eggs\x18\x05 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _INVENTORYSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['InventorySettings'] = _INVENTORYSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InventorySettings = _reflection.GeneratedProtocolMessageType('InventorySettings', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYSETTINGS,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n*pogoprotos/data/redeem/redeemed_item.proto\x12\x16pogoprotos.data.redeem\x1a\'pogoprotos/inventory/item/item_id.proto\"S\n\x0cRedeemedItem\x12/\n\x04item\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x12\n\nitem_count\x18\x02 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _REDEEMEDITEM = _descriptor.Descriptor(
 
 _REDEEMEDITEM.fields_by_name['item'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['RedeemedItem'] = _REDEEMEDITEM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RedeemedItem = _reflection.GeneratedProtocolMessageType('RedeemedItem', (_message.Message,), dict(
   DESCRIPTOR = _REDEEMEDITEM,

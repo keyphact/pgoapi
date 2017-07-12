@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n pogoprotos/data/food_value.proto\x12\x0fpogoprotos.data\x1a\'pogoprotos/inventory/item/item_id.proto\"s\n\tFoodValue\x12\x1b\n\x13motivation_increase\x18\x01 \x01(\x02\x12\x13\n\x0b\x63p_increase\x18\x02 \x01(\x05\x12\x34\n\tfood_item\x18\x03 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemIdb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _FOODVALUE = _descriptor.Descriptor(
 
 _FOODVALUE.fields_by_name['food_item'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['FoodValue'] = _FOODVALUE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FoodValue = _reflection.GeneratedProtocolMessageType('FoodValue', (_message.Message,), dict(
   DESCRIPTOR = _FOODVALUE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n$pogoprotos/data/client_version.proto\x12\x0fpogoprotos.data\"$\n\rClientVersion\x12\x13\n\x0bmin_version\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _CLIENTVERSION = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['ClientVersion'] = _CLIENTVERSION
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ClientVersion = _reflection.GeneratedProtocolMessageType('ClientVersion', (_message.Message,), dict(
   DESCRIPTOR = _CLIENTVERSION,

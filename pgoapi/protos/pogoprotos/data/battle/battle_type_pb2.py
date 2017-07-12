@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n(pogoprotos/data/battle/battle_type.proto\x12\x16pogoprotos.data.battle*k\n\nBattleType\x12\x15\n\x11\x42\x41TTLE_TYPE_UNSET\x10\x00\x12\x16\n\x12\x42\x41TTLE_TYPE_NORMAL\x10\x01\x12\x18\n\x14\x42\x41TTLE_TYPE_TRAINING\x10\x02\x12\x14\n\x10\x42\x41TTLE_TYPE_RAID\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _BATTLETYPE = _descriptor.EnumDescriptor(
   name='BattleType',
@@ -62,6 +61,7 @@ BATTLE_TYPE_RAID = 3
 
 
 DESCRIPTOR.enum_types_by_name['BattleType'] = _BATTLETYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

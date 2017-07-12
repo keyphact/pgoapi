@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nApogoprotos/settings/master/item/experience_boost_attributes.proto\x12\x1fpogoprotos.settings.master.item\"M\n\x19\x45xperienceBoostAttributes\x12\x15\n\rxp_multiplier\x18\x01 \x01(\x02\x12\x19\n\x11\x62oost_duration_ms\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _EXPERIENCEBOOSTATTRIBUTES = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['ExperienceBoostAttributes'] = _EXPERIENCEBOOSTATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ExperienceBoostAttributes = _reflection.GeneratedProtocolMessageType('ExperienceBoostAttributes', (_message.Message,), dict(
   DESCRIPTOR = _EXPERIENCEBOOSTATTRIBUTES,

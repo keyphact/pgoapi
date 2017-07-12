@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n%pogoprotos/enums/gym_badge_type.proto\x12\x10pogoprotos.enums*z\n\x0cGymBadgeType\x12\x13\n\x0fGYM_BADGE_UNSET\x10\x00\x12\x15\n\x11GYM_BADGE_VANILLA\x10\x01\x12\x14\n\x10GYM_BADGE_BRONZE\x10\x02\x12\x14\n\x10GYM_BADGE_SILVER\x10\x03\x12\x12\n\x0eGYM_BADGE_GOLD\x10\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _GYMBADGETYPE = _descriptor.EnumDescriptor(
   name='GymBadgeType',
@@ -67,6 +66,7 @@ GYM_BADGE_GOLD = 4
 
 
 DESCRIPTOR.enum_types_by_name['GymBadgeType'] = _GYMBADGETYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

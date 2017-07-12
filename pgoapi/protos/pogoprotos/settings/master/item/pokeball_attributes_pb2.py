@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n9pogoprotos/settings/master/item/pokeball_attributes.proto\x12\x1fpogoprotos.settings.master.item\x1a\"pogoprotos/enums/item_effect.proto\"\x95\x01\n\x12PokeballAttributes\x12\x31\n\x0bitem_effect\x18\x01 \x01(\x0e\x32\x1c.pogoprotos.enums.ItemEffect\x12\x15\n\rcapture_multi\x18\x02 \x01(\x02\x12\x1c\n\x14\x63\x61pture_multi_effect\x18\x03 \x01(\x02\x12\x17\n\x0fitem_effect_mod\x18\x04 \x01(\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_item__effect__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _POKEBALLATTRIBUTES = _descriptor.Descriptor(
 
 _POKEBALLATTRIBUTES.fields_by_name['item_effect'].enum_type = pogoprotos_dot_enums_dot_item__effect__pb2._ITEMEFFECT
 DESCRIPTOR.message_types_by_name['PokeballAttributes'] = _POKEBALLATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PokeballAttributes = _reflection.GeneratedProtocolMessageType('PokeballAttributes', (_message.Message,), dict(
   DESCRIPTOR = _POKEBALLATTRIBUTES,

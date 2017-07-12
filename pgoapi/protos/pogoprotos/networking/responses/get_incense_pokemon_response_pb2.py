@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nBpogoprotos/networking/responses/get_incense_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\x1a!pogoprotos/enums/pokemon_id.proto\x1a%pogoprotos/data/pokemon_display.proto\"\xbf\x03\n\x19GetIncensePokemonResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32\x41.pogoprotos.networking.responses.GetIncensePokemonResponse.Result\x12/\n\npokemon_id\x18\x02 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x1a\n\x12\x65ncounter_location\x18\x05 \x01(\t\x12\x14\n\x0c\x65ncounter_id\x18\x06 \x01(\x06\x12\x1e\n\x16\x64isappear_timestamp_ms\x18\x07 \x01(\x03\x12\x38\n\x0fpokemon_display\x18\x08 \x01(\x0b\x32\x1f.pogoprotos.data.PokemonDisplay\"m\n\x06Result\x12\x1d\n\x19INCENSE_ENCOUNTER_UNKNOWN\x10\x00\x12\x1f\n\x1bINCENSE_ENCOUNTER_AVAILABLE\x10\x01\x12#\n\x1fINCENSE_ENCOUNTER_NOT_AVAILABLE\x10\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_pokemon__display__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -140,6 +139,7 @@ _GETINCENSEPOKEMONRESPONSE.fields_by_name['pokemon_id'].enum_type = pogoprotos_d
 _GETINCENSEPOKEMONRESPONSE.fields_by_name['pokemon_display'].message_type = pogoprotos_dot_data_dot_pokemon__display__pb2._POKEMONDISPLAY
 _GETINCENSEPOKEMONRESPONSE_RESULT.containing_type = _GETINCENSEPOKEMONRESPONSE
 DESCRIPTOR.message_types_by_name['GetIncensePokemonResponse'] = _GETINCENSEPOKEMONRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetIncensePokemonResponse = _reflection.GeneratedProtocolMessageType('GetIncensePokemonResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETINCENSEPOKEMONRESPONSE,

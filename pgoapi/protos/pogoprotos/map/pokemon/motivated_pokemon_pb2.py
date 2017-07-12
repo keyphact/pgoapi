@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n.pogoprotos/map/pokemon/motivated_pokemon.proto\x12\x16pogoprotos.map.pokemon\x1a pogoprotos/data/food_value.proto\x1a\"pogoprotos/data/pokemon_data.proto\"\x82\x02\n\x10MotivatedPokemon\x12-\n\x07pokemon\x18\x01 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\x12\x11\n\tdeploy_ms\x18\x02 \x01(\x03\x12\x18\n\x10\x63p_when_deployed\x18\x03 \x01(\x05\x12\x16\n\x0emotivation_now\x18\x04 \x01(\x01\x12\x0e\n\x06\x63p_now\x18\x05 \x01(\x05\x12\x13\n\x0b\x62\x65rry_value\x18\x06 \x01(\x02\x12%\n\x1d\x66\x65\x65\x64_cooldown_duration_millis\x18\x07 \x01(\x03\x12.\n\nfood_value\x18\x08 \x03(\x0b\x32\x1a.pogoprotos.data.FoodValueb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_food__value__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -111,6 +110,7 @@ _MOTIVATEDPOKEMON = _descriptor.Descriptor(
 _MOTIVATEDPOKEMON.fields_by_name['pokemon'].message_type = pogoprotos_dot_data_dot_pokemon__data__pb2._POKEMONDATA
 _MOTIVATEDPOKEMON.fields_by_name['food_value'].message_type = pogoprotos_dot_data_dot_food__value__pb2._FOODVALUE
 DESCRIPTOR.message_types_by_name['MotivatedPokemon'] = _MOTIVATEDPOKEMON
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MotivatedPokemon = _reflection.GeneratedProtocolMessageType('MotivatedPokemon', (_message.Message,), dict(
   DESCRIPTOR = _MOTIVATEDPOKEMON,

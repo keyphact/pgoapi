@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n4pogoprotos/settings/master/gym_battle_settings.proto\x12\x1apogoprotos.settings.master\"\x91\x04\n\x11GymBattleSettings\x12\x16\n\x0e\x65nergy_per_sec\x18\x01 \x01(\x02\x12\x19\n\x11\x64odge_energy_cost\x18\x02 \x01(\x02\x12\x18\n\x10retarget_seconds\x18\x03 \x01(\x02\x12\x1d\n\x15\x65nemy_attack_interval\x18\x04 \x01(\x02\x12\x1e\n\x16\x61ttack_server_interval\x18\x05 \x01(\x02\x12\x1e\n\x16round_duration_seconds\x18\x06 \x01(\x02\x12#\n\x1b\x62onus_time_per_ally_seconds\x18\x07 \x01(\x02\x12$\n\x1cmaximum_attackers_per_battle\x18\x08 \x01(\x05\x12)\n!same_type_attack_bonus_multiplier\x18\t \x01(\x02\x12\x16\n\x0emaximum_energy\x18\n \x01(\x05\x12$\n\x1c\x65nergy_delta_per_health_lost\x18\x0b \x01(\x02\x12\x19\n\x11\x64odge_duration_ms\x18\x0c \x01(\x05\x12\x1c\n\x14minimum_player_level\x18\r \x01(\x05\x12\x18\n\x10swap_duration_ms\x18\x0e \x01(\x05\x12&\n\x1e\x64odge_damage_reduction_percent\x18\x0f \x01(\x02\x12!\n\x19minimum_raid_player_level\x18\x10 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -162,6 +161,7 @@ _GYMBATTLESETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GymBattleSettings'] = _GYMBATTLESETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymBattleSettings = _reflection.GeneratedProtocolMessageType('GymBattleSettings', (_message.Message,), dict(
   DESCRIPTOR = _GYMBATTLESETTINGS,

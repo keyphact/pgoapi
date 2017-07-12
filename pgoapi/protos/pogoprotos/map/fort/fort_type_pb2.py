@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n#pogoprotos/map/fort/fort_type.proto\x12\x13pogoprotos.map.fort*#\n\x08\x46ortType\x12\x07\n\x03GYM\x10\x00\x12\x0e\n\nCHECKPOINT\x10\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _FORTTYPE = _descriptor.EnumDescriptor(
   name='FortType',
@@ -52,6 +51,7 @@ CHECKPOINT = 1
 
 
 DESCRIPTOR.enum_types_by_name['FortType'] = _FORTTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

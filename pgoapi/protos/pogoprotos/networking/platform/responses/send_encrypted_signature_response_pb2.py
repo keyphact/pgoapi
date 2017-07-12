@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nPpogoprotos/networking/platform/responses/send_encrypted_signature_response.proto\x12(pogoprotos.networking.platform.responses\"2\n\x1eSendEncryptedSignatureResponse\x12\x10\n\x08received\x18\x01 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _SENDENCRYPTEDSIGNATURERESPONSE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SendEncryptedSignatureResponse'] = _SENDENCRYPTEDSIGNATURERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SendEncryptedSignatureResponse = _reflection.GeneratedProtocolMessageType('SendEncryptedSignatureResponse', (_message.Message,), dict(
   DESCRIPTOR = _SENDENCRYPTEDSIGNATURERESPONSE,

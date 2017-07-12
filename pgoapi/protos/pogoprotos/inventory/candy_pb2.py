@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n pogoprotos/inventory/candy.proto\x12\x14pogoprotos.inventory\x1a(pogoprotos/enums/pokemon_family_id.proto\"L\n\x05\x43\x61ndy\x12\x34\n\tfamily_id\x18\x01 \x01(\x0e\x32!.pogoprotos.enums.PokemonFamilyId\x12\r\n\x05\x63\x61ndy\x18\x02 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__family__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -67,6 +66,7 @@ _CANDY = _descriptor.Descriptor(
 
 _CANDY.fields_by_name['family_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__family__id__pb2._POKEMONFAMILYID
 DESCRIPTOR.message_types_by_name['Candy'] = _CANDY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Candy = _reflection.GeneratedProtocolMessageType('Candy', (_message.Message,), dict(
   DESCRIPTOR = _CANDY,

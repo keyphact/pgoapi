@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n0pogoprotos/inventory/exclusive_ticket_info.proto\x12\x14pogoprotos.inventory\"z\n\x13\x45xclusiveTicketInfo\x12\x11\n\traid_seed\x18\x01 \x01(\x03\x12\x0f\n\x07\x66ort_id\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x15\n\rstart_time_ms\x18\x04 \x01(\x03\x12\x13\n\x0b\x65nd_time_ms\x18\x05 \x01(\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _EXCLUSIVETICKETINFO = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['ExclusiveTicketInfo'] = _EXCLUSIVETICKETINFO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ExclusiveTicketInfo = _reflection.GeneratedProtocolMessageType('ExclusiveTicketInfo', (_message.Message,), dict(
   DESCRIPTOR = _EXCLUSIVETICKETINFO,

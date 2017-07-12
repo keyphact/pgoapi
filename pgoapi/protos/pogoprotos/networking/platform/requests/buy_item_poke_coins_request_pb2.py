@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nIpogoprotos/networking/platform/requests/buy_item_poke_coins_request.proto\x12\'pogoprotos.networking.platform.requests\"*\n\x17\x42uyItemPokeCoinsRequest\x12\x0f\n\x07item_id\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _BUYITEMPOKECOINSREQUEST = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['BuyItemPokeCoinsRequest'] = _BUYITEMPOKECOINSREQUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BuyItemPokeCoinsRequest = _reflection.GeneratedProtocolMessageType('BuyItemPokeCoinsRequest', (_message.Message,), dict(
   DESCRIPTOR = _BUYITEMPOKECOINSREQUEST,

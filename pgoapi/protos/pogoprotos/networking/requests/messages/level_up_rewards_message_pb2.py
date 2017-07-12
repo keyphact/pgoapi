@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/level_up_rewards_message.proto\x12\'pogoprotos.networking.requests.messages\"&\n\x15LevelUpRewardsMessage\x12\r\n\x05level\x18\x01 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _LEVELUPREWARDSMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['LevelUpRewardsMessage'] = _LEVELUPREWARDSMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LevelUpRewardsMessage = _reflection.GeneratedProtocolMessageType('LevelUpRewardsMessage', (_message.Message,), dict(
   DESCRIPTOR = _LEVELUPREWARDSMESSAGE,

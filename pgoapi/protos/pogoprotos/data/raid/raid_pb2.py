@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\x1fpogoprotos/data/raid/raid.proto\x12\x14pogoprotos.data.raid\x1a!pogoprotos/enums/pokemon_id.proto\"\xce\x01\n\x04Raid\x12\x11\n\traid_seed\x18\x01 \x01(\x03\x12\x12\n\nstarted_ms\x18\x02 \x01(\x03\x12\x14\n\x0c\x63ompleted_ms\x18\x03 \x01(\x03\x12\x39\n\x14\x65ncounter_pokemon_id\x18\x04 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\x18\n\x10\x63ompleted_battle\x18\x05 \x01(\x08\x12\x18\n\x10received_rewards\x18\x06 \x01(\x08\x12\x1a\n\x12\x66inished_encounter\x18\x07 \x01(\x08\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -102,6 +101,7 @@ _RAID = _descriptor.Descriptor(
 
 _RAID.fields_by_name['encounter_pokemon_id'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 DESCRIPTOR.message_types_by_name['Raid'] = _RAID
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Raid = _reflection.GeneratedProtocolMessageType('Raid', (_message.Message,), dict(
   DESCRIPTOR = _RAID,

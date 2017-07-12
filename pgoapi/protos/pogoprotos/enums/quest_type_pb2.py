@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n!pogoprotos/enums/quest_type.proto\x12\x10pogoprotos.enums*j\n\tQuestType\x12\x16\n\x12QUEST_UNKNOWN_TYPE\x10\x00\x12 \n\x1cQUEST_FIRST_CATCH_OF_THE_DAY\x10\x01\x12#\n\x1fQUEST_FIRST_POKESTOP_OF_THE_DAY\x10\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _QUESTTYPE = _descriptor.EnumDescriptor(
   name='QuestType',
@@ -57,6 +56,7 @@ QUEST_FIRST_POKESTOP_OF_THE_DAY = 2
 
 
 DESCRIPTOR.enum_types_by_name['QuestType'] = _QUESTTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

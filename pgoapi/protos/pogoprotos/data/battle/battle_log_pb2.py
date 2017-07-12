@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\'pogoprotos/data/battle/battle_log.proto\x12\x16pogoprotos.data.battle\x1a)pogoprotos/data/battle/battle_state.proto\x1a(pogoprotos/data/battle/battle_type.proto\x1a*pogoprotos/data/battle/battle_action.proto\"\x8d\x02\n\tBattleLog\x12\x32\n\x05state\x18\x01 \x01(\x0e\x32#.pogoprotos.data.battle.BattleState\x12\x37\n\x0b\x62\x61ttle_type\x18\x02 \x01(\x0e\x32\".pogoprotos.data.battle.BattleType\x12\x11\n\tserver_ms\x18\x03 \x01(\x03\x12<\n\x0e\x62\x61ttle_actions\x18\x04 \x03(\x0b\x32$.pogoprotos.data.battle.BattleAction\x12!\n\x19\x62\x61ttle_start_timestamp_ms\x18\x05 \x01(\x03\x12\x1f\n\x17\x62\x61ttle_end_timestamp_ms\x18\x06 \x01(\x03\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_battle_dot_battle__state__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_battle_dot_battle__type__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_battle_dot_battle__action__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -99,6 +98,7 @@ _BATTLELOG.fields_by_name['state'].enum_type = pogoprotos_dot_data_dot_battle_do
 _BATTLELOG.fields_by_name['battle_type'].enum_type = pogoprotos_dot_data_dot_battle_dot_battle__type__pb2._BATTLETYPE
 _BATTLELOG.fields_by_name['battle_actions'].message_type = pogoprotos_dot_data_dot_battle_dot_battle__action__pb2._BATTLEACTION
 DESCRIPTOR.message_types_by_name['BattleLog'] = _BATTLELOG
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BattleLog = _reflection.GeneratedProtocolMessageType('BattleLog', (_message.Message,), dict(
   DESCRIPTOR = _BATTLELOG,

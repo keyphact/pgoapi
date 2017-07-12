@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\'pogoprotos/settings/fort_settings.proto\x12\x13pogoprotos.settings\"\xc7\x02\n\x0c\x46ortSettings\x12 \n\x18interaction_range_meters\x18\x01 \x01(\x01\x12\"\n\x1amax_total_deployed_pokemon\x18\x02 \x01(\x05\x12#\n\x1bmax_player_deployed_pokemon\x18\x03 \x01(\x05\x12!\n\x19\x64\x65ploy_stamina_multiplier\x18\x04 \x01(\x01\x12 \n\x18\x64\x65ploy_attack_multiplier\x18\x05 \x01(\x01\x12$\n\x1c\x66\x61r_interaction_range_meters\x18\x06 \x01(\x01\x12\x14\n\x0c\x64isable_gyms\x18\x07 \x01(\x08\x12 \n\x18max_same_pokemon_at_fort\x18\x08 \x01(\x05\x12)\n!max_player_total_deployed_pokemon\x18\t \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -113,6 +112,7 @@ _FORTSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['FortSettings'] = _FORTSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortSettings = _reflection.GeneratedProtocolMessageType('FortSettings', (_message.Message,), dict(
   DESCRIPTOR = _FORTSETTINGS,

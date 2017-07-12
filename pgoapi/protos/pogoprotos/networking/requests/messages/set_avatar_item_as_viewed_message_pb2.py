@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nOpogoprotos/networking/requests/messages/set_avatar_item_as_viewed_message.proto\x12\'pogoprotos.networking.requests.messages\":\n\x1cSetAvatarItemAsViewedMessage\x12\x1a\n\x12\x61vatar_template_id\x18\x01 \x03(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _SETAVATARITEMASVIEWEDMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SetAvatarItemAsViewedMessage'] = _SETAVATARITEMASVIEWEDMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetAvatarItemAsViewedMessage = _reflection.GeneratedProtocolMessageType('SetAvatarItemAsViewedMessage', (_message.Message,), dict(
   DESCRIPTOR = _SETAVATARITEMASVIEWEDMESSAGE,

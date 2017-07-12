@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n$pogoprotos/inventory/loot_item.proto\x12\x14pogoprotos.inventory\x1a\'pogoprotos/inventory/item/item_id.proto\x1a!pogoprotos/enums/pokemon_id.proto\"\xa2\x01\n\x08LootItem\x12/\n\x04item\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x10\n\x08stardust\x18\x02 \x01(\x08\x12\x10\n\x08pokecoin\x18\x03 \x01(\x08\x12\x32\n\rpokemon_candy\x18\x04 \x01(\x0e\x32\x1b.pogoprotos.enums.PokemonId\x12\r\n\x05\x63ount\x18\x05 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_pokemon__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -90,6 +89,7 @@ _LOOTITEM = _descriptor.Descriptor(
 _LOOTITEM.fields_by_name['item'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 _LOOTITEM.fields_by_name['pokemon_candy'].enum_type = pogoprotos_dot_enums_dot_pokemon__id__pb2._POKEMONID
 DESCRIPTOR.message_types_by_name['LootItem'] = _LOOTITEM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LootItem = _reflection.GeneratedProtocolMessageType('LootItem', (_message.Message,), dict(
   DESCRIPTOR = _LOOTITEM,

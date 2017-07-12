@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n8pogoprotos/settings/master/equipped_badge_settings.proto\x12\x1apogoprotos.settings.master\"y\n\x15\x45quippedBadgeSettings\x12\x1f\n\x17\x65quip_badge_cooldown_ms\x18\x01 \x01(\x03\x12\x1f\n\x17\x63\x61tch_probability_bonus\x18\x02 \x03(\x02\x12\x1e\n\x16\x66lee_probability_bonus\x18\x03 \x03(\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _EQUIPPEDBADGESETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['EquippedBadgeSettings'] = _EQUIPPEDBADGESETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EquippedBadgeSettings = _reflection.GeneratedProtocolMessageType('EquippedBadgeSettings', (_message.Message,), dict(
   DESCRIPTOR = _EQUIPPEDBADGESETTINGS,

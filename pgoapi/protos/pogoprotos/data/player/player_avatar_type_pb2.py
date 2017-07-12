@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n/pogoprotos/data/player/player_avatar_type.proto\x12\x16pogoprotos.data.player*D\n\x10PlayerAvatarType\x12\x16\n\x12PLAYER_AVATAR_MALE\x10\x00\x12\x18\n\x14PLAYER_AVATAR_FEMALE\x10\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _PLAYERAVATARTYPE = _descriptor.EnumDescriptor(
   name='PlayerAvatarType',
@@ -52,6 +51,7 @@ PLAYER_AVATAR_FEMALE = 1
 
 
 DESCRIPTOR.enum_types_by_name['PlayerAvatarType'] = _PLAYERAVATARTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

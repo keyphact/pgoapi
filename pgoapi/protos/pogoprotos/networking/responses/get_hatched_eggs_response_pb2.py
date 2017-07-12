@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n?pogoprotos/networking/responses/get_hatched_eggs_response.proto\x12\x1fpogoprotos.networking.responses\x1a\"pogoprotos/data/pokemon_data.proto\"\xdc\x01\n\x16GetHatchedEggsResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x16\n\npokemon_id\x18\x02 \x03(\x06\x42\x02\x10\x01\x12\x1a\n\x12\x65xperience_awarded\x18\x03 \x03(\x05\x12\x15\n\rcandy_awarded\x18\x04 \x03(\x05\x12\x18\n\x10stardust_awarded\x18\x05 \x03(\x05\x12\x15\n\regg_km_walked\x18\x06 \x03(\x02\x12\x35\n\x0fhatched_pokemon\x18\x07 \x03(\x0b\x32\x1c.pogoprotos.data.PokemonDatab\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -102,6 +101,7 @@ _GETHATCHEDEGGSRESPONSE = _descriptor.Descriptor(
 
 _GETHATCHEDEGGSRESPONSE.fields_by_name['hatched_pokemon'].message_type = pogoprotos_dot_data_dot_pokemon__data__pb2._POKEMONDATA
 DESCRIPTOR.message_types_by_name['GetHatchedEggsResponse'] = _GETHATCHEDEGGSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetHatchedEggsResponse = _reflection.GeneratedProtocolMessageType('GetHatchedEggsResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETHATCHEDEGGSRESPONSE,

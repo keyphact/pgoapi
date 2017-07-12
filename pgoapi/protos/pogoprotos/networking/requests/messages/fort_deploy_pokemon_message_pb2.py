@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nIpogoprotos/networking/requests/messages/fort_deploy_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\"r\n\x18\x46ortDeployPokemonMessage\x12\x0f\n\x07\x66ort_id\x18\x01 \x01(\t\x12\x12\n\npokemon_id\x18\x02 \x01(\x06\x12\x17\n\x0fplayer_latitude\x18\x03 \x01(\x01\x12\x18\n\x10player_longitude\x18\x04 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _FORTDEPLOYPOKEMONMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['FortDeployPokemonMessage'] = _FORTDEPLOYPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FortDeployPokemonMessage = _reflection.GeneratedProtocolMessageType('FortDeployPokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _FORTDEPLOYPOKEMONMESSAGE,

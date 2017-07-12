@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nHpogoprotos/networking/platform/responses/buy_item_android_response.proto\x12(pogoprotos.networking.platform.responses\"\xad\x01\n\x16\x42uyItemAndroidResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32G.pogoprotos.networking.platform.responses.BuyItemAndroidResponse.Status\x12\x16\n\x0epurchase_token\x18\x02 \x01(\t\"\"\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -89,6 +88,7 @@ _BUYITEMANDROIDRESPONSE = _descriptor.Descriptor(
 _BUYITEMANDROIDRESPONSE.fields_by_name['result'].enum_type = _BUYITEMANDROIDRESPONSE_STATUS
 _BUYITEMANDROIDRESPONSE_STATUS.containing_type = _BUYITEMANDROIDRESPONSE
 DESCRIPTOR.message_types_by_name['BuyItemAndroidResponse'] = _BUYITEMANDROIDRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BuyItemAndroidResponse = _reflection.GeneratedProtocolMessageType('BuyItemAndroidResponse', (_message.Message,), dict(
   DESCRIPTOR = _BUYITEMANDROIDRESPONSE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nEpogoprotos/networking/requests/messages/release_pokemon_message.proto\x12\'pogoprotos.networking.requests.messages\"@\n\x15ReleasePokemonMessage\x12\x12\n\npokemon_id\x18\x01 \x01(\x06\x12\x13\n\x0bpokemon_ids\x18\x02 \x03(\x06\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _RELEASEPOKEMONMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['ReleasePokemonMessage'] = _RELEASEPOKEMONMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ReleasePokemonMessage = _reflection.GeneratedProtocolMessageType('ReleasePokemonMessage', (_message.Message,), dict(
   DESCRIPTOR = _RELEASEPOKEMONMESSAGE,

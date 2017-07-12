@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n-pogoprotos/data/player/contact_settings.proto\x12\x16pogoprotos.data.player\"Q\n\x0f\x43ontactSettings\x12\x1d\n\x15send_marketing_emails\x18\x01 \x01(\x08\x12\x1f\n\x17send_push_notifications\x18\x02 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _CONTACTSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['ContactSettings'] = _CONTACTSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ContactSettings = _reflection.GeneratedProtocolMessageType('ContactSettings', (_message.Message,), dict(
   DESCRIPTOR = _CONTACTSETTINGS,

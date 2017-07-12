@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n$pogoprotos/data/raid/raid_info.proto\x12\x14pogoprotos.data.raid\x1a\"pogoprotos/data/pokemon_data.proto\x1a!pogoprotos/enums/raid_level.proto\"\xee\x01\n\x08RaidInfo\x12\x11\n\traid_seed\x18\x01 \x01(\x03\x12\x15\n\rraid_spawn_ms\x18\x02 \x01(\x03\x12\x16\n\x0eraid_battle_ms\x18\x03 \x01(\x03\x12\x13\n\x0braid_end_ms\x18\x04 \x01(\x03\x12\x32\n\x0craid_pokemon\x18\x05 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\x12/\n\nraid_level\x18\x06 \x01(\x0e\x32\x1b.pogoprotos.enums.RaidLevel\x12\x10\n\x08\x63omplete\x18\x07 \x01(\x08\x12\x14\n\x0cis_exclusive\x18\x08 \x01(\x08\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_raid__level__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -111,6 +110,7 @@ _RAIDINFO = _descriptor.Descriptor(
 _RAIDINFO.fields_by_name['raid_pokemon'].message_type = pogoprotos_dot_data_dot_pokemon__data__pb2._POKEMONDATA
 _RAIDINFO.fields_by_name['raid_level'].enum_type = pogoprotos_dot_enums_dot_raid__level__pb2._RAIDLEVEL
 DESCRIPTOR.message_types_by_name['RaidInfo'] = _RAIDINFO
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RaidInfo = _reflection.GeneratedProtocolMessageType('RaidInfo', (_message.Message,), dict(
   DESCRIPTOR = _RAIDINFO,

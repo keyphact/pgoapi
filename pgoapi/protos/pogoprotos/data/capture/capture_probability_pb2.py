@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n1pogoprotos/data/capture/capture_probability.proto\x12\x17pogoprotos.data.capture\x1a\'pogoprotos/inventory/item/item_id.proto\"\x95\x01\n\x12\x43\x61ptureProbability\x12<\n\rpokeball_type\x18\x01 \x03(\x0e\x32!.pogoprotos.inventory.item.ItemIdB\x02\x10\x01\x12\x1f\n\x13\x63\x61pture_probability\x18\x02 \x03(\x02\x42\x02\x10\x01\x12 \n\x18reticle_difficulty_scale\x18\x0c \x01(\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -74,6 +73,7 @@ _CAPTUREPROBABILITY = _descriptor.Descriptor(
 
 _CAPTUREPROBABILITY.fields_by_name['pokeball_type'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['CaptureProbability'] = _CAPTUREPROBABILITY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CaptureProbability = _reflection.GeneratedProtocolMessageType('CaptureProbability', (_message.Message,), dict(
   DESCRIPTOR = _CAPTUREPROBABILITY,

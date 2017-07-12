@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n1pogoprotos/data/redeem/redeemed_avatar_item.proto\x12\x16pogoprotos.data.redeem\"D\n\x12RedeemedAvatarItem\x12\x1a\n\x12\x61vatar_template_id\x18\x01 \x01(\t\x12\x12\n\nitem_count\x18\x02 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -64,6 +63,7 @@ _REDEEMEDAVATARITEM = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['RedeemedAvatarItem'] = _REDEEMEDAVATARITEM
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RedeemedAvatarItem = _reflection.GeneratedProtocolMessageType('RedeemedAvatarItem', (_message.Message,), dict(
   DESCRIPTOR = _REDEEMEDAVATARITEM,

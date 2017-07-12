@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n9pogoprotos/settings/master/pokemon/stats_attributes.proto\x12\"pogoprotos.settings.master.pokemon\"n\n\x0fStatsAttributes\x12\x14\n\x0c\x62\x61se_stamina\x18\x01 \x01(\x05\x12\x13\n\x0b\x62\x61se_attack\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61se_defense\x18\x03 \x01(\x05\x12\x1a\n\x12\x64odge_energy_delta\x18\x08 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _STATSATTRIBUTES = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['StatsAttributes'] = _STATSATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 StatsAttributes = _reflection.GeneratedProtocolMessageType('StatsAttributes', (_message.Message,), dict(
   DESCRIPTOR = _STATSATTRIBUTES,

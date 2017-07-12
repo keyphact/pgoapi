@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n!pogoprotos/enums/raid_level.proto\x12\x10pogoprotos.enums*{\n\tRaidLevel\x12\x14\n\x10RAID_LEVEL_UNSET\x10\x00\x12\x10\n\x0cRAID_LEVEL_1\x10\x01\x12\x10\n\x0cRAID_LEVEL_2\x10\x02\x12\x10\n\x0cRAID_LEVEL_3\x10\x03\x12\x10\n\x0cRAID_LEVEL_4\x10\x04\x12\x10\n\x0cRAID_LEVEL_5\x10\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _RAIDLEVEL = _descriptor.EnumDescriptor(
   name='RaidLevel',
@@ -72,6 +71,7 @@ RAID_LEVEL_5 = 5
 
 
 DESCRIPTOR.enum_types_by_name['RaidLevel'] = _RAIDLEVEL
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

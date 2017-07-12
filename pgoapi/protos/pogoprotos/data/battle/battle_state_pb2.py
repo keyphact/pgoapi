@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n)pogoprotos/data/battle/battle_state.proto\x12\x16pogoprotos.data.battle*T\n\x0b\x42\x61ttleState\x12\x0f\n\x0bSTATE_UNSET\x10\x00\x12\n\n\x06\x41\x43TIVE\x10\x01\x12\x0b\n\x07VICTORY\x10\x02\x12\x0c\n\x08\x44\x45\x46\x45\x41TED\x10\x03\x12\r\n\tTIMED_OUT\x10\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _BATTLESTATE = _descriptor.EnumDescriptor(
   name='BattleState',
@@ -67,6 +66,7 @@ TIMED_OUT = 4
 
 
 DESCRIPTOR.enum_types_by_name['BattleState'] = _BATTLESTATE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

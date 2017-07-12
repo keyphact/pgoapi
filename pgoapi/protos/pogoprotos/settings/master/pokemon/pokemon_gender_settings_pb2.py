@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n@pogoprotos/settings/master/pokemon/pokemon_gender_settings.proto\x12\"pogoprotos.settings.master.pokemon\"a\n\x15PokemonGenderSettings\x12\x14\n\x0cmale_percent\x18\x01 \x01(\x02\x12\x16\n\x0e\x66\x65male_percent\x18\x02 \x01(\x02\x12\x1a\n\x12genderless_percent\x18\x03 \x01(\x02\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _POKEMONGENDERSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['PokemonGenderSettings'] = _POKEMONGENDERSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PokemonGenderSettings = _reflection.GeneratedProtocolMessageType('PokemonGenderSettings', (_message.Message,), dict(
   DESCRIPTOR = _POKEMONGENDERSETTINGS,

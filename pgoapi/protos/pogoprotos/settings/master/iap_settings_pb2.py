@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n-pogoprotos/settings/master/iap_settings.proto\x12\x1apogoprotos.settings.master\"\x8c\x02\n\x0bIapSettings\x12\x19\n\x11\x64\x61ily_bonus_coins\x18\x01 \x01(\x05\x12(\n daily_defender_bonus_per_pokemon\x18\x02 \x03(\x05\x12*\n\"daily_defender_bonus_max_defenders\x18\x03 \x01(\x05\x12%\n\x1d\x64\x61ily_defender_bonus_currency\x18\x04 \x03(\t\x12\"\n\x1amin_time_between_claims_ms\x18\x05 \x01(\x03\x12\x1b\n\x13\x64\x61ily_bonus_enabled\x18\x06 \x01(\x08\x12$\n\x1c\x64\x61ily_defender_bonus_enabled\x18\x07 \x01(\x08\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -99,6 +98,7 @@ _IAPSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['IapSettings'] = _IAPSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 IapSettings = _reflection.GeneratedProtocolMessageType('IapSettings', (_message.Message,), dict(
   DESCRIPTOR = _IAPSETTINGS,

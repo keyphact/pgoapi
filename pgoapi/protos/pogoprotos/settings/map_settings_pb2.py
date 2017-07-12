@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n&pogoprotos/settings/map_settings.proto\x12\x13pogoprotos.settings\"\xb2\x02\n\x0bMapSettings\x12\x1d\n\x15pokemon_visible_range\x18\x01 \x01(\x01\x12\x1d\n\x15poke_nav_range_meters\x18\x02 \x01(\x01\x12\x1e\n\x16\x65ncounter_range_meters\x18\x03 \x01(\x01\x12+\n#get_map_objects_min_refresh_seconds\x18\x04 \x01(\x02\x12+\n#get_map_objects_max_refresh_seconds\x18\x05 \x01(\x02\x12+\n#get_map_objects_min_distance_meters\x18\x06 \x01(\x02\x12\x1b\n\x13google_maps_api_key\x18\x07 \x01(\t\x12!\n\x19min_nearby_hide_sightings\x18\x08 \x01(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -106,6 +105,7 @@ _MAPSETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['MapSettings'] = _MAPSETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MapSettings = _reflection.GeneratedProtocolMessageType('MapSettings', (_message.Message,), dict(
   DESCRIPTOR = _MAPSETTINGS,

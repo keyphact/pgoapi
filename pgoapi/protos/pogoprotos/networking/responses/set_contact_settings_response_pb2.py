@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nCpogoprotos/networking/responses/set_contact_settings_response.proto\x12\x1fpogoprotos.networking.responses\x1a!pogoprotos/data/player_data.proto\"\xd1\x01\n\x1aSetContactSettingsResponse\x12R\n\x06status\x18\x01 \x01(\x0e\x32\x42.pogoprotos.networking.responses.SetContactSettingsResponse.Status\x12\x30\n\x0bplayer_data\x18\x02 \x01(\x0b\x32\x1b.pogoprotos.data.PlayerData\"-\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x0b\n\x07\x46\x41ILURE\x10\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player__data__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -96,6 +95,7 @@ _SETCONTACTSETTINGSRESPONSE.fields_by_name['status'].enum_type = _SETCONTACTSETT
 _SETCONTACTSETTINGSRESPONSE.fields_by_name['player_data'].message_type = pogoprotos_dot_data_dot_player__data__pb2._PLAYERDATA
 _SETCONTACTSETTINGSRESPONSE_STATUS.containing_type = _SETCONTACTSETTINGSRESPONSE
 DESCRIPTOR.message_types_by_name['SetContactSettingsResponse'] = _SETCONTACTSETTINGSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SetContactSettingsResponse = _reflection.GeneratedProtocolMessageType('SetContactSettingsResponse', (_message.Message,), dict(
   DESCRIPTOR = _SETCONTACTSETTINGSRESPONSE,

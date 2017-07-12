@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\x1dpogoprotos/enums/filter.proto\x12\x10pogoprotos.enums*j\n\x06\x46ilter\x12\x10\n\x0cUNSET_FILTER\x10\x00\x12\x07\n\x03\x41LL\x10\x01\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x02\x12\t\n\x05OWNED\x10\x03\x12\x0c\n\x08\x46\x45\x41TURED\x10\x04\x12\x0f\n\x0bPURCHASABLE\x10\x05\x12\x0e\n\nUNLOCKABLE\x10\x06\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _FILTER = _descriptor.EnumDescriptor(
   name='Filter',
@@ -77,6 +76,7 @@ UNLOCKABLE = 6
 
 
 DESCRIPTOR.enum_types_by_name['Filter'] = _FILTER
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

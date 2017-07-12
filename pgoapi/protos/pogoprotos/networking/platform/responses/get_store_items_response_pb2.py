@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nGpogoprotos/networking/platform/responses/get_store_items_response.proto\x12(pogoprotos.networking.platform.responses\x1a%pogoprotos/data/player/currency.proto\"\x85\x06\n\x15GetStoreItemsResponse\x12V\n\x06status\x18\x01 \x01(\x0e\x32\x46.pogoprotos.networking.platform.responses.GetStoreItemsResponse.Status\x12X\n\x05items\x18\x02 \x03(\x0b\x32I.pogoprotos.networking.platform.responses.GetStoreItemsResponse.StoreItem\x12;\n\x11player_currencies\x18\x03 \x03(\x0b\x32 .pogoprotos.data.player.Currency\x12\x0c\n\x04hash\x18\x04 \x01(\t\x1a\xf1\x02\n\tStoreItem\x12\x0f\n\x07item_id\x18\x01 \x01(\t\x12\x0e\n\x06is_iap\x18\x02 \x01(\x08\x12\x39\n\x0f\x63urrency_to_buy\x18\x03 \x01(\x0b\x32 .pogoprotos.data.player.Currency\x12\x39\n\x0fyields_currency\x18\x04 \x01(\x0b\x32 .pogoprotos.data.player.Currency\x12\x62\n\x0byields_item\x18\x05 \x01(\x0b\x32M.pogoprotos.networking.platform.responses.GetStoreItemsResponse.StoreItemInfo\x12W\n\x04tags\x18\x06 \x03(\x0b\x32I.pogoprotos.networking.platform.responses.GetStoreItemsResponse.StoreTags\x12\x10\n\x08unknown7\x18\x07 \x01(\x05\x1a\'\n\tStoreTags\x12\x0b\n\x03tag\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a/\n\rStoreItemInfo\x12\x0f\n\x07item_id\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"!\n\x06Status\x12\r\n\tUNDEFINED\x10\x00\x12\x08\n\x04OKAY\x10\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_player_dot_currency__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -260,6 +259,7 @@ _GETSTOREITEMSRESPONSE.fields_by_name['items'].message_type = _GETSTOREITEMSRESP
 _GETSTOREITEMSRESPONSE.fields_by_name['player_currencies'].message_type = pogoprotos_dot_data_dot_player_dot_currency__pb2._CURRENCY
 _GETSTOREITEMSRESPONSE_STATUS.containing_type = _GETSTOREITEMSRESPONSE
 DESCRIPTOR.message_types_by_name['GetStoreItemsResponse'] = _GETSTOREITEMSRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetStoreItemsResponse = _reflection.GeneratedProtocolMessageType('GetStoreItemsResponse', (_message.Message,), dict(
 

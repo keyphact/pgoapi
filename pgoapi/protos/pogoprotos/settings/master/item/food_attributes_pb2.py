@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n5pogoprotos/settings/master/item/food_attributes.proto\x12\x1fpogoprotos.settings.master.item\x1a\"pogoprotos/enums/item_effect.proto\"\x92\x01\n\x0e\x46oodAttributes\x12\x31\n\x0bitem_effect\x18\x01 \x03(\x0e\x32\x1c.pogoprotos.enums.ItemEffect\x12\x1b\n\x13item_effect_percent\x18\x02 \x03(\x02\x12\x16\n\x0egrowth_percent\x18\x03 \x01(\x02\x12\x18\n\x10\x62\x65rry_multiplier\x18\x04 \x01(\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_item__effect__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _FOODATTRIBUTES = _descriptor.Descriptor(
 
 _FOODATTRIBUTES.fields_by_name['item_effect'].enum_type = pogoprotos_dot_enums_dot_item__effect__pb2._ITEMEFFECT
 DESCRIPTOR.message_types_by_name['FoodAttributes'] = _FOODATTRIBUTES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FoodAttributes = _reflection.GeneratedProtocolMessageType('FoodAttributes', (_message.Message,), dict(
   DESCRIPTOR = _FOODATTRIBUTES,

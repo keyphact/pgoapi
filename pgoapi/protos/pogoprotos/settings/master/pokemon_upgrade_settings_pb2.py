@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n9pogoprotos/settings/master/pokemon_upgrade_settings.proto\x12\x1apogoprotos.settings.master\"\x84\x01\n\x16PokemonUpgradeSettings\x12\x1a\n\x12upgrades_per_level\x18\x01 \x01(\x05\x12#\n\x1b\x61llowed_levels_above_player\x18\x02 \x01(\x05\x12\x12\n\ncandy_cost\x18\x03 \x03(\x05\x12\x15\n\rstardust_cost\x18\x04 \x03(\x05\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _POKEMONUPGRADESETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['PokemonUpgradeSettings'] = _POKEMONUPGRADESETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PokemonUpgradeSettings = _reflection.GeneratedProtocolMessageType('PokemonUpgradeSettings', (_message.Message,), dict(
   DESCRIPTOR = _POKEMONUPGRADESETTINGS,

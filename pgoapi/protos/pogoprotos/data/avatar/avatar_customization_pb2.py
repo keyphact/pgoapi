@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n1pogoprotos/data/avatar/avatar_customization.proto\x12\x16pogoprotos.data.avatar\"\x8d\x02\n\x13\x41vatarCustomization\x12\x1a\n\x12\x61vatar_template_id\x18\x01 \x01(\t\x12\x41\n\x06labels\x18\x02 \x03(\x0e\x32\x31.pogoprotos.data.avatar.AvatarCustomization.Label\"\x96\x01\n\x05Label\x12\x0f\n\x0bUNSET_LABEL\x10\x00\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x01\x12\t\n\x05OWNED\x10\x02\x12\x0c\n\x08\x46\x45\x41TURED\x10\x03\x12\x07\n\x03NEW\x10\x04\x12\x08\n\x04SALE\x10\x05\x12\x0f\n\x0bPURCHASABLE\x10\x06\x12\x0e\n\nUNLOCKABLE\x10\x07\x12\n\n\x06VIEWED\x10\x08\x12\x16\n\x12LOCKED_PURCHASABLE\x10\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -121,6 +120,7 @@ _AVATARCUSTOMIZATION = _descriptor.Descriptor(
 _AVATARCUSTOMIZATION.fields_by_name['labels'].enum_type = _AVATARCUSTOMIZATION_LABEL
 _AVATARCUSTOMIZATION_LABEL.containing_type = _AVATARCUSTOMIZATION
 DESCRIPTOR.message_types_by_name['AvatarCustomization'] = _AVATARCUSTOMIZATION
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AvatarCustomization = _reflection.GeneratedProtocolMessageType('AvatarCustomization', (_message.Message,), dict(
   DESCRIPTOR = _AVATARCUSTOMIZATION,

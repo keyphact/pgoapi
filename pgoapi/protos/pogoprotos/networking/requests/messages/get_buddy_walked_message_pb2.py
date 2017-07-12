@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/get_buddy_walked_message.proto\x12\'pogoprotos.networking.requests.messages\"\x17\n\x15GetBuddyWalkedMessageb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -50,6 +49,7 @@ _GETBUDDYWALKEDMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetBuddyWalkedMessage'] = _GETBUDDYWALKEDMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetBuddyWalkedMessage = _reflection.GeneratedProtocolMessageType('GetBuddyWalkedMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETBUDDYWALKEDMESSAGE,

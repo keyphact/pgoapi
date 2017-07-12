@@ -25,7 +25,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n-pogoprotos/data/badge/awarded_gym_badge.proto\x12\x15pogoprotos.data.badge\x1a%pogoprotos/enums/gym_badge_type.proto\x1a+pogoprotos/data/badge/gym_badge_stats.proto\x1a+pogoprotos/data/raid/player_raid_info.proto\"\xb6\x03\n\x0f\x41wardedGymBadge\x12\x0f\n\x07\x66ort_id\x18\x01 \x01(\t\x12\x36\n\x0egym_badge_type\x18\x02 \x01(\x0e\x32\x1e.pogoprotos.enums.GymBadgeType\x12\r\n\x05score\x18\x03 \x01(\r\x12=\n\x0fgym_badge_stats\x18\x04 \x01(\x0b\x32$.pogoprotos.data.badge.GymBadgeStats\x12 \n\x18last_update_timestamp_ms\x18\x05 \x01(\x04\x12\x1f\n\x17last_check_timestamp_ms\x18\x0b \x01(\x04\x12\x15\n\rearned_points\x18\x0c \x01(\r\x12\x10\n\x08progress\x18\r \x01(\x02\x12\x10\n\x08level_up\x18\x0e \x01(\x08\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x11\n\timage_url\x18\x07 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x08 \x01(\t\x12\x10\n\x08latitude\x18\t \x01(\x01\x12\x11\n\tlongitude\x18\n \x01(\x01\x12\x33\n\x05raids\x18\x0f \x01(\x0b\x32$.pogoprotos.data.raid.PlayerRaidInfob\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_gym__badge__type__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_badge_dot_gym__badge__stats__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_raid_dot_player__raid__info__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -162,6 +161,7 @@ _AWARDEDGYMBADGE.fields_by_name['gym_badge_type'].enum_type = pogoprotos_dot_enu
 _AWARDEDGYMBADGE.fields_by_name['gym_badge_stats'].message_type = pogoprotos_dot_data_dot_badge_dot_gym__badge__stats__pb2._GYMBADGESTATS
 _AWARDEDGYMBADGE.fields_by_name['raids'].message_type = pogoprotos_dot_data_dot_raid_dot_player__raid__info__pb2._PLAYERRAIDINFO
 DESCRIPTOR.message_types_by_name['AwardedGymBadge'] = _AWARDEDGYMBADGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AwardedGymBadge = _reflection.GeneratedProtocolMessageType('AwardedGymBadge', (_message.Message,), dict(
   DESCRIPTOR = _AWARDEDGYMBADGE,

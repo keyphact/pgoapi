@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n+pogoprotos/data/badge/gym_badge_stats.proto\x12\x15pogoprotos.data.badge\"\x90\x01\n\rGymBadgeStats\x12\x1e\n\x16total_time_defended_ms\x18\x01 \x01(\x04\x12\x17\n\x0fnum_battles_won\x18\x02 \x01(\r\x12\x18\n\x10num_battles_lost\x18\x05 \x01(\r\x12\x17\n\x0fnum_berries_fed\x18\x03 \x01(\r\x12\x13\n\x0bnum_deploys\x18\x04 \x01(\rb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _GYMBADGESTATS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GymBadgeStats'] = _GYMBADGESTATS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GymBadgeStats = _reflection.GeneratedProtocolMessageType('GymBadgeStats', (_message.Message,), dict(
   DESCRIPTOR = _GYMBADGESTATS,

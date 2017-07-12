@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n,pogoprotos/enums/notification_category.proto\x12\x10pogoprotos.enums*l\n\x14NotificationCategory\x12\x1e\n\x1aUNSET_NotificationCategory\x10\x00\x12\x0f\n\x0bGYM_REMOVAL\x10\x01\x12\x12\n\x0ePOKEMON_HUNGRY\x10\x02\x12\x0f\n\x0bPOKEMON_WON\x10\x03\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _NOTIFICATIONCATEGORY = _descriptor.EnumDescriptor(
   name='NotificationCategory',
@@ -62,6 +61,7 @@ POKEMON_WON = 3
 
 
 DESCRIPTOR.enum_types_by_name['NotificationCategory'] = _NOTIFICATIONCATEGORY
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

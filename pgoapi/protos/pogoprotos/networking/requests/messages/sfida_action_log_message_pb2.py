@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/sfida_action_log_message.proto\x12\'pogoprotos.networking.requests.messages\"\x17\n\x15SfidaActionLogMessageb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -50,6 +49,7 @@ _SFIDAACTIONLOGMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['SfidaActionLogMessage'] = _SFIDAACTIONLOGMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SfidaActionLogMessage = _reflection.GeneratedProtocolMessageType('SfidaActionLogMessage', (_message.Message,), dict(
   DESCRIPTOR = _SFIDAACTIONLOGMESSAGE,

@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nFpogoprotos/networking/requests/messages/start_gym_battle_message.proto\x12\'pogoprotos.networking.requests.messages\"\x97\x01\n\x15StartGymBattleMessage\x12\x0e\n\x06gym_id\x18\x01 \x01(\t\x12\x1d\n\x15\x61ttacking_pokemon_ids\x18\x02 \x03(\x06\x12\x1c\n\x14\x64\x65\x66\x65nding_pokemon_id\x18\x03 \x01(\x06\x12\x17\n\x0fplayer_latitude\x18\x04 \x01(\x01\x12\x18\n\x10player_longitude\x18\x05 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -85,6 +84,7 @@ _STARTGYMBATTLEMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['StartGymBattleMessage'] = _STARTGYMBATTLEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 StartGymBattleMessage = _reflection.GeneratedProtocolMessageType('StartGymBattleMessage', (_message.Message,), dict(
   DESCRIPTOR = _STARTGYMBATTLEMESSAGE,

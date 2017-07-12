@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nEpogoprotos/networking/requests/messages/get_map_objects_message.proto\x12\'pogoprotos.networking.requests.messages\"p\n\x14GetMapObjectsMessage\x12\x13\n\x07\x63\x65ll_id\x18\x01 \x03(\x04\x42\x02\x10\x01\x12\x1e\n\x12since_timestamp_ms\x18\x02 \x03(\x03\x42\x02\x10\x01\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -78,6 +77,7 @@ _GETMAPOBJECTSMESSAGE = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['GetMapObjectsMessage'] = _GETMAPOBJECTSMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetMapObjectsMessage = _reflection.GeneratedProtocolMessageType('GetMapObjectsMessage', (_message.Message,), dict(
   DESCRIPTOR = _GETMAPOBJECTSMESSAGE,

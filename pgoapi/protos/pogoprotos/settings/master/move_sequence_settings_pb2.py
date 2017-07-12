@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n7pogoprotos/settings/master/move_sequence_settings.proto\x12\x1apogoprotos.settings.master\"(\n\x14MoveSequenceSettings\x12\x10\n\x08sequence\x18\x01 \x03(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _MOVESEQUENCESETTINGS = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['MoveSequenceSettings'] = _MOVESEQUENCESETTINGS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MoveSequenceSettings = _reflection.GeneratedProtocolMessageType('MoveSequenceSettings', (_message.Message,), dict(
   DESCRIPTOR = _MOVESEQUENCESETTINGS,

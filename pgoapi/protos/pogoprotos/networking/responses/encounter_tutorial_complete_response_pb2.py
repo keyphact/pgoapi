@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nJpogoprotos/networking/responses/encounter_tutorial_complete_response.proto\x12\x1fpogoprotos.networking.responses\x1a\"pogoprotos/data/pokemon_data.proto\x1a+pogoprotos/data/capture/capture_award.proto\"\xad\x02\n!EncounterTutorialCompleteResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32I.pogoprotos.networking.responses.EncounterTutorialCompleteResponse.Result\x12\x32\n\x0cpokemon_data\x18\x02 \x01(\x0b\x32\x1c.pogoprotos.data.PokemonData\x12<\n\rcapture_award\x18\x03 \x01(\x0b\x32%.pogoprotos.data.capture.CaptureAward\";\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x19\n\x15\x45RROR_INVALID_POKEMON\x10\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_pokemon__data__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_capture_dot_capture__award__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -105,6 +104,7 @@ _ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['pokemon_data'].message_type =
 _ENCOUNTERTUTORIALCOMPLETERESPONSE.fields_by_name['capture_award'].message_type = pogoprotos_dot_data_dot_capture_dot_capture__award__pb2._CAPTUREAWARD
 _ENCOUNTERTUTORIALCOMPLETERESPONSE_RESULT.containing_type = _ENCOUNTERTUTORIALCOMPLETERESPONSE
 DESCRIPTOR.message_types_by_name['EncounterTutorialCompleteResponse'] = _ENCOUNTERTUTORIALCOMPLETERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EncounterTutorialCompleteResponse = _reflection.GeneratedProtocolMessageType('EncounterTutorialCompleteResponse', (_message.Message,), dict(
   DESCRIPTOR = _ENCOUNTERTUTORIALCOMPLETERESPONSE,

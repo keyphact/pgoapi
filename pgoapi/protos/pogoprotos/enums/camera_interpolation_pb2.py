@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n+pogoprotos/enums/camera_interpolation.proto\x12\x10pogoprotos.enums*\x96\x01\n\x13\x43\x61meraInterpolation\x12\x12\n\x0e\x43\x41M_INTERP_CUT\x10\x00\x12\x15\n\x11\x43\x41M_INTERP_LINEAR\x10\x01\x12\x15\n\x11\x43\x41M_INTERP_SMOOTH\x10\x02\x12%\n!CAM_INTERP_SMOOTH_ROT_LINEAR_MOVE\x10\x03\x12\x16\n\x12\x43\x41M_INTERP_DEPENDS\x10\x04\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CAMERAINTERPOLATION = _descriptor.EnumDescriptor(
   name='CameraInterpolation',
@@ -67,6 +66,7 @@ CAM_INTERP_DEPENDS = 4
 
 
 DESCRIPTOR.enum_types_by_name['CameraInterpolation'] = _CAMERAINTERPOLATION
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 # @@protoc_insertion_point(module_scope)

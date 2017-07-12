@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\nBpogoprotos/networking/platform/requests/unknown_ptr8_request.proto\x12\'pogoprotos.networking.platform.requests\"%\n\x12UnknownPtr8Request\x12\x0f\n\x07message\x18\x01 \x01(\tb\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -57,6 +56,7 @@ _UNKNOWNPTR8REQUEST = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['UnknownPtr8Request'] = _UNKNOWNPTR8REQUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UnknownPtr8Request = _reflection.GeneratedProtocolMessageType('UnknownPtr8Request', (_message.Message,), dict(
   DESCRIPTOR = _UNKNOWNPTR8REQUEST,

@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nGpogoprotos/networking/requests/messages/add_fort_modifier_message.proto\x12\'pogoprotos.networking.requests.messages\x1a\'pogoprotos/inventory/item/item_id.proto\"\x96\x01\n\x16\x41\x64\x64\x46ortModifierMessage\x12\x38\n\rmodifier_type\x18\x01 \x01(\x0e\x32!.pogoprotos.inventory.item.ItemId\x12\x0f\n\x07\x66ort_id\x18\x02 \x01(\t\x12\x17\n\x0fplayer_latitude\x18\x03 \x01(\x01\x12\x18\n\x10player_longitude\x18\x04 \x01(\x01\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_item_dot_item__id__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -81,6 +80,7 @@ _ADDFORTMODIFIERMESSAGE = _descriptor.Descriptor(
 
 _ADDFORTMODIFIERMESSAGE.fields_by_name['modifier_type'].enum_type = pogoprotos_dot_inventory_dot_item_dot_item__id__pb2._ITEMID
 DESCRIPTOR.message_types_by_name['AddFortModifierMessage'] = _ADDFORTMODIFIERMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 AddFortModifierMessage = _reflection.GeneratedProtocolMessageType('AddFortModifierMessage', (_message.Message,), dict(
   DESCRIPTOR = _ADDFORTMODIFIERMESSAGE,

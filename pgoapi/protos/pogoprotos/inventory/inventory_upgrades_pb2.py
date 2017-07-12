@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n-pogoprotos/inventory/inventory_upgrades.proto\x12\x14pogoprotos.inventory\x1a,pogoprotos/inventory/inventory_upgrade.proto\"W\n\x11InventoryUpgrades\x12\x42\n\x12inventory_upgrades\x18\x01 \x03(\x0b\x32&.pogoprotos.inventory.InventoryUpgradeb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_inventory_dot_inventory__upgrade__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _INVENTORYUPGRADES = _descriptor.Descriptor(
 
 _INVENTORYUPGRADES.fields_by_name['inventory_upgrades'].message_type = pogoprotos_dot_inventory_dot_inventory__upgrade__pb2._INVENTORYUPGRADE
 DESCRIPTOR.message_types_by_name['InventoryUpgrades'] = _INVENTORYUPGRADES
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InventoryUpgrades = _reflection.GeneratedProtocolMessageType('InventoryUpgrades', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYUPGRADES,

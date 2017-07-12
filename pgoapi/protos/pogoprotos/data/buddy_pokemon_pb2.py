@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n#pogoprotos/data/buddy_pokemon.proto\x12\x0fpogoprotos.data\"L\n\x0c\x42uddyPokemon\x12\n\n\x02id\x18\x01 \x01(\x06\x12\x17\n\x0fstart_km_walked\x18\x02 \x01(\x01\x12\x17\n\x0flast_km_awarded\x18\x03 \x01(\x01\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -71,6 +70,7 @@ _BUDDYPOKEMON = _descriptor.Descriptor(
 )
 
 DESCRIPTOR.message_types_by_name['BuddyPokemon'] = _BUDDYPOKEMON
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 BuddyPokemon = _reflection.GeneratedProtocolMessageType('BuddyPokemon', (_message.Message,), dict(
   DESCRIPTOR = _BUDDYPOKEMON,

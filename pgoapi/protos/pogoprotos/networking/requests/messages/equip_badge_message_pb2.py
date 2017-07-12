@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nApogoprotos/networking/requests/messages/equip_badge_message.proto\x12\'pogoprotos.networking.requests.messages\x1a!pogoprotos/enums/badge_type.proto\"D\n\x11\x45quipBadgeMessage\x12/\n\nbadge_type\x18\x01 \x01(\x0e\x32\x1b.pogoprotos.enums.BadgeTypeb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_enums_dot_badge__type__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -60,6 +59,7 @@ _EQUIPBADGEMESSAGE = _descriptor.Descriptor(
 
 _EQUIPBADGEMESSAGE.fields_by_name['badge_type'].enum_type = pogoprotos_dot_enums_dot_badge__type__pb2._BADGETYPE
 DESCRIPTOR.message_types_by_name['EquipBadgeMessage'] = _EQUIPBADGEMESSAGE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EquipBadgeMessage = _reflection.GeneratedProtocolMessageType('EquipBadgeMessage', (_message.Message,), dict(
   DESCRIPTOR = _EQUIPBADGEMESSAGE,

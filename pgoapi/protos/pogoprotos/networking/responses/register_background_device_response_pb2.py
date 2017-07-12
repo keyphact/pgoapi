@@ -23,7 +23,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\nIpogoprotos/networking/responses/register_background_device_response.proto\x12\x1fpogoprotos.networking.responses\x1a&pogoprotos/data/background_token.proto\"\xda\x01\n RegisterBackgroundDeviceResponse\x12X\n\x06status\x18\x01 \x01(\x0e\x32H.pogoprotos.networking.responses.RegisterBackgroundDeviceResponse.Status\x12/\n\x05token\x18\x02 \x01(\x0b\x32 .pogoprotos.data.BackgroundToken\"+\n\x06Status\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x62\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_background__token__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -96,6 +95,7 @@ _REGISTERBACKGROUNDDEVICERESPONSE.fields_by_name['status'].enum_type = _REGISTER
 _REGISTERBACKGROUNDDEVICERESPONSE.fields_by_name['token'].message_type = pogoprotos_dot_data_dot_background__token__pb2._BACKGROUNDTOKEN
 _REGISTERBACKGROUNDDEVICERESPONSE_STATUS.containing_type = _REGISTERBACKGROUNDDEVICERESPONSE
 DESCRIPTOR.message_types_by_name['RegisterBackgroundDeviceResponse'] = _REGISTERBACKGROUNDDEVICERESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RegisterBackgroundDeviceResponse = _reflection.GeneratedProtocolMessageType('RegisterBackgroundDeviceResponse', (_message.Message,), dict(
   DESCRIPTOR = _REGISTERBACKGROUNDDEVICERESPONSE,

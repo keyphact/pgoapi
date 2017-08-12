@@ -54,12 +54,10 @@ from POGOProtos.Networking.Platform.Requests.SendEncryptedSignatureRequest_pb2 i
 
 
 class RpcApi:
-
-    RPC_REQUEST = 1
-    RPC_HIGH = 1
-    START_TIME = 0
-
     def __init__(self, auth_provider, device_info):
+        self.RPC_REQUEST = 1
+        self.RPC_HIGH = 1
+        self.START_TIME = 0
 
         self.log = logging.getLogger(__name__)
 

@@ -55,7 +55,8 @@ from POGOProtos.Networking.Platform.Requests.SendEncryptedSignatureRequest_pb2 i
 
 class RpcApi:
 
-    RPC_ID = 0
+    RPC_REQUEST = 1
+    RPC_HIGH = 1
     START_TIME = 0
 
     def __init__(self, auth_provider, device_info):
@@ -69,8 +70,8 @@ class RpcApi:
         self._signature_lib = None
         self._hash_engine = None
 
-        if RpcApi.START_TIME == 0:
-            RpcApi.START_TIME = get_time(ms=True)
+        if self.START_TIME == 0:
+            self.START_TIME = get_time(ms=True)
 
         # data fields for SignalAgglom
         self.session_hash = os.urandom(16)
@@ -88,19 +89,12 @@ class RpcApi:
             raise
 
     def get_rpc_id(self):
-        if RpcApi.RPC_ID==0 :  #Startup
-            RpcApi.RPC_ID=1
-            if self.device_info is not None  and  \
-               self.device_info.get('device_brand','Apple')!='Apple':
-                rand=0x53B77E48
-            else:
-                rand=0x000041A7
-        else:
-            rand=random.randint(0,2**31)
-        RpcApi.RPC_ID += 1
-        cnt= RpcApi.RPC_ID
-        reqid= ((rand| ((cnt&0xFFFFFFFF)>>31))<<32)|cnt
-        self.log.debug("Incremented RPC Request ID: %s", reqid)
+        # Random number generation, a combination of the Node.js API and aiopogo.
+        self.RPC_REQUEST += 1
+        self.RPC_HIGH = (7**5 * self.RPC_HIGH) % (2**31) - 1
+        reqid = (self.RPC_HIGH << 32) | self.RPC_REQUEST
+
+        self.log.debug('Incremented RPC Request ID: %s.', reqid)
 
         return reqid
 
@@ -218,7 +212,7 @@ class RpcApi:
 
             sig.field22 = self.session_hash
             sig.epoch_timestamp_ms = get_time(ms=True)
-            sig.timestamp_ms_since_start = get_time(ms=True) - RpcApi.START_TIME
+            sig.timestamp_ms_since_start = get_time(ms=True) - self.START_TIME
             if sig.timestamp_ms_since_start < 5000:
                 sig.timestamp_ms_since_start = random.randint(5000, 8000)
 

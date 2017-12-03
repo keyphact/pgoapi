@@ -40,21 +40,33 @@ from requests.exceptions import RequestException, Timeout
 
 class AuthPtc(Auth):
 
-    PTC_LOGIN_URL1 = 'https://sso.pokemon.com/sso/oauth2.0/authorize?client_id=mobile-app_pokemon-go&redirect_uri=https%3A%2F%2Fwww.nianticlabs.com%2Fpokemongo%2Ferror'
-    PTC_LOGIN_URL2 = 'https://sso.pokemon.com/sso/login?service=http%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
+    PTC_LOGIN_URL1 = 'https://sso.pokemon.com/sso/oauth2.0/authorize'
+    PTC_LOGIN_URL2 = 'https://sso.pokemon.com/sso/login'
     PTC_LOGIN_OAUTH = 'https://sso.pokemon.com/sso/oauth2.0/accessToken'
     PTC_LOGIN_CLIENT_SECRET = 'w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR'
 
-    def __init__(self, username=None, password=None, user_agent=None, timeout=None):
+    def __init__(self, username=None, password=None, user_agent=None, timeout=None, locale=None):
         Auth.__init__(self)
 
         self._auth_provider = 'ptc'
 
-        self._session = requests.session()
-        self._session.headers = {'User-Agent': user_agent or 'pokemongo/1 CFNetwork/811.4.18 Darwin/16.5.0', 'Host': 'sso.pokemon.com', 'X-Unity-Version': '5.5.1f1'}
         self._username = username
         self._password = password
-        self.timeout = timeout or 15
+
+        self.locale = locale or 'en_US'
+        self.timeout = timeout or 10
+
+        self._session = requests.session()
+
+        self._session.headers = {
+            'Accept': '*/*',
+            'Host': 'sso.pokemon.com',
+            'Connection': 'keep-alive',
+            'User-Agent': user_agent or 'pokemongo/1 CFNetwork/811.4.18 Darwin/16.5.0',
+            'Accept-Language': self.locale.lower().replace('_', '-'),
+            'Accept-Encoding': 'gzip-deflate',
+            'X-Unity-Version': '5.5.1f1'
+        }
 
     def set_proxy(self, proxy_config):
         self._session.proxies = proxy_config
@@ -69,8 +81,14 @@ class AuthPtc(Auth):
         self._session.cookies.clear()
         now = get_time()
 
+        get_params = {
+            'client_id': 'mobile-app_pokemon-go',
+            'redirect_uri': 'https://www.nianticlabs.com/pokemongo/error',
+            'locale': self.locale
+        }
+
         try:
-            r = self._session.get(self.PTC_LOGIN_URL1, timeout=self.timeout)
+            r = self._session.get(self.PTC_LOGIN_URL1, params=get_params, timeout=self.timeout)
         except Timeout:
             raise AuthTimeoutException('Auth GET timed out.')
         except RequestException as e:
@@ -82,13 +100,22 @@ class AuthPtc(Auth):
                 '_eventId': 'submit',
                 'username': self._username,
                 'password': self._password,
+                'locale': self.locale
             })
         except (ValueError, AttributeError) as e:
             self.log.error('PTC User Login Error - invalid JSON response: {}'.format(e))
             raise AuthException('Invalid JSON response: {}'.format(e))
 
+        post_params = {
+            'service': 'http://sso.pokemon.com/sso/oauth2.0/callbackAuthorize'
+        }
+
+        post_headers = {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+
         try:
-            r = self._session.post(self.PTC_LOGIN_URL2, data=data, timeout=self.timeout, allow_redirects=False)
+            r = self._session.post(self.PTC_LOGIN_URL2, params=post_params, headers=post_headers, data=data, timeout=self.timeout, allow_redirects=False)
         except Timeout:
             raise AuthTimeoutException('Auth POST timed out.')
         except RequestException as e:

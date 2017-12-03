@@ -62,7 +62,12 @@ class PGoApi:
         self._hash_server_token = None
 
         self._session = requests.session()
-        self._session.headers.update({'User-Agent': 'Niantic App'})
+        self._session.headers.update({
+            'User-Agent': 'Niantic App',
+            'Accept': '*/*',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept-Language': 'en-us'
+        })
         self._session.verify = True
 
         if proxy_config is not None:
@@ -77,9 +82,9 @@ class PGoApi:
     def get_api_version():
         return 8300
 
-    def set_authentication(self, provider=None, oauth2_refresh_token=None, username=None, password=None, proxy_config=None, user_agent=None, timeout=None):
+    def set_authentication(self, provider=None, oauth2_refresh_token=None, username=None, password=None, proxy_config=None, user_agent=None, timeout=None, locale=None):
         if provider == 'ptc':
-            self._auth_provider = AuthPtc(user_agent=user_agent, timeout=timeout)
+            self._auth_provider = AuthPtc(user_agent=user_agent, timeout=timeout, locale=locale)
         elif provider == 'google':
             self._auth_provider = AuthGoogle()
         elif provider is None:
@@ -153,9 +158,9 @@ class PGoApi:
         # Send empty initial request
         request = self.create_request()
         response = request.call()
-        
+
         time.sleep(1.5)
-        
+
         # Send GET_PLAYER only
         request = self.create_request()
         request.get_player(player_locale = {'country': 'US', 'language': 'en', 'timezone': 'America/Chicago'})
@@ -248,7 +253,7 @@ class PGoApiRequest:
 
         response = None
         execute = True
-        
+
         while execute:
             execute = False
 

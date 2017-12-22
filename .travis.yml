@@ -1,13 +1,18 @@
+sudo: false
 language: python
-
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+cache:
+  pip: true
+  directories:
+    - node_modules
 python:
   - "2.7"
-  - "3.5"
   - "3.6"
-
 install:
   - pip install -r requirements.txt
   - python setup.py install
-
 script:
   - python -c 'import pgoapi'

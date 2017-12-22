@@ -18,10 +18,6 @@ It allows automatic parsing of requests/responses by finding the correct protobu
  * Thread-safety
  * Advanced logging/debugging
  * Uses [POGOProtos](https://github.com/AeonLucid/POGOProtos)
- * Mostly all available RPC calls (see [API reference](https://docs.pogodev.org) on the wiki)
-
-## Documentation
-Documentation is available at the github [pgoapi wiki](https://wiki.pogodev.org).
 
 ## Requirements
  * Python 2 or 3
@@ -34,20 +30,20 @@ Documentation is available at the github [pgoapi wiki](https://wiki.pogodev.org)
 ## Use
 To use this api as part of a python project using setuptools/pip, modify your requirements.txt file to include:
 ```
-git+https://github.com/pogodevorg/pgoapi.git@develop#egg=pgoapi
+git+https://github.com/sebastienvercammen/pgoapi.git@develop#egg=pgoapi
 ```
 
 If you are not using setuptools/pip, follow the instructions in the Contributing section below to clone this repository and then install pgoapi using the appropriate method for your project.
 
 ## Contributing
-Contributions are highly welcome. Please use github or [Discord](https://discord.pogodev.org) for it!
+Contributions are highly welcome. Please use github or [Discord](https://discord.gg/rocketmap) for it!
 
 You can get started by cloning this repository. Note that as pgoapi uses [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) you must perform a recursive clone:
 
 | Protocol | Command |
 | -------- | ------- |
-| HTTPS | `git clone --recursive https://github.com/pogodevorg/pgoapi.git` |
-| SSH   | `git clone --recursive git@github.com:pogodevorg/pgoapi.git` |
+| HTTPS | `git clone --recursive https://github.com/sebastienvercammen/pgoapi.git` |
+| SSH   | `git clone --recursive git@github.com:sebastienvercammen/pgoapi.git` |
 
 If you already have a copy of the repository you can use `git submodule update --init` to fetch and update the submodules.
 

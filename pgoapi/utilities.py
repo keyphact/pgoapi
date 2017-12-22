@@ -21,13 +21,13 @@ Author: tjado <https://github.com/tejado>
 
 import time
 import struct
+import random
 import logging
 
 from json import JSONEncoder
 from binascii import unhexlify
 
 # other stuff
-from google.protobuf.internal import encoder
 from geopy.geocoders import GoogleV3
 from s2sphere import LatLng, Angle, Cap, RegionCoverer, math
 
@@ -37,25 +37,26 @@ EARTH_RADIUS = 6371000  # radius of Earth in meters
 
 
 def f2i(float):
-  return struct.unpack('<Q', struct.pack('<d', float))[0]
+    return struct.unpack('<Q', struct.pack('<d', float))[0]
 
 
 def f2h(float):
-  return hex(struct.unpack('<Q', struct.pack('<d', float))[0])
+    return hex(struct.unpack('<Q', struct.pack('<d', float))[0])
 
 
 def h2f(hex):
-  return struct.unpack('<d', struct.pack('<Q', int(hex,16)))[0]
+    return struct.unpack('<d', struct.pack('<Q', int(hex, 16)))[0]
 
 
 def d2h(f):
-    hex_str = f2h(f)[2:].replace('L','')
+    hex_str = f2h(f)[2:].replace('L', '')
     hex_str = ("0" * (len(hex_str) % 2)) + hex_str
     return unhexlify(hex_str)
 
 
 def to_camel_case(value):
-  return ''.join(word.capitalize() if word else '_' for word in value.split('_'))
+    return ''.join(word.capitalize() if word else '_'
+                   for word in value.split('_'))
 
 
 # JSON Encoder to handle bytes
@@ -71,7 +72,8 @@ def get_pos_by_name(location_name):
         return None
 
     log.info("Location for '%s' found: %s", location_name, loc.address)
-    log.info('Coordinates (lat/long/alt) for location: %s %s %s', loc.latitude, loc.longitude, loc.altitude)
+    log.info('Coordinates (lat/long/alt) for location: %s %s %s', loc.latitude,
+             loc.longitude, loc.altitude)
 
     return (loc.latitude, loc.longitude, loc.altitude)
 
@@ -81,7 +83,9 @@ def get_cell_ids(lat, long, radius=500):
     # https://github.com/AeonLucid/POGOProtos/issues/83#issuecomment-235612285
     if radius > 1500:
         radius = 1500  # radius = 1500 is max allowed by the server
-    region = Cap.from_axis_angle(LatLng.from_degrees(lat, long).to_point(), Angle.from_degrees(360*radius/(2*math.pi*EARTH_RADIUS)))
+    region = Cap.from_axis_angle(
+        LatLng.from_degrees(lat, long).to_point(),
+        Angle.from_degrees(360 * radius / (2 * math.pi * EARTH_RADIUS)))
     coverer = RegionCoverer()
     coverer.min_level = 15
     coverer.max_level = 15
@@ -90,14 +94,14 @@ def get_cell_ids(lat, long, radius=500):
     return sorted([x.id() for x in cells])
 
 
-def get_time(ms = False):
+def get_time(ms=False):
     if ms:
         return int(time.time() * 1000)
     else:
         return int(time.time())
 
 
-def get_format_time_diff(low, high, ms = True):
+def get_format_time_diff(low, high, ms=True):
     diff = (high - low)
     if ms:
         m, s = divmod(diff / 1000, 60)
@@ -113,3 +117,14 @@ def parse_api_endpoint(api_url):
         api_url = 'https://{}/rpc'.format(api_url)
 
     return api_url
+
+
+def weighted_choice(choices):
+    total = sum(w for c, w in choices)
+    r = random.uniform(0, total)
+    upto = 0
+    for c, w in choices:
+        if upto + w >= r:
+            return c
+        upto += w
+    assert False, "Shouldn't get here"

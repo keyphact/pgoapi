@@ -25,15 +25,16 @@ Author: tjado <https://github.com/tejado>
 
 from __future__ import absolute_import
 
+import time
+import random
 import logging
 import requests
-import time
 
 from . import __title__, __version__, __copyright__
-from pgoapi.rpc_api import RpcApi
+from pgoapi.rpc_api import RpcApi, RpcState
 from pgoapi.auth_ptc import AuthPtc
 from pgoapi.auth_google import AuthGoogle
-from pgoapi.utilities import parse_api_endpoint
+from pgoapi.utilities import parse_api_endpoint, get_time
 from pgoapi.exceptions import AuthException, AuthTokenExpiredException, BadRequestException, BannedAccountException, InvalidCredentialsException, NoPlayerPositionSetException, NotLoggedInException, ServerApiEndpointRedirectException, ServerBusyOrOfflineException, UnexpectedResponseException
 
 from . import protos
@@ -44,16 +45,31 @@ logger = logging.getLogger(__name__)
 
 
 class PGoApi:
+    def __init__(self,
+                 provider=None,
+                 oauth2_refresh_token=None,
+                 username=None,
+                 password=None,
+                 position_lat=None,
+                 position_lng=None,
+                 position_alt=None,
+                 proxy_config=None,
+                 device_info=None):
+        self.RPC_ID_LOW = 1
+        self.RPC_ID_HIGH = 1
+        self.START_TIME = get_time(ms=True) - random.randint(6000, 10000)
 
-    def __init__(self, provider=None, oauth2_refresh_token=None, username=None, password=None, position_lat=None, position_lng=None, position_alt=None, proxy_config=None, device_info=None):
         self.set_logger()
         self.log.info('%s v%s - %s', __title__, __version__, __copyright__)
 
         self._auth_provider = None
-        if provider is not None and ((username is not None and password is not None) or (oauth2_refresh_token is not None)):
-            self.set_authentication(provider, oauth2_refresh_token, username, password, proxy_config)
+        if provider is not None and (
+            (username is not None and password is not None) or
+            (oauth2_refresh_token is not None)):
+            self.set_authentication(provider, oauth2_refresh_token, username,
+                                    password, proxy_config)
 
-        self.set_api_endpoint("pgorelease.nianticlabs.com/plfe")
+        self.set_api_endpoint('pgorelease.nianticlabs.com/plfe')
 
         self._position_lat = position_lat
         self._position_lng = position_lng
@@ -62,13 +78,22 @@ class PGoApi:
         self._hash_server_token = None
 
         self._session = requests.session()
-        self._session.headers.update({'User-Agent': 'Niantic App'})
+
+        # requests' Session calls .default_headers() in init, which
+        # makes it set a bunch of default headers, including
+        # 'Connection': 'keep-alive', so we overwrite all of them.
+        self._session.headers = {
+            'User-Agent': 'Niantic App',
+            'Content-Type': 'application/binary',
+            'Accept-Encoding': 'identity, gzip'
+        }
         self._session.verify = True
 
         if proxy_config is not None:
             self._session.proxies = proxy_config
 
         self.device_info = device_info
+        self.state = RpcState()
 
     def set_logger(self, logger=None):
         self.log = logger or logging.getLogger(__name__)
@@ -77,15 +102,24 @@ class PGoApi:
     def get_api_version():
         return 8700
 
-    def set_authentication(self, provider=None, oauth2_refresh_token=None, username=None, password=None, proxy_config=None, user_agent=None, timeout=None):
+    def set_authentication(self,
+                           provider=None,
+                           oauth2_refresh_token=None,
+                           username=None,
+                           password=None,
+                           proxy_config=None,
+                           user_agent=None,
+                           timeout=None,
+                           locale=None):
         if provider == 'ptc':
-            self._auth_provider = AuthPtc(user_agent=user_agent, timeout=timeout)
+            self._auth_provider = AuthPtc(user_agent=user_agent, timeout=timeout, locale=locale)
         elif provider == 'google':
             self._auth_provider = AuthGoogle()
         elif provider is None:
             self._auth_provider = None
         else:
-            raise InvalidCredentialsException("Invalid authentication provider - only ptc/google available.")
+            raise InvalidCredentialsException(
+                "Invalid authentication provider - only ptc/google available.")
 
         self.log.debug('Auth provider: {}'.format(provider))
 
@@ -98,7 +132,9 @@ class PGoApi:
             if not self._auth_provider.user_login(username, password):
                 raise AuthException("User login failed!")
         else:
-            raise InvalidCredentialsException("Invalid Credential Input - Please provide username/password or an oauth2 refresh token")
+            raise InvalidCredentialsException(
+                "Invalid Credential Input - Please provide username/password or an oauth2 refresh token"
+            )
 
     def get_position(self):
         return (self._position_lat, self._position_lng, self._position_alt)
@@ -136,10 +172,20 @@ class PGoApi:
     def get_hash_server_token(self):
         return self._hash_server_token
 
+    def get_next_request_id(self):
+        self.RPC_ID_LOW += 1
+        self.RPC_ID_HIGH = ((7**5) * self.RPC_ID_HIGH) % ((2**31) - 1)
+        reqid = (self.RPC_ID_HIGH << 32) | self.RPC_ID_LOW
+        self.log.debug('RPC Request ID: %s.', reqid)
+        return reqid
+
+    def get_start_time(self):
+        return self.START_TIME
+
     def __getattr__(self, func):
         def function(**kwargs):
             request = self.create_request()
-            getattr(request, func)(_call_direct=True, **kwargs )
+            getattr(request, func)(_call_direct=True, **kwargs)
             return request.call()
 
         if func.upper() in RequestType.keys():
@@ -153,21 +199,27 @@ class PGoApi:
         # Send empty initial request
         request = self.create_request()
         response = request.call()
-        
+
         time.sleep(1.5)
-        
+
         # Send GET_PLAYER only
         request = self.create_request()
-        request.get_player(player_locale = {'country': 'US', 'language': 'en', 'timezone': 'America/Chicago'})
+        request.get_player(player_locale={
+            'country': 'US',
+            'language': 'en',
+            'timezone': 'America/Chicago'
+        })
         response = request.call()
 
-        if response.get('responses', {}).get('GET_PLAYER', {}).get('banned', False):
+        if response.get('responses', {}).get('GET_PLAYER', {}).get(
+                'banned', False):
             raise BannedAccountException
 
         time.sleep(1.5)
 
         request = self.create_request()
-        request.download_remote_config_version(platform=1, app_version=self.get_api_version())
+        request.download_remote_config_version(
+            platform=1, app_version=self.get_api_version())
         request.check_challenge()
         request.get_hatched_eggs()
         request.get_inventory()
@@ -182,7 +234,15 @@ class PGoApi:
     """
     The login function is not needed anymore but still in the code for backward compatibility"
     """
-    def login(self, provider, username, password, lat=None, lng=None, alt=None, app_simulation=True):
+
+    def login(self,
+              provider,
+              username,
+              password,
+              lat=None,
+              lng=None,
+              alt=None,
+              app_simulation=True):
 
         if lat and lng:
             self._position_lat = lat
@@ -191,7 +251,8 @@ class PGoApi:
             self._position_alt = alt
 
         try:
-            self.set_authentication(provider, username=username, password=password)
+            self.set_authentication(
+                provider, username=username, password=password)
         except AuthException as e:
             self.log.error('Login process failed: %s', e)
             return False
@@ -213,16 +274,19 @@ class PGoApi:
 
 
 class PGoApiRequest:
-
-    def __init__(self, parent, position_lat, position_lng, position_alt,
+    def __init__(self,
+                 parent,
+                 position_lat,
+                 position_lng,
+                 position_alt,
                  device_info=None):
         self.log = logging.getLogger(__name__)
 
         self.__parent__ = parent
-
+        self.state = parent.state
         """ Inherit necessary parameters from parent """
-        self._api_endpoint = self.__parent__.get_api_endpoint()
-        self._auth_provider = self.__parent__.get_auth_provider()
+        self._api_endpoint = parent.get_api_endpoint()
+        self._auth_provider = parent.get_auth_provider()
 
         self._position_lat = position_lat
         self._position_lng = position_lng
@@ -232,7 +296,7 @@ class PGoApiRequest:
         self._req_platform_list = []
         self.device_info = device_info
 
-    def call(self, use_dict = True):
+    def call(self, use_dict=True):
         if (self._position_lat is None) or (self._position_lng is None):
             raise NoPlayerPositionSetException
 
@@ -240,27 +304,33 @@ class PGoApiRequest:
             self.log.info('Not logged in')
             raise NotLoggedInException
 
-        request = RpcApi(self._auth_provider, self.device_info)
-        request._session = self.__parent__._session
+        api = self.__parent__
+        request = RpcApi(self._auth_provider, self.device_info, self.state,
+                         api.get_next_request_id(), api.get_start_time())
+        request._session = api._session
 
-        hash_server_token = self.__parent__.get_hash_server_token()
+        hash_server_token = api.get_hash_server_token()
         request.activate_hash_server(hash_server_token)
 
         response = None
         execute = True
-        
+
         while execute:
             execute = False
 
             try:
-                response = request.request(self._api_endpoint, self._req_method_list, self._req_platform_list, self.get_position(), use_dict)
+                response = request.request(self._api_endpoint,
+                                           self._req_method_list,
+                                           self._req_platform_list,
+                                           self.get_position(), use_dict)
             except AuthTokenExpiredException as e:
                 """
                 This exception only occures if the OAUTH service provider (google/ptc) didn't send any expiration date
                 so that we are assuming, that the access_token is always valid until the API server states differently.
                 """
                 try:
-                    self.log.info('Access Token rejected! Requesting new one...')
+                    self.log.info(
+                        'Access Token rejected! Requesting new one...')
                     self._auth_provider.get_access_token(force_refresh=True)
                 except Exception as e:
                     error = 'Reauthentication failed: {}'.format(e)
@@ -274,7 +344,7 @@ class PGoApiRequest:
                 new_api_endpoint = e.get_redirected_endpoint()
 
                 self._api_endpoint = parse_api_endpoint(new_api_endpoint)
-                self.__parent__.set_api_endpoint(self._api_endpoint)
+                api.set_api_endpoint(self._api_endpoint)
 
                 execute = True  # reexecute the call
 
@@ -300,22 +370,22 @@ class PGoApiRequest:
     def __getattr__(self, func):
         def add_request(**kwargs):
 
-                if '_call_direct' in kwargs:
-                    del kwargs['_call_direct']
-                    self.log.info('Creating a new direct request...')
-                elif not self._req_method_list:
-                    self.log.info('Creating a new request...')
+            if '_call_direct' in kwargs:
+                del kwargs['_call_direct']
+                self.log.info('Creating a new direct request...')
+            elif not self._req_method_list:
+                self.log.info('Creating a new request...')
 
-                name = func.upper()
-                if kwargs:
-                    self._req_method_list.append((RequestType.Value(name), kwargs))
-                    self.log.info("Adding '%s' to RPC request including arguments", name)
-                    self.log.debug("Arguments of '%s': \n\r%s", name, kwargs)
-                else:
-                    self._req_method_list.append((RequestType.Value(name), None))
-                    self.log.info("Adding '%s' to RPC request", name)
+            name = func.upper()
+            if kwargs:
+                self._req_method_list.append((RequestType.Value(name), kwargs))
+                self.log.info("Adding '%s' to RPC request including arguments", name)
+                self.log.debug("Arguments of '%s': \n\r%s", name, kwargs)
+            else:
+                self._req_method_list.append((RequestType.Value(name), None))
+                self.log.info("Adding '%s' to RPC request", name)
 
-                return self
+            return self
 
         def add_platform(**kwargs):
 
@@ -324,14 +394,16 @@ class PGoApiRequest:
 
             name = func.upper()
             if kwargs:
-                self._req_platform_list.append((PlatformRequestType.Value(name), kwargs))
+                self._req_platform_list.append(
+                    (PlatformRequestType.Value(name), kwargs))
                 self.log.info("Adding '%s' to RPC request including arguments", name)
                 self.log.debug("Arguments of '%s': \n\r%s", name, kwargs)
             else:
-                self._req_platform_list.append((PlatformRequestType.Value(name), None))
+                self._req_platform_list.append(
+                    (PlatformRequestType.Value(name), None))
                 self.log.info("Adding '%s' to RPC request", name)
 
-            return self    
+            return self
 
         name = func.upper()
         if name in RequestType.keys():

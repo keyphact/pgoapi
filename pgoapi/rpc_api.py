@@ -315,6 +315,8 @@ class RpcApi:
         sen.status = 3
 
         sig.unknown25 = 4500779412463383546
+        for key in state.device_info:
+            setattr(sig.device_info, key, state.device_info[key])
         sig.activity_status.stationary = True
 
         signature_proto = sig.SerializeToString()
